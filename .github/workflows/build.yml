@@ -114,7 +114,9 @@ jobs:
 
       - name: Compile installer
         working-directory: src/installer
-        run: & $env:ISCC_PATH Script_x64.iss
+        shell: pwsh
+        run: |
+          & $env:ISCC_PATH Script_x64.iss
 
       - uses: actions/upload-artifact@v4
         with:
