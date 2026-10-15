@@ -9,13 +9,13 @@ namespace Lively.Common
 {
     public static class FileTypes
     {
+        // Formats are limited to what the WebView2 (Chromium) engine decodes natively.
         public static readonly FileTypeModel[] SupportedFormats = [
-            new (WallpaperType.video, [".wmv", ".avi", ".flv", ".m4v",
-                    ".mkv", ".mov", ".mp4", ".mp4v", ".mpeg4",
-                    ".mpg", ".webm", ".ogm", ".ogv", ".ogx" ]),
+            new (WallpaperType.video, [".mp4", ".m4v", ".mov", ".webm", ".ogv" ]),
             new (WallpaperType.picture, [".jpg", ".jpeg", ".png",
-                    ".bmp", ".tif", ".tiff", ".webp", ".jfif" ]),
-            new (WallpaperType.gif, [".gif"]),
+                    ".bmp", ".tif", ".tiff", ".jfif" ]),
+            // Rendered by the browser so animation is preserved.
+            new (WallpaperType.gif, [".gif", ".webp", ".avif", ".apng", ".svg" ]),
             //new FileData(WallpaperType.heic, new string[] {".heic" }),//, ".heics", ".heif", ".heifs" }),
             new (WallpaperType.web, [".html"]),
             new (WallpaperType.webaudio, [".html"]),

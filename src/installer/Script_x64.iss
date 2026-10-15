@@ -2,7 +2,7 @@
 ; https://jrsoftware.org/isinfo.php
 
 #define MyAppName "Lively Wallpaper"
-#define MyAppVersion "2.2.1.4"
+#define MyAppVersion "2.2.1.5"
 #define MyAppPublisher "rocksdanister"
 #define MyAppURL "https://github.com/rocksdanister/lively"
 #define MyAppExeName "Lively.exe"
@@ -33,7 +33,8 @@ DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 ; Ask user which PrivilegesRequired on startup.
 PrivilegesRequiredOverridesAllowed=dialog
-OutputBaseFilename=lively_installer
+; Name matches the asset prefix the in-app updater looks for: lively_setup_x64_full_*
+OutputBaseFilename=lively_setup_x64_full_v{#MyAppVersion}
 SetupIconFile=Icons\appicon_96.ico
 Compression=lzma
 ;Compression=lzma2/ultra64
@@ -93,13 +94,10 @@ Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: 
 
 [Files]
 Source: "VC\VC_redist.x64.exe"; DestDir: {tmp}; Flags: deleteafterinstall
-; https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/deploy-unpackaged-apps
-;Source: "WindowsAppRuntime\WindowsAppRuntimeInstall_x86.exe"; DestDir: {tmp}; Flags: deleteafterinstall
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+; Published self-contained, so no .NET / Windows App runtime redistributable is needed.
 Source: "Release\Lively.exe"; DestDir: "{app}"; Flags: ignoreversion;
 Source: "Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs;
-Source: "dotnetcore\windowsdesktop-runtime-9.0.11-win-x64.exe"; DestDir: {tmp}; Flags: deleteafterinstall
-Source: "dotnetcore\netcorecheck.exe"; DestDir: {tmp}; Flags: deleteafterinstall
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -109,8 +107,6 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall; Check: AutoLaunch 
 ;skipifsilent
 Filename: "{tmp}\VC_redist.x64.exe"; Parameters: /install /quiet /norestart; Check: VCRedistNeedsInstall; StatusMsg: Installing Visual C++ Redistributable...
-;Filename: "{tmp}\WindowsAppRuntimeInstall_x86.exe"; Parameters: --quiet; Check: DependencyInstall; Flags: runhidden; StatusMsg: Installing Windows App SDK...
-Filename: "{tmp}\windowsdesktop-runtime-9.0.11-win-x64.exe"; Parameters: /install /quiet /norestart; Check: NetCoreNeedsInstall('9.0.11');  StatusMsg: Installing .NET Desktop Runtime 9.0.11...
 
 [Code]
 var
@@ -263,21 +259,6 @@ begin
   Result := True;
 end;
 //////////////////////////////////////////////////////////////////////
-// Credits: https://github.com/domgho/InnoDependencyInstaller
-// NetCoreCheck tool is necessary for detecting if a specific version of .NET Core/.NET 5.0 is installed: https://github.com/dotnet/runtime/issues/36479
-// Source code: https://github.com/dotnet/deployment-tools/tree/master/src/clickonce/native/projects/NetCoreCheck
-// Download netcorecheck.exe: https://go.microsoft.com/fwlink/?linkid=2135256
-// Download netcorecheck_x64.exe: https://go.microsoft.com/fwlink/?linkid=2135504
-function NetCoreNeedsInstall(version: String): Boolean;
-var
-	netcoreRuntime: String;
-	resultCode: Integer;
-begin
-  // Example: 'Microsoft.NETCore.App', 'Microsoft.AspNetCore.App', 'Microsoft.WindowsDesktop.App'
-  netcoreRuntime := 'Microsoft.WindowsDesktop.App'
-	Result := not(Exec(ExpandConstant('{tmp}{\}') + 'netcorecheck.exe', netcoreRuntime + ' ' + version, '', SW_HIDE, ewWaitUntilTerminated, resultCode) and (resultCode = 0));
-end;
-
 function CmdLineParamNotExists(const Value: string): Boolean;
 var
   I: Integer;  

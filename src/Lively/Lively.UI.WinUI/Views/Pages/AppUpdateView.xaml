@@ -118,7 +118,7 @@
             Translation="0,0,32">
             <controls:SettingsCard
                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-                BorderBrush="#33f2f2f2"
+                BorderBrush="{ThemeResource ControlElevationBorderBrush}"
                 BorderThickness="0.5"
                 CornerRadius="5"
                 Header="{Binding AppVersionText}">

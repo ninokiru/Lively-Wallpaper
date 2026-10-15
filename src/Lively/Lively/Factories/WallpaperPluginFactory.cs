@@ -1,4 +1,4 @@
-﻿using Lively.Common.Helpers;
+using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Core;
 using Lively.Core.Display;
@@ -7,7 +7,6 @@ using Lively.Models;
 using Lively.Models.Enums;
 using System;
 using System.Drawing;
-using System.IO;
 
 namespace Lively.Factories
 {
@@ -19,7 +18,7 @@ namespace Lively.Factories
         private readonly IUserSettingsService userSettings;
 
         public WallpaperPluginFactory(ILivelyPropertyFactory lpFactory,
-            IWebView2UserDataFactory webViewUserDataFactory, 
+            IWebView2UserDataFactory webViewUserDataFactory,
             IDisplayManager displayManager,
             IUserSettingsService userSettings)
         {
@@ -47,112 +46,13 @@ namespace Lively.Factories
                 case WallpaperType.web:
                 case WallpaperType.webaudio:
                 case WallpaperType.url:
-                    switch (userSettings.Settings.WebBrowser)
-                    {
-                        case LivelyWebBrowser.cef:
-                            return new WebCefSharpProcess(model.FilePath,
-                                model,
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.WebDebugPort,
-                                userSettings.Settings.CefDiskCache,
-                                userSettings.Settings.ApplicationTheme,
-                                userSettings.Settings.AudioVolumeGlobal,
-                                userSettings.Settings.VisualizerAudioDeviceId);
-                        case LivelyWebBrowser.webview2:
-                            return new WebWebView2(model.FilePath,
-                                model,
-                                display,
-                                userSettings.Settings.WebDebugPort,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                GetWebView2UserDataDir(arrangement, display, isWindowed),
-                                userSettings.Settings.ApplicationTheme,
-                                userSettings.Settings.AudioVolumeGlobal,
-                                GetWebView2Scale(display, isWindowed),
-                                userSettings.Settings.VisualizerAudioDeviceId);
-                    }
-                    break;
+                case WallpaperType.videostream:
                 case WallpaperType.video:
-                    //How many videoplayers you need? Yes.
-                    switch (userSettings.Settings.VideoPlayer)
-                    {
-                        case LivelyMediaPlayer.wmf:
-                            return new VideoWmfProcess(model.FilePath, model,
-                                display, 0, userSettings.Settings.WallpaperScaling);
-                        case LivelyMediaPlayer.libmpv:
-                            throw new DepreciatedException("libmpv depreciated player selected.");
-                        case LivelyMediaPlayer.libmpvExt:
-                            throw new DepreciatedException("libmpvExt depreciated player selected.");
-                        case LivelyMediaPlayer.libvlc:
-                            throw new DepreciatedException("libvlc depreciated player selected.");
-                        case LivelyMediaPlayer.libvlcExt:
-                            return new VideoLibVlcPlayer(model.FilePath,
-                                model,
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.ApplicationTheme,
-                                userSettings.Settings.AudioVolumeGlobal,
-                                userSettings.Settings.VideoPlayerHwAccel);
-                        case LivelyMediaPlayer.mpv:
-                            return new VideoMpvPlayer(model.FilePath,
-                                model,
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.VideoPlayerHwAccel,
-                                isWindowed: isWindowed,
-                                userSettings.Settings.VideoTargetColorSpaceMode);
-                        case LivelyMediaPlayer.vlc:
-                            return new VideoVlcPlayer(model.FilePath, 
-                                model, 
-                                display,
-                                userSettings.Settings.WallpaperScaling, 
-                                userSettings.Settings.VideoPlayerHwAccel);
-                    }
-                    break;
                 case WallpaperType.gif:
-                    switch (userSettings.Settings.GifPlayer)
-                    {
-                        case LivelyGifPlayer.win10Img:
-                        throw new PluginNotFoundException("xaml island gif player not available.");
-                        case LivelyGifPlayer.libmpvExt:
-                            throw new DepreciatedException("libmpvExt depreciated player selected.");
-                        case LivelyGifPlayer.mpv:
-                            return new VideoMpvPlayer(model.FilePath,
-                                model,
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.VideoPlayerHwAccel,
-                                isWindowed: isWindowed, 
-                                userSettings.Settings.VideoTargetColorSpaceMode);
-                        case LivelyGifPlayer.libvlcExt:
-                            return new VideoLibVlcPlayer(model.FilePath,
-                                model,
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.ApplicationTheme,
-                                userSettings.Settings.AudioVolumeGlobal,
-                                userSettings.Settings.VideoPlayerHwAccel);
-                    }
-                    break;
+                    return CreateWebView2Wallpaper(model, display, arrangement, isWindowed);
                 case WallpaperType.picture:
-                    switch (userSettings.Settings.PicturePlayer)
-                    {
-                        case LivelyPicturePlayer.picture:
-                            throw new PluginNotFoundException("xaml island gif player not available.");
-                        case LivelyPicturePlayer.winApi:
-                        return new PictureWinApi(model.FilePath, model, display, arrangement, userSettings.Settings.WallpaperScaling);
-                        case LivelyPicturePlayer.mpv:
-                            return new VideoMpvPlayer(model.FilePath,
-                                model,
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.VideoPlayerHwAccel,
-                                isWindowed: isWindowed,
-                                userSettings.Settings.VideoTargetColorSpaceMode);
-                        case LivelyPicturePlayer.wmf:
-                            return new VideoWmfProcess(model.FilePath, model, display, 0, userSettings.Settings.WallpaperScaling);
-                    }
-                    break;
+                    // Static images use the shell wallpaper api: no extra process, no gpu cost.
+                    return new PictureWinApi(model.FilePath, model, display, arrangement, userSettings.Settings.WallpaperScaling);
                 case WallpaperType.app:
                 case WallpaperType.bizhawk:
                 case WallpaperType.unity:
@@ -167,47 +67,40 @@ namespace Lively.Factories
                         return new ExtPrograms(model.FilePath, model, display,
                           userSettings.Settings.WallpaperWaitTime);
                     }
-                case WallpaperType.videostream:
-                    if (userSettings.Settings.IsVideoPlayerForStreams)
-                    {
-                        return new VideoMpvPlayer(model.FilePath,
-                            model,
-                            display,
-                            lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                            userSettings.Settings.VideoPlayerHwAccel,
-                            isWindowed: isWindowed,
-                            userSettings.Settings.VideoTargetColorSpaceMode);
-                    }
-                    else
-                    {
-                        return userSettings.Settings.WebBrowser switch
-                        {
-                            LivelyWebBrowser.cef => new WebCefSharpProcess(model.FilePath,
-                                                        model,
-                                                        display,
-                                                        lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                                        userSettings.Settings.WebDebugPort,
-                                                        userSettings.Settings.CefDiskCache,
-                                                        userSettings.Settings.ApplicationTheme,
-                                                        userSettings.Settings.AudioVolumeGlobal),
-                            _ => new WebWebView2(model.FilePath,
-                                                    model,
-                                                    display,
-                                                    userSettings.Settings.WebDebugPort,
-                                                    lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                                    GetWebView2UserDataDir(arrangement, display, isWindowed),
-                                                    userSettings.Settings.ApplicationTheme,
-                                                    userSettings.Settings.AudioVolumeGlobal,
-                                                    GetWebView2Scale(display, isWindowed)),
-                        };
-                    }
             }
             throw new PluginNotFoundException("Wallpaper player not found.");
         }
 
+        private IWallpaper CreateWebView2Wallpaper(LibraryModel model,
+            DisplayMonitor display,
+            WallpaperArrangement arrangement,
+            bool isWindowed)
+        {
+            var settings = userSettings.Settings;
+            var scaler = model.LivelyInfo.Type switch
+            {
+                WallpaperType.gif => settings.ScalerGif,
+                WallpaperType.video => settings.ScalerVideo,
+                _ => settings.WallpaperScaling,
+            };
+
+            return new WebView2Wallpaper(model.FilePath,
+                model,
+                display,
+                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
+                GetWebView2UserDataDir(arrangement, display, isWindowed),
+                settings.ApplicationTheme,
+                settings.AudioVolumeGlobal,
+                settings.WebDebugPort,
+                GetWebView2Scale(display, isWindowed),
+                settings.VisualizerAudioDeviceId,
+                scaler);
+        }
+
         private string GetWebView2UserDataDir(WallpaperArrangement arrangement, DisplayMonitor display, bool isWindowed)
         {
-            return userSettings.Settings.CefDiskCache && !isWindowed ? 
+            // A windowed preview must not share (or wipe) the disk cache of a running wallpaper.
+            return !isWindowed && userSettings.Settings.IsBrowserDiskCacheEnabled ?
                 webView2UserDataFactory.GetUserDataFolder(arrangement, display) : webView2UserDataFactory.GetTempUserDataFolder();
         }
 
@@ -234,23 +127,6 @@ namespace Lively.Factories
             }
 
             public MsixNotAllowedException(string message, Exception inner)
-                : base(message, inner)
-            {
-            }
-        }
-
-        public class DepreciatedException : Exception
-        {
-            public DepreciatedException()
-            {
-            }
-
-            public DepreciatedException(string message)
-                : base(message)
-            {
-            }
-
-            public DepreciatedException(string message, Exception inner)
                 : base(message, inner)
             {
             }

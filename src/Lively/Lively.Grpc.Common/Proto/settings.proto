@@ -34,10 +34,7 @@ message SettingsDataModel {
     InputForwardMode input_forward = 22;
     bool mouse_input_mov_always = 23;
     int32 tile_size = 24;
-    MediaPlayer video_player = 25;
-    bool video_player_hw_accel = 26;
-    GifPlayer gif_player = 27;
-    WebBrowser web_browser = 28;
+    // 25-28 retired: single player engine, no per-type player selection.
     bool gif_capture = 29;
     bool multi_file_auto_import = 30;
     GetScreensResponse selected_display = 31;
@@ -53,7 +50,7 @@ message SettingsDataModel {
     int32 audio_volume_global = 41;
     bool audio_only_on_desktop = 42;
     WallpaperScalerRule wallpaper_scaling = 43;
-    bool cef_disk_cache = 44;
+    bool browser_disk_cache = 44;
     bool debug_menu = 45;
     bool test_build = 46;
     AppTheme application_theme = 47;
@@ -66,7 +63,7 @@ message SettingsDataModel {
     bool screensaver_lock_on_resume = 54;
     ProcessMonitorRule process_monitor_alogorithm = 55;
     bool keep_awake_ui = 56;
-    PicturePlayer picture_player = 57;
+    // 57 retired: picture player selection.
     bool remember_selected_screen = 58;
     bool updated = 59;
     AppThemeBackground application_theme_background = 60;
@@ -79,7 +76,7 @@ message SettingsDataModel {
     bool screensaver_plugin_notify = 67;
     int32 screensaver_volume_global = 68;
     bool screensaver_fade_in = 69;
-    TargetColorSpaceMode video_target_color_space_mode = 70;
+    // 70 retired: mpv target colorspace hint.
     DisplayAudioMode display_audio_output = 71;
     GetScreensResponse selected_audio_output_display = 72;
     string visualizer_audio_device_id = 73;
@@ -155,35 +152,6 @@ enum InputForwardMode {
     mousekeyboard = 2;
 }
 
-enum MediaPlayer {
-    wmf = 0;
-    libvlc = 1;
-    libvlcExt = 2;
-    libmpv = 3;
-    libmpvExt = 4;
-    mpv = 5;
-    vlc = 6;
-}
-
-enum GifPlayer {
-    win10img = 0;
-    libmpvExt_ = 1;
-    mpv_ = 2;
-    _libvlcExt = 3;
-}
-
-enum PicturePlayer {
-    picture = 0;
-    winApi = 1;
-    mpv__ = 2;
-    wmf_ = 3;
-}
-
-enum WebBrowser {
-    cef = 0;
-    webview2 = 1;
-}
-
 enum GuiMode {
     normal = 0;
     lite = 1;
@@ -244,13 +212,6 @@ enum ScreensaverTypeRule
 {
     wallpaper_ = 0;
     different = 1;
-}
-
-enum TargetColorSpaceMode
-{
-    target = 0;
-    source = 1;
-    sourceDynamic = 2;
 }
 
 enum DisplayAudioMode

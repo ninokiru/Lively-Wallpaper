@@ -38,7 +38,6 @@
                             <!--
                                 This setting was originally used as a global scaling option for live wallpapers.
                                 Since scaling is now handled per wallpaper, we repurpose it here for Desktop Picture mode.
-                                Some plugins (eg: VLC) still rely on this since they don’t yet support per-wallpaper scaling.
                             -->
                             <controls:SettingsCard x:Uid="WallpaperFit">
                                 <controls:SettingsCard.HeaderIcon>
@@ -106,78 +105,28 @@
                         x:Uid="WallpaperPluginGroup"
                         Margin="0,0,0,10"
                         FontWeight="SemiBold" />
-                    <controls:SettingsExpander x:Uid="VideoPlayer" IsExpanded="True">
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="{Binding SelectedVideoPlayerIndex, Mode=TwoWay}">
-                            <ComboBoxItem>wmf</ComboBoxItem>
-                            <ComboBoxItem Visibility="Collapsed">libVlc</ComboBoxItem>
-                            <!--  Even though its libVlc (External) we are calling it libVlc to simplify things.  -->
-                            <ComboBoxItem>libVlc</ComboBoxItem>
-                            <ComboBoxItem Visibility="Collapsed">libMpv</ComboBoxItem>
-                            <ComboBoxItem Visibility="Collapsed">libMpv(External)</ComboBoxItem>
-                            <ComboBoxItem>mpv</ComboBoxItem>
-                            <ComboBoxItem>vlc</ComboBoxItem>
-                        </ComboBox>
-                        <controls:SettingsExpander.Items>
-                            <controls:SettingsCard x:Uid="VideoHardwareDecode">
-                                <ToggleSwitch IsOn="{Binding VideoPlayerHWDecode, Mode=TwoWay}" />
-                            </controls:SettingsCard>
-                            <controls:SettingsCard x:Uid="VideoLetWindowsManageColor">
-                                <ToggleSwitch IsOn="{Binding IsWindowsManageVideoColor, Mode=TwoWay}" />
-                            </controls:SettingsCard>
-                        </controls:SettingsExpander.Items>
-                    </controls:SettingsExpander>
-                    <InfoBar
-                        x:Uid="PluginNotFound"
-                        VerticalAlignment="Top"
-                        IsClosable="False"
-                        IsOpen="True"
-                        Severity="Error"
-                        Visibility="{Binding IsSelectedVideoPlayerAvailable, Converter={StaticResource VisibilityConverter}, Mode=OneWay, ConverterParameter=Reverse}">
-                        <InfoBar.ActionButton>
-                            <HyperlinkButton NavigateUri="https://github.com/rocksdanister/lively/wiki/Video-Guide" ToolTipService.ToolTip="https://github.com/rocksdanister/lively/wiki/Video-Guide">
-                                <HyperlinkButton.Content>
-                                    <TextBlock x:Uid="TextLearnMore" TextWrapping="Wrap" />
-                                </HyperlinkButton.Content>
-                            </HyperlinkButton>
-                        </InfoBar.ActionButton>
-                        <animations:Implicit.ShowAnimations>
-                            <animations:TranslationAnimation
-                                From="0,-15,0"
-                                To="0"
-                                Duration="0:0:0.4" />
-                            <animations:OpacityAnimation
-                                From="0"
-                                To="1.0"
-                                Duration="0:0:0.6" />
-                        </animations:Implicit.ShowAnimations>
-                        <animations:Implicit.HideAnimations>
-                            <animations:OpacityAnimation
-                                From="1.0"
-                                To="0"
-                                Duration="0:0:0.2" />
-                            <animations:TranslationAnimation
-                                From="0"
-                                To="0,-15,0"
-                                Duration="0:0:0.2" />
-                        </animations:Implicit.HideAnimations>
-                    </InfoBar>
-
                     <controls:SettingsExpander x:Uid="WebBrowser" IsExpanded="True">
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="{Binding SelectedWebBrowserIndex, Mode=TwoWay}">
-                            <ComboBoxItem>CefSharp</ComboBoxItem>
-                            <ComboBoxItem>WebView2</ComboBoxItem>
-                        </ComboBox>
+                        <controls:SettingsExpander.HeaderIcon>
+                            <FontIcon Glyph="&#xE774;" />
+                        </controls:SettingsExpander.HeaderIcon>
                         <controls:SettingsExpander.Items>
                             <controls:SettingsCard x:Uid="WebBrowserDiskCache">
-                                <ToggleSwitch IsOn="{Binding CefDiskCache, Mode=TwoWay}" />
+                                <ToggleSwitch IsOn="{Binding IsBrowserDiskCacheEnabled, Mode=TwoWay}" />
                             </controls:SettingsCard>
                             <controls:SettingsCard x:Uid="BrowserDebuggingPort">
-                                <StackPanel>
-                                    <ToggleSwitch IsOn="{Binding IsWebDebuggingEnabled, Mode=TwoWay}" />
+                                <StackPanel
+                                    HorizontalAlignment="Right"
+                                    Orientation="Horizontal"
+                                    Spacing="10">
                                     <NumberBox
-                                        MinWidth="200"
+                                        MinWidth="{StaticResource SettingActionControlMinWidth}"
+                                        PlaceholderText="9223"
                                         Text="{Binding WebDebuggingPort, Mode=TwoWay}"
-                                        Visibility="Collapsed" />
+                                        Visibility="{Binding IsWebDebuggingEnabled, Converter={StaticResource VisibilityConverter}, Mode=OneWay}" />
+                                    <ToggleSwitch
+                                        OffContent=""
+                                        IsOn="{Binding IsWebDebuggingEnabled, Mode=TwoWay}"
+                                        OnContent="" />
                                 </StackPanel>
                             </controls:SettingsCard>
                         </controls:SettingsExpander.Items>
@@ -199,90 +148,6 @@
                             IsIndeterminate="True"
                             Visibility="{Binding IsWebView2Installing, Mode=OneWay}" />
                     </InfoBar>
-                    <!--  Plugin not found  -->
-                    <InfoBar
-                        x:Uid="PluginNotFound"
-                        Margin="0,0,0,0"
-                        VerticalAlignment="Top"
-                        IsClosable="False"
-                        IsOpen="True"
-                        Severity="Error"
-                        Visibility="{Binding IsSelectedWebBrowserAvailable, Converter={StaticResource VisibilityConverter}, Mode=OneWay, ConverterParameter=Reverse}">
-                        <InfoBar.ActionButton>
-                            <HyperlinkButton NavigateUri="https://github.com/rocksdanister/lively/wiki/Web-Guide-I-:-Cef" ToolTipService.ToolTip="https://github.com/rocksdanister/lively/wiki/Web-Guide-I-:-Cef">
-                                <HyperlinkButton.Content>
-                                    <TextBlock x:Uid="TextLearnMore" TextWrapping="Wrap" />
-                                </HyperlinkButton.Content>
-                            </HyperlinkButton>
-                        </InfoBar.ActionButton>
-                        <animations:Implicit.ShowAnimations>
-                            <animations:TranslationAnimation
-                                From="0,-15,0"
-                                To="0"
-                                Duration="0:0:0.4" />
-                            <animations:OpacityAnimation
-                                From="0"
-                                To="1.0"
-                                Duration="0:0:0.6" />
-                        </animations:Implicit.ShowAnimations>
-                        <animations:Implicit.HideAnimations>
-                            <animations:OpacityAnimation
-                                From="1.0"
-                                To="0"
-                                Duration="0:0:0.2" />
-                            <animations:TranslationAnimation
-                                From="0"
-                                To="0,-15,0"
-                                Duration="0:0:0.2" />
-                        </animations:Implicit.HideAnimations>
-                    </InfoBar>
-
-                    <!--  depreciated  -->
-                    <!--<controls:SettingsCard x:Uid="GifPlayer">
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="{Binding SelectedGifPlayerIndex, Mode=TwoWay}">
-                            <ComboBoxItem>Win10</ComboBoxItem>
-                            <ComboBoxItem Visibility="Collapsed">libMPV(External)</ComboBoxItem>
-                            <ComboBoxItem>mpv</ComboBoxItem>
-                            <ComboBoxItem>libVlc (External)</ComboBoxItem>
-                    </ComboBox>
-                    </controls:SettingsCard>
-                    <InfoBar
-                        x:Uid="PluginNotFound"
-                        Margin="0,0,0,0"
-                        VerticalAlignment="Top"
-                        IsClosable="False"
-                        IsOpen="True"
-                        Severity="Error"
-                        Visibility="{Binding IsSelectedGifPlayerAvailable, Converter={StaticResource VisibilityConverter}, Mode=OneWay, ConverterParameter=Reverse}">
-                        <InfoBar.ActionButton>
-                            <HyperlinkButton NavigateUri="https://github.com/rocksdanister/lively/wiki/GIF-Guide" ToolTipService.ToolTip="https://github.com/rocksdanister/lively/wiki/GIF-Guide">
-                                <HyperlinkButton.Content>
-                                    <TextBlock x:Uid="TextLearnMore" TextWrapping="Wrap" />
-                                </HyperlinkButton.Content>
-                            </HyperlinkButton>
-                        </InfoBar.ActionButton>
-                        <animations:Implicit.ShowAnimations>
-                            <animations:TranslationAnimation
-                                From="0,-15,0"
-                                To="0"
-                                Duration="0:0:0.4" />
-                            <animations:OpacityAnimation
-                                From="0"
-                                To="1.0"
-                                Duration="0:0:0.6" />
-                        </animations:Implicit.ShowAnimations>
-                        <animations:Implicit.HideAnimations>
-                            <animations:OpacityAnimation
-                                From="1.0"
-                                To="0"
-                                Duration="0:0:0.2" />
-                            <animations:TranslationAnimation
-                                From="0"
-                                To="0,-15,0"
-                                Duration="0:0:0.2" />
-                        </animations:Implicit.HideAnimations>
-                    </InfoBar>-->
-
                 </StackPanel>
                 <!--  Music  -->
                 <StackPanel>

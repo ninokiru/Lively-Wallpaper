@@ -237,6 +237,20 @@
         "items": ["Hiçbiri", "Doldur", "Aynı", "Aynı şekilde doldur"]
       },
       "mute": { "text": "Sustur" }
+    },
+    "vi": {
+      "saturation": { "text": "Độ bão hòa" },
+      "hue": { "text": "Tông màu" },
+      "brightness": { "text": "Độ sáng" },
+      "contrast": { "text": "Độ tương phản" },
+      "gamma": { "text": "Gamma" },
+      "speed": { "text": "Tốc độ" },
+      "scaler": {
+        "text": "Kiểu hiển thị",
+        "help": "Cách hình nền vừa với màn hình",
+        "items": ["Không", "Kéo giãn", "Vừa khung", "Lấp đầy khung"]
+      },
+      "mute": { "text": "Tắt tiếng" }
     }
   }
 }

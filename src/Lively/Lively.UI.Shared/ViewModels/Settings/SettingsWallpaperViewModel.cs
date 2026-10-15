@@ -57,14 +57,10 @@ namespace Lively.UI.Shared.ViewModels
             SelectedWallpaperScalingIndex = (int)userSettings.Settings.WallpaperScaling;
             SelectedWallpaperInputMode = (int)userSettings.Settings.InputForward;
             MouseMoveOnDesktop = userSettings.Settings.MouseInputMovAlways;
-            SelectedVideoPlayerIndex = (int)userSettings.Settings.VideoPlayer;
-            VideoPlayerHWDecode = userSettings.Settings.VideoPlayerHwAccel;
-            IsWindowsManageVideoColor = userSettings.Settings.VideoTargetColorSpaceMode == TargetColorspaceHintMode.source;
-            SelectedGifPlayerIndex = (int)userSettings.Settings.GifPlayer;
-            SelectedWebBrowserIndex = (int)userSettings.Settings.WebBrowser;
             WebDebuggingPort = userSettings.Settings.WebDebugPort;
             IsWebDebuggingEnabled = !string.IsNullOrEmpty(WebDebuggingPort);
-            CefDiskCache = userSettings.Settings.CefDiskCache;
+            IsBrowserDiskCacheEnabled = userSettings.Settings.IsBrowserDiskCacheEnabled;
+            IsWebView2Required = !WebViewUtil.IsWebView2Available();
             // AudioDevices is populated only when IsShowAudioDevices is true for better UX.
         }
 
@@ -156,102 +152,6 @@ namespace Lively.UI.Shared.ViewModels
         }
 
         [ObservableProperty]
-        private bool isSelectedVideoPlayerAvailable;
-
-        private int _selectedVideoPlayerIndex;
-        public int SelectedVideoPlayerIndex
-        {
-            get => _selectedVideoPlayerIndex;
-            set
-            {
-                IsSelectedVideoPlayerAvailable = IsVideoPlayerAvailable((LivelyMediaPlayer)value);
-
-                if (userSettings.Settings.VideoPlayer != (LivelyMediaPlayer)value && IsSelectedVideoPlayerAvailable)
-                {
-                    userSettings.Settings.VideoPlayer = (LivelyMediaPlayer)value;
-                    UpdateSettingsConfigFile();
-                    _ = WallpaperRestart([WallpaperType.video, WallpaperType.picture, WallpaperType.videostream]);
-                }
-                SetProperty(ref _selectedVideoPlayerIndex, value);
-            }
-        }
-
-        private bool _videoPlayerHWDecode;
-        public bool VideoPlayerHWDecode
-        {
-            get => _videoPlayerHWDecode;
-            set
-            {
-                if (userSettings.Settings.VideoPlayerHwAccel != value)
-                {
-                    userSettings.Settings.VideoPlayerHwAccel = value;
-                    UpdateSettingsConfigFile();
-                    //if mpv player is also set as gif player..
-                    _ = WallpaperRestart([WallpaperType.video, WallpaperType.videostream, WallpaperType.gif]);
-                }
-                SetProperty(ref _videoPlayerHWDecode, value);
-            }
-        }
-
-        private bool _isWindowsManageVideoColor;
-        public bool IsWindowsManageVideoColor
-        {
-            get => _isWindowsManageVideoColor;
-            set
-            {
-                var currentValue = value ? TargetColorspaceHintMode.source : TargetColorspaceHintMode.target;
-                if (userSettings.Settings.VideoTargetColorSpaceMode != currentValue)
-                {
-                    userSettings.Settings.VideoTargetColorSpaceMode = currentValue;
-                    UpdateSettingsConfigFile();
-                    _ = WallpaperRestart([WallpaperType.video, WallpaperType.videostream, WallpaperType.gif]);
-                }
-                SetProperty(ref _isWindowsManageVideoColor, value);
-            }
-        }
-
-        [ObservableProperty]
-        private bool isSelectedGifPlayerAvailable;
-
-        private int _selectedGifPlayerIndex;
-        public int SelectedGifPlayerIndex
-        {
-            get => _selectedGifPlayerIndex;
-            set
-            {
-                IsSelectedGifPlayerAvailable = IsGifPlayerAvailable((LivelyGifPlayer)value);
-                if (userSettings.Settings.GifPlayer != (LivelyGifPlayer)value && IsSelectedGifPlayerAvailable)
-                {
-                    userSettings.Settings.GifPlayer = (LivelyGifPlayer)value;
-                    UpdateSettingsConfigFile();
-                    _ = WallpaperRestart([WallpaperType.gif, WallpaperType.picture]);
-                }
-                SetProperty(ref _selectedGifPlayerIndex, value);
-            }
-        }
-
-        [ObservableProperty]
-        private bool isSelectedWebBrowserAvailable;
-
-        private int _selectedWebBrowserIndex;
-        public int SelectedWebBrowserIndex
-        {
-            get => _selectedWebBrowserIndex;
-            set
-            {
-                IsSelectedWebBrowserAvailable = IsWebPlayerAvailable((LivelyWebBrowser)value);
-                IsWebView2Required = !WebViewUtil.IsWebView2Available() && IsSelectedWebBrowserAvailable && ((LivelyWebBrowser)value) == LivelyWebBrowser.webview2;
-                if (userSettings.Settings.WebBrowser != (LivelyWebBrowser)value && IsSelectedWebBrowserAvailable)
-                {
-                    userSettings.Settings.WebBrowser = (LivelyWebBrowser)value;
-                    UpdateSettingsConfigFile();
-                    _ = WallpaperRestart([WallpaperType.web, WallpaperType.webaudio, WallpaperType.url, WallpaperType.videostream]);
-                }
-                SetProperty(ref _selectedWebBrowserIndex, value);
-            }
-        }
-
-        [ObservableProperty]
         private bool isWebView2Required;
 
         [ObservableProperty]
@@ -266,8 +166,9 @@ namespace Lively.UI.Shared.ViewModels
 
                 if (await WebViewUtil.InstallWebView2(downloader))
                 {
+                    IsWebView2Required = false;
                     // Restart wallpaper
-                    _ = WallpaperRestart([WallpaperType.web, WallpaperType.webaudio, WallpaperType.url, WallpaperType.videostream]);
+                    _ = WallpaperRestart([WallpaperType.web, WallpaperType.webaudio, WallpaperType.url, WallpaperType.videostream, WallpaperType.video, WallpaperType.gif]);
                     // Restart to reload WebView2 (Update changelog page.)
                     _ = commandsClient.RestartUI();
                 }
@@ -313,18 +214,18 @@ namespace Lively.UI.Shared.ViewModels
             }
         }
 
-        private bool _cefDiskCache;
-        public bool CefDiskCache
+        private bool _isBrowserDiskCacheEnabled;
+        public bool IsBrowserDiskCacheEnabled
         {
-            get => _cefDiskCache;
+            get => _isBrowserDiskCacheEnabled;
             set
             {
-                if (userSettings.Settings.CefDiskCache != value)
+                if (userSettings.Settings.IsBrowserDiskCacheEnabled != value)
                 {
-                    userSettings.Settings.CefDiskCache = value;
+                    userSettings.Settings.IsBrowserDiskCacheEnabled = value;
                     UpdateSettingsConfigFile();
                 }
-                SetProperty(ref _cefDiskCache, value);
+                SetProperty(ref _isBrowserDiskCacheEnabled, value);
             }
         }
 
@@ -452,43 +353,6 @@ namespace Lively.UI.Shared.ViewModels
         public void UpdateSettingsConfigFile()
         {
             _ = dispatcher.TryEnqueue(userSettings.Save<SettingsModel>);
-        }
-
-        private bool IsVideoPlayerAvailable(LivelyMediaPlayer mp)
-        {
-            return mp switch
-            {
-                LivelyMediaPlayer.libvlc => false, //depreciated
-                LivelyMediaPlayer.libmpv => false, //depreciated
-                LivelyMediaPlayer.wmf => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.WmfPath)),
-                LivelyMediaPlayer.libvlcExt => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.LibVlcPath)),
-                LivelyMediaPlayer.libmpvExt => false, //depreciated
-                LivelyMediaPlayer.mpv => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.MpvPath)),
-                LivelyMediaPlayer.vlc => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.VlcPath)),
-                _ => false,
-            };
-        }
-
-        private bool IsGifPlayerAvailable(LivelyGifPlayer gp)
-        {
-            return gp switch
-            {
-                LivelyGifPlayer.win10Img => false, //xaml island
-                LivelyGifPlayer.libmpvExt => false,
-                LivelyGifPlayer.mpv => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.MpvPath)),
-                LivelyGifPlayer.libvlcExt => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.LibVlcPath)),
-                _ => false,
-            };
-        }
-
-        private bool IsWebPlayerAvailable(LivelyWebBrowser wp)
-        {
-            return wp switch
-            {
-                LivelyWebBrowser.cef => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.CefSharpPath)),
-                LivelyWebBrowser.webview2 => File.Exists(Path.Combine(desktopCore.BaseDirectory, Constants.PlayerPartialPaths.WebView2Path)),
-                _ => false,
-            };
         }
 
         private async Task WallpaperRestart(WallpaperType[] type)

@@ -35,18 +35,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Plugins\Mpv\LivelyProperties.json" />
-    <None Remove="Assets\Plugins\Mpv\LivelyProperties.loc.json" />
+    <None Remove="Assets\Plugins\Media\LivelyProperties.json" />
+    <None Remove="Assets\Plugins\Media\LivelyProperties.loc.json" />
     <None Remove="Nlog.config" />
     <None Remove="Resources\appicon_96.png" />
     <None Remove="Resources\splash.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\Plugins\Mpv\LivelyProperties.json">
+    <Content Include="Assets\Plugins\Media\LivelyProperties.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Plugins\Mpv\LivelyProperties.loc.json">
+    <Content Include="Assets\Plugins\Media\LivelyProperties.loc.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Nlog.config">

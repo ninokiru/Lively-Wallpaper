@@ -22,5 +22,6 @@
         lp_cpicker,
         lp_chekbox,
         lp_dropdown_scaler,
+        cmd_seek,
     }
 }

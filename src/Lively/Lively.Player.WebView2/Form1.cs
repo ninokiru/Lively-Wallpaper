@@ -29,6 +29,7 @@ namespace Lively.Player.WebView2
         private StartArgs startArgs;
         private bool isPaused = false;
         private bool isVideoStream = false;
+        private bool isMediaWallpaper = false;
         private int cefD3DRenderingSubProcessId;
 
         private bool initializedServices = false; //delay API init till loaded page
@@ -199,6 +200,7 @@ namespace Lively.Player.WebView2
             webView.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
             webView.CoreWebView2.DownloadStarting += CoreWebView2_DownloadStarting;
             webView.CoreWebView2.DocumentTitleChanged += CoreWebView2_DocumentTitleChanged;
+            webView.CoreWebView2.WebMessageReceived += CoreWebView2_WebMessageReceived;
 
             switch (startArgs.Type)
             {
@@ -250,6 +252,11 @@ namespace Lively.Player.WebView2
                         webView.NavigateToLocalPath(startArgs.Url);
                     }
                     break;
+                case WebPageType.video:
+                case WebPageType.gif:
+                case WebPageType.image:
+                    NavigateToMediaFile(startArgs.Url, startArgs.Type);
+                    break;
             }
             this.Controls.Add(webView);
             webView.Dock = DockStyle.Fill;
@@ -263,6 +270,42 @@ namespace Lively.Player.WebView2
         private void CoreWebView2_DocumentTitleChanged(object sender, object e)
         {
             this.Invoke((MethodInvoker)(() => this.Text = webView.CoreWebView2.DocumentTitle));
+        }
+
+        private void CoreWebView2_WebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)
+        {
+            // Media host page reports decode/load failures that navigation completion cannot see.
+            try
+            {
+                SendToParent(JsonConvert.DeserializeObject<IpcMessage>(e.WebMessageAsJson,
+                    new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } }));
+            }
+            catch (Exception ie)
+            {
+                ie.SendError(SendToParent, "Failed to parse page message");
+            }
+        }
+
+        private void NavigateToMediaFile(string filePath, WebPageType kind)
+        {
+            if (string.IsNullOrWhiteSpace(filePath) || !File.Exists(filePath))
+            {
+                $"Media file not found: {filePath}".SendError(SendToParent);
+                // Exit code 5: distinct from 2 (webview2 runtime missing) handled by the core.
+                Environment.Exit(5);
+                return;
+            }
+
+            var hostName = $"{LinkUtil.GetStableHostName(filePath)}.localhost";
+            webView.CoreWebView2.SetVirtualHostNameToFolderMapping(
+                hostName,
+                Path.GetDirectoryName(filePath),
+                CoreWebView2HostResourceAccessKind.Allow);
+
+            var mediaUri = new Uri($"https://{hostName}/{Uri.EscapeDataString(Path.GetFileName(filePath))}");
+            isMediaWallpaper = true;
+            $"Opening media {kind}: {mediaUri}".SendLog(SendToParent);
+            webView.CoreWebView2.NavigateToString(MediaPageBuilder.Build(kind, mediaUri, startArgs.Scaler, startArgs.Volume));
         }
 
         private void CoreWebView2_ProcessFailed(object sender, CoreWebView2ProcessFailedEventArgs e)
@@ -317,6 +360,12 @@ namespace Lively.Player.WebView2
                     }
                     break;
                 case WebPageType.local:
+                    await RestoreLivelyProperties(startArgs.Properties);
+                    break;
+                case WebPageType.video:
+                case WebPageType.gif:
+                case WebPageType.image:
+                    // Media wallpapers keep their own saved LivelyProperties (filters, fit, speed).
                     await RestoreLivelyProperties(startArgs.Properties);
                     break;
             }
@@ -489,19 +538,19 @@ namespace Lively.Player.WebView2
             switch (obj.Type)
             {
                 case MessageType.cmd_reload:
-                    // ConnectionAborted issue.
-                    //try
-                    //{
-                    //    webView?.Reload();
-                    //}
-                    //catch (Exception ie)
-                    //{
-                    //    WriteToParent(new LivelyMessageConsole()
-                    //    {
-                    //        Category = ConsoleMessageType.error,
-                    //        Message = $"Reload failed: {ie.Message}"
-                    //    });
-                    //}
+                    // Web wallpapers keep their own state and some pages break on reload
+                    // (ConnectionAborted), so only media is restarted here.
+                    if (isMediaWallpaper)
+                    {
+                        try
+                        {
+                            webView.CoreWebView2.Reload();
+                        }
+                        catch (Exception ie)
+                        {
+                            ie.SendError(SendToParent, "Reload failed");
+                        }
+                    }
                     break;
                 case MessageType.cmd_suspend:
                     await HandleSuspend();
@@ -512,6 +561,13 @@ namespace Lively.Player.WebView2
                 case MessageType.cmd_volume:
                     var vc = (LivelyVolumeCmd)obj;
                     webView.CoreWebView2.IsMuted = vc.Volume == 0;
+                    if (isMediaWallpaper)
+                        await webView.ExecuteScriptFunctionAsync("livelyMediaVolume", vc.Volume);
+                    break;
+                case MessageType.cmd_seek:
+                    var sc = (LivelySeekCmd)obj;
+                    if (isMediaWallpaper)
+                        await webView.ExecuteScriptFunctionAsync("livelyMediaSeek", sc.Percent, sc.IsRelative);
                     break;
                 case MessageType.cmd_screenshot:
                     var success = true;
@@ -545,6 +601,10 @@ namespace Lively.Player.WebView2
                 case MessageType.lp_dropdown:
                     var dd = (LivelyDropdown)obj;
                     await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", dd.Name, dd.Value);
+                    break;
+                case MessageType.lp_dropdown_scaler:
+                    var sd = (LivelyDropdownScaler)obj;
+                    await webView.ExecuteScriptFunctionAsync("livelyMediaScaler", sd.Value);
                     break;
                 case MessageType.lp_cpicker:
                     var cp = (LivelyColorPicker)obj;
@@ -584,7 +644,7 @@ namespace Lively.Player.WebView2
             SuspendRenderingSubProcess();
             if (!isPaused)
             {
-                if (startArgs.PauseWebMedia || isVideoStream)
+                if (startArgs.PauseWebMedia || isVideoStream || isMediaWallpaper)
                     await webView.TryPauseMedia();
 
                 if (startArgs.PauseEvent)
@@ -600,7 +660,7 @@ namespace Lively.Player.WebView2
             ResumeRenderingSubProcess();
             if (isPaused)
             {
-                if (startArgs.PauseWebMedia || isVideoStream)
+                if (startArgs.PauseWebMedia || isVideoStream || isMediaWallpaper)
                     await webView.TryPlayMedia();
 
                 if (startArgs.PauseEvent)

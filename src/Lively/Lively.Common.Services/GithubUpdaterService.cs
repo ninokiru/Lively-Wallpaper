@@ -110,8 +110,9 @@ namespace Lively.Common.Services
 
         public async Task<(Uri Url, string FileName, Version AppVersion)> GetLatestRelease(bool isBeta)
         {
-            var userName = "rocksdanister";
-            var repositoryName = isBeta ? "lively-beta" : "lively";
+            // Single channel fork build: updates come from this repository, not upstream.
+            var userName = "ninokiru";
+            var repositoryName = "Lively-Wallpaper";
             var gitRelease = await GithubUtil.GetLatestRelease(userName, repositoryName);
             Version version = GithubUtil.GetVersion(gitRelease);
 

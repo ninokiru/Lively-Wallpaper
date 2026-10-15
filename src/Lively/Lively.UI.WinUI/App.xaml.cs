@@ -185,7 +185,6 @@ namespace Lively.UI.WinUI
                 .AddTransient<IWallpaperLibraryFactory, WallpaperLibraryFactory>()
                 .AddTransient<IAppThemeFactory, AppThemeFactory>()
                 .AddTransient<IDownloadService, HttpDownloadService>()
-                .AddTransient<IMediaFormatConverter, MediaFormatConverter>()
                 .AddTransient<IAudioDeviceFactory, AudioDeviceFactory>()
                 //https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
                 .AddHttpClient()

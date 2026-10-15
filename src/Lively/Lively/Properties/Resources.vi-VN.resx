@@ -284,7 +284,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Tất cả tập tin</value>
   </data>
   <data name="Application.Text" xml:space="preserve">
-    <value>Application</value>
+    <value>Ứng dụng</value>
   </data>
   <data name="Attribution.Header" xml:space="preserve">
     <value>Đóng góp</value>
@@ -584,7 +584,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Loại</value>
   </data>
   <data name="Website.Header" xml:space="preserve">
-    <value>Website</value>
+    <value>Trang web</value>
   </data>
   <data name="TextWebStream" xml:space="preserve">
     <value>Stream từ web</value>
@@ -737,7 +737,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Cộng đồng</value>
   </data>
   <data name="Debug.Header" xml:space="preserve">
-    <value>Debug</value>
+    <value>Gỡ lỗi</value>
   </data>
   <data name="TitleDeleteConfirmation" xml:space="preserve">
     <value>Xác nhận xóa</value>
@@ -755,7 +755,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Nhập URL</value>
   </data>
   <data name="ExportLogs.Header" xml:space="preserve">
-    <value>Log File</value>
+    <value>Tệp nhật ký</value>
   </data>
   <data name="TitleGeneral" xml:space="preserve">
     <value>Tổng quát</value>
@@ -960,7 +960,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Giới thiệu</value>
   </data>
   <data name="SourceWebsite.Text" xml:space="preserve">
-    <value>Website</value>
+    <value>Trang web</value>
   </data>
   <data name="TextOpen.Content" xml:space="preserve">
     <value>Mở</value>
@@ -1020,13 +1020,13 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Bộ sưu tập</value>
   </data>
   <data name="GalleryPageHome.Content" xml:space="preserve">
-    <value>Home</value>
+    <value>Trang chủ</value>
   </data>
   <data name="GalleryPageManage.Content" xml:space="preserve">
     <value>Quản lý</value>
   </data>
   <data name="GalleryPageProfile.Content" xml:space="preserve">
-    <value>Profile</value>
+    <value>Hồ sơ</value>
   </data>
   <data name="GalleryPleaseLogin.Text" xml:space="preserve">
     <value>Vui lòng đăng nhập để tiếp tục</value>
@@ -1158,7 +1158,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Để tránh việc chọn nhầm tất cả desktop icons đã bị ẩn</value>
   </data>
   <data name="IconsHidden.Title" xml:space="preserve">
-    <value>Desktop icons</value>
+    <value>Biểu tượng màn hình nền</value>
   </data>
   <data name="TextEndOfItems.Text" xml:space="preserve">
     <value>Chỉ có như vậy thôi..</value>
@@ -1188,7 +1188,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Tạo một hình nền đơn giãn</value>
   </data>
   <data name="TitleDepthWallpaper.Content" xml:space="preserve">
-    <value>AI Depth Wallpaper</value>
+    <value>Hình nền độ sâu AI</value>
   </data>
   <data name="TitleDepthWallpaperItem.Content" xml:space="preserve">
     <value>Hình nền 3D</value>

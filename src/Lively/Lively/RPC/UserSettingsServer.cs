@@ -148,11 +148,6 @@ namespace Lively.RPC
             userSettings.Settings.AppFocusPause = (Models.Enums.AppRules)((int)req.AppFocusPause);
             userSettings.Settings.AppFullscreenPause = (Models.Enums.AppRules)((int)req.AppFullscreenPause);
             userSettings.Settings.BatteryPause = (Models.Enums.AppRules)((int)req.BatteryPause);
-            userSettings.Settings.VideoPlayer = (LivelyMediaPlayer)((int)req.VideoPlayer);
-            userSettings.Settings.VideoPlayerHwAccel = req.VideoPlayerHwAccel;
-            userSettings.Settings.WebBrowser = (LivelyWebBrowser)((int)req.WebBrowser);
-            userSettings.Settings.GifPlayer = (LivelyGifPlayer)((int)req.GifPlayer);
-            userSettings.Settings.PicturePlayer = (LivelyPicturePlayer)((int)req.PicturePlayer);
             userSettings.Settings.WallpaperWaitTime = req.WallpaperWaitTime;
             userSettings.Settings.ProcessTimerInterval = req.ProcessTimerInterval;
             userSettings.Settings.StreamQuality = (Models.Enums.StreamQualitySuggestion)((int)req.StreamQuality);
@@ -177,7 +172,7 @@ namespace Lively.RPC
             userSettings.Settings.AudioVolumeGlobal = req.AudioVolumeGlobal;
             userSettings.Settings.AudioOnlyOnDesktop = req.AudioOnlyOnDesktop;
             userSettings.Settings.WallpaperScaling = (WallpaperScaler)req.WallpaperScaling;
-            userSettings.Settings.CefDiskCache = req.CefDiskCache;
+            userSettings.Settings.IsBrowserDiskCacheEnabled = req.BrowserDiskCache;
             userSettings.Settings.DebugMenu = req.DebugMenu;
             userSettings.Settings.IsBetaOptIn = req.TestBuild;
             userSettings.Settings.ApplicationTheme = (Models.Enums.AppTheme)req.ApplicationTheme;
@@ -200,7 +195,6 @@ namespace Lively.RPC
             userSettings.Settings.IsScreensaverPluginNotify = req.ScreensaverPluginNotify;
             userSettings.Settings.ScreensaverGlobalVolume = req.ScreensaverVolumeGlobal;
             userSettings.Settings.ScreensaverFadeIn = req.ScreensaverFadeIn;
-            userSettings.Settings.VideoTargetColorSpaceMode = (TargetColorspaceHintMode)req.VideoTargetColorSpaceMode;
             userSettings.Settings.VisualizerAudioDeviceId = req.VisualizerAudioDeviceId;
             userSettings.Settings.DisplayAudioOutput = (Models.Enums.DisplayAudioMode)req.DisplayAudioOutput;
             userSettings.Settings.SelectedAudioOutputDisplay = displayManager.DisplayMonitors.FirstOrDefault(x => req.SelectedAudioOutputDisplay.DeviceId == x.DeviceId) ?? displayManager.PrimaryDisplayMonitor;
@@ -264,11 +258,6 @@ namespace Lively.RPC
                 AppFocusPause = (Grpc.Common.Proto.Settings.AppRules)((int)settings.AppFocusPause),
                 AppFullscreenPause = (Grpc.Common.Proto.Settings.AppRules)((int)settings.AppFullscreenPause),
                 BatteryPause = (Grpc.Common.Proto.Settings.AppRules)((int)settings.BatteryPause),
-                VideoPlayer = (MediaPlayer)((int)settings.VideoPlayer),
-                VideoPlayerHwAccel = settings.VideoPlayerHwAccel,
-                WebBrowser = (WebBrowser)((int)settings.WebBrowser),
-                GifPlayer = (GifPlayer)((int)settings.GifPlayer),
-                PicturePlayer = (PicturePlayer)(((int)settings.PicturePlayer)),
                 WallpaperWaitTime = settings.WallpaperWaitTime,
                 ProcessTimerInterval = settings.ProcessTimerInterval,
                 StreamQuality = (Grpc.Common.Proto.Settings.StreamQualitySuggestion)((int)settings.StreamQuality),
@@ -293,7 +282,7 @@ namespace Lively.RPC
                 AudioVolumeGlobal = settings.AudioVolumeGlobal,
                 AudioOnlyOnDesktop = settings.AudioOnlyOnDesktop,
                 WallpaperScaling = (WallpaperScalerRule)settings.WallpaperScaling,
-                CefDiskCache = settings.CefDiskCache,
+                BrowserDiskCache = settings.IsBrowserDiskCacheEnabled,
                 DebugMenu = settings.DebugMenu,
                 TestBuild = settings.IsBetaOptIn,
                 ApplicationTheme = (Grpc.Common.Proto.Settings.AppTheme)settings.ApplicationTheme,
@@ -318,7 +307,6 @@ namespace Lively.RPC
                 ScreensaverPluginNotify = settings.IsScreensaverPluginNotify,
                 ScreensaverVolumeGlobal = settings.ScreensaverGlobalVolume,
                 ScreensaverFadeIn = settings.ScreensaverFadeIn,
-                VideoTargetColorSpaceMode = (TargetColorSpaceMode)settings.VideoTargetColorSpaceMode,
                 VisualizerAudioDeviceId = settings.VisualizerAudioDeviceId ?? string.Empty,
                 DisplayAudioOutput = (Grpc.Common.Proto.Settings.DisplayAudioMode)settings.DisplayAudioOutput,
                 SelectedAudioOutputDisplay = new GetScreensResponse()

@@ -41,7 +41,6 @@ namespace Lively.UI.Shared.ViewModels
         private readonly IUserSettingsClient userSettings;
         private readonly IWallpaperLibraryFactory wallpaperLibraryFactory;
         private readonly IDisplayManagerClient displayManager;
-        private readonly IMediaFormatConverter mediaFormatConverter;
         private readonly IDialogService dialogService;
         private readonly IFileService fileService;
         private readonly GalleryClient galleryClient;
@@ -57,11 +56,9 @@ namespace Lively.UI.Shared.ViewModels
             IDispatcherService dispatcher,
             IResourceService i18n,
             IFileService fileService,
-            IMediaFormatConverter mediaFormatConverter,
             GalleryClient galleryClient)
         {
             this.wallpaperLibraryFactory = wallpaperLibraryFactory;
-            this.mediaFormatConverter = mediaFormatConverter;
             this.desktopCore = desktopCore;
             this.displayManager = displayManager;
             this.userSettings = userSettings;
@@ -588,21 +585,6 @@ namespace Lively.UI.Shared.ViewModels
             }
             else if (FileTypes.GetFileType(filePath) is not (WallpaperType)(-1) and var fileType)
             {
-                if (mediaFormatConverter.RequiresConversion(filePath, out var newExt))
-                {
-                    if (!await dialogService.ShowConfirmationDialogAsync($"{i18n.GetString("DescriptionConfirmFileConvertion/Text")}"))
-                        return null;
-
-                    var fileName = Path.GetFileNameWithoutExtension(filePath) + newExt;
-                    var outPath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
-
-                    if (!await mediaFormatConverter.TryConvertAsync(filePath, outPath))
-                        return null;
-
-                    filePath = outPath;
-                    fileType = FileTypes.GetFileType(filePath);
-                }
-
                 var arguments = fileType.IsApplicationWallpaper() ? 
                     await dialogService.ShowTextInputDialogAsync(i18n.GetString("TextWallpaperCommandlineArgs"), "Examples: --myarguments1 -myargument2") : 
                     string.Empty;
@@ -643,16 +625,6 @@ namespace Lively.UI.Shared.ViewModels
                     }
                     else
                     {
-                        if (mediaFormatConverter.RequiresConversion(file, out var newExt))
-                        {
-                            var fileName = Path.GetFileNameWithoutExtension(file) + newExt;
-                            var outPath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
-                            if (!await mediaFormatConverter.TryConvertAsync(file, outPath))
-                                continue;
-
-                            file = outPath;
-                        }
-
                         var wallpaperDirectory = Path.Combine(userSettings.Settings.WallpaperDir,
                             Constants.CommonPartialPaths.WallpaperInstallTempDir,
                             Path.GetRandomFileName());

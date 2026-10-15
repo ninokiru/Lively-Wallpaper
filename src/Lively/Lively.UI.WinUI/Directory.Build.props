@@ -1,5 +1,8 @@
 <Project>
  <PropertyGroup>
     <IsMsixRelease>false</IsMsixRelease>
+    <!-- WinUI has no AnyCPU platform, so command line builds default to x64 instead of passing
+         Platform down to the referenced projects, which only build AnyCPU. -->
+    <Platform Condition="'$(Platform)' == '' or '$(Platform)' == 'AnyCPU'">x64</Platform>
  </PropertyGroup>
 </Project>

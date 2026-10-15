@@ -30,6 +30,7 @@ namespace Lively
         {
             CleanTempFiles();
             CreateRequiredDirectories();
+            CleanupLegacyPlayerData();
             SetupWallpaperDirectories();
             HandleFirstRunOrUpdate(true);
         }
@@ -41,8 +42,9 @@ namespace Lively
                 // Clear temp files from previous run if any..
                 FileUtil.EmptyDirectory(Constants.CommonPaths.TempDir);
                 FileUtil.EmptyDirectory(Constants.CommonPaths.ThemeCacheDir);
-                FileUtil.EmptyDirectory(Constants.CommonPaths.CefRootCacheDir);
                 FileUtil.EmptyDirectory(Constants.CommonPaths.ScreenshotDir);
+                if (!userSettings.Settings.IsBrowserDiskCacheEnabled)
+                    FileUtil.EmptyDirectory(Constants.CommonPaths.WebView2RootCacheDir);
             }
             catch { /* Nothing to do */ }
         }
@@ -54,12 +56,11 @@ namespace Lively
             Directory.CreateDirectory(Constants.CommonPaths.LogDir);
             Directory.CreateDirectory(Constants.CommonPaths.ThemeDir);
             Directory.CreateDirectory(Constants.CommonPaths.TempDir);
-            Directory.CreateDirectory(Constants.CommonPaths.TempCefDir);
-            Directory.CreateDirectory(Constants.CommonPaths.TempVideoDir);
+            Directory.CreateDirectory(Constants.CommonPaths.TempMediaDir);
             Directory.CreateDirectory(Constants.CommonPaths.ThemeCacheDir);
             Directory.CreateDirectory(Constants.CommonPaths.TempWebView2Dir);
             Directory.CreateDirectory(Constants.CommonPaths.ScreenshotDir);
-            Directory.CreateDirectory(Constants.CommonPaths.CefRootCacheDir);
+            Directory.CreateDirectory(Constants.CommonPaths.WebView2RootCacheDir);
         }
 
         private void SetupWallpaperDirectories()
@@ -119,14 +120,14 @@ namespace Lively
             try
             {
                 // Default media wallpaper LivelyProperty configuration.
-                var assetDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "Plugins", "Mpv");
+                var assetDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "Plugins", "Media");
                 var livelyPropertyPath = Path.Combine(assetDir, "LivelyProperties.json");
                 var livelyPropertyLocPath = Path.Combine(assetDir, "LivelyProperties.loc.json");
 
                 if (File.Exists(livelyPropertyPath))
-                    File.Copy(livelyPropertyPath, Path.Combine(Constants.CommonPaths.TempVideoDir, "LivelyProperties.json"), true);
+                    File.Copy(livelyPropertyPath, Path.Combine(Constants.CommonPaths.TempMediaDir, "LivelyProperties.json"), true);
                 if (File.Exists(livelyPropertyLocPath))
-                    File.Copy(livelyPropertyLocPath, Path.Combine(Constants.CommonPaths.TempVideoDir, "LivelyProperties.loc.json"), true);
+                    File.Copy(livelyPropertyLocPath, Path.Combine(Constants.CommonPaths.TempMediaDir, "LivelyProperties.loc.json"), true);
             }
             catch { /* Nothing to do */ }
         }
@@ -177,8 +178,7 @@ namespace Lively
                 // Default, same as system.
                 userSettings.Settings.Language = string.Empty;
                 // Reset webplayer settings.
-                userSettings.Settings.WebBrowser = Constants.AppDefaults.WebBrowser;
-                userSettings.Settings.CefDiskCache = false;
+                userSettings.Settings.IsBrowserDiskCacheEnabled = false;
                 userSettings.Settings.WebDebugPort = string.Empty;
                 // New pause algorithm, lets reset.
                 userSettings.Settings.ProcessMonitorAlgorithm = ProcessMonitorAlgorithm.grid;
@@ -196,6 +196,25 @@ namespace Lively
                 // Reset this re-added setting which was previously available to the user.
                 userSettings.Settings.ScreensaverIdleDelay = ScreensaverIdleTime.none;
                 userSettings.Save<SettingsModel>();
+            }
+        }
+
+        // Leftover per-user data from the players that the WebView2 engine replaced.
+        private static void CleanupLegacyPlayerData()
+        {
+            foreach (var path in new[]
+            {
+                Path.Combine(Constants.CommonPaths.AppDataDir, "Cef"),
+                Path.Combine(Constants.CommonPaths.AppDataDir, "Mpv"),
+                Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "Cef"),
+            })
+            {
+                try
+                {
+                    if (Directory.Exists(path))
+                        Directory.Delete(path, true);
+                }
+                catch { /* Nothing to do */ }
             }
         }
 

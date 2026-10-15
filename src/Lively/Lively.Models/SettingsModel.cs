@@ -56,17 +56,6 @@ namespace Lively.Models
         public bool MouseInputMovAlways { get; set; }
         public int TileSize { get; set; }
         public DisplayIdentificationMode DisplayIdentification { get; set; }
-        public LivelyMediaPlayer VideoPlayer { get; set; }
-        /// <summary>
-        /// Video gpu decode
-        /// </summary>
-        public bool VideoPlayerHwAccel { get; set; }
-        /// <summary>
-        /// Gif and picture wallpaper player.
-        /// </summary>
-        public LivelyGifPlayer GifPlayer { get; set; }
-        public LivelyPicturePlayer PicturePlayer { get; set; }
-        public LivelyWebBrowser WebBrowser { get; set; }
         public bool GifCapture { get; set; }
         public bool MultiFileAutoImport { get; set; }
         public DisplayMonitor SelectedDisplay { get; set; }
@@ -75,10 +64,9 @@ namespace Lively.Models
         public bool WallpaperDirMoveExistingWallpaperNewDir { get; set; }
         public bool SysTrayIcon { get; set; }
         public bool AutoDetectOnlineStreams { get; set; }
-        public bool IsVideoPlayerForStreams { get; set; }
         public bool ExtractStreamMetaData { get; set; }
         /// <summary>
-        /// Cefsharp debug port.
+        /// WebView2 remote debugging port.
         /// </summary>
         public string WebDebugPort { get; set; }
         public int WallpaperBundleVersion { get; set; }
@@ -89,7 +77,7 @@ namespace Lively.Models
         public int AudioVolumeGlobal { get; set; }
         public bool AudioOnlyOnDesktop { get; set; }
         public WallpaperScaler WallpaperScaling { get; set; }
-        public bool CefDiskCache { get; set; }
+        public bool IsBrowserDiskCacheEnabled { get; set; }
         public bool DebugMenu { get; set; }
         /// <summary>
         /// Fetch beta lively release updates from lively-beta repository.
@@ -137,7 +125,6 @@ namespace Lively.Models
         public int TaskbarCrashTimeOutDelay { get; set; }
         public double ProcessMonitorGridTileCoverageThreshold { get; set; }
         public int ProcessMonitorGridTileSize { get; set; }
-        public TargetColorspaceHintMode VideoTargetColorSpaceMode { get; set; }
         public DisplayAudioMode DisplayAudioOutput { get; set; }
         public DisplayMonitor SelectedAudioOutputDisplay { get; set; }
         public bool IsRestartAfterLockscreen { get; set; }
@@ -161,11 +148,6 @@ namespace Lively.Models
             AppFocusPause = AppRules.ignore;
             AppFullscreenPause = AppRules.pause;
             BatteryPause = AppRules.ignore;
-            VideoPlayer = LivelyMediaPlayer.mpv;
-            VideoPlayerHwAccel = true;
-            WebBrowser = LivelyWebBrowser.webview2;
-            GifPlayer = LivelyGifPlayer.mpv;
-            PicturePlayer = LivelyPicturePlayer.mpv;
             ProcessMonitorGridTileCoverageThreshold = 0.05;
             ProcessMonitorGridTileSize = 50;
 
@@ -197,14 +179,13 @@ namespace Lively.Models
             SysTrayIcon = true;
             WebDebugPort = string.Empty;
             AutoDetectOnlineStreams = true;
-            IsVideoPlayerForStreams = false;
             ExtractStreamMetaData = true;
             WallpaperBundleVersion = -1;
             ThemeBundleVersion = -1;
             AudioVolumeGlobal = 75;
             AudioOnlyOnDesktop = true;
             WallpaperScaling = WallpaperScaler.fill;
-            CefDiskCache = false;
+            IsBrowserDiskCacheEnabled = false;
             DebugMenu = false;
             IsBetaOptIn = false;
             ApplicationTheme = AppTheme.Dark;
@@ -228,7 +209,7 @@ namespace Lively.Models
             ApplicationThemeBackground = AppThemeBackground.default_mica;
             TaskbarCrashTimeOutDelay = 30;
             Language = string.Empty;
-            VideoTargetColorSpaceMode = TargetColorspaceHintMode.target;
+
             VisualizerAudioDeviceId = string.Empty;
             DisplayAudioOutput = DisplayAudioMode.all;
             IsRestartAfterLockscreen = false;

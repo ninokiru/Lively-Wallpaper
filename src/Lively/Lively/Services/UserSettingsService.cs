@@ -29,11 +29,6 @@ namespace Lively.Services
             Load<List<ApplicationRulesModel>>();
             Load<List<WallpaperLayoutModel>>();
 
-            // Fallback incase player plugin is changed/missing.
-            Settings.VideoPlayer = GetAvailableVideoPlayerOrDefault(Settings.VideoPlayer);
-            Settings.GifPlayer = GetAvailableGifPlayerOrDefault(Settings.GifPlayer);
-            Settings.WebBrowser = GetAvailableWebPlayerOrDefault(Settings.WebBrowser);
-            Settings.PicturePlayer = GetAvailablePicturePlayerOrDefault(Settings.PicturePlayer);
             // Fallback incase display disconnected or not set.
             Settings.SelectedAudioOutputDisplay = ResolveDisplay(Settings.SelectedAudioOutputDisplay);
             Settings.SelectedDisplay = ResolveDisplay(Settings.SelectedDisplay);
@@ -135,60 +130,6 @@ namespace Lively.Services
             }
 
             return defaultAction();
-        }
-
-        private static LivelyMediaPlayer GetAvailableVideoPlayerOrDefault(LivelyMediaPlayer mp)
-        {
-            var isAvailable  = mp switch
-            {
-                LivelyMediaPlayer.libvlc => false, //depreciated
-                LivelyMediaPlayer.libmpv => false, //depreciated
-                LivelyMediaPlayer.wmf => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.WmfPath)),
-                LivelyMediaPlayer.libvlcExt => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.LibVlcPath)),
-                LivelyMediaPlayer.libmpvExt => false, //depreciated
-                LivelyMediaPlayer.mpv => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.MpvPath)),
-                LivelyMediaPlayer.vlc => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.VlcPath)),
-                _ => false,
-            };
-            // Assume default is always available.
-            return isAvailable ? mp : Constants.AppDefaults.VideoPlayer;
-        }
-
-        private static LivelyGifPlayer GetAvailableGifPlayerOrDefault(LivelyGifPlayer gp)
-        {
-            var isAvailable = gp switch
-            {
-                LivelyGifPlayer.win10Img => false, //xaml island
-                LivelyGifPlayer.libmpvExt => false, //depreciated
-                LivelyGifPlayer.mpv => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.MpvPath)),
-                LivelyGifPlayer.libvlcExt => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.LibVlcPath)),
-                _ => false,
-            };
-            return isAvailable ? gp : Constants.AppDefaults.GifPlayer;
-        }
-
-        private static LivelyPicturePlayer GetAvailablePicturePlayerOrDefault(LivelyPicturePlayer pp)
-        {
-            var isAvailable = pp switch
-            {
-                LivelyPicturePlayer.picture => false,
-                LivelyPicturePlayer.winApi => false,
-                LivelyPicturePlayer.mpv => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.MpvPath)),
-                LivelyPicturePlayer.wmf => false,
-                _ => false,
-            };
-            return isAvailable ? pp : Constants.AppDefaults.PicturePlayer;
-        }
-
-        private static LivelyWebBrowser GetAvailableWebPlayerOrDefault(LivelyWebBrowser wp)
-        {
-            var isAvailable = wp switch
-            {
-                LivelyWebBrowser.cef => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.CefSharpPath)),
-                LivelyWebBrowser.webview2 => File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.PlayerPartialPaths.WebView2Path)),
-                _ => false,
-            };
-            return isAvailable ? wp : Constants.AppDefaults.WebBrowser;
         }
 
         private DisplayMonitor ResolveDisplay(DisplayMonitor current)

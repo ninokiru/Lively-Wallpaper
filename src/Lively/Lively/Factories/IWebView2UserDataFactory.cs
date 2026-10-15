@@ -33,7 +33,7 @@ namespace Lively.Factories
         /// </para>
         /// <list type="bullet">
         ///   <item>
-        ///     <description>If running unpackaged: uses <see cref="Constants.CommonPaths.CefRootCacheDir"/> as the base path.</description>
+        ///     <description>If running unpackaged: uses <see cref="Constants.CommonPaths.WebView2RootCacheDir"/> as the base path.</description>
         ///   </item>
         ///   <item>
         ///     <description>If running packaged (MSIX): resolves the path using <see cref="PackageUtil.ValidateAndResolvePath"/>.</description>

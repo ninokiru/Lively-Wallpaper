@@ -36,6 +36,12 @@ namespace Lively.Player.WebView2
         HelpText = "Wallpaper scale factor.")]
         public double? Scale { get; set; }
 
+        [Option("wallpaper-scaler",
+        Required = false,
+        Default = WallpaperScaler.fill,
+        HelpText = "Media fit mode for video/gif/image wallpapers.")]
+        public WallpaperScaler Scaler { get; set; }
+
         [Option("wallpaper-audio",
         Default = false,
         HelpText = "Analyse system audio(visualiser data.)")]

@@ -83,10 +83,6 @@ namespace Lively.Common.Helpers
             if (File.Exists(Constants.CommonPaths.WallpaperLayoutPath))
                 files.Add(Constants.CommonPaths.WallpaperLayoutPath);
 
-            var cefLogFile = Path.Combine(Constants.CommonPaths.TempCefDir, "logfile.txt");
-            if (File.Exists(cefLogFile))
-                files.Add(cefLogFile);
-
             /*
             var procFile = Path.Combine(Program.AppDataDir, "temp", "process.txt");
             File.WriteAllLines(procFile, Process.GetProcesses().Select(x => x.ProcessName));

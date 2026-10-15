@@ -3,6 +3,9 @@
     public enum WebPageType
     {
         online,
-        local
+        local,
+        video,
+        gif,
+        image,
     }
 }

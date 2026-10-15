@@ -47,6 +47,7 @@ namespace Lively.Core
         /// </summary>
         private readonly bool isWorkerWParent;
         private readonly List<WallpaperLayoutModel> wallpapersDisconnected = [];
+        private readonly WallpaperCrashGuard crashGuard = new();
 
         private int prevExplorerPid = GetTaskbarExplorerPid();
         private DateTime prevExplorerCrashTime = DateTime.MinValue;
@@ -177,9 +178,40 @@ namespace Lively.Core
             // Send 0x052C to Progman. This message directs Progman to spawn a 
             // WorkerW behind the desktop icons. If it is already there, nothing 
             // happens.
+            // Windows 11 24H2 and later only respond to the 0xD parameter, older builds
+            // (incl. Windows 10) use the plain one, so both are tried in order.
+            if (!TrySpawnAndBindWorkerW(new IntPtr(0xD)))
+            {
+                Logger.Warn("WorkerW not found with 0xD, retrying with default parameters.");
+                _ = TrySpawnAndBindWorkerW(new IntPtr(0x0));
+            }
+
+            if (IsWindows7)
+            {
+                // This should fix the wallpaper disappearing issue.
+                if (!workerW.Equals(progman))
+                    NativeMethods.ShowWindow(workerW, (uint)0);
+
+                // WorkerW is assumed as progman here.
+                workerW = progman;
+            }
+
+            // For checking if desktop foreground.
+            original_WorkerW = DesktopUtil.GetDesktopWorkerW();
+
+            Logger.Info($"WorkerW initialized {workerW}");
+            WallpaperReset?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Asks Progman to spawn a WorkerW and binds the handles of the wallpaper layer.
+        /// </summary>
+        /// <returns><see langword="false"/> when no WorkerW could be found.</returns>
+        private bool TrySpawnAndBindWorkerW(IntPtr spawnParameter)
+        {
             NativeMethods.SendMessageTimeout(progman,
                                    0x052C,
-                                   new IntPtr(0xD),
+                                   spawnParameter,
                                    new IntPtr(0x1),
                                    NativeMethods.SendMessageTimeoutFlags.SMTO_NORMAL,
                                    1000,
@@ -196,6 +228,7 @@ namespace Lively.Core
             // We enumerate all Windows, until we find one, that has the SHELLDLL_DefView 
             // as a child. 
             // If we found that window, we take its next sibling and assign it to workerw.
+            workerW = IntPtr.Zero;
             NativeMethods.EnumWindows(new NativeMethods.EnumWindowsProc((tophandle, topparamhandle) =>
             {
                 IntPtr p = NativeMethods.FindWindowEx(tophandle,
@@ -229,21 +262,7 @@ namespace Lively.Core
                                                 IntPtr.Zero);
             }
 
-            if (IsWindows7)
-            {
-                // This should fix the wallpaper disappearing issue.
-                if (!workerW.Equals(progman))
-                    NativeMethods.ShowWindow(workerW, (uint)0);
-
-                // WorkerW is assumed as progman here.
-                workerW = progman;
-            }
-
-            // For checking if desktop foreground.
-            original_WorkerW = DesktopUtil.GetDesktopWorkerW();
-
-            Logger.Info($"WorkerW initialized {workerW}");
-            WallpaperReset?.Invoke(this, EventArgs.Empty);
+            return workerW != IntPtr.Zero;
         }
 
         private async void WorkerWHook_EventReceived(object sender, WinEventHookEventArgs e)
@@ -429,12 +448,55 @@ namespace Lively.Core
 
         private async void Wallpaper_Loaded(object sender, EventArgs e)
         {
+            if (sender is IWallpaper loaded)
+                crashGuard.Clear(loaded.Model.LivelyInfoFolderPath);
+
             await SetDesktopPictureOrLockscreen(sender as IWallpaper);
         }
 
         private void Wallpaper_Exited(object sender, EventArgs e)
         {
+            // Player processes that were closed on purpose are already unregistered by the close helpers,
+            // so an entry that is still listed means the process died on its own.
+            if (sender is IWallpaper crashed && wallpapers.Remove(crashed))
+            {
+                Logger.Warn($"Wallpaper process exited unexpectedly: {crashed.Model.LivelyInfo.Name}");
+                if (crashed.Pid is int deadPid)
+                    watchdog.Remove(deadPid);
+                crashed.Dispose();
+
+                ScheduleCrashRestart(crashed);
+            }
+
             RefreshDesktop();
+        }
+
+        private async void ScheduleCrashRestart(IWallpaper wallpaper)
+        {
+            // Application wallpapers (unity/godot/exe) are expected to exit when the user closes them.
+            if (disposedValue || wallpaper.Model.LivelyInfo.Type.IsApplicationWallpaper())
+                return;
+
+            var key = wallpaper.Model.LivelyInfoFolderPath;
+            var delay = crashGuard.TryScheduleRestart(key);
+            if (delay is null)
+            {
+                Logger.Error($"Wallpaper {wallpaper.Model.LivelyInfo.Name} keeps crashing, giving up until the next change.");
+                return;
+            }
+
+            try
+            {
+                await Task.Delay(delay.Value);
+                if (wallpapers.Any(x => x.Screen.Equals(wallpaper.Screen)))
+                    return;
+
+                await SetWallpaperAsync(wallpaper.Model, wallpaper.Screen);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"Crash restart failed: {ex.Message}");
+            }
         }
 
         private async Task SetDesktopPictureOrLockscreen(IWallpaper wallpaper)

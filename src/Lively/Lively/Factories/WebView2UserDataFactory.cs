@@ -48,13 +48,13 @@ namespace Lively.Factories
         /// <inheritdoc/>
         public string GetTempUserDataFolder()
         {
-            var baseDir = Constants.CommonPaths.CefRootCacheDir;
+            var baseDir = Constants.CommonPaths.WebView2RootCacheDir;
 
             if (PackageUtil.IsRunningAsPackaged)
             {
                 try
                 {
-                    baseDir = PackageUtil.ValidateAndResolvePath(Constants.CommonPaths.CefRootCacheDir);
+                    baseDir = PackageUtil.ValidateAndResolvePath(Constants.CommonPaths.WebView2RootCacheDir);
                 }
                 catch (Exception ex)
                 {
