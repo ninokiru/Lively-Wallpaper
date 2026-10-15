@@ -460,7 +460,7 @@ namespace Lively.Core
             // so an entry that is still listed means the process died on its own.
             if (sender is IWallpaper crashed && wallpapers.Remove(crashed))
             {
-                Logger.Warn($"Wallpaper process exited unexpectedly: {crashed.Model.LivelyInfo.Name}");
+                Logger.Warn($"Wallpaper process exited unexpectedly: {crashed.Model.LivelyInfo.Title}");
                 if (crashed.Pid is int deadPid)
                     watchdog.Remove(deadPid);
                 crashed.Dispose();
@@ -481,7 +481,7 @@ namespace Lively.Core
             var delay = crashGuard.TryScheduleRestart(key);
             if (delay is null)
             {
-                Logger.Error($"Wallpaper {wallpaper.Model.LivelyInfo.Name} keeps crashing, giving up until the next change.");
+                Logger.Error($"Wallpaper {wallpaper.Model.LivelyInfo.Title} keeps crashing, giving up until the next change.");
                 return;
             }
 
