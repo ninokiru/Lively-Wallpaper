@@ -141,7 +141,13 @@ namespace Lively.Player.WebView2
                 // Allow media autoplay even if not muted.
                 "--autoplay-policy=no-user-gesture-required " +
                 // Disable SMTC.
-                "--disable-features=HardwareMediaKeyHandling ";
+                "--disable-features=HardwareMediaKeyHandling " +
+                // Integrated GPUs (Intel UHD 610/620/710/730, Iris Xe, AMD Radeon) sit on the
+                // Chromium blocklist, which drops the wallpaper to CPU compositing and software
+                // video decode.
+                "--ignore-gpu-blocklist --enable-accelerated-video-decode " +
+                // Route H.265 through the Windows decoder so the iGPU media engine is used.
+                "--enable-features=PlatformHEVCDecoderSupport";
             CoreWebView2EnvironmentOptions options = new CoreWebView2EnvironmentOptions(webViewStartArgs);
             // WebView2 does not have in-memory mode, ref: https://github.com/MicrosoftEdge/WebView2Feedback/issues/3637
             // Custom user data folder, ref: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder
@@ -529,7 +535,18 @@ namespace Lively.Player.WebView2
             finally
             {
                 reader?.Dispose();
-                this.Invoke((Action)Application.Exit);
+                try
+                {
+                    this.Invoke((Action)Application.Exit);
+                }
+                catch (Exception ex)
+                {
+                    // Invoke throws once the form handle is gone; the caller waits on a task
+                    // nobody observes, so without this the process keeps running as a wallpaper
+                    // with no parent after Lively exits.
+                    ex.SendError(SendToParent, "Graceful exit failed, forcing shutdown");
+                    Environment.Exit(0);
+                }
             }
         }
 

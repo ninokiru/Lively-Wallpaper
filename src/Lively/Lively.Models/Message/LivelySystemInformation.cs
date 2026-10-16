@@ -7,7 +7,7 @@ namespace Lively.Models.Message
     public class LivelySystemInformation : IpcMessage
     {
         public HardwareUsageEventArgs Info { get; set; }
-        public LivelySystemInformation() : base(MessageType.cmd_reload)
+        public LivelySystemInformation() : base(MessageType.lsp_perfcntr)
         {
         }
     }

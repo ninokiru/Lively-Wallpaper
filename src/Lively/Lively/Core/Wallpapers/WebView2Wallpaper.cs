@@ -63,6 +63,9 @@ namespace Lively.Core.Wallpapers
             var type = model.LivelyInfo.Type;
             isMediaWallpaper = type.IsMediaWallpaper() && type != WallpaperType.videostream;
             LivelyPropertyCopyPath = livelyPropertyPath;
+            // Unmuting replays this value, so seed it from the startup volume the player
+            // already received; left at 0 the wallpaper stays silent until the slider moves.
+            currentVolume = volume;
 
             var cmdArgs = new StringBuilder();
             cmdArgs.Append(" --wallpaper-pause-media");
@@ -84,6 +87,11 @@ namespace Lively.Core.Wallpapers
                     cmdArgs.Append(" --wallpaper-audio-id " + audioVisualizerId);
                 if (!string.IsNullOrWhiteSpace(debugPort))
                     cmdArgs.Append(" --wallpaper-debug " + debugPort);
+                // Wallpapers call livelySystemInformation, livelyCurrentTrack and
+                // livelyWallpaperPlaybackChanged; each one only fires when its switch is on.
+                cmdArgs.Append(" --wallpaper-system-information true");
+                cmdArgs.Append(" --wallpaper-system-nowplaying true");
+                cmdArgs.Append(" --wallpaper-pause-event true");
                 cmdArgs.Append(type.IsOnlineWallpaper() ? " --wallpaper-type online" : " --wallpaper-type local");
             }
             else
@@ -351,35 +359,43 @@ namespace Lively.Core.Wallpapers
             await WaitForContentReadyAsync(TimeSpan.FromSeconds(5));
 
             var tcs = new TaskCompletionSource();
+            // The player writes to exactly the path it is sent, so the file name compared
+            // below has to come from the same string the command carries.
+            var capturePath = Path.GetExtension(filePath) != ".jpg" ? filePath + ".jpg" : filePath;
             void LocalOutputDataReceived(object sender, DataReceivedEventArgs e)
             {
                 if (string.IsNullOrEmpty(e.Data))
                 {
                     tcs.TrySetException(new InvalidOperationException("Process exited unexpectedly."));
+                    return;
                 }
-                else
+
+                IpcMessage obj = null;
+                try
                 {
-                    var obj = JsonConvert.DeserializeObject<IpcMessage>(e.Data, new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } });
-                    if (obj.Type == MessageType.msg_screenshot)
-                    {
-                        var msg = (LivelyMessageScreenshot)obj;
-                        if (msg.FileName == Path.GetFileName(filePath))
-                        {
-                            process.OutputDataReceived -= LocalOutputDataReceived;
-                            if (msg.Success)
-                                tcs.TrySetResult();
-                            else
-                                tcs.TrySetException(new InvalidOperationException($"Failed to take screenshot."));
-                        }
-                    }
+                    obj = JsonConvert.DeserializeObject<IpcMessage>(e.Data, new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } });
                 }
+                catch (Exception ex)
+                {
+                    Logger.Error($"Wv2{uniqueId}: Ipc parse error: {e.Data}.\n\nException: {ex.Message}");
+                    return;
+                }
+
+                if (obj is not LivelyMessageScreenshot msg || msg.FileName != Path.GetFileName(capturePath))
+                    return;
+
+                process.OutputDataReceived -= LocalOutputDataReceived;
+                if (msg.Success)
+                    tcs.TrySetResult();
+                else
+                    tcs.TrySetException(new InvalidOperationException("Failed to take screenshot."));
             }
             process.OutputDataReceived += LocalOutputDataReceived;
 
             Logger.Info($"Wv2{uniqueId}: Taking screenshot: {filePath}");
             SendMessage(new LivelyScreenshotCmd()
             {
-                FilePath = Path.GetExtension(filePath) != ".jpg" ? filePath + ".jpg" : filePath,
+                FilePath = capturePath,
                 Format = ScreenshotFormat.jpeg,
                 Delay = 0 //unused
             });

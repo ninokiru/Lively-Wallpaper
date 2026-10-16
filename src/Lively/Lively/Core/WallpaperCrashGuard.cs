@@ -19,6 +19,11 @@ namespace Lively.Core
         /// </summary>
         public TimeSpan? TryScheduleRestart(string key)
         {
+            // Models built from remote metadata carry no local folder, and a null key throws
+            // inside Dictionary - there is simply nothing to count for those.
+            if (key is null)
+                return TimeSpan.FromSeconds(1);
+
             if (!records.TryGetValue(key, out var record)
                 || DateTime.UtcNow - record.LastRestart > ResetWindow)
                 record = default;
@@ -43,6 +48,9 @@ namespace Lively.Core
         /// </summary>
         public void Clear(string key)
         {
+            if (key is null)
+                return;
+
             records.Remove(key);
         }
     }

@@ -51,7 +51,10 @@ namespace Lively.Player.WebView2
 
                         const fx = { hue: 0, saturate: 1, brightness: 1, contrast: 1, gamma: 1 };
                         const gammaCurves = ['livelyGammaR', 'livelyGammaG', 'livelyGammaB'].map((id) => document.getElementById(id));
-                        const scaleNames = ['none', 'fill', 'contain', 'cover'];
+                        // Index order matches WallpaperScaler: none, fill, uniform, uniformFill, auto.
+                        const scaleNames = ['none', 'fill', 'contain', 'cover', 'cover'];
+                        // Wallpapers written before the scaler dropdown accept the enum name instead.
+                        const scaleAliases = { none: 'none', fill: 'fill', uniform: 'contain', uniformfill: 'cover', autofit: 'cover', auto: 'cover', contain: 'contain', cover: 'cover' };
 
                         function applyFilters() {
                             // SVG gamma curve only when used, it renders slower than plain css filters.
@@ -91,8 +94,10 @@ namespace Lively.Player.WebView2
                         };
 
                         window.livelyMediaScaler = (value) => {
-                            const name = typeof value === 'number' ? scaleNames[value] : String(value).toLowerCase();
-                            if (scaleNames.indexOf(name) >= 0) media.style.objectFit = name;
+                            const name = typeof value === 'number'
+                                ? scaleNames[Math.trunc(value)]
+                                : scaleAliases[String(value).toLowerCase().replace(/\s+/g, '')];
+                            if (name) media.style.objectFit = name;
                         };
 
                         window.livelyMediaVolume = (value) => {

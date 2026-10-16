@@ -42,6 +42,9 @@ namespace Lively.Core
         public IntPtr DesktopWorkerW => workerW;
         private bool disposedValue;
         private bool isRaisedDesktopWithLayeredShellView;
+        // Picture and thumbnail players raise Exited synchronously from Close(), so the
+        // handler needs to know the shutdown was requested before it treats it as a crash.
+        private bool isClosingWallpapers;
         /// <summary>
         /// Set wallpaper as child of WorkerW.
         /// </summary>
@@ -458,7 +461,7 @@ namespace Lively.Core
         {
             // Player processes that were closed on purpose are already unregistered by the close helpers,
             // so an entry that is still listed means the process died on its own.
-            if (sender is IWallpaper crashed && wallpapers.Remove(crashed))
+            if (!isClosingWallpapers && sender is IWallpaper crashed && wallpapers.Remove(crashed))
             {
                 Logger.Warn($"Wallpaper process exited unexpectedly: {crashed.Model.LivelyInfo.Title}");
                 if (crashed.Pid is int deadPid)
@@ -984,16 +987,39 @@ namespace Lively.Core
         {
             if (Wallpapers.Count > 0)
             {
-                wallpapers.ForEach(x =>
-                {
-                    x.Close();
-                    x.Dispose();
-                });
+                CloseAndDispose(wallpapers);
                 wallpapers.Clear();
                 watchdog.Clear();
 
                 if (fireEvent)
                     WallpaperChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        /// <summary>
+        /// Stops the given players, marking the exit as requested so it is not counted as a crash.
+        /// </summary>
+        private void CloseAndDispose(List<IWallpaper> items)
+        {
+            isClosingWallpapers = true;
+            try
+            {
+                items.ForEach(x =>
+                {
+                    if (x.Pid is int pid)
+                        watchdog.Remove(pid);
+
+                    x.Close();
+                    x.Dispose();
+                });
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+            finally
+            {
+                isClosingWallpapers = false;
             }
         }
 
@@ -1007,14 +1033,7 @@ namespace Lively.Core
             var tmp = wallpapers.FindAll(x => x.Screen.Equals(display));
             if (tmp.Count > 0)
             {
-                tmp.ForEach(x =>
-                {
-                    if (x.Pid is int pid)
-                        watchdog.Remove(pid);
-
-                    x.Close();
-                    x.Dispose();
-                });
+                CloseAndDispose(tmp);
                 wallpapers.RemoveAll(x => tmp.Contains(x));
 
                 if (fireEvent)
@@ -1027,14 +1046,7 @@ namespace Lively.Core
             var tmp = wallpapers.FindAll(x => x.Category == type);
             if (tmp.Count > 0)
             {
-                tmp.ForEach(x =>
-                {
-                    if (x.Pid is int pid)
-                        watchdog.Remove(pid);
-
-                    x.Close();
-                    x.Dispose();
-                });
+                CloseAndDispose(tmp);
                 wallpapers.RemoveAll(x => tmp.Contains(x));
                 WallpaperChanged?.Invoke(this, EventArgs.Empty);
             }
@@ -1051,14 +1063,7 @@ namespace Lively.Core
             var tmp = wallpapers.FindAll(x => x.Model.LivelyInfoFolderPath == wp.LivelyInfoFolderPath);
             if (tmp.Count > 0)
             {
-                tmp.ForEach(x =>
-                {
-                    if (x.Pid is int pid)
-                        watchdog.Remove(pid);
-
-                    x.Close();
-                    x.Dispose();
-                });
+                CloseAndDispose(tmp);
                 wallpapers.RemoveAll(x => tmp.Contains(x));
 
                 if (fireEvent)
