@@ -96,12 +96,26 @@ jobs:
       - name: Install Inno Setup
         shell: pwsh
         run: |
-          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
-          if (-not (Test-Path -LiteralPath $iscc)) {
+          # jrsoftware.org serves whatever major version is current, so locate the compiler
+          # by folder name instead of assuming "Inno Setup 6".
+          function Find-Iscc {
+            Get-ChildItem -Path "${env:ProgramFiles(x86)}", $env:ProgramFiles -Directory -Filter "Inno Setup*" -ErrorAction SilentlyContinue |
+              ForEach-Object { Join-Path $_.FullName "ISCC.exe" } |
+              Where-Object { Test-Path -LiteralPath $_ } |
+              Select-Object -First 1
+          }
+          $iscc = Find-Iscc
+          if (-not $iscc) {
             $setup = Join-Path $env:RUNNER_TEMP "innosetup.exe"
             Invoke-WebRequest -Uri "https://jrsoftware.org/download.php/is.exe" -OutFile $setup
             Start-Process -FilePath $setup -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART" -Wait
+            $iscc = Find-Iscc
           }
+          if (-not $iscc) {
+            Write-Host "::error::ISCC.exe not found after installing Inno Setup."
+            exit 1
+          }
+          Write-Host "Using compiler: $iscc"
           Add-Content -Path $env:GITHUB_ENV -Value "ISCC_PATH=$iscc"
 
       # Ships the C++ runtime that Magick.NET and the WebView2 SDK need; the .NET runtime

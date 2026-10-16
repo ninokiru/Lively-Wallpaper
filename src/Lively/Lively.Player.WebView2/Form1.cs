@@ -269,7 +269,7 @@ namespace Lively.Player.WebView2
 
         private void CoreWebView2_DocumentTitleChanged(object sender, object e)
         {
-            this.Invoke((MethodInvoker)(() => this.Text = webView.CoreWebView2.DocumentTitle));
+            this.Invoke((System.Windows.Forms.MethodInvoker)(() => this.Text = webView.CoreWebView2.DocumentTitle));
         }
 
         private void CoreWebView2_WebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)
