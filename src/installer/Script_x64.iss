@@ -2,7 +2,10 @@
 ; https://jrsoftware.org/isinfo.php
 
 #define MyAppName "Lively Wallpaper"
-#define MyAppVersion "2.2.1.5"
+; CI passes /DMyAppVersion=<tag> so the asset name tracks the release; local builds fall back here.
+#ifndef MyAppVersion
+#define MyAppVersion "0.0.1"
+#endif
 #define MyAppPublisher "rocksdanister"
 #define MyAppURL "https://github.com/rocksdanister/lively"
 #define MyAppExeName "Lively.exe"

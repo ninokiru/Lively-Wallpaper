@@ -68,7 +68,7 @@ namespace Lively.UI.Shared.ViewModels
                 if (IsBetaBuild)
                     ver += "(b)";
                 else if (IsWinStore)
-                    ver += $" {i18n.GetString("Store/Header")}";
+                    ver += $" {i18n.GetString("Store.Header")}";
                 return ver;
             }
         }
@@ -129,22 +129,42 @@ namespace Lively.UI.Shared.ViewModels
         [RelayCommand]
         private async Task DownloadUpdate()
         {
+            // The button is live while a fetch runs, so a second click would swap the token
+            // and leave two writers on the same installer file.
+            if (IsUpdateDownloading)
+                return;
+
+            var setupUri = appUpdater.LastCheckUri;
+            var fileName = appUpdater.LastCheckFileName;
+            if (setupUri is null || string.IsNullOrEmpty(fileName))
+            {
+                await dialogService.ShowDialogAsync(i18n.GetString("LivelyExceptionAppUpdateFail"),
+                    i18n.GetString("TextError"),
+                    i18n.GetString("TextOK"));
+                return;
+            }
+
             try
             {
                 IsUpdateDownloading = true;
 
-                var fileName = appUpdater.LastCheckFileName;
                 var filePath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
+                downloadCts?.Dispose();
                 downloadCts = new CancellationTokenSource();
 
                 Logger.Info($"Downloading update: {filePath}");
-                await downloader.DownloadFile(appUpdater.LastCheckUri, filePath, new Progress<(double downloaded, double total)>(progress =>
+                await downloader.DownloadFile(setupUri, filePath, new Progress<(double downloaded, double total)>(progress =>
                 {
                     CurrentProgress = (float)(progress.downloaded * 100 / progress.total);
                 }), downloadCts.Token);
 
-                if (!downloadCts.Token.IsCancellationRequested)
-                    IsUpdateDownloaded = true;
+                if (downloadCts.Token.IsCancellationRequested)
+                    return;
+
+                IsUpdateDownloaded = true;
+                // One click update: the setup closes both processes and relaunches the app itself.
+                Logger.Info("Update downloaded, handing over to setup");
+                await appUpdater.StartUpdate();
             }
             catch (Exception ex)
             {

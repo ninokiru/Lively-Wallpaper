@@ -72,24 +72,32 @@ namespace Lively.Common.Services
             {
                 await Task.Delay(fetchDelay);
                 var (SetupUri, SetupFileName, SetupVersion) = await GetLatestRelease(Constants.ApplicationType.IsTestBuild);
-                int verCompare = GithubUtil.CompareAssemblyVersion(SetupVersion);
-                if (verCompare > 0)
+                if (SetupVersion is null)
                 {
-                    //update available.
-                    Status = AppUpdateStatus.available;
-                }
-                else if (verCompare < 0)
-                {
-                    //beta release.
-                    Status = AppUpdateStatus.invalid;
+                    // Nothing published on the release page yet, so there is simply nothing to update to.
+                    Status = AppUpdateStatus.uptodate;
                 }
                 else
                 {
-                    //up-to-date.
-                    Status = AppUpdateStatus.uptodate;
+                    int verCompare = GithubUtil.CompareAssemblyVersion(SetupVersion);
+                    if (verCompare > 0)
+                    {
+                        //update available.
+                        Status = AppUpdateStatus.available;
+                    }
+                    else if (verCompare < 0)
+                    {
+                        //beta release.
+                        Status = AppUpdateStatus.invalid;
+                    }
+                    else
+                    {
+                        //up-to-date.
+                        Status = AppUpdateStatus.uptodate;
+                    }
                 }
                 LastCheckUri = SetupUri;
-                LastCheckVersion = SetupVersion;
+                LastCheckVersion = SetupVersion ?? new Version(0, 0, 0, 0);
                 LastCheckFileName = SetupFileName;
             }
             catch (Exception e)
@@ -110,10 +118,12 @@ namespace Lively.Common.Services
 
         public async Task<(Uri Url, string FileName, Version AppVersion)> GetLatestRelease(bool isBeta)
         {
-            // Single channel fork build: updates come from this repository, not upstream.
-            var userName = "ninokiru";
-            var repositoryName = "Lively-Wallpaper";
+            var userName = Constants.ApplicationType.UpdateRepoOwner;
+            var repositoryName = Constants.ApplicationType.UpdateRepoName;
             var gitRelease = await GithubUtil.GetLatestRelease(userName, repositoryName);
+            if (gitRelease is null)
+                return (null, null, null);
+
             Version version = GithubUtil.GetVersion(gitRelease);
 
             // Get latest installer file

@@ -11,14 +11,13 @@ namespace Lively.Common.Helpers
     {
         /// <summary>
         /// Get latest release from github after given delay.
+        /// Returns null when the repository has no published release yet.
         /// </summary>
         public static async Task<Release> GetLatestRelease(string userName, string repositoryName)
         {
             var client = new GitHubClient(new ProductHeaderValue(repositoryName));
             var releases = await client.Repository.Release.GetAll(userName, repositoryName);
-            var latest = releases[0];
-
-            return latest;
+            return releases.Count == 0 ? null : releases[0];
         }
 
         public static (string fileName, string url) GetAssetUrl(Release release, string assetName)
@@ -29,13 +28,25 @@ namespace Lively.Common.Helpers
 
         public static Version GetVersion(Release release)
         {
-            return new Version(Regex.Replace(release.TagName, "[A-Za-z ]", ""));
+            // Suffixes such as v0.0.2-beta leave a trailing separator that Version() rejects.
+            var sanitized = Regex.Replace(release.TagName, "[^0-9.]", "");
+            return sanitized.Length == 0 ? new Version(0, 0, 0, 0) : new Version(sanitized);
         }
 
         public static int CompareAssemblyVersion(Version version)
         {
-            var appVersion = new Version(System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString());
-            return version.CompareTo(appVersion);
+            var appVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
+            return Normalize(version).CompareTo(Normalize(appVersion));
+        }
+
+        /// <summary>
+        /// Release tags usually carry three parts while the assembly always has four,
+        /// and a three part Version reports Revision as -1.
+        /// </summary>
+        private static Version Normalize(Version version)
+        {
+            return new Version(version.Major, version.Minor,
+                Math.Max(version.Build, 0), Math.Max(version.Revision, 0));
         }
 
         /// <summary>

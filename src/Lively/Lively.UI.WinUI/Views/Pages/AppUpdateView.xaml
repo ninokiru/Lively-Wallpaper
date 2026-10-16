@@ -27,7 +27,7 @@
 
     <Grid>
         <!--  WebView2 available.  -->
-        <Grid Visibility="{Binding IsWebView2Available, Mode=OneWay}">
+        <Grid Visibility="{Binding IsWebView2Available, Mode=OneWay, Converter={StaticResource VisibilityConverter}}">
             <!--  Changelog  -->
             <WebView2
                 x:Name="WebView"
@@ -138,27 +138,29 @@
                 <Grid>
                     <Grid VerticalAlignment="Center" Visibility="{Binding IsWinStore, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Reverse}">
                         <Grid Visibility="{Binding IsUpdateAvailable, Mode=OneWay, Converter={StaticResource VisibilityConverter}}">
-                            <!--  Download  -->
-                            <Button
-                                x:Uid="TextDownload"
-                                MinWidth="100"
-                                HorizontalAlignment="Right"
-                                Background="{ThemeResource SystemAccentColor}"
-                                Command="{Binding DownloadUpdateCommand}"
-                                Visibility="{Binding IsUpdateDownloaded, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Reverse}">
-                                <Button.Resources>
-                                    <ResourceDictionary>
-                                        <ResourceDictionary.ThemeDictionaries>
-                                            <ResourceDictionary x:Key="Dark">
-                                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColorDark1}" />
-                                            </ResourceDictionary>
-                                            <ResourceDictionary x:Key="Light">
-                                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColorDark1}" />
-                                            </ResourceDictionary>
-                                        </ResourceDictionary.ThemeDictionaries>
-                                    </ResourceDictionary>
-                                </Button.Resources>
-                            </Button>
+                            <!--  Update: fetches the setup then runs it, so one click is the whole update.  -->
+                            <Grid Visibility="{Binding IsUpdateDownloading, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Reverse}">
+                                <Button
+                                    x:Uid="TextInstall"
+                                    MinWidth="100"
+                                    HorizontalAlignment="Right"
+                                    Background="{ThemeResource SystemAccentColor}"
+                                    Command="{Binding DownloadUpdateCommand}"
+                                    Visibility="{Binding IsUpdateDownloaded, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Reverse}">
+                                    <Button.Resources>
+                                        <ResourceDictionary>
+                                            <ResourceDictionary.ThemeDictionaries>
+                                                <ResourceDictionary x:Key="Dark">
+                                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColorDark1}" />
+                                                </ResourceDictionary>
+                                                <ResourceDictionary x:Key="Light">
+                                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColorDark1}" />
+                                                </ResourceDictionary>
+                                            </ResourceDictionary.ThemeDictionaries>
+                                        </ResourceDictionary>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
                             <!--  Install  -->
                             <Button
                                 x:Uid="TextInstall"

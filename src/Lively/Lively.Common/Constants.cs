@@ -66,6 +66,11 @@ namespace Lively.Common
         {
             public static string Name { get; } = "Lively Wallpaper";
             public static bool IsTestBuild { get; } = false;
+
+            // Single channel fork build: updates and release notes come from this repository.
+            public static string UpdateRepoOwner { get; } = "ninokiru";
+            public static string UpdateRepoName { get; } = "Lively-Wallpaper";
+            public static string UpdateRepoUrl { get; } = $"https://github.com/{UpdateRepoOwner}/{UpdateRepoName}";
         }
 
         public static class Weather

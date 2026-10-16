@@ -14,7 +14,7 @@
     <Platforms>AnyCPU;x64</Platforms>
     <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <Version>2.2.1</Version>
+    <Version>0.0.1</Version>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 

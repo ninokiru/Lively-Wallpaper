@@ -55,22 +55,8 @@ namespace Lively.UI.WinUI.Views.Pages
             }
             else
             {
-                // Set website to reflect app interface
-                var pageTheme = App.Services.GetRequiredService<IUserSettingsClient>().Settings.ApplicationTheme switch
-                {
-                    AppTheme.Auto => "auto", // Website handles theme change based on WebView change.
-                    AppTheme.Light => "light",
-                    AppTheme.Dark => "dark",
-                    _ => "auto",
-                };
-                var accentColorDark1 = ((Color)App.Current.Resources["SystemAccentColorDark1"]).ToHex().Substring(1);
-                var accentColorLight1 = ((Color)App.Current.Resources["SystemAccentColorLight1"]).ToHex().Substring(1);
-                var param = $"?source=app&theme={pageTheme}&colorLight={accentColorLight1}&colorDark={accentColorDark1}";
-
-                var url = viewModel.IsBetaBuild ?
-                    $"https://www.livelywallpaper.net/changelog/beta.html{param}" :
-                    $"https://www.livelywallpaper.net/changelog/{param}";
-                WebView.Source = LinkUtil.SanitizeUrl(url);
+                // Fork build: the changelog is the release page of this repository.
+                WebView.Source = LinkUtil.SanitizeUrl($"{Constants.ApplicationType.UpdateRepoUrl}/releases/latest");
 
                 WebView.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
                 // Theme need to set css, ref: https://github.com/MicrosoftEdge/WebView2Feedback/issues/4426
@@ -94,22 +80,13 @@ namespace Lively.UI.WinUI.Views.Pages
 
         private void WebView_NavigationStarting(WebView2 sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs args)
         {
-
-            // Stay in page
-            // livelywallpaper.net is a redirect, allow for now.
-            //if (args.IsRedirected)
-            //{
-            //    args.Cancel = true;
-            //    return;
-            //}
-
             WebViewProgress.Visibility = Visibility.Visible;
         }
 
         private void WebView_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
         {
-            // Reset to default
-            WebView.DefaultBackgroundColor = Colors.White;
+            // Keep the page on the app background so a dark theme does not flash white.
+            WebView.DefaultBackgroundColor = Colors.Transparent;
             WebViewProgress.Visibility = Visibility.Collapsed;
         }
 

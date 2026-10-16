@@ -143,10 +143,159 @@ jobs:
         working-directory: src/installer
         shell: pwsh
         run: |
-          & $env:ISCC_PATH Script_x64.iss
+          # Tagged builds override the version in the script, so the asset the updater
+          # downloads (lively_setup_x64_full_v<tag>.exe) matches the release it came from.
+          if ($env:GITHUB_REF_TYPE -eq 'tag') {
+            $version = $env:GITHUB_REF_NAME -replace '^v', ''
+            & $env:ISCC_PATH "/DMyAppVersion=$version" Script_x64.iss
+          }
+          else {
+            & $env:ISCC_PATH Script_x64.iss
+          }
 
       - uses: actions/upload-artifact@v4
         with:
           name: lively-win-x64-installer
           path: src/installer/Output/*.exe
           if-no-files-found: error
+
+  # ---------------------------------------------------------------------------
+  # GitHub Release: the only channel the in-app updater reads.
+  #
+  # How the tag relates to AssemblyVersion:
+  #   GithubUtil.GetVersion() strips every non-digit and non-dot from TagName and
+  #   parses the rest as System.Version, then CompareAssemblyVersion() pads both
+  #   sides to four parts before comparing against the entry assembly version
+  #   (Lively.csproj: 0.0.1.0). So v0.0.2 is an update, v0.0.1 is up to date and
+  #   v0.0.2-beta is read as 0.0.2.
+  #   The --prerelease flag below only decorates GitHub; the updater takes the
+  #   newest release whatever its channel, so publish a beta tag only when the
+  #   build really is newer.
+  #
+  # Asset the updater matches on: any asset whose name contains
+  # lively_setup_x64_full, which is what Script_x64.iss produces.
+  # ---------------------------------------------------------------------------
+  release:
+    name: GitHub Release
+    needs: [build, installer]
+    runs-on: ubuntu-latest
+    # Tags publish, branch pushes and pull_request builds never do. success() is
+    # spelled out because a custom if replaces the implicit "all needs succeeded"
+    # guard and would otherwise release half-built files.
+    if: startsWith(github.ref, 'refs/tags/v') && success()
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The notes diff the previous tag against this one, so the default
+          # single-commit checkout is not enough.
+          fetch-depth: 0
+
+      # Both artifacts land in dist/, but the portable one was uploaded with a "**"
+      # glob: its archive root IS the publish tree, so restoring it straight into
+      # dist/ would scatter thousands of loose files and directories there and the
+      # dist/* asset glob would upload all of them. It is restored beside dist/ and
+      # archived, which keeps dist/ down to exactly two release assets.
+      - name: Download installer
+        uses: actions/download-artifact@v4
+        with:
+          name: lively-win-x64-installer
+          path: dist
+
+      - name: Download portable build
+        uses: actions/download-artifact@v4
+        with:
+          name: lively-win-x64-portable
+          path: portable
+
+      - name: Stage release assets
+        run: |
+          set -euo pipefail
+          command -v zip >/dev/null || { echo "::error::zip is missing from the runner image."; exit 1; }
+          folder="lively-win-x64-portable-${GITHUB_REF_NAME}"
+          mv portable "${folder}"
+          zip -qr "dist/${folder}.zip" "${folder}"
+          ls -l dist
+          files=$(find dist -maxdepth 1 -type f | wc -l)
+          if [ "${files}" -ne 2 ]; then
+            echo "::error::Expected two release assets in dist/, found ${files}. Check the publish steps."
+            exit 1
+          fi
+
+      - name: Build release notes
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          # Nearest tag on the tagged commit's ancestry; empty for the first release,
+          # where the whole log is used instead.
+          PREV_TAG="$(git describe --tags --abbrev=0 "${TAG}^" 2>/dev/null || true)"
+
+          {
+            echo "## ${TAG}"
+            echo
+            if [ -n "${PREV_TAG}" ]; then
+              echo "Changes since \`${PREV_TAG}\`:"
+              echo
+              # Merged PRs first; the compare endpoint links them to this tag range.
+              merged="$(gh api "repos/${GITHUB_REPOSITORY}/compare/${PREV_TAG}...${TAG}" \
+                --jq '.pull_requests[]? | "[#" + (.number | tostring) + "](" + .html_url + ") " + .title' || true)"
+              if [ -n "${merged}" ]; then
+                printf '%s\n' "${merged}"
+              else
+                # Nothing linked: fall back to the commit subjects.
+                git log --no-merges --pretty=format:'- %s (%h)' "${PREV_TAG}..${TAG}"
+                echo
+              fi
+            else
+              echo "First tagged build - commit log:"
+              echo
+              git log --no-merges --pretty=format:'- %s (%h)' "${TAG}"
+              echo
+            fi
+            echo
+            echo "## Files"
+            echo
+            for asset in dist/*; do
+              name="$(basename "${asset}")"
+              case "${name}" in
+                *.exe) echo "- \`${name}\` - installer, bundles the Visual C++ runtime." ;;
+                *.zip) echo "- \`${name}\` - portable build, extract anywhere and run Lively.exe." ;;
+                *) echo "- \`${name}\`" ;;
+              esac
+            done
+            echo
+            echo "Built from the \`${TAG}\` tag by the Build workflow."
+          } > release-notes.md
+
+          cat release-notes.md
+
+      - name: Publish release
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          TITLE="Lively Wallpaper ${TAG}"
+          # v0.0.2-beta and similar suffixed tags are prereleases, plain ones are not.
+          FLAGS=()
+          case "${TAG}" in
+            *-*) FLAGS+=(--prerelease) ;;
+          esac
+
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            # Re-running a tag must not hard fail: rewrite the notes in place and
+            # overwrite the assets instead of creating a duplicate release.
+            gh release edit "${TAG}" --title "${TITLE}" --notes-file release-notes.md "${FLAGS[@]}"
+            gh release upload "${TAG}" dist/* --clobber
+          else
+            gh release create "${TAG}" \
+              --title "${TITLE}" \
+              --notes-file release-notes.md \
+              --verify-tag \
+              "${FLAGS[@]}" \
+              dist/*
+          fi
+
+          # Log where the release landed; never fail the job over this cosmetic call.
+          gh release view "${TAG}" || true
