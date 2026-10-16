@@ -229,7 +229,7 @@ As atualizações serão frequentes e poderão conter erros!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Atualização mal-sucedida. Tente descarregar o instalador novamente:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Ficheiro de papel de parede corrompido, tente descarregar novamente</value>

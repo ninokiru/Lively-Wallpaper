@@ -226,7 +226,7 @@ Magiging madalas and mga updates, at maaaring may mga bugs!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Nabigong i-update; subukang i-download ang installer mula sa:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Nasira ang file ng wallpaper, subukang muling i-download.</value>

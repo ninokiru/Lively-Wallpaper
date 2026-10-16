@@ -230,7 +230,7 @@ Windows Explorer е рестартирал два пъти в последнит
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Актуализацията не бе успешна; опитайте да изтеглите инсталатора от:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Файлът с тапет е повреден, опитайте да го изтеглите отново</value>

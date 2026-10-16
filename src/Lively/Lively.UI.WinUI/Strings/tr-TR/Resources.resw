@@ -230,7 +230,7 @@ Güncellemeler sık olacak ve hatalar içerebilir!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Güncelleme başarısız oldu; indirme işlemi için aşağıdaki bağlantıyı kullanın:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Hasarlı duvar kağıdı dosyası, yeniden indirmeyi deneyin</value>

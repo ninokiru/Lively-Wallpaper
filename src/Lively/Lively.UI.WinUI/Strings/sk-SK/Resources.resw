@@ -230,7 +230,7 @@ Aktualizácie budú častejšie a môžu obsahovať chyby!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Aktualizácia sa nepodarila, skúste stiahnuť inštalátor z odkazu:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Súbor je poškodený. Skúste ho stiahnuť znovu</value>

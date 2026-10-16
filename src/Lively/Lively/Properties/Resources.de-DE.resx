@@ -230,7 +230,7 @@ Aktualisierungen finden häufiger statt und können Fehler enthalten!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Aktualisierung fehlgeschlagen. Versuchen Sie die Installationsdatei manuell herunterzuladen: 
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Hintergrund-Datei beschädigt, versuchen Sie die Datei erneut herunterzuladen</value>

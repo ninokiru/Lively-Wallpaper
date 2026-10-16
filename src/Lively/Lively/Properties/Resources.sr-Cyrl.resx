@@ -228,7 +228,7 @@
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Неуспешна надоградња; покушај да скинеш инсталацију са:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Оштећен позадински фајл, покушај да поново преузмеш.</value>

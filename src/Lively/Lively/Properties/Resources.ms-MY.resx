@@ -230,7 +230,7 @@ Kemaskini akan menjadi lebih kerap dan mungkin akan mengandungi pepijat!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Kemaskini gagal; muat turun pemasang aplikasi daripada:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Fail latar belakang rosak, muat turun semula latar belakang</value>

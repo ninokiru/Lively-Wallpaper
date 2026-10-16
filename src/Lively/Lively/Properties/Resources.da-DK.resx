@@ -230,7 +230,7 @@ Opdateringer vil være hyppige og kan indeholde fejl!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Mislykkedes at opdatere; prøv at downloade installationsprogrammet fra:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Beskadiget baggrundsfil, prøv at downloade igen</value>

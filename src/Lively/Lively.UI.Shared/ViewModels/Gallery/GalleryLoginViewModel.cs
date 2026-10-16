@@ -25,7 +25,7 @@ namespace Lively.UI.Shared.ViewModels
             this.libraryVm = libraryVm;
             this.i18n = i18n;
 
-            Message = i18n.GetString("GalleryPleaseLogin/Text");
+            Message = i18n.GetString("GalleryPleaseLogin.Text");
 #if DEBUG
             IsOpen = true;
 #endif
@@ -99,7 +99,7 @@ namespace Lively.UI.Shared.ViewModels
             {
                 try
                 {
-                    Message = $"{i18n.GetString("GalleryWelcomeMessage/Text")} {galleryClient.CurrentUser.DisplayName}";
+                    Message = $"{i18n.GetString("GalleryWelcomeMessage.Text")} {galleryClient.CurrentUser.DisplayName}";
                     Picture = new Uri(galleryClient.CurrentUser.AvatarUrl);
                 }
                 catch

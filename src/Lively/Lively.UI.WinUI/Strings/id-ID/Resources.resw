@@ -230,7 +230,7 @@ Pembaruan akan sering dilakukan dan mungkin memiliki bug!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Gagal untuk mendapatkan update; coba download installer dari:
-https://github.com/rocksdanister/lively/releases
+https://github.com/ninokiru/Lively-Wallpaper/releases
 </value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">

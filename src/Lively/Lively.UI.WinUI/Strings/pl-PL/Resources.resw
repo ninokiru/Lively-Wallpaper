@@ -229,7 +229,7 @@ Aktualizacje będą częste i mogą zawierać błędy!</value>
     <value>Język</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>Aktualizacja nieudana. Spróbuj pobrać instalator z: https://github.com/rocksdanister/lively/releases</value>
+    <value>Aktualizacja nieudana. Spróbuj pobrać instalator z: https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Uszkodzony plik tapety, spróbuj pobrać ponownie</value>

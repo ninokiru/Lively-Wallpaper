@@ -30,14 +30,14 @@ namespace Lively.UI.WinUI.Services
         {
             return type switch
             {
-                WallpaperType.app => resourceLoader.GetString("TextApplication"),
+                WallpaperType.app => resourceLoader.GetString("Application.Text"),
                 WallpaperType.unity => "Unity",
                 WallpaperType.godot => "Godot",
                 WallpaperType.unityaudio => "Unity",
                 WallpaperType.bizhawk => "Bizhawk",
-                WallpaperType.web => resourceLoader.GetString("Website/Header"),
-                WallpaperType.webaudio => resourceLoader.GetString("AudioGroup/Header"),
-                WallpaperType.url => resourceLoader.GetString("Website/Header"),
+                WallpaperType.web => resourceLoader.GetString("Website.Header"),
+                WallpaperType.webaudio => resourceLoader.GetString("AudioGroup.Text"),
+                WallpaperType.url => resourceLoader.GetString("Website.Header"),
                 WallpaperType.video => resourceLoader.GetString("TextVideo"),
                 WallpaperType.gif => "Gif",
                 WallpaperType.videostream => resourceLoader.GetString("TextWebStream"),

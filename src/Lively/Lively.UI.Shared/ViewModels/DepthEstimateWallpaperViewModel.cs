@@ -113,7 +113,7 @@ namespace Lively.UI.Shared.ViewModels
                 RunCommand.NotifyCanExecuteChanged();
                 CanCancelCommand = false;
                 CancelCommand.NotifyCanExecuteChanged();
-                PreviewText = i18n.GetString("DescriptionDepthApprox/Content");
+                PreviewText = i18n.GetString("DescriptionDepthApprox.Content");
 
                 await Task.Run(async() =>
                 {
@@ -156,7 +156,7 @@ namespace Lively.UI.Shared.ViewModels
                     //LivelyInfo.json update
                     var infoModel = JsonStorage<LivelyInfoModel>.LoadData(Path.Combine(destDir, "LivelyInfo.json"));
                     infoModel.Title = Path.GetFileNameWithoutExtension(inputImagePath);
-                    infoModel.Desc = i18n.GetString("DescriptionDepthWallpaperTemplate/Content");
+                    infoModel.Desc = i18n.GetString("DescriptionDepthWallpaperTemplate.Content");
                     infoModel.AppVersion = desktopCore.AssemblyVersion.ToString();
                     JsonStorage<LivelyInfoModel>.StoreData(Path.Combine(destDir, "LivelyInfo.json"), infoModel);
                 });

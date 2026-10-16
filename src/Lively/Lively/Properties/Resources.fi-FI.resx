@@ -230,7 +230,7 @@ Päivityksiä tulee usein ja ne saattavat sisältää vikoja!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Päivitys epäonnistui, kokeile asentajan lataamista täältä:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Vaurioitunut taustakuvatiedosto, kokeile uudelleenlatausta</value>

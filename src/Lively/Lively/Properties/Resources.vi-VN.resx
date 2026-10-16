@@ -230,7 +230,7 @@ Lively sẽ được cập nhật thường xuyên hơn và sẽ bị lỗi nhi�
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Cập nhật phiên bản thất bại, hãy thử tải xuống bản cài đặt từ
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>File hình nền bị lỗi, hãy thử tải lại file này</value>

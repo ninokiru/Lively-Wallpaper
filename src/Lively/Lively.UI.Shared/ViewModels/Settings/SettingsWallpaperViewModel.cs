@@ -242,7 +242,7 @@ namespace Lively.UI.Shared.ViewModels
             {
                 if (value && AudioDevices == null)
                 {
-                    var defaultName = i18n.GetString("TextDefault/Text");
+                    var defaultName = i18n.GetString("TextDefault.Text");
                     var defaultIcon = "ms-appx:///Assets/icons8-audio-96.png";
                     try
                     {

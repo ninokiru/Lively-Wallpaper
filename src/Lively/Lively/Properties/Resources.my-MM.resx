@@ -229,7 +229,7 @@ Lively's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ
     <value>ဘာသာစကား</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>အပ်ဒိတ်လုပ်ရန် မအောင်မြင်ပါ။ Installer ကို https://github.com/rocksdanister/lively/releases မှ ဒေါင်းလုဒ်လုပ်ကြည့်ပါ။</value>
+    <value>အပ်ဒိတ်လုပ်ရန် မအောင်မြင်ပါ။ Installer ကို https://github.com/ninokiru/Lively-Wallpaper/releases မှ ဒေါင်းလုဒ်လုပ်ကြည့်ပါ။</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>ပျက်စီးနေသော နောက်ခံဖိုင်ကို ပြန်လည်ဒေါင်းလုဒ်လုပ်ကြည့်ပါ။</value>

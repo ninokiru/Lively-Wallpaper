@@ -230,7 +230,7 @@ Lively's скринсейверлерінің негізгі мақсаты - к
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Жаңарту мүмкін болмады; орнатушыны мына жерден жүктеп көріңіз:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Зақымдалған тұсқағаз файлы, қайта жүктеп көріңіз</value>

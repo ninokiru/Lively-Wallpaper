@@ -40,8 +40,8 @@ namespace Lively.UI.Shared.ViewModels
             this.i18n = i18n;
 
             //Defaults
-            Themes.Add(new ThemeModel() { Name = i18n.GetString("TextDefault/Text"), Description = i18n.GetString("DescriptionDefault/Text"), Preview = "ms-appx:///Assets/icons8-application-window-96.png", IsEditable = false });
-            Themes.Add(new ThemeModel() { Name = i18n.GetString("TextDynamicTheme/Text"), Description = i18n.GetString("DescriptionDynamicTheme/Text"), Preview = "ms-appx:///Assets/icons8-wallpaper-96.png", IsEditable = false });
+            Themes.Add(new ThemeModel() { Name = i18n.GetString("TextDefault.Text"), Description = i18n.GetString("DescriptionDefault.Text"), Preview = "ms-appx:///Assets/icons8-application-window-96.png", IsEditable = false });
+            Themes.Add(new ThemeModel() { Name = i18n.GetString("TextDynamicTheme.Text"), Description = i18n.GetString("DescriptionDynamicTheme.Text"), Preview = "ms-appx:///Assets/icons8-wallpaper-96.png", IsEditable = false });
             //User collection
             foreach (var item in new DirectoryInfo(Constants.CommonPaths.ThemeDir).GetDirectories("*.*", SearchOption.TopDirectoryOnly).OrderBy(t => t.LastWriteTime))
             {

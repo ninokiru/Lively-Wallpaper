@@ -26,16 +26,16 @@ namespace Lively.UI.Shared.ViewModels
 
             WallpaperCategories.Add(new AddWallpaperCreateModel()
             {
-                Title = i18n.GetString("TextOpen/Content"),
-                Description = i18n.GetString("TitleCreateWallpaperOpenItem/Description"),
+                Title = i18n.GetString("TextOpen.Content"),
+                Description = i18n.GetString("TitleCreateWallpaperOpenItem.Description"),
                 TypeSupported = WallpaperType.picture,
                 CreateType = WallpaperCreateType.none,
                 Icon = "ms-appx:///Assets/icons8-wallpaper-96.png"
             });
             WallpaperCategories.Add(new AddWallpaperCreateModel()
             {
-                Title = i18n.GetString("TitleDepthWallpaperItem/Content"),
-                Description =  i18n.GetString("DescriptionDepthWallpaperItem/Content"),
+                Title = i18n.GetString("TitleDepthWallpaperItem.Content"),
+                Description =  i18n.GetString("DescriptionDepthWallpaperItem.Content"),
                 CreateType = WallpaperCreateType.depthmap,
                 TypeSupported = WallpaperType.picture,
                 Icon = "ms-appx:///Assets/icons8-landscape-64.png"

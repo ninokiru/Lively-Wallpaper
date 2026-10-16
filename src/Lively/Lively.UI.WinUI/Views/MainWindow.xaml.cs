@@ -117,10 +117,10 @@ namespace Lively.UI.WinUI
                 args.Handled = true;
 
                 //Option 1: Show user prompt with choice to cancel.
-                var result = await dialogService.ShowDialogAsync(i18n.GetString("TextConfirmCancel/Text"),
-                                                            i18n.GetString("TitleDownloadProgress/Text"),
+                var result = await dialogService.ShowDialogAsync(i18n.GetString("TextConfirmCancel.Text"),
+                                                            i18n.GetString("TitleDownloadProgress.Text"),
                                                             i18n.GetString("TextYes"),
-                                                            i18n.GetString("TextWait/Text"),
+                                                            i18n.GetString("TextWait.Text"),
                                                             false);
                 if (result == DialogResult.primary)
                 {

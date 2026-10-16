@@ -67,14 +67,14 @@ namespace Lively.Services
         {
             return type switch
             {
-                WallpaperType.app => resourceManager.GetString("TextApplication"),
+                WallpaperType.app => resourceManager.GetString("Application.Text"),
                 WallpaperType.unity => "Unity",
                 WallpaperType.godot => "Godot",
                 WallpaperType.unityaudio => "Unity",
                 WallpaperType.bizhawk => "Bizhawk",
-                WallpaperType.web => resourceManager.GetString("Website/Header"),
-                WallpaperType.webaudio => resourceManager.GetString("AudioGroup/Header"),
-                WallpaperType.url => resourceManager.GetString("Website/Header"),
+                WallpaperType.web => resourceManager.GetString("Website.Header"),
+                WallpaperType.webaudio => resourceManager.GetString("AudioGroup.Text"),
+                WallpaperType.url => resourceManager.GetString("Website.Header"),
                 WallpaperType.video => resourceManager.GetString("TextVideo"),
                 WallpaperType.gif => "Gif",
                 WallpaperType.videostream => resourceManager.GetString("TextWebStream"),

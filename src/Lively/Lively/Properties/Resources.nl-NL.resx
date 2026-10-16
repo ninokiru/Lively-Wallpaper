@@ -227,7 +227,7 @@ Updates zullen vaker voorkomen en de updates kunnen bugs bevatten!</value>
     <value>Taal</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>Update mislukt; probeer het installatieprogramma te downloaden op: https://github.com/rocksdanister/lively/releases</value>
+    <value>Update mislukt; probeer het installatieprogramma te downloaden op: https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Het achtergrondbestand is beschadigd, probeer het opnieuw te downloaden. </value>

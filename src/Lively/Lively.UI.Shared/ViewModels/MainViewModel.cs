@@ -150,7 +150,7 @@ namespace Lively.UI.Shared.ViewModels
         [NotifyPropertyChangedFor(nameof(WallpaperCountGlyph))]
         private int wallpaperCount;
 
-        public string WallpaperCountMessage => $"{WallpaperCount} {i18n.GetString("ActiveWallpapers/Label")}";
+        public string WallpaperCountMessage => $"{WallpaperCount} {i18n.GetString("ActiveWallpapers.Label")}";
 
         public string WallpaperCountGlyph => monitorGlyphs[WallpaperCount >= monitorGlyphs.Length ? monitorGlyphs.Length - 1 : WallpaperCount];
 
@@ -383,7 +383,7 @@ namespace Lively.UI.Shared.ViewModels
             {
                 await dialogService.ShowDialogAsync(ex.Message,
                     i18n.GetString("TextError"),
-                    i18n.GetString("TextOk"));
+                    i18n.GetString("TextOK"));
             }
             finally
             {
@@ -433,7 +433,7 @@ namespace Lively.UI.Shared.ViewModels
             CanCancelWallpaperImport = false;
             AddWallpapersCancelCommand.NotifyCanExecuteChanged();
 
-            ImportNotification.Title = i18n.GetString("PleaseWait/Text");
+            ImportNotification.Title = i18n.GetString("PleaseWait.Text");
             ImportNotification.Message = "100%";
             wallpaperImportCts.Cancel();
         }
@@ -591,7 +591,7 @@ namespace Lively.UI.Shared.ViewModels
             ];
         }
 
-        private string GetSearchPlaceholderText() => i18n.GetString("SearchBox/PlaceholderText");
+        private string GetSearchPlaceholderText() => i18n.GetString("SearchBox.PlaceholderText");
 
         private string GetPageName(ContentPageType pageType)
         {
@@ -602,9 +602,9 @@ namespace Lively.UI.Shared.ViewModels
                 ContentPageType.appupdate => i18n.GetString("TitleUpdates"),
                 ContentPageType.settingsGeneral => i18n.GetString("TitleGeneral"),
                 ContentPageType.settingsPerformance => i18n.GetString("TitlePerformance"),
-                ContentPageType.settingsWallpaper => i18n.GetString("TitleWallpaper/Content"),
-                ContentPageType.settingsScreensaver => i18n.GetString("TitleScreensaver/Content"),
-                ContentPageType.settingsSystem => i18n.GetString("System/Text"),
+                ContentPageType.settingsWallpaper => i18n.GetString("TitleWallpaper.Content"),
+                ContentPageType.settingsScreensaver => i18n.GetString("TitleScreensaver.Content"),
+                ContentPageType.settingsSystem => i18n.GetString("System.Text"),
                 _ => throw new NotImplementedException(),
             };
         }

@@ -84,7 +84,7 @@ namespace Lively.UI.Shared.ViewModels
 
             try
             {
-                var dialogTask = dialogService.ShowCancellableProgressDialogAsync(i18n.GetString("PleaseWait/Text"), dialogCts.Token);
+                var dialogTask = dialogService.ShowCancellableProgressDialogAsync(i18n.GetString("PleaseWait.Text"), dialogCts.Token);
                 var switchTask = appUpdater.SwitchReleaseChannel(!IsBetaBuild, switchCts.Token);
                 var completed = await Task.WhenAny(dialogTask, switchTask);
 

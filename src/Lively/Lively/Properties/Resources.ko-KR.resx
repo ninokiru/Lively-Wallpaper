@@ -230,7 +230,7 @@ Lively 화면 보호기의 주요 목적은 사용자 PC에 사용자 지정의 
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>업데이트 실패됨. 다음 링크에서 설치 파일을 내려받으세요:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>손상된 배경화면입니다. 다시 내려받으세요.</value>

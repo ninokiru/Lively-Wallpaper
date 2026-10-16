@@ -226,7 +226,7 @@ Lively এর স্ক্রিনসেভারগুলির মূল উ�
     <value>ভাষা</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>আপডেট করতে ব্যর্থ; ইনস্টলার ডাউনলোড করার চেষ্টা করুন: https://github.com/rocksdanister/lively/releases</value>
+    <value>আপডেট করতে ব্যর্থ; ইনস্টলার ডাউনলোড করার চেষ্টা করুন: https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>ওয়ালপেপার ফাইলটি ক্ষতিগ্রস্ত, অনুগ্রহ করে আবার ডাউনলোড করার চেষ্টা করুন</value>

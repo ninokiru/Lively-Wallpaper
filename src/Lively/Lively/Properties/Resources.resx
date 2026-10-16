@@ -230,7 +230,7 @@ Updates will be frequent and may contain bugs!</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Failed to update; try downloading the installer from:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Damaged wallpaper file, try redownloading</value>

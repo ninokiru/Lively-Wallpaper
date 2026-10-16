@@ -397,7 +397,7 @@ namespace Lively.Services
                 TrayMenuItem.openApp => i18n.GetString("TextOpenLively"),
                 TrayMenuItem.closeWallpaper => i18n.GetString("TextCloseWallpapers"),
                 TrayMenuItem.changeWallpaper => i18n.GetString("TextChangeWallpaper"),
-                TrayMenuItem.reportBug => i18n.GetString("ReportBug/Header"),
+                TrayMenuItem.reportBug => i18n.GetString("ReportBug.Header"),
                 TrayMenuItem.exitApp => i18n.GetString("TextExit"),
                 TrayMenuItem.pauseWallpaper => i18n.GetString("TextPauseWallpapers"),
                 TrayMenuItem.customiseWallpaper => i18n.GetString("TextCustomiseWallpaper"),

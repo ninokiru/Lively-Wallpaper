@@ -43,7 +43,7 @@ namespace Lively.UI.Shared.ViewModels
             this.i18n = i18n;
 
             Languages = new ObservableCollection<LanguageModel>(Common.Languages.SupportedLanguages);
-            Languages.Insert(0, new(i18n.GetString("LanguageSettingsItemSystemDefault/Content"), string.Empty));
+            Languages.Insert(0, new(i18n.GetString("LanguageSettingsItemSystemDefault.Content"), string.Empty));
             SelectedLanguage = string.IsNullOrWhiteSpace(userSettings.Settings.Language) ? 
                 Languages[0] : Languages.FirstOrDefault(x => x.Code == userSettings.Settings.Language) ?? Languages[0];
 

@@ -162,7 +162,7 @@ namespace Lively.UI.WinUI.Views.Pages
                 {
                     await dialogService.ShowDialogAsync(ie.Message,
                         i18n.GetString("TextError"),
-                        i18n.GetString("TextOk"));
+                        i18n.GetString("TextOK"));
                 }
             }
             else if (e.DataView.Contains(StandardDataFormats.StorageItems))
@@ -209,7 +209,7 @@ namespace Lively.UI.WinUI.Views.Pages
                     {
                         await dialogService.ShowDialogAsync(ie.Message,
                             i18n.GetString("TextError"),
-                            i18n.GetString("TextOk"));
+                            i18n.GetString("TextOK"));
                     }
                 }
                 else if (items.Count > 1)

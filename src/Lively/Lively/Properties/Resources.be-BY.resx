@@ -230,7 +230,7 @@
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Не ўдалося абнавіць; паспрабуйце ўручную спампаваць файл усталявання:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Файл са шпалерамі пашкоджаны. Паспрабуйце спампаваць яго паўторна</value>

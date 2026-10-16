@@ -24,9 +24,9 @@ namespace Lively.UI.Shared.ViewModels
             this.dialogNavigator = dialogNavigator;
 
             MenuItems = [
-                new() { Name = i18n.GetString("TitleWallpaper/Content"), PageType = DialogPageType.controlPanelWallpaper},
-                new() { Name = i18n.GetString("TitleScreensaver/Content"), PageType = DialogPageType.controlPanelScreensaver },
-                new() { Name = i18n.GetString("TitleCustomise/Content"), PageType = DialogPageType.controlPanelCustomise, IsVisible = false }
+                new() { Name = i18n.GetString("TitleWallpaper.Content"), PageType = DialogPageType.controlPanelWallpaper},
+                new() { Name = i18n.GetString("TitleScreensaver.Content"), PageType = DialogPageType.controlPanelScreensaver },
+                new() { Name = i18n.GetString("TitleCustomise.Content"), PageType = DialogPageType.controlPanelCustomise, IsVisible = false }
             ];
             // SelectedMenuItem set in View Loaded event.
 

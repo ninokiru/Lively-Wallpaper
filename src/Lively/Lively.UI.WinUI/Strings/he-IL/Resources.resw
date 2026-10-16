@@ -230,7 +230,7 @@
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>העדכון נכשל; נסה להוריד את תוכנית ההתקנה מ:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>קובץ טפט פגום, נסה להוריד מחדש</value>

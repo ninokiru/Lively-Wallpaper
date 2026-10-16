@@ -230,7 +230,7 @@ Les mises à jour seront fréquentes et pourraient contenir des bugs !</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Échec de la mise à jour. Essayez de télécharger l'installateur depuis :
- https://github.com/rocksdanister/lively/releases</value>
+ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Fichier endommagé, tentez de le re-télécharger</value>

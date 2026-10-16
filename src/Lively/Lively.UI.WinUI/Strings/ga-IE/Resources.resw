@@ -230,7 +230,7 @@ Tiocfaidh na nuashonruithe go minic agus seans go mbeidh fabhtanna iontu</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>Theip ar an nuashonrú. Bain triail as an suiteálaí a íoslódáil ó:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Comhad cúlbhrait damáistithe, bain triail as é a íoslódáil arís</value>

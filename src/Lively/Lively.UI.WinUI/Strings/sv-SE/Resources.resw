@@ -222,7 +222,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Språk</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>Uppdateringen misslyckades. Prova att ladda installionsprogrammet från denna länk; https://github.com/rocksdanister/lively/releases</value>
+    <value>Uppdateringen misslyckades. Prova att ladda installionsprogrammet från denna länk; https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Skadad bakgrunds fil, prova att ladda ner filen igen.</value>

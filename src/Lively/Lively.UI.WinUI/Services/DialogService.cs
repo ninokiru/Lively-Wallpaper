@@ -43,7 +43,7 @@ namespace Lively.UI.WinUI.Services
             {
                 Title = i18n.GetString("DescriptionScreenLayout"),
                 Content = new ChooseDisplayView(vm),
-                PrimaryButtonText = i18n.GetString("Cancel/Content"),
+                PrimaryButtonText = i18n.GetString("Cancel.Content"),
                 //DefaultButton = ContentDialogButton.Primary,
                 XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
             };
@@ -57,9 +57,9 @@ namespace Lively.UI.WinUI.Services
         {
             var vm = App.Services.GetRequiredService<FindMoreAppsViewModel>();
             var result = await ShowDialogAsync(new FindMoreAppsView() { DataContext = vm },
-                                          i18n.GetString("TitleChooseApplication/Text"),
+                                          i18n.GetString("TitleChooseApplication.Text"),
                                           i18n.GetString("TextAdd"),
-                                          i18n.GetString("Cancel/Content"));
+                                          i18n.GetString("Cancel.Content"));
             return result == DialogResult.primary ? vm.SelectedItem : null;
         }
 
@@ -131,9 +131,9 @@ namespace Lively.UI.WinUI.Services
         {
             await new ContentDialog()
             {
-                Title = i18n.GetString("AppTheme/Header"),
+                Title = i18n.GetString("AppTheme.Header"),
                 Content = new AppThemeView(),
-                PrimaryButtonText = i18n.GetString("TextOk"),
+                PrimaryButtonText = i18n.GetString("TextOK"),
                 DefaultButton = ContentDialogButton.Primary,
                 XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
             }.ShowAsyncQueue();
@@ -150,7 +150,7 @@ namespace Lively.UI.WinUI.Services
                 {
                     Title = obj.Title.Length > 35 ? obj.Title.Substring(0, 35) + "..." : obj.Title,
                     Content = new LivelyPropertiesView(vm) { MinWidth = 325 },
-                    PrimaryButtonText = i18n.GetString("TextOk"),
+                    PrimaryButtonText = i18n.GetString("TextOK"),
                     DefaultButton = ContentDialogButton.Primary,
                     XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
                 };
@@ -173,10 +173,10 @@ namespace Lively.UI.WinUI.Services
             vm.SelectedImage = imagePath;
             var depthDialog = new ContentDialog
             {
-                Title = i18n.GetString("TitleDepthWallpaper/Content"),
+                Title = i18n.GetString("TitleDepthWallpaper.Content"),
                 Content = new DepthEstimateWallpaperView(vm),
-                PrimaryButtonText = i18n.GetString("TextContinue/Content"),
-                SecondaryButtonText = i18n.GetString("Cancel/Content"),
+                PrimaryButtonText = i18n.GetString("TextContinue.Content"),
+                SecondaryButtonText = i18n.GetString("Cancel.Content"),
                 DefaultButton = ContentDialogButton.Primary,
                 XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
                 SecondaryButtonCommand = vm.CancelCommand,
@@ -208,7 +208,7 @@ namespace Lively.UI.WinUI.Services
             var addVm = App.Services.GetRequiredService<AddWallpaperViewModel>();
             var addDialog = new ContentDialog()
             {
-                Title = i18n.GetString("AddWallpaper/Label"),
+                Title = i18n.GetString("AddWallpaper.Label"),
                 Content = new AddWallpaperView(addVm),
                 PrimaryButtonText = i18n.GetString("TextOK"),
                 DefaultButton = ContentDialogButton.Primary,
@@ -257,9 +257,9 @@ namespace Lively.UI.WinUI.Services
             var vm = App.Services.GetRequiredService<AddWallpaperCreateViewModel>();
             var dlg = new ContentDialog()
             {
-                Title = i18n.GetString("TitleCreateWallpaper/Content"),
+                Title = i18n.GetString("TitleCreateWallpaper.Content"),
                 Content = new AddWallpaperCreateView(vm),
-                SecondaryButtonText = i18n.GetString("Cancel/Content"),
+                SecondaryButtonText = i18n.GetString("Cancel.Content"),
                 XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
             };
             vm.WallpaperCategoriesFiltered.Filter = _ => true; //reset
@@ -279,7 +279,7 @@ namespace Lively.UI.WinUI.Services
         {
             await new ContentDialog()
             {
-                Title = i18n.GetString("About/Label"),
+                Title = i18n.GetString("About.Label"),
                 Content = new AboutView(),
                 PrimaryButtonText = i18n.GetString("TextOK"),
                 DefaultButton = ContentDialogButton.Primary,
@@ -347,7 +347,7 @@ namespace Lively.UI.WinUI.Services
         {
             await new ContentDialog()
             {
-                Title = i18n.GetString("Help/Label"),
+                Title = i18n.GetString("Help.Label"),
                 Content = new HelpView(),
                 PrimaryButtonText = i18n.GetString("TextOK"),
                 DefaultButton = ContentDialogButton.Primary,
@@ -361,7 +361,7 @@ namespace Lively.UI.WinUI.Services
             vm.Model = obj;
             await new ContentDialog()
             {
-                Title = i18n.GetString("TitleShareWallpaper/Text"),
+                Title = i18n.GetString("TitleShareWallpaper.Text"),
                 Content = new ShareWallpaperView()
                 {
                     DataContext = vm,
@@ -376,7 +376,7 @@ namespace Lively.UI.WinUI.Services
         {
             await new ContentDialog()
             {
-                Title = i18n.GetString("About/Label"),
+                Title = i18n.GetString("About.Label"),
                 Content = new LibraryAboutView()
                 {
                     DataContext = new LibraryAboutViewModel(obj),
@@ -405,13 +405,13 @@ namespace Lively.UI.WinUI.Services
         {
             await new ContentDialog()
             {
-                Title = i18n.GetString("TitleReportWallpaper/Text"),
+                Title = i18n.GetString("TitleReportWallpaper.Text"),
                 Content = new ReportWallpaperView()
                 {
                     DataContext = new ReportWallpaperViewModel(obj),
                 },
-                PrimaryButtonText = i18n.GetString("Send/Content"),
-                SecondaryButtonText = i18n.GetString("Cancel/Content"),
+                PrimaryButtonText = i18n.GetString("Send.Content"),
+                SecondaryButtonText = i18n.GetString("Cancel.Content"),
                 DefaultButton = ContentDialogButton.Primary,
                 XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
             }.ShowAsyncQueue();
@@ -428,9 +428,9 @@ namespace Lively.UI.WinUI.Services
 
             var result = await ShowDialogAsync(
                 new RestoreWallpaperView(vm),
-                i18n.GetString("TitleWelcomeback/Text"),
-                i18n.GetString("TextDownloadNow/Content"),
-                i18n.GetString("TextMaybeLater/Content"));
+                i18n.GetString("TitleWelcomeback.Text"),
+                i18n.GetString("TextDownloadNow.Content"),
+                i18n.GetString("TextMaybeLater.Content"));
 
             return result == DialogResult.primary ? vm.SelectedItems : null;
         }
@@ -451,7 +451,7 @@ namespace Lively.UI.WinUI.Services
         {
             var dlg = new ContentDialog()
             {
-                Title = i18n.GetString("PleaseWait/Text"),
+                Title = i18n.GetString("PleaseWait.Text"),
                 Content = content,
                 PrimaryButtonText = $"{seconds}s",
                 IsPrimaryButtonEnabled = false,
@@ -476,7 +476,7 @@ namespace Lively.UI.WinUI.Services
             var folderView = new UserControls.FolderView() { FolderPath = folderPath };
             var dlg = new ContentDialog()
             {
-                Title = i18n.GetString("DescriptionConfirmProjectDirectory/Text"),
+                Title = i18n.GetString("DescriptionConfirmProjectDirectory.Text"),
                 Content = folderView,
                 PrimaryButtonText = i18n.GetString("TextYes"),
                 SecondaryButtonText = i18n.GetString("TextNo"),
@@ -490,7 +490,7 @@ namespace Lively.UI.WinUI.Services
         {
             return await new ContentDialog()
             {
-                Title = i18n.GetString("PleaseWait/Text"),
+                Title = i18n.GetString("PleaseWait.Text"),
                 Content = message,
                 PrimaryButtonText = i18n.GetString("TextYes"),
                 SecondaryButtonText = i18n.GetString("TextNo"),
@@ -505,7 +505,7 @@ namespace Lively.UI.WinUI.Services
             {
                 Title = message,
                 Content = new ProgressBar() { IsIndeterminate = true },
-                PrimaryButtonText = i18n.GetString("Cancel/Content"),
+                PrimaryButtonText = i18n.GetString("Cancel.Content"),
                 XamlRoot = App.Services.GetRequiredService<MainWindow>().Content.XamlRoot,
             };
 

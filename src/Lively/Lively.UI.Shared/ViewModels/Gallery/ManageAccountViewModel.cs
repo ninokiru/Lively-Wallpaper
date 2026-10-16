@@ -58,17 +58,17 @@ namespace Lively.UI.Shared.ViewModels
         private async Task DeleteAccount()
         {
             //IsProcessing = true;
-            var choice = await dialogService.ShowDialogAsync(i18n.GetString("GalleryAccountDeleteConfirm/Text"),
-                                                        i18n.GetString("PleaseWait/Text"),
-                                                        i18n.GetString("GalleryAccountDelete/Content"),
-                                                        i18n.GetString("Cancel/Content"),
+            var choice = await dialogService.ShowDialogAsync(i18n.GetString("GalleryAccountDeleteConfirm.Text"),
+                                                        i18n.GetString("PleaseWait.Text"),
+                                                        i18n.GetString("GalleryAccountDelete.Content"),
+                                                        i18n.GetString("Cancel.Content"),
                                                         false);
             if (choice == DialogResult.primary)
             {
                 var response = await galleryClient.DeleteAccountAsync();
                 if (response != null) //fail
                 {
-                    await dialogService.ShowDialogAsync(i18n.GetString("GalleryAccountDeleteFail/Text"),
+                    await dialogService.ShowDialogAsync(i18n.GetString("GalleryAccountDeleteFail.Text"),
                                                    i18n.GetString("TextError"),
                                                    i18n.GetString("TextOK"));
                 }

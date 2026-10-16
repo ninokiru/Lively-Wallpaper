@@ -230,7 +230,7 @@ OLED, प्लाज्मा या CRT डिस्प्ले के लि
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
     <value>अपडेट नहीं हो सका; कृपया इस इंस्टॉलर को यहाँ से डाउनलोड करने का प्रयास करें:
-https://github.com/rocksdanister/lively/releases</value>
+https://github.com/ninokiru/Lively-Wallpaper/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>यह एक ख़राब wallpaper फ़ाइल है इसे फिर से डाउनलोड करने का प्रयास करें।</value>
