@@ -68,8 +68,10 @@ jobs:
             $missing | ForEach-Object { Write-Host "::error::Missing $_" }
             exit 1
           }
-          $leftovers = Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Filter *.dll -Recurse |
-            Where-Object { $_.Name -match 'libmpv|libvlc|cef|CefSharp' }
+          # Removed engine binaries, matched by name prefix so unrelated dll files
+          # such as wuceffectsi.dll are not caught.
+          $leftovers = Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Recurse -Include *.dll, *.exe |
+            Where-Object { $_.Name -match '^(CefSharp|libcef|libvlc|vlc|libmpv|mpv-)' }
           if ($leftovers) {
             $leftovers | ForEach-Object { Write-Host "::error::Removed player leftover: $($_.FullName)" }
             exit 1
@@ -78,7 +80,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: lively-win-x64-portable
-          path: ${{ env.PUBLISH_DIR }}
+          # Glob so the artifact stores the publish contents, not a "publish" folder.
+          path: ${{ env.PUBLISH_DIR }}\**
           if-no-files-found: error
 
   installer:
@@ -92,6 +95,16 @@ jobs:
         with:
           name: lively-win-x64-portable
           path: src/installer/Release
+
+      - name: Flatten artifact
+        shell: pwsh
+        run: |
+          # Script_x64.iss reads Release\* directly, so the publish tree must sit right there.
+          $nested = Join-Path "src/installer/Release" "publish"
+          if (Test-Path -LiteralPath $nested) {
+            Get-ChildItem -LiteralPath $nested | Move-Item -Destination "src/installer/Release"
+            Remove-Item -LiteralPath $nested
+          }
 
       - name: Install Inno Setup
         shell: pwsh
