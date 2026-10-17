@@ -39,8 +39,10 @@ namespace Lively.Services
             }
             else
             {
-                fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins", "UI", "Lively.UI.WinUI.exe");
-                workingDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins", "UI");
+                // One shared publish folder for all three processes: the UI executable
+                // is next to the core, it is no longer kept under plugins\UI.
+                fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lively.UI.WinUI.exe");
+                workingDirectory = AppDomain.CurrentDomain.BaseDirectory;
             }
         }
 

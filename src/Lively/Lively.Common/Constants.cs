@@ -80,13 +80,19 @@ namespace Lively.Common
 
         /// <summary>
         /// To be combined with Core base directory.
-        /// Single player engine: every wallpaper type is rendered by the WebView2 plugin.
+        /// Single player engine: every wallpaper type is rendered by the WebView2 player.
+        /// Core, UI and player are published into one shared folder so the .NET runtime,
+        /// ImageMagick and the common libraries are stored once instead of three times,
+        /// so the player executable sits right next to the core and these paths are empty.
         /// </summary>
         public static class PlayerPartialPaths
         {
-            public static string PlayerDir { get; } = "plugins";
-            public static string WebView2Dir { get; } = Path.Combine("plugins", "webview2");
-            public static string WebView2Path { get; } = Path.Combine(WebView2Dir, "Lively.Player.WebView2.exe");
+            public static string PlayerDir { get; } = string.Empty;
+            public static string WebView2Dir { get; } = string.Empty;
+
+            // Bare file name: WebView2UserDataFactory derives the browser profile folder
+            // name from it, so it must keep reading Lively.Player.WebView2 like before.
+            public static string WebView2Path { get; } = "Lively.Player.WebView2.exe";
         }
 
         public static class MachineLearning

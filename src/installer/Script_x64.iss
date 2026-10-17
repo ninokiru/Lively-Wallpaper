@@ -39,8 +39,10 @@ PrivilegesRequiredOverridesAllowed=dialog
 ; Name matches the asset prefix the in-app updater looks for: luma_setup_x64_full_*
 OutputBaseFilename=luma_setup_x64_full_v{#MyAppVersion}
 SetupIconFile=Icons\appicon_96.ico
-Compression=lzma
-;Compression=lzma2/ultra64
+; Solid lzma2 over the whole tree: the publish folder is mostly runtime dll files that
+; compress well together. lzma (LZMA1) is single threaded and weaker; the ultra levels
+; need Inno Setup 6.3+ and add minutes of build time for a few percent more.
+Compression=lzma2/max
 SolidCompression=yes
 WizardStyle=modern
 ;Installer/Uninstaller will stop if application is running by checking mutex.
@@ -94,6 +96,13 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}";
 Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "Lively"; ValueData: """{app}\Lively.exe"""; Flags: uninsdeletevalue;
 
 ;[UninstallDelete]
+
+; Core, UI and player are published into one shared folder now instead of plugins\UI and
+; plugins\webview2. Inno only overwrites files, it never removes ones that disappeared, so
+; an upgrade from an earlier build would keep three orphaned runtime copies (~250 MB) and
+; could even launch the stale executable. Cleared before every install.
+[InstallDelete]
+Type: filesandordirs; Name: "{app}\plugins"
 
 [Files]
 Source: "VC\VC_redist.x64.exe"; DestDir: {tmp}; Flags: deleteafterinstall

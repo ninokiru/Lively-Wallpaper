@@ -18,6 +18,8 @@ env:
   DOTNET_NOLOGO: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   RID: win-x64
+  # Every project is published here first; the three trees are then merged into PUBLISH_DIR.
+  STAGE_DIR: ${{ github.workspace }}\stage
   PUBLISH_DIR: ${{ github.workspace }}\publish
 
 jobs:
@@ -52,13 +54,20 @@ jobs:
           Add-Content -Path $env:GITHUB_ENV -Value "LIVELY_VERSION=$version"
 
       # Everything comes from NuGet restore; no binaries are committed or fetched by hand.
+      #
+      # Core, UI and player are three separate processes, so each used to ship its own full
+      # copy of the .NET runtime, of ImageMagick and of the shared libraries - roughly 200 MB
+      # of duplicate files in a 666 MB install. They are staged one folder per project, then
+      # merged into a single tree that all three run from. The app resolves both executables
+      # relative to the core folder, so the lookup paths live in Constants.PlayerPartialPaths
+      # and RunnerService.
       - name: Publish core
         run: >
           dotnet publish src/Lively/Lively/Lively.csproj
           -c Release -r $env:RID --self-contained true
           -p:DebugType=none -p:DebugSymbols=false
           -p:LivelyVersion=$env:LIVELY_VERSION
-          -o "$env:PUBLISH_DIR"
+          -o "$env:STAGE_DIR\core"
 
       - name: Publish UI
         run: >
@@ -66,7 +75,7 @@ jobs:
           -c Release -r $env:RID --self-contained true
           -p:DebugType=none -p:DebugSymbols=false
           -p:LivelyVersion=$env:LIVELY_VERSION
-          -o "$env:PUBLISH_DIR\plugins\UI"
+          -o "$env:STAGE_DIR\ui"
 
       - name: Publish WebView2 player
         run: >
@@ -74,16 +83,79 @@ jobs:
           -c Release -r $env:RID --self-contained true
           -p:DebugType=none -p:DebugSymbols=false
           -p:LivelyVersion=$env:LIVELY_VERSION
-          -o "$env:PUBLISH_DIR\plugins\webview2"
+          -o "$env:STAGE_DIR\player"
+
+      - name: Merge staged output into one shared tree
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          # Managed assemblies answer with their assembly version, native dll files with the
+          # file version in their resource block. Keeping the newest copy matters: a process
+          # may load an assembly newer than the one it compiled against, an older one can
+          # throw MissingMethodException at run time.
+          function Get-AssemblyVersion([string]$File) {
+            try { return [System.Reflection.AssemblyName]::GetAssemblyName($File).Version } catch { }
+            $info = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($File)
+            $text = ''
+            if ($info -and $info.FileVersion) { $text = ($info.FileVersion -split '\s')[0] }
+            $parsed = [Version]$null
+            if ([Version]::TryParse($text, [ref]$parsed)) { return $parsed }
+            return $null
+          }
+
+          New-Item -ItemType Directory -Force -Path $env:PUBLISH_DIR | Out-Null
+          $count = @{ new = 0; identical = 0; replaced = 0; kept = 0 }
+          foreach ($stage in 'core', 'player', 'ui') {
+            $root = (Resolve-Path -LiteralPath (Join-Path $env:STAGE_DIR $stage)).Path
+            Get-ChildItem -LiteralPath $root -Recurse -File | ForEach-Object {
+              $relative = [System.IO.Path]::GetRelativePath($root, $_.FullName)
+              $target = Join-Path $env:PUBLISH_DIR $relative
+              if (-not (Test-Path -LiteralPath $target)) {
+                New-Item -ItemType Directory -Force -Path (Split-Path -Parent $target) | Out-Null
+                Copy-Item -LiteralPath $_.FullName -Destination $target
+                $count.new = $count.new + 1
+                return
+              }
+              $sourceHash = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash
+              $targetHash = (Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash
+              if ($sourceHash -eq $targetHash) {
+                $count.identical = $count.identical + 1
+                return
+              }
+              $incoming = Get-AssemblyVersion $_.FullName
+              $existing = Get-AssemblyVersion $target
+              # Newest wins; an equal or unreadable version goes to the later stage, which is
+              # why the UI is merged last - it is built against the highest Windows SDK and
+              # the newest WinAppSDK, so its copy of a tied file covers the other two.
+              if ((-not $incoming) -or (-not $existing) -or ($incoming -ge $existing)) {
+                Copy-Item -LiteralPath $_.FullName -Destination $target -Force
+                $count.replaced = $count.replaced + 1
+                Write-Host "Replaced $relative ($existing) with $incoming from $stage."
+              } else {
+                $count.kept = $count.kept + 1
+                Write-Host "Kept $relative ($existing), $stage offered the older $incoming."
+              }
+            }
+          }
+          $summary = "Merge summary: {0} new, {1} identical, {2} replaced, {3} kept." -f $count.new, $count.identical, $count.replaced, $count.kept
+          Write-Host $summary
+          if ($count.kept -gt 0) {
+            # A file was left in place because the copy already merged was newer. Nothing is
+            # broken by this, but it is where a version mismatch would hide, so list them.
+            Write-Host "::warning::$($count.kept) colliding file(s) kept a newer version than another process was built against."
+          }
+          Remove-Item -LiteralPath $env:STAGE_DIR -Recurse -Force
 
       # The app looks these up by relative path at runtime, so fail the build if staging is wrong.
       - name: Verify layout
         shell: pwsh
         run: |
+          $ErrorActionPreference = 'Stop'
           $expected = @(
             "$env:PUBLISH_DIR\Lively.exe",
-            "$env:PUBLISH_DIR\plugins\UI\Lively.UI.WinUI.exe",
-            "$env:PUBLISH_DIR\plugins\webview2\Lively.Player.WebView2.exe",
+            "$env:PUBLISH_DIR\Lively.UI.WinUI.exe",
+            "$env:PUBLISH_DIR\Lively.Player.WebView2.exe",
             "$env:PUBLISH_DIR\Assets\Plugins\Media\LivelyProperties.json"
           )
           $missing = $expected | Where-Object { -not (Test-Path -LiteralPath $_) }
@@ -91,6 +163,35 @@ jobs:
             $missing | ForEach-Object { Write-Host "::error::Missing $_" }
             exit 1
           }
+
+          # Merging is only safe if every assembly an app declares in its deps.json really
+          # landed in the shared folder; a missing one fails at run time, not at start up.
+          $paths = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+          $leaves = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+          Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Recurse -File | ForEach-Object {
+            [void]$paths.Add($_.FullName.Substring($env:PUBLISH_DIR.Length + 1))
+            [void]$leaves.Add($_.Name)
+          }
+          foreach ($app in 'Lively', 'Lively.UI.WinUI', 'Lively.Player.WebView2') {
+            $deps = Get-Content -LiteralPath (Join-Path $env:PUBLISH_DIR "$app.deps.json") -Raw | ConvertFrom-Json
+            $assets = foreach ($target in $deps.targets.PSObject.Properties) {
+              foreach ($library in $target.Value.PSObject.Properties) {
+                foreach ($group in 'runtime', 'native', 'resources') {
+                  if ($library.Value.$group) { $library.Value.$group.PSObject.Properties.Name }
+                }
+              }
+            }
+            foreach ($asset in ($assets | Sort-Object -Unique)) {
+              # deps.json writes forward slashes while the file system uses backslashes, so
+              # only the file name is compared against the merged tree.
+              $leaf = ($asset -split '[\\/]')[-1]
+              if (-not $paths.Contains($asset) -and -not $leaves.Contains($leaf)) {
+                Write-Host "::error::$app.deps.json needs '$asset' but the merged tree has no such file."
+                exit 1
+              }
+            }
+          }
+
           # Removed engine binaries, matched by name prefix so unrelated dll files
           # such as wuceffectsi.dll are not caught.
           $leftovers = Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Recurse -Include *.dll, *.exe |
@@ -98,6 +199,23 @@ jobs:
           if ($leftovers) {
             $leftovers | ForEach-Object { Write-Host "::error::Removed player leftover: $($_.FullName)" }
             exit 1
+          }
+
+      # Where the weight actually sits, so a future reduction can be measured instead of
+      # guessed at. Prints the total, the per top level folder totals and the largest files.
+      - name: Report publish size
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Recurse -File
+          $total = ($files | Measure-Object -Property Length -Sum).Sum
+          Write-Host ('Installed size: {0:N1} MB in {1} files.' -f ($total / 1MB), $files.Count)
+          foreach ($child in Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Directory) {
+            $size = (Get-ChildItem -LiteralPath $child.FullName -Recurse -File | Measure-Object -Property Length -Sum).Sum
+            Write-Host ('   {0,9:N1} MB  folder {1}' -f ($size / 1MB), $child.Name)
+          }
+          $files | Sort-Object -Property Length -Descending | Select-Object -First 20 | ForEach-Object {
+            $name = $_.FullName.Substring($env:PUBLISH_DIR.Length + 1)
+            Write-Host ('   {0,9:N1} MB  {1}' -f ($_.Length / 1MB), $name)
           }
 
       - uses: actions/upload-artifact@v4
