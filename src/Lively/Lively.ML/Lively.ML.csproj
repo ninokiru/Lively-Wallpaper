@@ -8,7 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.23.2" />
-    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.1" />
+    <!--  Same package as the core project: both are published into one shared folder, and
+          AnyCPU would add the x86 and ARM64 copies of the natives on top.  -->
+    <PackageReference Include="Magick.NET-Q8-x64" Version="14.9.1" />
   </ItemGroup>
 
 </Project>

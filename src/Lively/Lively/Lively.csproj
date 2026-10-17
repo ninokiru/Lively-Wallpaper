@@ -65,7 +65,10 @@
 
   <ItemGroup>
     <PackageReference Include="GrpcDotNetNamedPipes" Version="3.1.0" />
-    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.1" />
+    <!--  The x64 flavoured package instead of AnyCPU: AnyCPU ships the ImageMagick natives
+          for x86, x64 and ARM64 (91.8 MB against 51.7 MB) and only the x64 set can ever load
+          here, because the build is win-x64 and the installer is x64 only.  -->
+    <PackageReference Include="Magick.NET-Q8-x64" Version="14.9.1" />
     <PackageReference Include="NLog" Version="6.0.6" />
     <PackageReference Include="RawInput.Sharp" Version="0.1.3" />
     <PackageReference Include="Sentinel.NLogViewer" Version="2.0.1" />

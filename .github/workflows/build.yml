@@ -201,6 +201,16 @@ jobs:
             exit 1
           }
 
+          # ImageMagick keeps one set of native dll files per architecture. The x64 package is
+          # referenced instead of AnyCPU because a win-x64 build can only ever load the x64 set,
+          # so this fails the run if a package change puts the other copies back in the folder.
+          $magick = Get-ChildItem -LiteralPath $env:PUBLISH_DIR -Recurse -Include *.dll |
+            Where-Object { $_.Name -match 'AnyCPU|Q8-(x86|ARM64)' }
+          if ($magick) {
+            $magick | ForEach-Object { Write-Host "::error::Wrong architecture Magick binary: $($_.FullName)" }
+            exit 1
+          }
+
       # Where the weight actually sits, so a future reduction can be measured instead of
       # guessed at. Prints the total, the per top level folder totals and the largest files.
       - name: Report publish size
