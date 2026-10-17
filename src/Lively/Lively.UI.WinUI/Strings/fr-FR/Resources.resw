@@ -136,22 +136,22 @@
     <value>Documentation de l'API et aide</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively a rencontré une erreur fatale.
+    <value>Luma a rencontré une erreur fatale.
 
-Windows Explorer a redémarré deux fois dans les 30 dernières secondes ! Cela est peut-être un conflit entre Lively et d'autres applications de personnalisations de bureau ou Windows. Pour éviter d'autres éventuelles erreurs, tous les fonds d'écran ont été arrêtés.</value>
+Windows Explorer a redémarré deux fois dans les 30 dernières secondes ! Cela est peut-être un conflit entre Luma et d'autres applications de personnalisations de bureau ou Windows. Pour éviter d'autres éventuelles erreurs, tous les fonds d'écran ont été arrêtés.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Programme incompatible trouvé, thème de la barre des tâches désactivé</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Site officiel de Lively Wallpaper</value>
+    <value>Site officiel de Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>La plupart des écrans modernes LCD et LED ne souffres pas de brûlures internes et donc n'importe quel fond d'écran peut être utilisé comme écran de veille.
 
 Pour les écrans OLED, Plasma ou CRT qui sont susceptibles aux brûlures internes, il est conseillé d'utiliser un fond d'écran avec un mouvement régulier et le thème sombre ce qui permet d'atténuer les brûlures internes, cependant son efficacité ne peut pas être garantie.
 
-La principale utilité des écrans de veille de Lively est d'ajouter une couche supplémentaire de personnalisation à votre ordinateur, utilisez les écrans de veilles comme protection contre les brûlures internes d'écrans à vos risques et périls!</value>
+La principale utilité des écrans de veille de Luma est d'ajouter une couche supplémentaire de personnalisation à votre ordinateur, utilisez les écrans de veilles comme protection contre les brûlures internes d'écrans à vos risques et périls!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Signaler un problème avec le logiciel</value>
@@ -180,10 +180,10 @@ Les applications malveillantes peuvent contenir des malwares, virus ... ainsi qu
 Continuez seulement si cette application provient d'une source fiable.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively est réduit dans la barre d'état, clic droit sur l'icône Lively pour plus d'options.</value>
+    <value>Luma est réduit dans la barre d'état, clic droit sur l'icône Luma pour plus d'options.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Veuillez redémarrer Lively pour prendre en compte les modifications</value>
+    <value>Veuillez redémarrer Luma pour prendre en compte les modifications</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Veuillez arrêter avant de continuer</value>
@@ -204,7 +204,7 @@ Continuez seulement si cette application provient d'une source fiable.</value>
     <value>Entrer le lien du site à charger, shadertoy.com les liens de shaders sont supportés.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Cet assistant vous aidera à configurer Lively</value>
+    <value>Cet assistant vous aidera à configurer Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Votre version de Windows N/KN requiert le téléchargement de codecs additionnels pour supporter la lecture de vidéos pour les fonds d'écran</value>
@@ -213,17 +213,17 @@ Continuez seulement si cette application provient d'une source fiable.</value>
     <value>Montrez votre soutien en payant le café au développeur</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Vous êtes sur le point de passer à la version bêta (développeur) de Lively.
+    <value>Vous êtes sur le point de passer à la version bêta (développeur) de Luma.
 Les mises à jour seront fréquentes et pourraient contenir des bugs !</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Visibilité de l'icône dans la barre d'état, Lively continuera de fonctionner avec l'icône cachée</value>
+    <value>Visibilité de l'icône dans la barre d'état, Luma continuera de fonctionner avec l'icône cachée</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Icône de la barre d'état système</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively doit redémarrer pour appliquer la nouvelle langue</value>
+    <value>Luma doit redémarrer pour appliquer la nouvelle langue</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Langue</value>
@@ -242,7 +242,7 @@ Instructions pour partager le fichier des logs :
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively ne peut pas fonctionner correctement avec le mode "Contraste élevé" de Windows !
+    <value>Luma ne peut pas fonctionner correctement avec le mode "Contraste élevé" de Windows !
 Désactivez le mode "Contraste élevé" et essayez à nouveau</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Instructions pour partager le fichier de log :
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Ceci n'est pas un fichier de Lively wallpaper</value>
+    <value>Ceci n'est pas un fichier de Luma wallpaper</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively n'a pas été fermé correctement et va redémarrer en mode sans échec.
+    <value>Luma n'a pas été fermé correctement et va redémarrer en mode sans échec.
 Souhaitez-vous restaurer les fonds d'écran précédemment en cours d'utilisation ?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Il semblerait que certains paramètres aient besoin d'être ajustés pour que Lively puisse fonctionner :
+    <value>Il semblerait que certains paramètres aient besoin d'être ajustés pour que Luma puisse fonctionner :
 1. Appuyez sur Win+R pour ouvrir "Exécuter"
 2. Tapez "SystemPropertiesPerformance.exe", cliquez sur "OK" pour ouvrir les "Options de performances"
 3. Cochez la case "Animer les contrôles et les éléments dans Windows" (si déja coché, décocher puis recocher).
 4. Cliquez sur "Appliquer" puis sur "OK" pour fermer la fenêtre.
 
 Si Windows 7 vient de se mettre en route, choisissez "Ajuster afin d'obtenir la meilleure apparence" et cliquez sur Appliquer.
-Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Windows.
+Si cela ne fonctionne toujours pas, fermez et relancez Luma / redémarrez Windows.
 (Ne fonctionne pas sur quelques versions Insider de Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively doit fonctionner en arrière-plan pour la lecture du fond d'écran</value>
+    <value>Luma doit fonctionner en arrière-plan pour la lecture du fond d'écran</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Démarrer avec Windows</value>
@@ -356,7 +356,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Exporter .zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Des fonctionnalités ne sont pas disponibles dans cette version de Lively</value>
+    <value>Des fonctionnalités ne sont pas disponibles dans cette version de Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Fichier non trouvé</value>
@@ -371,7 +371,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Go</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Aidez-nous à traduire Lively</value>
+    <value>Aidez-nous à traduire Luma</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>heure(s)</value>
@@ -425,7 +425,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>En ligne</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Ouvrir Lively</value>
+    <value>Ouvrir Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Tous les processus</value>
@@ -488,7 +488,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Arrêter</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Vous aimez Lively ? Laissez un commentaire :)</value>
+    <value>Vous aimez Luma ? Laissez un commentaire :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Aide</value>
@@ -551,7 +551,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Vérification des mises à jour</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>Lively est à jour !</value>
+    <value>Luma est à jour !</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>Vidéo</value>
@@ -614,7 +614,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Mettre en pause les fonds d'écran lors de l'exécution de ces applications</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Adapter l'apparence de Lively aux paramètres du thème du système</value>
+    <value>Adapter l'apparence de Luma aux paramètres du thème du système</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Pour les systèmes alimentés par batterie uniquement) Définir le comportement de lecture lorsque l'alimentation secteur est déconnectée</value>
@@ -716,7 +716,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Autre application en plein écran</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Fond d'écran Lively</value>
+    <value>Fond d'écran Luma</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Règles par application</value>
@@ -779,7 +779,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Bibliothèque</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Installation de Lively</value>
+    <value>Installation de Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Emplacement</value>
@@ -1254,7 +1254,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Identique au système</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Lively doit être redémarrée pour que les nouveaux paramètres prennent effet.</value>
+    <value>Luma doit être redémarrée pour que les nouveaux paramètres prennent effet.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Lors de la reprise, afficher l'écran de connexion</value>

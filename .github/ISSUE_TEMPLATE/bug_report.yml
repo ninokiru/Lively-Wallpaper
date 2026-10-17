@@ -79,9 +79,9 @@ body:
       label: Log file
       description: |
         Share the diagnostic files by:
-        - Open Lively settings (Gear icon) → System → Log File → Save.
-        - Or Right-click Lively tray-icon -> Report Bug -> Create log report file.
-        - Or navigate to `C:\Users\<UserName>\AppData\Local\Lively Wallpaper\logs`
+        - Open Luma Wallpaper settings (Gear icon) → System → Log File → Save.
+        - Or Right-click Luma Wallpaper tray-icon -> Report Bug -> Create log report file.
+        - Or navigate to `C:\Users\<UserName>\AppData\Local\Luma Wallpaper\logs`
       placeholder: Attach logs or paste the contents here
     validations:
       required: true

@@ -144,14 +144,14 @@
     <value>Выяўлена несумяшчальная праграма, тэматызацыя панэлі задач адключана</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Афіцыйная вэб-старонка Lively Wallpaper</value>
+    <value>Афіцыйная вэб-старонка Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Пераважная колькасць сучасных дысплэяў з тэхналогіяй LCD і LED не падвержаны выгаранню, і таму вы можаце выкарыстоўваць любыя шпалеры ў якасці застаўкі.
 
 Для дысплэяў OLED, CRT або з плазменнай тэхналогіяй, якія падвержаны выгаранню, рэкамендуецца выкарыстоўваць тэму цёмных шпалер са звычайным рухам. Такі падыход змяншае выгаранне, аднак гэта функцыя пакуль не пратэсціравана і яе эфектыўнасць не гарантуецца.
 
-Галоўная задача заставак Lively — гэта дадаць яшчэ адзін узровень персаналізацыі да вашага камп'ютара. Уся адказнасць за выкарыстанне заставак з абаронай ад выгарання ляжыць на вас!</value>
+Галоўная задача заставак Luma — гэта дадаць яшчэ адзін узровень персаналізацыі да вашага камп'ютара. Уся адказнасць за выкарыстанне заставак з абаронай ад выгарання ляжыць на вас!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Паведаміць аб праблеме з праграмным забеспячэннем</value>
@@ -180,10 +180,10 @@
 Працягвайце толькі ў выпадку, калі праграма атрымана з надзейнай крыніцы.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively згорнута ў сістэмны латок. Націсніце на правую кнопку, каб працягнуць.</value>
+    <value>Luma згорнута ў сістэмны латок. Націсніце на правую кнопку, каб працягнуць.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Перазапусціце Lively, каб адбыліся змены</value>
+    <value>Перазапусціце Luma, каб адбыліся змены</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Спыніцеся перад тым, як працягнуць</value>
@@ -204,7 +204,7 @@
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Майстар усталявання дапаможа вам наладзіць Lively</value>
+    <value>Майстар усталявання дапаможа вам наладзіць Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Вашай версіі Windows N/KN спатрэбіцца спампаваць дадатковыя кодэкі для падтрымкі прайгравання відэа ў шпалерах</value>
@@ -213,11 +213,11 @@
     <value>Падтрымайце распрацоўшчыка, купіўшы яму каву</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Вы збірайцеся перайсці на бэта-версію Lively (для распрацоўшчыкаў).
+    <value>Вы збірайцеся перайсці на бэта-версію Luma (для распрацоўшчыкаў).
 Абнаўленні будуць больш частымі і могуць змяшчаць памылкі!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Бачнасць значка ў сістэмным латку. Lively працягне працаваць са схаваным значком</value>
+    <value>Бачнасць значка ў сістэмным латку. Luma працягне працаваць са схаваным значком</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Значок у сістэмным латку</value>
@@ -242,7 +242,7 @@ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively не можа працаваць з уключаным рэжымам павышанага кантрасту ў Windows!
+    <value>Luma не можа працаваць з уключаным рэжымам павышанага кантрасту ў Windows!
 Адключыце вышэйадзначаны рэжым і паспрабуйце яшчэ раз</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,14 +254,14 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Не файл шпалер Lively</value>
+    <value>Не файл шпалер Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively запушчана ў бяспечным рэжыме, бо папярэдні запуск завяршыўся неналежным чынам.
+    <value>Luma запушчана ў бяспечным рэжыме, бо папярэдні запуск завяршыўся неналежным чынам.
 Вы сапраўды хочаце аднавіць раней запушчаныя шпалеры?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Падобна на тое, што трэба зрабіць некалькі налад, каб Lively пачала працаваць:  
+    <value>Падобна на тое, што трэба зрабіць некалькі налад, каб Luma пачала працаваць:  
 1. Націсніце Win + R, каб адкрыць акно "Выканаць", 
 2. Увядзіце SystemPropertiesPerformance.exe у радок акна "Выканаць" і націсніце "ОК", каб адкрыць параметры прадуктыўнасці.
 3. Уключыце/Пазначце птушкай на "Animate controls and elements inside windows" (калі птушка прысутнічае, здыміце яе і пазначце яшчэ раз).
@@ -272,7 +272,7 @@ https://github.com/rocksdanister/lively/wiki</value>
 (Не працуе ў некаторых інсайдарскіх зборках Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively неабходна працаваць у фонавым рэжыме для адлюстравання шпалер</value>
+    <value>Luma неабходна працаваць у фонавым рэжыме для адлюстравання шпалер</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Запускаць разам з Windows</value>
@@ -356,7 +356,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Захаваць у файл</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Некаторыя функцыі недаступны ў гэтай версіі Lively</value>
+    <value>Некаторыя функцыі недаступны ў гэтай версіі Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Файл не знойдзены</value>
@@ -371,7 +371,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>GO</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Дапамагчы з перакладам Lively</value>
+    <value>Дапамагчы з перакладам Luma</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>гадзін(а)</value>
@@ -425,7 +425,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>У сетцы</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Адкрыць Lively</value>
+    <value>Адкрыць Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Усе працэсы</value>
@@ -488,7 +488,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Спыніць</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Вам падабаецца выкарыстоўваць Lively? Пакіньце водгук :)</value>
+    <value>Вам падабаецца выкарыстоўваць Luma? Пакіньце водгук :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Падтрымка</value>
@@ -614,7 +614,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Прыпыніць шпалеры, калі запушчаны гэтыя праграмы</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively адаптуецца пад сістэмныя налады тэмы, каб змяніць знешні выгляд</value>
+    <value>Luma адаптуецца пад сістэмныя налады тэмы, каб змяніць знешні выгляд</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Змяніць прайграванне пры сілкаванні ад акумулятара</value>
@@ -710,7 +710,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Праграмы на ўвесь экран</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Правілы для праграм</value>
@@ -773,7 +773,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Бібліятэка</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Налады Lively</value>
+    <value>Налады Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Месцазнаходжанне</value>

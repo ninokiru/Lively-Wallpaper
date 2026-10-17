@@ -136,22 +136,22 @@
     <value>Tư liệu API và hỗ trợ</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively đã gặp sự cố nghiêm trọng. 
+    <value>Luma đã gặp sự cố nghiêm trọng. 
 
-Windows Explorer đã khởi động lại 2 lần trong 30 giây! Đây có thể là do Lively và những ứng dụng chỉnh hình nền khác chạy cùng một lúc gây ra lỗi. Để tránh trường hợp bị lỗi nặng hơn, tất cả hình nền của bạn sẽ bị tắt.</value>
+Windows Explorer đã khởi động lại 2 lần trong 30 giây! Đây có thể là do Luma và những ứng dụng chỉnh hình nền khác chạy cùng một lúc gây ra lỗi. Để tránh trường hợp bị lỗi nặng hơn, tất cả hình nền của bạn sẽ bị tắt.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Phát hiện chương trình không tương thích, taskbar theming đã bị tắt</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Trang chính thức của Lively Wallpaper</value>
+    <value>Trang chính thức của Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Hầu như tất cả màn hình LCD và LED đều không bị burn-in(lưu ảnh màn hình) nên bất kỳ hình nền nào cũng có thể sử dụng làm màn hình chờ.
 
 Còn đối với màn hình OLED, Plasma hoặc CRT thì sẽ có thể dễ bị burn-in nên lively khuyến cáo bạn nên sử dụng hình nền có ảnh động và tối để giảm thiểu hiệu ứng burn-in nhưng chức năng này cũng chưa được thử nghiệm nên sẽ không đảm bảo màn hình của bạn sẽ không bị hỏng.
 
-Mục đích chính của Lively là để làm cho màn hình desktop của bạn đẹp hơn, nên trong trường hợp sử dụng Lively để làm màn hình chờ thì Lively sẽ không chịu trách nhiệm!</value>
+Mục đích chính của Luma là để làm cho màn hình desktop của bạn đẹp hơn, nên trong trường hợp sử dụng Luma để làm màn hình chờ thì Luma sẽ không chịu trách nhiệm!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Báo lỗi chương trình</value>
@@ -180,10 +180,10 @@ Phần mềm không được kiểm duyệt có thể chứa phần mềm gián 
 Chỉ tiếp tục nếu phần mềm này nếu bạn tin tưởng nó.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively đã được thu nhỏ vào khay hệ thống, click vào biểu tượng Lively để tiếp tục.</value>
+    <value>Luma đã được thu nhỏ vào khay hệ thống, click vào biểu tượng Luma để tiếp tục.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Xin hãy khởi động lại Lively để xác nhận cài đặt</value>
+    <value>Xin hãy khởi động lại Luma để xác nhận cài đặt</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Vui lòng dừng trước khi đi tiếp</value>
@@ -198,32 +198,32 @@ Chỉ tiếp tục nếu phần mềm này nếu bạn tin tưởng nó.</value>
     <value>Chọn màn hình</value>
   </data>
   <data name="DescriptionUpdateAvailable" xml:space="preserve">
-    <value>Lively đã có một phiên bản mới hơn!</value>
+    <value>Luma đã có một phiên bản mới hơn!</value>
   </data>
   <data name="DescriptionWebpageLoad" xml:space="preserve">
     <value>Nhập url trang web để tải, có hỗ trợ link cho shader trên shadertoy.com</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Trình cài đặt này sẽ giúp bạn cài đặt Lively</value>
+    <value>Trình cài đặt này sẽ giúp bạn cài đặt Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Phiên bản Windows N/KN sẽ cần phải tải thêm một số codecs khác để hỗ trợ chạy video dưới dạng hình nền</value>
   </data>
   <data name="DescSupperDev" xml:space="preserve">
-    <value>Hãy giúp đỡ nhà phát triển của Lively bằng cách donate</value>
+    <value>Hãy giúp đỡ nhà phát triển của Luma bằng cách donate</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Bạn chuẩn bị chuyển qua phiên bản beta (developer) của Lively.
-Lively sẽ được cập nhật thường xuyên hơn và sẽ bị lỗi nhiều hơn!</value>
+    <value>Bạn chuẩn bị chuyển qua phiên bản beta (developer) của Luma.
+Luma sẽ được cập nhật thường xuyên hơn và sẽ bị lỗi nhiều hơn!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Ẩn hiện khay icon của hệ thống, Lively sẽ tiếp tục chạy dù icon đã bị ẩn</value>
+    <value>Ẩn hiện khay icon của hệ thống, Luma sẽ tiếp tục chạy dù icon đã bị ẩn</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Biểu tượng trên khay hệ thống</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively sẽ khởi động lại để áp dụng ngôn ngữ mới.</value>
+    <value>Luma sẽ khởi động lại để áp dụng ngôn ngữ mới.</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Ngôn ngữ</value>
@@ -242,37 +242,37 @@ Hướng dẫn chia sẻ file log:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively không thể hoạt động tốt trên Windows bật chế độ tương phản cao!
+    <value>Luma không thể hoạt động tốt trên Windows bật chế độ tương phản cao!
 Hãy tắt chế độ tương phản cao và thử lại.</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Không thể phát lại video :(
-thử thay đổi trình phát video trong phần cài đặt của Lively.
+thử thay đổi trình phát video trong phần cài đặt của Luma.
 
 Để hiểu rõ hơn lỗi và có thể giải quyết vấn đề này, xin hãy chia sẻ file log với người phát triển.
 Hướng dẫn chia sẻ file log:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Không phải file hình nền của Lively.</value>
+    <value>Không phải file hình nền của Luma.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively đã không được tắt đúng cách, khởi động Lively trong chế độ an toàn.
+    <value>Luma đã không được tắt đúng cách, khởi động Luma trong chế độ an toàn.
 Bạn có muốn khôi phục lại hình nền trước đây?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Có vẻ như bạn cần phải cài đặt một chút để Lively có thể hoạt động: 
+    <value>Có vẻ như bạn cần phải cài đặt một chút để Luma có thể hoạt động: 
 1. Nhấn tổ hợp phím Win + R để mở cửa sổ Run
 2. Nhập (SystemPropertiesPerformance.exe) vô Run, xong rồi nhấp "OK" để mở lên (Performance Options).
 3. Trong phần (Visual Effects) bạn hãy nhấn tick con dấu tại (Animate controls and elements inside windows) và nhấn (Apply).
 4. Sau khi xong bạn nhấn (Apply) rồi nhấn "OK" để đóng.
 
 Nếu là Windows 7 chỉ cần chọn - (Adjust for best appearance) &amp; Apply.
-Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại Lively / khởi động lại windows.
-(Lively sẽ không hoạt động trên một vài bản insider-build của windows 10)</value>
+Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại Luma / khởi động lại windows.
+(Luma sẽ không hoạt động trên một vài bản insider-build của windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively cần chạy ngầm để phát lại hình nền</value>
+    <value>Luma cần chạy ngầm để phát lại hình nền</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Khởi động cùng Windows</value>
@@ -356,7 +356,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Lưu vào máy</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Một số chức năng sẽ không có trong phiên bản Lively này</value>
+    <value>Một số chức năng sẽ không có trong phiên bản Luma này</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Không tìm thấy tập tin</value>
@@ -365,13 +365,13 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>GIF động</value>
   </data>
   <data name="SourceCode.Description" xml:space="preserve">
-    <value>Tặng sao để cảm ơn nhà phát triển Lively</value>
+    <value>Tặng sao để cảm ơn nhà phát triển Luma</value>
   </data>
   <data name="TextGo" xml:space="preserve">
     <value>ĐI</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Giúp phiên dịch Lively.</value>
+    <value>Giúp phiên dịch Luma.</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>giờ</value>
@@ -425,7 +425,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Trực tuyến</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Mở Lively</value>
+    <value>Mở Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Tất cả tiến trình</value>
@@ -488,7 +488,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Dừng lại</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Bạn có thích Lively không? Hãy để lại đánh giá nhé :)</value>
+    <value>Bạn có thích Luma không? Hãy để lại đánh giá nhé :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Hỗ trợ</value>
@@ -605,19 +605,19 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Sử dụng đường dẫn liên kết của web bạn vừa nhập để làm hình nền</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
-    <value>Cài đặt Lively sẽ làm gì khi ứng dụng đang được sử dụng</value>
+    <value>Cài đặt Luma sẽ làm gì khi ứng dụng đang được sử dụng</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>Cài đặt hoạt động của Lively khi Game/Phần mềm sử dụng toàn màn hình hoạt động.</value>
+    <value>Cài đặt hoạt động của Luma khi Game/Phần mềm sử dụng toàn màn hình hoạt động.</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
-    <value>Tạm dừng Lively khi đang chạy các ứng dụng trên</value>
+    <value>Tạm dừng Luma khi đang chạy các ứng dụng trên</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Thích nghi Lively với các theme của hệ thống, đổi giao diện đến</value>
+    <value>Thích nghi Luma với các theme của hệ thống, đổi giao diện đến</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
-    <value>Đổi Lively sẽ làm gì khi dây sạc bị ngắt</value>
+    <value>Đổi Luma sẽ làm gì khi dây sạc bị ngắt</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
     <value>Hãy nhập cổng port để bắt đầu debug hình nền chạy trên web; khi sẵn sàng thì hãy truy cập http://localhost:portnumber để sử dụng console của nhà phát triển</value>
@@ -710,7 +710,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Các ứng dụng toàn màn hình</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Quy tắc của các ứng dụng</value>
@@ -773,7 +773,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Thư viện</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Cài đặt Lively</value>
+    <value>Cài đặt Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Vị trí</value>
@@ -903,7 +903,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Tải trang web</value>
   </data>
   <data name="FastUI.Description" xml:space="preserve">
-    <value>Giữ Lively chạy để mở nhanh hơn vào lần sau</value>
+    <value>Giữ Luma chạy để mở nhanh hơn vào lần sau</value>
   </data>
   <data name="FastUI.Header" xml:space="preserve">
     <value>Mở nhanh</value>

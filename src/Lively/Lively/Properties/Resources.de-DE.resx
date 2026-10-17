@@ -136,15 +136,15 @@
     <value>API-Dokumentation und Hilfe</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively hat einen schwerwiegenden Fehler festgestellt.
+    <value>Luma hat einen schwerwiegenden Fehler festgestellt.
 
-Windows Explorer wurde in den letzten 30 Sekunden zwei Mal neu gestartet! Dies kann durch einen Konflikt von Lively mit anderer Software zur Desktopanpassung oder von Windows verursacht worden sein. Um weitere Probleme zu vermeiden, werden alle Hintergründe beendet.</value>
+Windows Explorer wurde in den letzten 30 Sekunden zwei Mal neu gestartet! Dies kann durch einen Konflikt von Luma mit anderer Software zur Desktopanpassung oder von Windows verursacht worden sein. Um weitere Probleme zu vermeiden, werden alle Hintergründe beendet.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Inkompatibles Programm gefunden, Taskleisten-Design deaktiviert</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Offizielle Webseite von Lively Wallpaper</value>
+    <value>Offizielle Webseite von Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Die meisten modernen LCD- und LED-Bildschirme haben keine Probleme mit dem Einbrennen von Bildern, sodass jeder Hintergrund als Bildschirmschoner verwendet werden kann.
@@ -180,10 +180,10 @@ Schädliche Anwendungen können Malware, Viren usw. enthalten und Ihrem System s
 Fahren Sie nur fort, wenn diese Anwendung aus einer vertrauenswürdigen Quelle stammt.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively wurde in den Infobereich minimiert. Klicken Sie mit der rechten Maustaste auf Lively um fortzufahren.</value>
+    <value>Luma wurde in den Infobereich minimiert. Klicken Sie mit der rechten Maustaste auf Luma um fortzufahren.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Bitte starten Sie Lively neu, damit die Einstellungen wirksam werden</value>
+    <value>Bitte starten Sie Luma neu, damit die Einstellungen wirksam werden</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Vor dem Fortfahren bitte anhalten</value>
@@ -204,7 +204,7 @@ Fahren Sie nur fort, wenn diese Anwendung aus einer vertrauenswürdigen Quelle s
     <value>Geben Sie eine Webseiten-URL ein. Links zu Shadertoy.com-Shadern werden unterstützt</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Dieser Assistent hilft dir beim Einrichten von Lively</value>
+    <value>Dieser Assistent hilft dir beim Einrichten von Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Ihre Windows N/KN Version benötigt für das Abspielen von Videos in Hintergründen zusätzliche Codecs, die heruntergeladen werden müssen</value>
@@ -213,17 +213,17 @@ Fahren Sie nur fort, wenn diese Anwendung aus einer vertrauenswürdigen Quelle s
     <value>Unterstützung zeigen und dem Entwickler einen Becher Kaffee spenden</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Sie sind dabei zur Beta (Entwickler) Version von Lively zu wechseln.
+    <value>Sie sind dabei zur Beta (Entwickler) Version von Luma zu wechseln.
 Aktualisierungen finden häufiger statt und können Fehler enthalten!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Sichtbarkeit des Taskleisten-Symbols. Lively läuft auch bei ausgeschaltetem Symbol im Hintergrund weiter</value>
+    <value>Sichtbarkeit des Taskleisten-Symbols. Luma läuft auch bei ausgeschaltetem Symbol im Hintergrund weiter</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Taskleistensymbol</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively muss neu gestartet werden, um die ausgewählte Sprache anzuwenden</value>
+    <value>Luma muss neu gestartet werden, um die ausgewählte Sprache anzuwenden</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Sprache</value>
@@ -241,37 +241,37 @@ Um diesen Fehler besser zu verstehen, und das Problem zu beheben, teilen Sie das
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively funktioniert nicht richtig, wenn der Hohe Kontrast-Modus von Windows aktiviert ist
+    <value>Luma funktioniert nicht richtig, wenn der Hohe Kontrast-Modus von Windows aktiviert ist
 Schalten Sie den Hohen Kontrast-Modus aus und versuchen es erneut</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Medienwiedergabe fehlgeschlagen :(
-Versuchen Sie, den Videoplayer in den Lively Einstellungen zu wechseln.
+Versuchen Sie, den Videoplayer in den Luma Einstellungen zu wechseln.
 
 Um diesen Fehler besser zu verstehen und das Problem zu beheben, geben Sie die Protokolldatei an den Entwickler weiter.
 Anweisungen zur Freigabe der Protokolldatei:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Keine Lively-Wallpaper-Datei</value>
+    <value>Keine Luma-Wallpaper-Datei</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively wurde nicht richtig beendet und startet daher im abgesicherten Modus.
+    <value>Luma wurde nicht richtig beendet und startet daher im abgesicherten Modus.
 Möchten Sie die zuvor ausgeführten Hintergründe wiederherstellen?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Es sieht so aus, als müssten einige Einstellungen vorgenommen werden, damit Lively funktioniert: 
+    <value>Es sieht so aus, als müssten einige Einstellungen vorgenommen werden, damit Luma funktioniert: 
 1. Drücken Sie die Windows-Logo-Taste und die R-Taste gleichzeitig zum Öffnen des Ausführen-Dialogs.
 2. Geben Sie "SystemPropertiesPerformance" (ohne " ") ein und klicken auf "OK", um die Leistungsoptionen zu öffnen
 3. Aktivieren/Prüfen Sie "Steuerelemente und Elemente innerhalb von Fenstern animieren" &amp; klicken Sie auf Übernehmen.
 4. Klicken Sie auf "OK" um das Fenster zu schließen.
 
 Wenn Sie Windows 7 benutzen - einfach auf "Für optimale Darstellung anpassen" auswählen &amp; auf "Übernehmen" klicken.
-Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively oder Windows neu.
+Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Luma oder Windows neu.
 (Funktioniert nicht in den Insider Builds von Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively muss für die Wiedergabe von Hintergründen im Hintergrund ausgeführt werden</value>
+    <value>Luma muss für die Wiedergabe von Hintergründen im Hintergrund ausgeführt werden</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Mit Windows starten</value>
@@ -355,7 +355,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>In Datei speichern</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Einige Funktionen sind in dieser Version von Lively nicht verfügbar</value>
+    <value>Einige Funktionen sind in dieser Version von Luma nicht verfügbar</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Datei nicht gefunden</value>
@@ -424,7 +424,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively öffnen</value>
+    <value>Luma öffnen</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Alle Prozesse</value>
@@ -487,7 +487,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Stopp</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Gefällt dir Lively? Lass eine Bewertung da :)</value>
+    <value>Gefällt dir Luma? Lass eine Bewertung da :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Unterstützen</value>
@@ -550,7 +550,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Updates werden gesucht</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>Lively ist auf dem neusten Stand!</value>
+    <value>Luma ist auf dem neusten Stand!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>Video</value>
@@ -613,7 +613,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Wiedergaberegeln für Anwendungen einstellen</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively passt das Aussehen an das System-Design an</value>
+    <value>Luma passt das Aussehen an das System-Design an</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Wiedergabeverhalten ändern, wenn die Stromversorgung getrennt wird</value>
@@ -697,7 +697,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Wählen Sie einen Renderer für HTML-Hintergründe</value>
   </data>
   <data name="About.Label" xml:space="preserve">
-    <value>Über Lively</value>
+    <value>Über Luma</value>
   </data>
   <data name="AddWallpaper.Label" xml:space="preserve">
     <value>Hintergrund hinzufügen</value>
@@ -709,7 +709,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Anwendungen im Vollbildmodus</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Anwendungsregeln</value>
@@ -772,7 +772,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
     <value>Bibliothek</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively-Einrichtung</value>
+    <value>Luma-Einrichtung</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Standort</value>

@@ -136,20 +136,20 @@
     <value>API documentaion at tulong</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Dalawang beses na nag-restart ang Windows Explorer sa huling 30 segundo! Ito ay maaaring isang salungatan sa pagitan ng Lively at iba pang software sa pagpapasadya ng desktop o Windows. Upang maiwasan ang karagdagang mga isyu, ang lahat ng mga wallpaper ay winakasan.</value>
+    <value>Dalawang beses na nag-restart ang Windows Explorer sa huling 30 segundo! Ito ay maaaring isang salungatan sa pagitan ng Luma at iba pang software sa pagpapasadya ng desktop o Windows. Upang maiwasan ang karagdagang mga isyu, ang lahat ng mga wallpaper ay winakasan.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Incompatible program found, taskbar theming disabled.</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Opisyal na website ng Lively Wallpaper</value>
+    <value>Opisyal na website ng Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Karamihan sa mga modernong LCD at LED ay hindi nag dudusa ng burn- in na isyu, samakatuwid ang anumang walpaper ay magamit bilang screensaver.
 
 Para sa OLED, Plasma, o CRT na display, madaling ma burn-in, pinapayuhan na gumamit ng wallpaper na may regular na paggalaw at pangkalahatang madilim na tema na dapat ay magpapagaan ng burn-in ngunit ang feature na ito ay hindi pa nasubok at hindo magagarantiyahan ang pagiging epiktibo.
 
-Ang una na layunin ng mga screensaver ng Lively ay upang magdagdag ng isang layer ng pagpapasadya ng inyong PC, gamitin ang screensavers bilang proteksyon ng burn-in sa iyong sariling peligro!</value>
+Ang una na layunin ng mga screensaver ng Luma ay upang magdagdag ng isang layer ng pagpapasadya ng inyong PC, gamitin ang screensavers bilang proteksyon ng burn-in sa iyong sariling peligro!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>I-report ang problema sa software</value>
@@ -176,10 +176,10 @@ Ang una na layunin ng mga screensaver ng Lively ay upang magdagdag ng isang laye
     <value>Binubuksan mo ang isang panlabas na application bilang wallpaper. Ang mga nakakahamak na apllikasyon ay maaaring mag-host ng malware, virus.. na makakahamak sa iyong system. Patuloy lamang kung ang aplikasyon na ito ay nagmula sa mapagkakatiwalaang mapagkukunan</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Ang Lively ay nai-minimize sa system tray, mag--click sa Lively icon upang matuloy.</value>
+    <value>Ang Luma ay nai-minimize sa system tray, mag--click sa Luma icon upang matuloy.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>I-restart ang Lively para makita ang bagong mga setting</value>
+    <value>I-restart ang Luma para makita ang bagong mga setting</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Please stop before proceeding.</value>
@@ -200,7 +200,7 @@ Ang una na layunin ng mga screensaver ng Lively ay upang magdagdag ng isang laye
     <value>Ipasok ang link sa website upang mai-load, suportado ang mga link ng shadertoy.com</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Sisimulan ka ng wizard na ito sa pag-set up ng Lively.</value>
+    <value>Sisimulan ka ng wizard na ito sa pag-set up ng Luma.</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Ang iyong bersyon ng Windows N/KN ay may kailangang i-download na karagdagang codecs para masuportahan ang pag-play ng video sa mga wallpapers</value>
@@ -209,7 +209,7 @@ Ang una na layunin ng mga screensaver ng Lively ay upang magdagdag ng isang laye
     <value>Suportahan ang developer sa paraan ng pagbili ng kape sa kanya</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Malapit ka nan ng lumipat sa bete(developer) build ng Lively.
+    <value>Malapit ka nan ng lumipat sa bete(developer) build ng Luma.
 Magiging madalas and mga updates, at maaaring may mga bugs!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -250,24 +250,24 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Hindi Lively wallpaper file.</value>
+    <value>Hindi Luma wallpaper file.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Ang Lively ay hindi nagsarado nang maayos, nagsisimula na ang Safe Mode. Nais mo bang ibalik ang dating mga tumatakbo na wallpaper?</value>
+    <value>Ang Luma ay hindi nagsarado nang maayos, nagsisimula na ang Safe Mode. Nais mo bang ibalik ang dating mga tumatakbo na wallpaper?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Mukhang may kailangang baguhing mga settings upang mapagana ang Lively:
+    <value>Mukhang may kailangang baguhing mga settings upang mapagana ang Luma:
 1. Pindutin ang Win + R na key para magbukas ang Run,
 2. Itype ang SystemPropertiesPerformance.exe sa Run at i-click ang "OK" para buksan ang Performance Options.
 3. I-enable/check "Animate controls and elements inside windows" (pag naka-check na, i-uncheck at icheck uli) at i-apply.
 4. I-click ang "Apply" at pindutin ang "OK" para magsara ang window.
 
 Kapag Windows 7 just set - "Adjust for best appearance" at i-apply.
-Pag hindi pa gumagana, i-close at buksan ulit ang Lively/i-restart Windows.
+Pag hindi pa gumagana, i-close at buksan ulit ang Luma/i-restart Windows.
 (Hindi gumagana sa piling mga Windows Insider builds)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively needs to run in the background for wallpaper playback.</value>
+    <value>Luma needs to run in the background for wallpaper playback.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>I-start kasama ng Windows</value>
@@ -351,7 +351,7 @@ Pag hindi pa gumagana, i-close at buksan ulit ang Lively/i-restart Windows.
     <value>I-save sa file</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Hindi lahat ng features ay magagamit sa bersyon na ito ng Lively</value>
+    <value>Hindi lahat ng features ay magagamit sa bersyon na ito ng Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Hindi makita ang file</value>
@@ -420,7 +420,7 @@ Pag hindi pa gumagana, i-close at buksan ulit ang Lively/i-restart Windows.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Buksan ang Lively</value>
+    <value>Buksan ang Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Lahat ng proseso</value>
@@ -483,7 +483,7 @@ Pag hindi pa gumagana, i-close at buksan ulit ang Lively/i-restart Windows.
     <value>Maghinto</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Nasisiyahan ka ba sa paggamit ng Lively? Mag-iwan ng review :)</value>
+    <value>Nasisiyahan ka ba sa paggamit ng Luma? Mag-iwan ng review :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Suporta</value>
@@ -609,7 +609,7 @@ Pag hindi pa gumagana, i-close at buksan ulit ang Lively/i-restart Windows.
     <value>Itakda ang iba't ibang mga patakaran sa pag-playback ng wallpaper batay sa pagpapatakbo ng application.</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Ang Lively ay umaayon sa mga setting ng tema ng system, upang baguhin ang hitsura.</value>
+    <value>Ang Luma ay umaayon sa mga setting ng tema ng system, upang baguhin ang hitsura.</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Para sa mga operating system lamang ng baterya) Baguhin ang pag-playback kapag ang AC ay hindi naka-disconnect.</value>
@@ -708,7 +708,7 @@ Edge is the built in webview of windows 10.</value>
     <value>Applications Fullscreen</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Mga panuntunan sa aplikasyon</value>
@@ -771,7 +771,7 @@ Edge is the built in webview of windows 10.</value>
     <value>Library</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Setup ng Lively</value>
+    <value>Setup ng Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Lokasyon</value>

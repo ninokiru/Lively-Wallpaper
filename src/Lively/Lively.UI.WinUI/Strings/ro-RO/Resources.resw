@@ -136,22 +136,22 @@
     <value>Documentație API și ajutor</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively a întâmpinat o eroare critică.
+    <value>Luma a întâmpinat o eroare critică.
 
-Explorer a repornit de două ori în ultimele 30 de secunde! Acesta poate fi un conflict între Lively și alt software de personalizare desktop sau Windows. Pentru a evita alte probleme, toate fundalurile au fost oprite.</value>
+Explorer a repornit de două ori în ultimele 30 de secunde! Acesta poate fi un conflict între Luma și alt software de personalizare desktop sau Windows. Pentru a evita alte probleme, toate fundalurile au fost oprite.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Program incompatibil găsit, tematica din bara de activități dezactivată.</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Pagina web oficială a Lively Wallpaper</value>
+    <value>Pagina web oficială a Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Majoritatea ecranelor LCD și LED moderne nu suferă de probleme de ardere și, prin urmare, orice fundal poate fi folosit ca economizor de ecran.
 
 Pentru ecranele OLED, cu plasmă sau CRT care sunt susceptibile de a arde, se recomandă utilizarea fundalelor cu mișcare regulată și o temă generală întunecată care ar trebui să atenueze arderea, dar această caracteristică nu este testată și eficacitatea ei nu poate fi garantată.
 
-Scopul principal al economizoarelor de ecran de la Lively este de a adăuga un alt nivel de personalizare computerului tău, folosește economizoarele de ecran ca protecție împotriva arderii pe propriu tău risc!</value>
+Scopul principal al economizoarelor de ecran de la Luma este de a adăuga un alt nivel de personalizare computerului tău, folosește economizoarele de ecran ca protecție împotriva arderii pe propriu tău risc!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Raportați o problemă cu programul softwear</value>
@@ -180,10 +180,10 @@ Aplicațiile rău intenționate pot găzdui malware, viruși... și pot dăuna s
 Continuați doar dacă această aplicație provine dintr-o sursă de încredere.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively este minimizat în bara de sistem, faceți clic dreapta pe pictograma lively pentru a continua.</value>
+    <value>Luma este minimizat în bara de sistem, faceți clic dreapta pe pictograma lively pentru a continua.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Vă rugăm să reporniți Lively pentru ca setările să aibă efect</value>
+    <value>Vă rugăm să reporniți Luma pentru ca setările să aibă efect</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Te rog oprește înainte să procedezi</value>
@@ -204,7 +204,7 @@ Continuați doar dacă această aplicație provine dintr-o sursă de încredere.
     <value>Introdu linkul site-ului pentru a încărca, linkurile shadertoy.com sunt acceptate</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Acest asistent vă va ajuta să configurați Lively</value>
+    <value>Acest asistent vă va ajuta să configurați Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Versiunea dvs. Windows N/KN va necesita descărcarea de codec-uri suplimentare pentru a suporta redarea videoclipurilor în imagini de fundal</value>
@@ -217,13 +217,13 @@ Continuați doar dacă această aplicație provine dintr-o sursă de încredere.
 Actualizările vor fi frecvente și pot apărea probleme!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Vizibilitatea pictogramei în bara de sistem, Lively va continua să ruleze cu pictograma ascunsă</value>
+    <value>Vizibilitatea pictogramei în bara de sistem, Luma va continua să ruleze cu pictograma ascunsă</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Pictograma din bara de sistem</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively va reporni pentru a aplica o nouă limbă</value>
+    <value>Luma va reporni pentru a aplica o nouă limbă</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Limbă</value>
@@ -242,7 +242,7 @@ Instrucțiuni pentru partajarea fișierului jurnal:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively nu poate funcționa corect cu modul Contrast Înalt Windows activat!
+    <value>Luma nu poate funcționa corect cu modul Contrast Înalt Windows activat!
 Dezactivați modul Contrast Înalt și încercați din nou</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -252,25 +252,25 @@ Instrucțiuni pentru partajarea fișierului "log":
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Nu este un fișier de fundal Lively</value>
+    <value>Nu este un fișier de fundal Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively nu a fost închis corect, se pornește în modul de siguranță.
+    <value>Luma nu a fost închis corect, se pornește în modul de siguranță.
 Doriți să restaurați fundalurile care rulau anterior?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Se pare că unele setări trebuie setate pentru ca Lively să funcționeze:
+    <value>Se pare că unele setări trebuie setate pentru ca Luma să funcționeze:
 1. Apasă tastele Win + R pentru a deschide Run,
 2. Introdu SystemPropertiesPerformance.exe în Run,apasă „OK” pentru a deschide Performance Options.
 3. Activează/Bifează „Animate controls and elements inside windows” (Dacă este deja bifat, atunci debifează și bifaează) și Aplicați.
 4. Apasă „Aplicați”, apoi apasă pe „OK” pentru a închide fereastra.
 
 Dacă ești pe Windows 7 atunci setează - Adjust for best appearancet &amp; Aplicați.
-Dacă tot nu funcționează, repornește Lively/Windows.
+Dacă tot nu funcționează, repornește Luma/Windows.
 (Nu funcționează în unele versiuni interne Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively trebuie să ruleze în fundal pentru redarea fundalului.</value>
+    <value>Luma trebuie să ruleze în fundal pentru redarea fundalului.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Pornește cu Windows</value>
@@ -354,7 +354,7 @@ Dacă tot nu funcționează, repornește Lively/Windows.
     <value>Salvează ca fișier</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Unele funcții nu sunt disponibile în această versiune de Lively.</value>
+    <value>Unele funcții nu sunt disponibile în această versiune de Luma.</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Fișierul nu a fost găsit</value>
@@ -423,7 +423,7 @@ Dacă tot nu funcționează, repornește Lively/Windows.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Deschide Lively</value>
+    <value>Deschide Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Toate procesele</value>
@@ -486,7 +486,7 @@ Dacă tot nu funcționează, repornește Lively/Windows.
     <value>Stop</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Ți-a plăcut să folosești Lively ? Lasă o recenzie :)</value>
+    <value>Ți-a plăcut să folosești Luma ? Lasă o recenzie :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Ajutor</value>
@@ -612,7 +612,7 @@ Dacă tot nu funcționează, repornește Lively/Windows.
     <value>Oprește fundalul când aceste programe rulează</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively se adaptează la setările temei de sistem, pentru a schimba aspectul mergi la</value>
+    <value>Luma se adaptează la setările temei de sistem, pentru a schimba aspectul mergi la</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Schimbă redarea când alimentarea este deconectată</value>
@@ -710,7 +710,7 @@ Edge este vizualizarea web integrată a Windows 10.</value>
     <value>Aplicații fullscreen</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Reguli aplicații</value>
@@ -773,7 +773,7 @@ Edge este vizualizarea web integrată a Windows 10.</value>
     <value>Bibliotecă</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Setup Lively</value>
+    <value>Setup Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Locație</value>
@@ -1248,7 +1248,7 @@ Edge este vizualizarea web integrată a Windows 10.</value>
     <value>La fel ca Sistemul</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Vă rugăm să reporniți Lively pentru ca setările să aibă efect.</value>
+    <value>Vă rugăm să reporniți Luma pentru ca setările să aibă efect.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>La reluare, arată ecranul de autentificare</value>

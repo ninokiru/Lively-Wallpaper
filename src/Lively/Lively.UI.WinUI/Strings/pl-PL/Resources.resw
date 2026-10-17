@@ -136,22 +136,22 @@
     <value>Dokumentacja API i pomoc</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively napotkał krytyczny błąd.
+    <value>Luma napotkał krytyczny błąd.
 
-Eksplorator Windows został uruchomiony ponownie dwukrotnie w ciągu ostatnich 30 sekund! To może być konflikt pomiędzy Lively a innym oprogramowaniem do zmiany wyglądu lub Windows. Aby uniknąć dalszych problemów, wszystkie tapety zostały zakończone.</value>
+Eksplorator Windows został uruchomiony ponownie dwukrotnie w ciągu ostatnich 30 sekund! To może być konflikt pomiędzy Luma a innym oprogramowaniem do zmiany wyglądu lub Windows. Aby uniknąć dalszych problemów, wszystkie tapety zostały zakończone.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Znaleziono niekompatybilny program, motywy paska zadań zostały wyłączone.</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Oficjalna strona Lively Wallpaper</value>
+    <value>Oficjalna strona Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Większość nowoczesnych wyświetlaczy LCD i LED nie ma problemów z wypalaniem, dlatego jako wygaszacza ekranu można używać każdej tapety.
 
 Dla wyświetlaczy typu OLED, Plasma lub CRT, które są podatne na efekt wypalania, zaleca się używanie ruchomej tapety w ogólnie ciemnych kolorach, co powinno zmniejszyć efekt wypalenia, ale jest sposobem niepotwierdzonym i niekoniecznie skutecznym.
 
-Głównym celem wygaszacza ekranu Lively jest dodanie kolejnej warstwy personalizacji do Twojego komputera, używaj wygaszacza jako zabezpieczenia przed wypaleniem na własne ryzyko!</value>
+Głównym celem wygaszacza ekranu Luma jest dodanie kolejnej warstwy personalizacji do Twojego komputera, używaj wygaszacza jako zabezpieczenia przed wypaleniem na własne ryzyko!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Zgłoś problem z oprogramowaniem</value>
@@ -183,7 +183,7 @@ Kontynuuj, tylko jeśli aplikacja pochodzi z zaufanego źródła.</value>
     <value>Jestem w zasobniku systemowym, kliknij prawym lively po więcej opcji.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Uruchom ponownie Lively, aby zastosować ustawienia</value>
+    <value>Uruchom ponownie Luma, aby zastosować ustawienia</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Zatrzymaj się proszę zanim przejdziesz dalej.</value>
@@ -204,7 +204,7 @@ Kontynuuj, tylko jeśli aplikacja pochodzi z zaufanego źródła.</value>
     <value>Wpisz adres strony do załadowania, (obsługuje łącza do shader'ów na stronie Shadertoy.com)</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Ten kreator pomoże Ci rozpocząć konfigurację aplikacji Lively.</value>
+    <value>Ten kreator pomoże Ci rozpocząć konfigurację aplikacji Luma.</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Twój Windows w wersji N/KN wymaga pobrania dodatkowych kodeków aby móc odtwarzać video w tapetach.</value>
@@ -213,17 +213,17 @@ Kontynuuj, tylko jeśli aplikacja pochodzi z zaufanego źródła.</value>
     <value>Okaż wsparcie deweloperowi, kupując mu kawę</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Masz zamiar zmienić wersję Lively do wersji beta (deweloperskiej).
+    <value>Masz zamiar zmienić wersję Luma do wersji beta (deweloperskiej).
 Aktualizacje będą częste i mogą zawierać błędy!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Widoczność ikony zasobnika, Lively będzie kontynuował dalszą pracę z ukrytą ikoną</value>
+    <value>Widoczność ikony zasobnika, Luma będzie kontynuował dalszą pracę z ukrytą ikoną</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Ikona zasobnika systemowego</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively uruchomi się ponownie, aby zastosować nowy język</value>
+    <value>Luma uruchomi się ponownie, aby zastosować nowy język</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Język</value>
@@ -241,7 +241,7 @@ Instrukcje jak to zrobić znajdziesz pod adresem:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively nie może współpracować poprawnie z systemem Windows w trybie Dużego Kontrastu!
+    <value>Luma nie może współpracować poprawnie z systemem Windows w trybie Dużego Kontrastu!
 Wyłącz tryb Duży Kontrast (Ustawienia&gt;Ułatwienia dostępu&gt;Duży kontrast) i spróbuj ponownie</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -253,10 +253,10 @@ Instrukcje jak to zrobić znajdziesz pod adresem:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>To nie jest plik tapety Lively</value>
+    <value>To nie jest plik tapety Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively zostało niepoprawnie wyłączone, włączanie trybu awaryjnego.
+    <value>Luma zostało niepoprawnie wyłączone, włączanie trybu awaryjnego.
 Czy chcesz przywrócić użyte poprzednio tapety?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
@@ -269,11 +269,11 @@ Czy chcesz przywrócić użyte poprzednio tapety?</value>
 6. Włącz Animuj formanty i elementy wewnątrz okien &amp; Zastosuj.
 
 W Windows 7 wybierz - Dostosuj do uzyskania najlepszej wydajności &amp; Zastosuj.
-Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
+Jeśli ciągle nie działa,  uruchom ponownie Luma / system Windows.
 (Nie działa w wersji Windows 10 insider)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively musi być uruchomiony w tle, aby móc odtwarzać tapety</value>
+    <value>Luma musi być uruchomiony w tle, aby móc odtwarzać tapety</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Uruchom przy starcie systemu</value>
@@ -357,7 +357,7 @@ Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
     <value>Zapisz jako plik</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Niektóre funkcje w tej wersji Lively są niedostępne.</value>
+    <value>Niektóre funkcje w tej wersji Luma są niedostępne.</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Nie znaleziono pliku</value>
@@ -372,7 +372,7 @@ Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
     <value>START</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Pomóż tłumaczyć Lively.</value>
+    <value>Pomóż tłumaczyć Luma.</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>godziny</value>
@@ -426,7 +426,7 @@ Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Otwórz Lively</value>
+    <value>Otwórz Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Wszystkie procesy</value>
@@ -489,7 +489,7 @@ Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
     <value>Zatrzymaj</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Lubisz używać Lively? Zostaw recenzję :)</value>
+    <value>Lubisz używać Luma? Zostaw recenzję :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Wsparcie</value>
@@ -552,7 +552,7 @@ Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
     <value>Szukam aktualizacji</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>Lively jest aktualny!</value>
+    <value>Luma jest aktualny!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>Wideo</value>
@@ -615,7 +615,7 @@ Jeśli ciągle nie działa,  uruchom ponownie Lively / system Windows.
     <value>Ustaw rożne reguły odtwarzania dla uruchomionych aplikacji.</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively dostosuje się do kompozycji systemu, aby zmienić wygląd przejdź do</value>
+    <value>Luma dostosuje się do kompozycji systemu, aby zmienić wygląd przejdź do</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Tylko dla systemów działających na baterii) Zachowanie przy odłączonym źródle zasilania.</value>
@@ -714,7 +714,7 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Inne aplikacje pełnoekranowe</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Tapeta Lively</value>
+    <value>Tapeta Luma</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Zasady aplikacji</value>
@@ -777,7 +777,7 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Biblioteka</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Ustawienia Lively</value>
+    <value>Ustawienia Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Położenie</value>

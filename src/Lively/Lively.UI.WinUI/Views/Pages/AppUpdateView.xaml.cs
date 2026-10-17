@@ -1,103 +1,19 @@
-﻿using Lively.Common;
-using Lively.Common.Extensions;
-using Lively.Common.Helpers;
-using Lively.Grpc.Client;
-using Lively.Models.Enums;
 using Lively.UI.Shared.ViewModels;
-using Lively.UI.WinUI.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.UI;
-using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.Web.WebView2.Core;
-using System;
-using System.IO;
-using System.Reflection;
-using System.Threading.Tasks;
-using Windows.UI;
 
 namespace Lively.UI.WinUI.Views.Pages
 {
+    /// <summary>
+    /// Update page. The status banner and the release notes are bound from the view
+    /// model, so nothing besides resolving that view model is wired up here.
+    /// </summary>
     public sealed partial class AppUpdateView : Page
     {
-        private readonly AppUpdateViewModel viewModel;
-
         public AppUpdateView()
         {
             this.InitializeComponent();
-            this.viewModel = App.Services.GetRequiredService<AppUpdateViewModel>();
-            this.DataContext = this.viewModel;
-
-            InitializeWebView2Async().Await(() => { }, 
-                (ex) => viewModel.UpdateChangelogError = $"Exception: {ex.GetType().Name}\nMessage: {ex.Message}");
-        }
-
-        private async Task InitializeWebView2Async()
-        {
-            if (!viewModel.IsWebView2Available)
-                return;
-
-            var options = new CoreWebView2EnvironmentOptions();
-            // WebView2 runs outside the packaged sandbox, so we must redirect paths to the packaged LocalCache if it exists.
-            // This workaround addresses a known issue on Windows 10 22H2, where WebView2 does not automatically pick up the redirected path.
-            var resolvedTempWebView2Dir = PackageUtil.ValidateAndResolvePath(Constants.CommonPaths.TempWebView2Dir);
-            var userDataDir = Path.Combine(resolvedTempWebView2Dir, Assembly.GetExecutingAssembly().GetName().Name);
-            var webView2Environment = await CoreWebView2Environment.CreateWithOptionsAsync(null, userDataDir, options);
-            await WebView.EnsureCoreWebView2Async(webView2Environment);
-        }
-
-        // ref: https://github.com/MicrosoftEdge/WebView2Samples
-        private void WebView_CoreWebView2Initialized(WebView2 sender, CoreWebView2InitializedEventArgs args)
-        {
-            if (args.Exception != null)
-            {
-                viewModel.UpdateChangelogError = $"Exception: {args.Exception.GetType().Name}\nMessage: {args.Exception.Message}";
-            }
-            else
-            {
-                // Fork build: the changelog is the release page of this repository.
-                WebView.Source = LinkUtil.SanitizeUrl($"{Constants.ApplicationType.UpdateRepoUrl}/releases/latest");
-
-                WebView.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
-                // Theme need to set css, ref: https://github.com/MicrosoftEdge/WebView2Feedback/issues/4426
-                WebView.CoreWebView2.Profile.PreferredColorScheme = CoreWebView2PreferredColorScheme.Auto;
-                // Don't allow contextmenu and devtools
-                WebView.CoreWebView2.Settings.AreBrowserAcceleratorKeysEnabled = false;
-                WebView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
-            }
-        }
-
-        private void CoreWebView2_NewWindowRequested(Microsoft.Web.WebView2.Core.CoreWebView2 sender, Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs args)
-        {
-            // Prevent popups
-            if (!args.IsUserInitiated)
-                return;
-
-            // Open hyperlinks in default browser
-            args.Handled = true;
-            LinkUtil.OpenBrowser(args.Uri);
-        }
-
-        private void WebView_NavigationStarting(WebView2 sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs args)
-        {
-            WebViewProgress.Visibility = Visibility.Visible;
-        }
-
-        private void WebView_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
-        {
-            // Keep the page on the app background so a dark theme does not flash white.
-            WebView.DefaultBackgroundColor = Colors.Transparent;
-            WebViewProgress.Visibility = Visibility.Collapsed;
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            BackgroundGridShadow.Receivers.Add(BackgroundGrid);
-        }
-
-        private void Page_Unloaded(object sender, RoutedEventArgs e)
-        {
-            WebView.Close();
+            this.DataContext = App.Services.GetRequiredService<AppUpdateViewModel>();
         }
     }
 }

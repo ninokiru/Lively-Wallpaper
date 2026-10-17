@@ -10,6 +10,10 @@ namespace Lively.Common.Services
         Uri LastCheckUri { get; }
         string LastCheckFileName {get;}
         Version LastCheckVersion { get; }
+        /// <summary>
+        /// Release notes of the newest published release, markdown as stored on GitHub.
+        /// </summary>
+        string LastCheckChangelog { get; }
         AppUpdateStatus Status { get; }
 
         event EventHandler<AppUpdaterEventArgs> UpdateChecked;

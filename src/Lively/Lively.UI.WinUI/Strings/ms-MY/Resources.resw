@@ -136,22 +136,22 @@
     <value>Dokumentasi API dan bantuan</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively telah mengalami ralat yang serius.
+    <value>Luma telah mengalami ralat yang serius.
 
-Windows Explorer telah dimulakan semula sebanyak 2 kali dalam tempoh 30 saat yang lalu! Ini mungkin disebabkan oleh konflik antara Lively dan perisian pemeribadian yang lain atau Windows. Untuk mengelakkan sebarang isu mendatang, semua latar bekang telah ditamatkan.</value>
+Windows Explorer telah dimulakan semula sebanyak 2 kali dalam tempoh 30 saat yang lalu! Ini mungkin disebabkan oleh konflik antara Luma dan perisian pemeribadian yang lain atau Windows. Untuk mengelakkan sebarang isu mendatang, semua latar bekang telah ditamatkan.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Tema taskbar dinyahaktifkan kerana terjumpa program yang tidak serasi</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Laman web rasmi Lively Wallpaper</value>
+    <value>Laman web rasmi Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Kebanyakan skrin LCD dan LED yang moden tidak mengalami isu 'burn-in' dan justeru sebarang wallpaper boleh dijadikan sebagai screensaver.
       
       Bagi skrin OLED, Plasma atau CRT yang mudah mengalami isu 'burn-in' ini, anda digalakkan mengguna wallpaper yang mempunyai pergerakan yang lazim dan tema yang gelap secara keseluruhan untuk mengurangkan kesan isu ini, tetapi cara mitigasi ini tidak pernah diuji dan keberkesanannya tidak mampu dijamin.
 
-      Tujuan utama screensaver Lively adalah untuk menambah satu lagi lapisan penyesuaian bagi PC anda. Gunakan screensaver sebagai pelindung 'burn-in' atas risiko anda sendiri!</value>
+      Tujuan utama screensaver Luma adalah untuk menambah satu lagi lapisan penyesuaian bagi PC anda. Gunakan screensaver sebagai pelindung 'burn-in' atas risiko anda sendiri!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Laporkan masalah perisian</value>
@@ -180,10 +180,10 @@ Aplikasi sebegini mungkin mempunyai virus yang mampu merosakkan sistem anda.
 Hanya teruskan jika aplikasi ini berasal daripada sumber yang dipercayai.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively diminimumkan ke dalam dulang sistem. Klik kanan ikon Lively untuk teruskan.</value>
+    <value>Luma diminimumkan ke dalam dulang sistem. Klik kanan ikon Luma untuk teruskan.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Mulakan semula Lively untuk mengemaskini konfigurasi</value>
+    <value>Mulakan semula Luma untuk mengemaskini konfigurasi</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Sila berhenti sebelum meneruskan</value>
@@ -204,7 +204,7 @@ Hanya teruskan jika aplikasi ini berasal daripada sumber yang dipercayai.</value
     <value>Masukkan pautan laman sesawang untuk dimuatkan. Pautan shader shadertoy.com disokong.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Wizard ini akan membantu anda mengesetkan Lively</value>
+    <value>Wizard ini akan membantu anda mengesetkan Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>N/KN Windows anda akan memerlukan muat-turun codec tambahan untuk menyokong main semula video dalam latar belakang</value>
@@ -213,7 +213,7 @@ Hanya teruskan jika aplikasi ini berasal daripada sumber yang dipercayai.</value
     <value>Tunjukkan sokongan anda dengan membelikan pembangun secawan kopi</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Anda akan menukar ke versi binaan Lively ke beta.
+    <value>Anda akan menukar ke versi binaan Luma ke beta.
 Kemaskini akan menjadi lebih kerap dan mungkin akan mengandungi pepijat!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@ Kemaskini akan menjadi lebih kerap dan mungkin akan mengandungi pepijat!</value>
     <value>Ikon Dulang Sistem</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively akan dimulakan semula bagi menggunakan bahasa terbaharu</value>
+    <value>Luma akan dimulakan semula bagi menggunakan bahasa terbaharu</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Bahasa</value>
@@ -242,36 +242,36 @@ Cara untuk kongsikan fail log:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively tidak berfungsi secara teratur jika mod Windows Kontras Tinggi diaktifkan!
+    <value>Luma tidak berfungsi secara teratur jika mod Windows Kontras Tinggi diaktifkan!
 Nyahaktifkan mod Kontras Tinggi dan cuba semula</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Gagal memainkan media.
-Sila ubah pemain video di seting Lively.
+Sila ubah pemain video di seting Luma.
 
 Untuk memahami ralat ini secara lebih baik dan selesaikan isu, kongsikan fail log dengan pengarang.
 Panduan kongsi:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Fail bukan fail wallpaper Lively</value>
+    <value>Fail bukan fail wallpaper Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively tidak ditamatkan secara teratur, memulakan aplikasi dalam mod selamat. Adakah anda mahu mengembalikan latar belakang yang sebelumnya?</value>
+    <value>Luma tidak ditamatkan secara teratur, memulakan aplikasi dalam mod selamat. Adakah anda mahu mengembalikan latar belakang yang sebelumnya?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Panduan bagi memulakan Lively secara teratur:  
+    <value>Panduan bagi memulakan Luma secara teratur:  
 1. Tekan logo Win + R untuk membuka Run, 
 2. Taip SystemPropertiesPerformance.exe dalam Run, klik "OK" untuk membuka Performance Options.
 3. Tanda "Animate controls and elements inside windows" (Jika sudah bertanda, sila buang dan tandkan semula) &amp; Apply.
 4. Klik "Apply" kemudian tekan "OK" untuk menutup tetingkap.
 
 Bagi Windows 7 setkan - "Adjust for best appearance" &amp; klik Apply.
-Jika masih tidak berkesan, mulakan semula Lively/Windows.
+Jika masih tidak berkesan, mulakan semula Luma/Windows.
 (Tidak berfungsi untuk sebahagian binaan Windows 10 Insider)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively mesti berjalan di belakang untuk memainkan semula latar belakang</value>
+    <value>Luma mesti berjalan di belakang untuk memainkan semula latar belakang</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Mula dengan Windows</value>
@@ -355,7 +355,7 @@ Jika masih tidak berkesan, mulakan semula Lively/Windows.
     <value>Eksport lively.zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Sesetengah ciri tidak ada didalam versi Lively ini.</value>
+    <value>Sesetengah ciri tidak ada didalam versi Luma ini.</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Fail tidak dijumpai</value>
@@ -364,13 +364,13 @@ Jika masih tidak berkesan, mulakan semula Lively/Windows.
     <value>GIF Beranimasi</value>
   </data>
   <data name="SourceCode.Description" xml:space="preserve">
-    <value>Letakkan bintang di Lively jika anda menyukai program ini</value>
+    <value>Letakkan bintang di Luma jika anda menyukai program ini</value>
   </data>
   <data name="TextGo" xml:space="preserve">
     <value>PERGI</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Bantu terjemah Lively!</value>
+    <value>Bantu terjemah Luma!</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>jam</value>
@@ -424,7 +424,7 @@ Jika masih tidak berkesan, mulakan semula Lively/Windows.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Buka Lively</value>
+    <value>Buka Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Semua Proses</value>
@@ -487,7 +487,7 @@ Jika masih tidak berkesan, mulakan semula Lively/Windows.
     <value>Henti</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Adakah anda berpuas hati dengan Lively? Sila tinggalkan ulasan :)</value>
+    <value>Adakah anda berpuas hati dengan Luma? Sila tinggalkan ulasan :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Bantuan</value>
@@ -613,7 +613,7 @@ Jika masih tidak berkesan, mulakan semula Lively/Windows.
     <value>Setkan peraturan bagi main semula wallpaper berdasarkan aplikasi yang sedang berjalan</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively menurut seting bagi tema sistem. Untuk mengubah penampilan pergi ke</value>
+    <value>Luma menurut seting bagi tema sistem. Untuk mengubah penampilan pergi ke</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Sistem berkuasa bateri sahaja) Ubah main semula jika kuasa AC terputus.</value>
@@ -701,7 +701,7 @@ Semua Proses: Lebih berat, mengimbas semua proses untuk menentukan tingkah laku 
 Edge ialah Webview sedia ada bagi Windows 10.</value>
   </data>
   <data name="About.Label" xml:space="preserve">
-    <value>Tentang Lively</value>
+    <value>Tentang Luma</value>
   </data>
   <data name="AddWallpaper.Label" xml:space="preserve">
     <value>Tambah Wallpaper</value>
@@ -713,7 +713,7 @@ Edge ialah Webview sedia ada bagi Windows 10.</value>
     <value>Aplikasi Skrin Penuh</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Peraturan Aplikasi</value>
@@ -776,7 +776,7 @@ Edge ialah Webview sedia ada bagi Windows 10.</value>
     <value>Pustaka</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Setup Lively</value>
+    <value>Setup Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Lokasi</value>
@@ -960,7 +960,7 @@ Edge ialah Webview sedia ada bagi Windows 10.</value>
     <value>Akan Datang!</value>
   </data>
   <data name="AboutMenu.Text" xml:space="preserve">
-    <value>Tentang Lively</value>
+    <value>Tentang Luma</value>
   </data>
   <data name="SourceWebsite.Text" xml:space="preserve">
     <value>Laman Web</value>

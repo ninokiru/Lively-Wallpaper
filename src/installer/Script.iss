@@ -1,7 +1,7 @@
 ﻿; Inno Setup
 ; https://jrsoftware.org/isinfo.php
 
-#define MyAppName "Lively Wallpaper"
+#define MyAppName "Luma Wallpaper"
 #define MyAppVersion "0.0.1"
 #define MyAppPublisher "rocksdanister"
 #define MyAppURL "https://github.com/rocksdanister/lively"
@@ -32,7 +32,8 @@ DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 ; Ask user which PrivilegesRequired on startup.
 PrivilegesRequiredOverridesAllowed=dialog
-OutputBaseFilename=lively_installer
+; Name matches the asset prefix the in-app updater looks for: luma_setup_x86_full_*
+OutputBaseFilename=luma_setup_x86_full_v{#MyAppVersion}
 SetupIconFile=Icons\appicon_96.ico
 Compression=lzma
 ;Compression=lzma2/ultra64
@@ -161,12 +162,15 @@ begin
   if CurUninstallStep = usPostUninstall then
   begin
     // query user to confirm deletion; if user chose "Yes", then...
-    if SuppressibleMsgBox(ExpandConstant('{cm:DeleteEverythigMsgBox}')+ ' ' + ExpandConstant('{localappdata}\Lively Wallpaper') + ' ?',
+    if SuppressibleMsgBox(ExpandConstant('{cm:DeleteEverythigMsgBox}')+ ' ' + ExpandConstant('{localappdata}\Luma Wallpaper') +
+      ' and ' + ExpandConstant('{localappdata}\Lively Wallpaper') + ' ?',
       mbConfirmation, MB_YESNO, IDNO) = IDYES
     then
       // deletion confirmed by user.
       begin
-        // Delete the directory "C:\Users\<UserName>\AppData\Local\Lively Wallpaper" and everything inside it
+        // Delete the directory "C:\Users\<UserName>\AppData\Local\Luma Wallpaper" and everything inside it
+        DelTree(ExpandConstant('{localappdata}\Luma Wallpaper'), True, True, True);
+        // Legacy "Lively Wallpaper" folder from the old brand name; only removed at uninstall time.
         DelTree(ExpandConstant('{localappdata}\Lively Wallpaper'), True, True, True);
       end;
   end;

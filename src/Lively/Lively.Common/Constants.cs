@@ -9,7 +9,13 @@ namespace Lively.Common
     {
         public static class CommonPaths
         {
-            public static string AppDataDir { get; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), ApplicationType.Name);
+            /// <summary>
+            /// Data folder of the current brand. The application used to be Lively Wallpaper,
+            /// so the first launch after the rename copies the configuration files across.
+            /// The wallpaper library is deliberately left alone: Settings.json stores its
+            /// absolute path, so moving it would break every existing install.
+            /// </summary>
+            public static string AppDataDir { get; } = ResolveAppDataDir();
             public static string LogDir { get; } = Path.Combine(AppDataDir, "logs");
             public static string LogDirUI { get; } = Path.Combine(AppDataDir, "UI"); //temp use..
             public static string TempDir { get; } = Path.Combine(AppDataDir, "temp");
@@ -30,10 +36,36 @@ namespace Lively.Common
             public static string DisplayPerformancePath { get; } = Path.Combine(AppDataDir, "DisplayPerformance.json");
             public static string WeatherSettingsPath { get; } = Path.Combine(AppDataDir, "WeatherSettings.json");
             public static string ThemeDir { get; } = Path.Combine(AppDataDir, "Themes");
-            public static string ThemeCacheDir { get; } = Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "themes");
-            public static string WebView2RootCacheDir { get; } = Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "WebView2Cache");
+            public static string ThemeCacheDir { get; } = Path.Combine(Path.GetTempPath(), ApplicationType.Name, "themes");
+            public static string WebView2RootCacheDir { get; } = Path.Combine(Path.GetTempPath(), ApplicationType.Name, "WebView2Cache");
             public static string TokensPath { get; } = Path.Combine(AppDataDir, "Tokens.dat");
             public static string ScreenshotDir { get; } = Path.Combine(AppDataDir, "Screenshots");
+
+            private static string ResolveAppDataDir()
+            {
+                var local = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                var current = Path.Combine(local, ApplicationType.Name);
+                try
+                {
+                    var legacy = Path.Combine(local, ApplicationType.LegacyName);
+                    if (!Directory.Exists(current) && Directory.Exists(legacy))
+                    {
+                        Directory.CreateDirectory(current);
+                        foreach (var file in Directory.GetFiles(legacy))
+                        {
+                            var target = Path.Combine(current, Path.GetFileName(file));
+                            if (!File.Exists(target))
+                                File.Copy(file, target);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    // A broken migration must never stop the app from starting: the
+                    // process simply continues with a fresh data folder.
+                }
+                return current;
+            }
         }
 
         /// <summary>
@@ -72,7 +104,12 @@ namespace Lively.Common
         
         public static class ApplicationType
         {
-            public static string Name { get; } = "Lively Wallpaper";
+            public static string Name { get; } = "Luma Wallpaper";
+            /// <summary>
+            /// Brand name used before the rename, kept only so the data folder migration
+            /// in CommonPaths knows what to look for.
+            /// </summary>
+            public static string LegacyName { get; } = "Lively Wallpaper";
             public static bool IsTestBuild { get; } = false;
 
             // Single channel fork build: updates and release notes come from this repository.

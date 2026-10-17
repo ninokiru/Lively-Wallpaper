@@ -213,17 +213,17 @@ OLED, प्लाज्मा या CRT डिस्प्ले के लि
     <value>Developer के लिए कॉफी खरीदकर समर्थन दिखाएं।</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>आप Lively के Beta Build में बदलने वाले हैं।
+    <value>आप Luma के Beta Build में बदलने वाले हैं।
 अपडेट लगातार होंगे और इसमें गलतियाँ (Bugs) भी हो सकती हैं!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Syste-tray icon visibility (दृश्यता), Lively छिपाकर पिछे चलता रहेगा।</value>
+    <value>Syste-tray icon visibility (दृश्यता), Luma छिपाकर पिछे चलता रहेगा।</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>सिस्टम ट्रे आइकन</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>नई भाषा को लागू करने के लिए Lively पुनः आरंभ करेगा</value>
+    <value>नई भाषा को लागू करने के लिए Luma पुनः आरंभ करेगा</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>भाषा</value>
@@ -254,7 +254,7 @@ https://github.com/rocksdanister/lively/wiki</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>यह एक Lively wallpaper फ़ाइल नहीं है</value>
+    <value>यह एक Luma wallpaper फ़ाइल नहीं है</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
     <value>सुरक्षित मोड में शुरू होने से लाइवली ठीक से बंद नहीं हुआ।

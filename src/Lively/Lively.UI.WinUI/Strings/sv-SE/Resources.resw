@@ -136,15 +136,15 @@
     <value>API-dokumentation och hjälp</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively har stött på ett allvarligt fel.
+    <value>Luma har stött på ett allvarligt fel.
 
-Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta kan vara en konflikt mellan Lively och andra anpassningsprogram för skrivbordet eller Windows. För att undvika ytterligare fel stängs alla bakgrunder av.</value>
+Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta kan vara en konflikt mellan Luma och andra anpassningsprogram för skrivbordet eller Windows. För att undvika ytterligare fel stängs alla bakgrunder av.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Ett inkompatibelt program hittades, aktivitetsfältets tema har inaktiverats</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Officiell hemsida för Lively Wallpaper</value>
+    <value>Officiell hemsida för Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>De flesta moderna LCD- och LED-skärmar lider inte av problemet med inbränning och därför kan alla bakgrunder användas som skärmsläckare. För OLED-, plasma- eller CRT-skärmar som är känsliga för inbränning rekommenderas det att använda bakgrunder med regelbundna rörelser och ett övergripande mörkt tema som antas minska inbränningen, men den här funktionen är oprövad och dess effektivitet kan inte garanteras. Huvudsyftet med Livelys skärmsläckare är att lägga till ytterligare ett lager av anpassning till din dator, använd skärmsläckare som skydd mot inbränning på egen risk!</value>
@@ -174,10 +174,10 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Du öppnar ett externt program som bakgrundsbild. Skadliga program kan vara värd för skadlig kod, virus och skada ditt system. Fortsätt endast om programmet kommer från en betrodd källa.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively är nu minimerad.</value>
+    <value>Luma är nu minimerad.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Starta om Lively för att dina nya inställningar ska ta effekt.</value>
+    <value>Starta om Luma för att dina nya inställningar ska ta effekt.</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Vänligen avbryt innan du fortsätter.</value>
@@ -198,7 +198,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Skriv in en webbadress för att ladda. Shader-länkar från shadertoy.com stöds.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Denna guide kommer att hjälpa dig med att komma igång med att konfigurera Lively.</value>
+    <value>Denna guide kommer att hjälpa dig med att komma igång med att konfigurera Luma.</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Din Windows N/KN-version kräver nedladdning av ytterligare codecs för att stödja videouppspelning i bakgrundsbilder.</value>
@@ -207,7 +207,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Visa ditt stöd genom att köpa kaffe till utvecklaren</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Du är på väg att byta till en betaversion (utvecklare) av Lively.Uppdateringarna kommer att vara frekventa och kan innehålla buggar!</value>
+    <value>Du är på väg att byta till en betaversion (utvecklare) av Luma.Uppdateringarna kommer att vara frekventa och kan innehålla buggar!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
     <value>Synlighet för ikonen i aktivitetsfältets hörn, lively fortsätter köras om ikonen är dold</value>
@@ -216,7 +216,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Systemfälts ikon</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively kommer att startas om för att tillämpa det nya språket</value>
+    <value>Luma kommer att startas om för att tillämpa det nya språket</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Språk</value>
@@ -231,22 +231,22 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Oj... Det verkar som om något gick fel :( Dela loggfilen med utvecklaren för att bättre förstå felet och åtgärda problemet. Instruktioner för att dela loggfilen: https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively fungerar inte med Hög Kontrast läge på. Stäng av det i dina inställningar och försök igen.</value>
+    <value>Luma fungerar inte med Hög Kontrast läge på. Stäng av det i dina inställningar och försök igen.</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
-    <value>Uppspelning av media misslyckades. Försök att ändra videospelaren i Lively inställningar. För att bättre förstå felet och åtgärda problemet kan du dela loggfilen med utvecklaren.Instruktioner för att dela loggfilen: https://github.com/rocksdanister/lively/wiki</value>
+    <value>Uppspelning av media misslyckades. Försök att ändra videospelaren i Luma inställningar. För att bättre förstå felet och åtgärda problemet kan du dela loggfilen med utvecklaren.Instruktioner för att dela loggfilen: https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Denna fil är inte en Lively fil.</value>
+    <value>Denna fil är inte en Luma fil.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively stängdes inte ordentligt och startade i felsäkert läge. Vill du återställa tidigare körda bakgrundsbilder?</value>
+    <value>Luma stängdes inte ordentligt och startade i felsäkert läge. Vill du återställa tidigare körda bakgrundsbilder?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Det ser ut som om några inställningar måste göras för att Lively ska fungera: 1. Öppna den här datorn (Min dator) 2. Högerklicka på ett tomt område 3. Välj Egenskaper 4. Välj Avancerade systeminställningar 5. Under fliken Prestanda välj Inställningar 6. Aktivera Animera kontroller och element i fönster och tillämpa. Om Windows 7 ställ bara in - Justera för bästa utseende och tillämpa. Om det fortfarande inte fungerar, stäng och starta Lively igen / starta om Windows. (Fungerar inte i vissa Insider Windows 10-versioner)</value>
+    <value>Det ser ut som om några inställningar måste göras för att Luma ska fungera: 1. Öppna den här datorn (Min dator) 2. Högerklicka på ett tomt område 3. Välj Egenskaper 4. Välj Avancerade systeminställningar 5. Under fliken Prestanda välj Inställningar 6. Aktivera Animera kontroller och element i fönster och tillämpa. Om Windows 7 ställ bara in - Justera för bästa utseende och tillämpa. Om det fortfarande inte fungerar, stäng och starta Luma igen / starta om Windows. (Fungerar inte i vissa Insider Windows 10-versioner)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively måste köras i bakgrunden för uppspelning av tapeter.</value>
+    <value>Luma måste köras i bakgrunden för uppspelning av tapeter.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Starta med Windows</value>
@@ -330,7 +330,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Exportera lively.zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Vissa funktioner är inte tillgängliga i den här versionen av Lively.</value>
+    <value>Vissa funktioner är inte tillgängliga i den här versionen av Luma.</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Filen finns inte</value>
@@ -345,7 +345,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>GO</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Hjälp till med att översätta Lively</value>
+    <value>Hjälp till med att översätta Luma</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>timmar</value>
@@ -399,7 +399,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Uppkopplad</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Öppna Lively</value>
+    <value>Öppna Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Alla processer</value>
@@ -462,7 +462,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Stoppa</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Tycker du om att använda Lively? Lämna en recension :)</value>
+    <value>Tycker du om att använda Luma? Lämna en recension :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Hjälp</value>
@@ -588,7 +588,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Ställ in olika tapet suppspelningsregler baserat på program som körs.</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively anpassar sig till inställningarna för systemtema för att ändra utseendet</value>
+    <value>Luma anpassar sig till inställningarna för systemtema för att ändra utseendet</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Endast för batteridrivna system) Ändra uppspelning när AC ström är frånkopplad.</value>
@@ -684,7 +684,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Program Hellskärm</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Bakgrundsbilder</value>
+    <value>Luma Bakgrundsbilder</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Programregler</value>
@@ -747,7 +747,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Bibliotek</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Installation</value>
+    <value>Luma Installation</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Plats</value>

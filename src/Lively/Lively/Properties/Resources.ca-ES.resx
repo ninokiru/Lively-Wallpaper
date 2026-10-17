@@ -136,22 +136,22 @@
     <value>Documentació de l'API i ajuda</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>El Lively ha trobat un error fatal.
+    <value>El Luma ha trobat un error fatal.
 
-L'Explorador de Windows s'ha reiniciat dues vegades en els darrers 30 segons! Pot ser que es tracti d'un conflicte entre el Lively i altres programes de personalització d'escriptori o Windows. Per evitar més problemes, tots els fons de pantalla s'han cancel·lat.</value>
+L'Explorador de Windows s'ha reiniciat dues vegades en els darrers 30 segons! Pot ser que es tracti d'un conflicte entre el Luma i altres programes de personalització d'escriptori o Windows. Per evitar més problemes, tots els fons de pantalla s'han cancel·lat.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>S'ha trobat programa incompatible, s'ha deshabilitat la personalització de la barra de tasques</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Pàgina web oficial del Lively Wallpaper</value>
+    <value>Pàgina web oficial del Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>La majoria de pantalles LCD i LED modernes no pateixen de cremades, per tant, es pot fer servir qualsevol fons de pantalla.
 
 Per a pantalles OLED, plasma o CRT, que són susceptibles a cremades, es recomana usar uns fons de pantalla amb moviment regular i un tema generalment fosc. Això se suposa que mitiga els problemes de cremades, encara que és una funcionalitat no provada i no se'n pot garantir l'eficàcia.
 
-L'objectiu principal dels protectors de pantalla del Lively és afegir una nova capa de personaltzació al vostre PC, feu-lo servir com a protecció contra cremades de pantalla sota la vostra responsabilitat!</value>
+L'objectiu principal dels protectors de pantalla del Luma és afegir una nova capa de personaltzació al vostre PC, feu-lo servir com a protecció contra cremades de pantalla sota la vostra responsabilitat!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Informeu d'un problema amb el programari</value>
@@ -180,10 +180,10 @@ Les aplicacions externes poden contenir programari maliciós, virus... i malmetr
 Només continueu si aquesta aplicació prové d'una font de confiança.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>El Lively es minimitza a la safata del sistema, feu clic amb el botó dret a la icona del Lively per continuar.</value>
+    <value>El Luma es minimitza a la safata del sistema, feu clic amb el botó dret a la icona del Luma per continuar.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Reinicieu el Lively perquè les configuracions tinguin efecte</value>
+    <value>Reinicieu el Luma perquè les configuracions tinguin efecte</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Si us plau, atura't abans de continuar</value>
@@ -204,7 +204,7 @@ Només continueu si aquesta aplicació prové d'una font de confiança.</value>
     <value>Ingressa l'enllaç d'un lloc web per carregar-ho. També pots utilitzar enllaços de shadertoy.com.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Aquest assistent us ajudarà a començar a configurar el Lively</value>
+    <value>Aquest assistent us ajudarà a començar a configurar el Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>La versió N/KN del Windows requerirà la baixada de còdecs addicionals per admetre la reproducció de vídeo com a fons de pantalla</value>
@@ -213,17 +213,17 @@ Només continueu si aquesta aplicació prové d'una font de confiança.</value>
     <value>Mostreu el vostre suport comprant un cafè per al desenvolupador</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Esteu a punt de canviar a la versió beta (per a desenvolupadors) del Lively.
+    <value>Esteu a punt de canviar a la versió beta (per a desenvolupadors) del Luma.
 Les actualitzacions seran més freqüents i poden contenir errors!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Visibilitat de la icona a la safata del sistema, el Lively continuarà executant-se amb la icona oculta</value>
+    <value>Visibilitat de la icona a la safata del sistema, el Luma continuarà executant-se amb la icona oculta</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Icona de la safata del sistema</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>El Lively es reiniciarà per aplicar el nou idioma</value>
+    <value>El Luma es reiniciarà per aplicar el nou idioma</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Idioma</value>
@@ -242,26 +242,26 @@ Instruccions per compartir el fitxer de registre:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>El Lively no pot funcionar correctament amb el mode d'alt contrast del Windows activat!
+    <value>El Luma no pot funcionar correctament amb el mode d'alt contrast del Windows activat!
 Desactiveu el mode d'alt contrast i torneu-ho a provar</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>El reproductor de contingut ha fallat :(
-S'ha de canviar el reproductor de vídeo des de la configuració de Lively.
+S'ha de canviar el reproductor de vídeo des de la configuració de Luma.
 
 Per a entendre millor aquest error i solucionar el problema, comparteix l'arxiu de registre amb el desenvolupador.
 Visita el següent enllaç amb instruccions sobre com compartir l'arxiu de registre:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>No és un fitxer de fons de Lively.</value>
+    <value>No és un fitxer de fons de Luma.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively no s'ha tancat correctament, s'està iniciant en mode segur.
+    <value>Luma no s'ha tancat correctament, s'està iniciant en mode segur.
 Voleu restaurar els fons de pantalla que s'estaven executant anteriorment?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Has d'aplicar algunes configuracions perquè Lively funcioni:
+    <value>Has d'aplicar algunes configuracions perquè Luma funcioni:
 1. Pressiona les tecles Win + R per obrir "Executa".
 2. Escriu "SystemPropertiesPerformance.exe", clica "Accepta" per a obrir "Opcions de rendiment".
 3. Habilita "Animar controls i elements dintre finestres" (Si ja estava habilitat, deshabilita'l i torna'l a habilitar), després "Aplicar".
@@ -272,7 +272,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
 (No funciona en algunes versions "Insider" de Windows 10)&amp;</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively necessita executar-se en segon pla per a reproduir el fons de pantalla</value>
+    <value>Luma necessita executar-se en segon pla per a reproduir el fons de pantalla</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Iniciar amb Windows</value>
@@ -356,7 +356,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Desa en un fitxer</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Algunes funcions no estan disponibles en aquesta versió del Lively</value>
+    <value>Algunes funcions no estan disponibles en aquesta versió del Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>No s'ha trobat el fitxer</value>
@@ -425,7 +425,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>En línia</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Obre el Lively</value>
+    <value>Obre el Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Tots els processos</value>
@@ -488,7 +488,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Atura</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Us agrada el Lively? Deixeu una ressenya :)</value>
+    <value>Us agrada el Luma? Deixeu una ressenya :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Suport</value>
@@ -614,7 +614,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Pausa el fons de pantalla quan s'executen aquestes aplicacions</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively s'adapta a la configuració del tema de el sistema, per a canviar l'aparença, ves a</value>
+    <value>Luma s'adapta a la configuració del tema de el sistema, per a canviar l'aparença, ves a</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Canvieu la reproducció quan es desconnecta la font l'alimentació</value>
@@ -710,7 +710,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Aplicacions de pantalla completa</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Regles per aplicació</value>
@@ -773,7 +773,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Bilbioteca</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Configuració del Lively</value>
+    <value>Configuració del Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Ubicació</value>

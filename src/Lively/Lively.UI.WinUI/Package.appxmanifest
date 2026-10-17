@@ -16,7 +16,7 @@
   <mp:PhoneIdentity PhoneProductId="04bfe68a-b076-487d-957e-c3eea0ef5dd3" PhonePublisherId="1decb601-e64f-4088-bc00-0e28637c9926" />
   
   <Properties>
-    <DisplayName>Lively Wallpaper</DisplayName>
+    <DisplayName>Luma Wallpaper</DisplayName>
     <PublisherDisplayName>rocksdanister</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -36,12 +36,12 @@
       Executable="Build\Lively.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Lively Wallpaper"
+        DisplayName="Luma Wallpaper"
         Description="Free and open-source software that allows users to set animated and interactive desktop wallpapers."
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" ShortName="Lively Wallpaper">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" ShortName="Luma Wallpaper">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo"/>
             <uap:ShowOn Tile="wide310x150Logo"/>
@@ -52,7 +52,7 @@
       </uap:VisualElements>
       <Extensions>
         <desktop:Extension Category="windows.startupTask" Executable="Build\Lively.exe" EntryPoint="Windows.FullTrustApplication">
-          <desktop:StartupTask TaskId="AppStartup" Enabled="false" DisplayName="Lively Wallpaper" />
+          <desktop:StartupTask TaskId="AppStartup" Enabled="false" DisplayName="Luma Wallpaper" />
         </desktop:Extension>
       </Extensions>
     </Application>

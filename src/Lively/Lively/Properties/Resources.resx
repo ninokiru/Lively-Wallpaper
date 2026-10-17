@@ -136,22 +136,22 @@
     <value>API documentation and help</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively has encountered a fatal error.
+    <value>Luma has encountered a fatal error.
 
-Windows Explorer restarted twice in the last 30 seconds! This may be a conflict between Lively and other desktop customization software or Windows. To avoid further issues, all wallpapers are terminated.</value>
+Windows Explorer restarted twice in the last 30 seconds! This may be a conflict between Luma and other desktop customization software or Windows. To avoid further issues, all wallpapers are terminated.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Incompatible program found, taskbar theming disabled</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Official webpage of Lively Wallpaper</value>
+    <value>Official webpage of Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Most modern LCD and LED displays do not suffer from burn-in issue and therefore any wallpaper can be used as screensaver.
 
 For OLED, Plasma or CRT displays which are susceptibe to burn-in it is advised to use wallpaper with regular motion and an overall dark theme which is supposed to mitigate burn-in but this feature is untested and its effectiveness cannot be guaranteed.
 
-The main purpose of Lively's screensavers is to add another layer of customization to your pc, use screensavers as burn-in protection at your own risk!</value>
+The main purpose of Luma's screensavers is to add another layer of customization to your pc, use screensavers as burn-in protection at your own risk!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Report a problem with the software</value>
@@ -180,10 +180,10 @@ Malicious applications can host malware, virus.. and do harm to your system.
 Only continue if this application comes from a trusted source.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively is minimized to systemtray, right click lively icon to continue.</value>
+    <value>Luma is minimized to systemtray, right click lively icon to continue.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Please restart Lively for settings to take effect</value>
+    <value>Please restart Luma for settings to take effect</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Please stop before proceeding</value>
@@ -204,7 +204,7 @@ Only continue if this application comes from a trusted source.</value>
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>This wizard will get you started on setting up Lively</value>
+    <value>This wizard will get you started on setting up Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Your Windows N/KN version will require the download of additional codecs to support video playback in wallpapers</value>
@@ -213,7 +213,7 @@ Only continue if this application comes from a trusted source.</value>
     <value>Show support by buying the developer coffee</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>You are about to change to beta (developer) build of Lively.
+    <value>You are about to change to beta (developer) build of Luma.
 Updates will be frequent and may contain bugs!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@ Updates will be frequent and may contain bugs!</value>
     <value>System-tray Icon</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively will restart to apply the new language</value>
+    <value>Luma will restart to apply the new language</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Language</value>
@@ -242,7 +242,7 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively cannot work properly with Windows High Contrast mode enabled!
+    <value>Luma cannot work properly with Windows High Contrast mode enabled!
 Disable High Contrast mode and try again</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Not Lively wallpaper file</value>
+    <value>Not Luma wallpaper file</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively was not closed properly, starting in safe mode.
+    <value>Luma was not closed properly, starting in safe mode.
 Do you wish to restore previously running wallpapers?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>It looks like some settings need to be set to make Lively work:  
+    <value>It looks like some settings need to be set to make Luma work:  
 1. Press the Win + R keys to open Run, 
 2. Type SystemPropertiesPerformance.exe into Run, click on "OK" to open Performance Options.
 3. Enable/Check "Animate controls and elements inside windows" (If already checked, then uncheck and check) &amp; Apply.
 4. Click "Apply" then press "OK" to close the window.
 
 If Windows 7 just set - Adjust for best appearance &amp;amp; Apply.
-If still not working, close &amp; start Lively again/restart windows.
+If still not working, close &amp; start Luma again/restart windows.
 (Does not work in some insider windows 10 builds)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively needs to run in the background for wallpaper playback</value>
+    <value>Luma needs to run in the background for wallpaper playback</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Start with Windows</value>
@@ -356,7 +356,7 @@ If still not working, close &amp; start Lively again/restart windows.
     <value>Save to file</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Some features are not available in this version of Lively</value>
+    <value>Some features are not available in this version of Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>File not found</value>
@@ -425,7 +425,7 @@ If still not working, close &amp; start Lively again/restart windows.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Open Lively</value>
+    <value>Open Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>All process</value>
@@ -488,7 +488,7 @@ If still not working, close &amp; start Lively again/restart windows.
     <value>Stop</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Do you enjoy using Lively? Leave a review :)</value>
+    <value>Do you enjoy using Luma? Leave a review :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Support</value>
@@ -614,7 +614,7 @@ If still not working, close &amp; start Lively again/restart windows.
     <value>Pause wallpaper when running these applications</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively adapts to system theme settings, to change appearance goto</value>
+    <value>Luma adapts to system theme settings, to change appearance goto</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Change playback when AC power is disconnected</value>
@@ -710,7 +710,7 @@ If still not working, close &amp; start Lively again/restart windows.
     <value>Applications fullscreen</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Application Rules</value>
@@ -773,7 +773,7 @@ If still not working, close &amp; start Lively again/restart windows.
     <value>Library</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Setup</value>
+    <value>Luma Setup</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Location</value>

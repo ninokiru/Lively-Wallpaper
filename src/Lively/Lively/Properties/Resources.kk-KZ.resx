@@ -136,22 +136,22 @@
     <value>API құжаттамасы және көмегi</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively маңызды қатеге тап болды.
+    <value>Luma маңызды қатеге тап болды.
 
-Windows Explorer соңғы 30 секундта екі рет қайта іске қосылды! Бұл Lively және басқа жұмыс үстелін теңшеу бағдарламалық құралы немесе Windows арасындағы қайшылық болуы мүмкін. Қосымша мәселелерді болдырмау үшін барлық тұсқағаздар тоқтатылады.</value>
+Windows Explorer соңғы 30 секундта екі рет қайта іске қосылды! Бұл Luma және басқа жұмыс үстелін теңшеу бағдарламалық құралы немесе Windows арасындағы қайшылық болуы мүмкін. Қосымша мәселелерді болдырмау үшін барлық тұсқағаздар тоқтатылады.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Үйлесімсіз бағдарлама табылды, тапсырмалар тақтасының тақырыбы өшірілген</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively Wallpaper ресми веб-сайты</value>
+    <value>Luma Wallpaper ресми веб-сайты</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Қазіргі заманғы СКД және жарықдиодты дисплейлердің көпшілігі күйіп кетуден зардап шекпейді, сондықтан кез келген тұсқағазды экран қорғаушысы ретінде пайдалануға болады.
 
 Жанып кетуге бейім OLED, плазмалық немесе CRT дисплейлері үшін тұрақты қозғалыстағы тұсқағазды және күйіп кетуді азайтатын жалпы қараңғы тақырыпты пайдалану ұсынылады, бірақ бұл мүмкіндік тексерілмеген және оның тиімділігіне кепілдік берілмейді.
 
-Lively's скринсейверлерінің негізгі мақсаты - компьютеріңізге басқа теңшеу қабатын қосу, экран сақтағыштарды жанып кетуден қорғау ретінде пайдалану, өз тәуекеліңізге!</value>
+Luma's скринсейверлерінің негізгі мақсаты - компьютеріңізге басқа теңшеу қабатын қосу, экран сақтағыштарды жанып кетуден қорғау ретінде пайдалану, өз тәуекеліңізге!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Бағдарламалық құралға қатысты мәселе туралы хабарлаңыз</value>
@@ -180,10 +180,10 @@ Lively's скринсейверлерінің негізгі мақсаты - к
 Бұл қолданба сенімді көзден келген жағдайда ғана жалғастырыңыз.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively жүйелік тақтаға кішірейтілген, жалғастыру үшін жанды белгішесін тінтуірдің оң жақ түймешігімен басыңыз.</value>
+    <value>Luma жүйелік тақтаға кішірейтілген, жалғастыру үшін жанды белгішесін тінтуірдің оң жақ түймешігімен басыңыз.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Параметрлер күшіне енуі үшін Lively қолданбасын қайта іске қосыңыз</value>
+    <value>Параметрлер күшіне енуі үшін Luma қолданбасын қайта іске қосыңыз</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Жалғастырмас бұрын тоқтатыңыз</value>
@@ -204,7 +204,7 @@ Lively's скринсейверлерінің негізгі мақсаты - к
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Бұл шебер сізге Lively орнатуды бастайды</value>
+    <value>Бұл шебер сізге Luma орнатуды бастайды</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Windows N/KN нұсқасы тұсқағаздардағы бейнені ойнатуды қолдау үшін қосымша кодектерді жүктеп алуды қажет етеді</value>
@@ -213,7 +213,7 @@ Lively's скринсейверлерінің негізгі мақсаты - к
     <value>Әзірлеуші кофені сатып алу арқылы қолдау көрсетіңіз</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Сіз Lively нұсқасының бета (әзірлеуші) нұсқасына ауысқалы жатырсыз.
+    <value>Сіз Luma нұсқасының бета (әзірлеуші) нұсқасына ауысқалы жатырсыз.
 Жаңартулар жиі болады және қателер болуы мүмкін!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@ Lively's скринсейверлерінің негізгі мақсаты - к
     <value>Жүйе науасы белгішесі</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Жаңа тілді қолдану үшін Lively қайта іске қосылады</value>
+    <value>Жаңа тілді қолдану үшін Luma қайта іске қосылады</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Тіл</value>
@@ -242,7 +242,7 @@ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Windows High Contrast режимі қосылған кезде Lively дұрыс жұмыс істей алмайды!
+    <value>Windows High Contrast режимі қосылған кезде Luma дұрыс жұмыс істей алмайды!
 Жоғары контраст режимін өшіріп, әрекетті қайталаңыз</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Lively тұсқағаз файлы емес</value>
+    <value>Luma тұсқағаз файлы емес</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively қауіпсіз режимде дұрыс жабылмады.
+    <value>Luma қауіпсіз режимде дұрыс жабылмады.
 Бұрын іске қосылған тұсқағаздарды қалпына келтіргіңіз келе ме?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Lively жұмыс істеуі үшін кейбір параметрлерді орнату қажет сияқты:
+    <value>Luma жұмыс істеуі үшін кейбір параметрлерді орнату қажет сияқты:
 1. Іске қосуды ашу үшін Win + R пернелерін басыңыз,
 2. «Іске қосу» ішіне SystemPropertiesPerformance.exe енгізіңіз, өнімділік параметрлерін ашу үшін «OK» түймесін басыңыз.
 3. "Басқару элементтерін және терезелердегі элементтерді анимациялау" (Егер әлдеқашан белгіленген болса, құсбелгіні алып тастаңыз және тексеріңіз) және Қолдану қосыңыз/тексеріңіз.
 4. «Қолдану» түймесін басып, терезені жабу үшін «OK» түймесін басыңыз.
 
 Егер Windows 7 жай ғана орнатылған болса - Ең жақсы көрініс үшін реттеу &amp; Қолдану.
-Әлі жұмыс істемесе, Lively қолданбасын жауып, қайта іске қосыңыз/терезелерді қайта қосыңыз.
+Әлі жұмыс істемесе, Luma қолданбасын жауып, қайта іске қосыңыз/терезелерді қайта қосыңыз.
 (Кейбір инсайдерлік Windows 10 құрастыруларында жұмыс істемейді)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Түсқағазды ойнату үшін Lively фондық режимде жұмыс істеуі керек</value>
+    <value>Түсқағазды ойнату үшін Luma фондық режимде жұмыс істеуі керек</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Windows-пен бірге қосылу</value>
@@ -356,7 +356,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Файлға сақтау</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Кейбір мүмкіндіктер Lively қолданбасының осы нұсқасында қолжетімді емес</value>
+    <value>Кейбір мүмкіндіктер Luma қолданбасының осы нұсқасында қолжетімді емес</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Файл табылмады</value>
@@ -425,7 +425,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Желіде</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively ашу</value>
+    <value>Luma ашу</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Барлық үдерістер</value>
@@ -488,7 +488,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Тоқтату</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Сізге Lively пайдалану ұнайды ма? Пікір қалдырыңыз :)</value>
+    <value>Сізге Luma пайдалану ұнайды ма? Пікір қалдырыңыз :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Қолдау</value>
@@ -614,7 +614,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Тұсқағазды келесі қолданбалар қосылынып тұрған кезде тоқтаку</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively жүйелік тақырып параметрлерін қолданады. Оларды өзгерту үшін келесіге өтіңіз</value>
+    <value>Luma жүйелік тақырып параметрлерін қолданады. Оларды өзгерту үшін келесіге өтіңіз</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Батареямен жұмыс істегенде әрекетті өзгертіңіз</value>
@@ -711,7 +711,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Толық экранды қолданбалар</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Қолдану ережелері</value>
@@ -774,7 +774,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Кітапхана</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Оранту</value>
+    <value>Luma Оранту</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Орналасқан жер</value>

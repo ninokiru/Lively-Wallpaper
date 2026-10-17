@@ -136,22 +136,22 @@
     <value>مستندات و راهنمای API</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively با یک خطای مهلک مواجه شده است.
+    <value>Luma با یک خطای مهلک مواجه شده است.
 
-Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی مجدد شد! این ممکن است تضاد بین Lively و سایر نرم افزارهای سفارشی‌سازی دسکتاپ یا ویندوز باشد. برای جلوگیری از مشکلات بیشتر، تمام تصاویر زمینه بسته می‌شوند.</value>
+Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی مجدد شد! این ممکن است تضاد بین Luma و سایر نرم افزارهای سفارشی‌سازی دسکتاپ یا ویندوز باشد. برای جلوگیری از مشکلات بیشتر، تمام تصاویر زمینه بسته می‌شوند.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>برنامۀ ناسازگار پیدا شد، پوسته‌ی نوار وظیفه غیرفعال شد</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>صفحه وب رسمی Lively Wallpaper</value>
+    <value>صفحه وب رسمی Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>اکثر نمایشگرهای مدرن LCD و LED دچار مشکل سوختن صفحه (burn-in) نمی‌شوند، بنابراین می‌توان از هر تصویر پس‌زمینه‌ای به عنوان محافظ صفحه (screensaver) استفاده کرد.
 
 برای نمایشگرهای OLED، پلاسما یا CRT که در برابر سوختن صفحه حساس هستند، توصیه می‌شود از تصاویر پس‌زمینه‌ای با حرکت منظم و طرحی که در مجموع تیره است استفاده کنید؛ این روش قرار است سوختن صفحه را کاهش دهد، اما این ویژگی آزمایش نشده است و تأثیر آن را نمی‌توان تضمین کرد.
 
-هدف اصلی محافظهای صفحه نرم‌افزار Lively، افزودن لایه‌ای دیگر از شخصی‌سازی به رایانه شماست؛ از محافظهای صفحه به عنوان محافظ در برابر سوختن صفحه تنها با مسئولیت خودتان استفاده کنید!</value>
+هدف اصلی محافظهای صفحه نرم‌افزار Luma، افزودن لایه‌ای دیگر از شخصی‌سازی به رایانه شماست؛ از محافظهای صفحه به عنوان محافظ در برابر سوختن صفحه تنها با مسئولیت خودتان استفاده کنید!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>مشکل نرم‌افزار را گزارش دهید</value>
@@ -180,10 +180,10 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
 تنها در صورتی ادامه دهید که این برنامه از یک منبع مورد اعتماد باشد.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively کوچک شده و به سیستم ترِی (زیر نوار وظیفه) انتقال یافته، برای ادامه آیکون Lively را راست کلیک کنید.</value>
+    <value>Luma کوچک شده و به سیستم ترِی (زیر نوار وظیفه) انتقال یافته، برای ادامه آیکون Luma را راست کلیک کنید.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>لطفاً Lively را مجدداً راه‌اندازی کنید تا تنظیمات اعمال شوند</value>
+    <value>لطفاً Luma را مجدداً راه‌اندازی کنید تا تنظیمات اعمال شوند</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>لطفا قبل از ادامه دست نگه دارید.</value>
@@ -213,7 +213,7 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
     <value>با خرید قهوه برای توسعه‌دهنده حمایت خود را نشان دهید</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>شما در شرف تغییر به نسخه بتا (توسعه‌دهنده) Lively هستید.
+    <value>شما در شرف تغییر به نسخه بتا (توسعه‌دهنده) Luma هستید.
 به‌روزرسانی‌ها مکرر خواهد بود و ممکن است حاوی اِشکال باشند!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
     <value>آیکون System-tray</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively برای اعمال زبان جدید دوباره راه‌اندازی می‌شود.</value>
+    <value>Luma برای اعمال زبان جدید دوباره راه‌اندازی می‌شود.</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>زبان</value>
@@ -254,10 +254,10 @@ https://github.com/rocksdanister/lively/wiki</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>فایل کاغذدیواری Lively نیست</value>
+    <value>فایل کاغذدیواری Luma نیست</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively به‌درستی بسته نشده است و در حال راه‌اندازی در حالت ایمن است. 
+    <value>Luma به‌درستی بسته نشده است و در حال راه‌اندازی در حالت ایمن است. 
 آیا مایلید کاغذدیواری‌های در حال اجرا در جلسهٔ قبل بازیابی شوند؟</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
@@ -272,7 +272,7 @@ https://github.com/rocksdanister/lively/wiki</value>
 (در بعضي از نسخه هاي اينسايدر ويندوز کار نميکند)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively برای پخش کاغذ دیواری باید در پس زمینه اجرا شود</value>
+    <value>Luma برای پخش کاغذ دیواری باید در پس زمینه اجرا شود</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>اجرا شدن همزمان با ویندوز</value>
@@ -356,7 +356,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ذخیره در فایل</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>برخی از ویژگی ها در این نسخه از Lively موجود نیست</value>
+    <value>برخی از ویژگی ها در این نسخه از Luma موجود نیست</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>فايل پيدا نشد</value>
@@ -488,7 +488,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>پایان</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>آیا از استفاده Lively لذت می برید؟ نظر بدهید :)</value>
+    <value>آیا از استفاده Luma لذت می برید؟ نظر بدهید :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>پشتیبانی</value>
@@ -614,7 +614,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>هنگام اجرای این برنامه ها، کاغذدیواری را متوقف کنید</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively با تنظیمات تم سیستم سازگار می شود تا ظاهر را تغییر دهد</value>
+    <value>Luma با تنظیمات تم سیستم سازگار می شود تا ظاهر را تغییر دهد</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(فقط برای سیستم هایی که با باتری کار می کنند) هنگام قطع برق AC ، پخش را تغییر دهید.</value>

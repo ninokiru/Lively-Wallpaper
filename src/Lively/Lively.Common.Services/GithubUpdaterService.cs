@@ -1,4 +1,4 @@
-﻿using Lively.Common.Helpers;
+using Lively.Common.Helpers;
 using Lively.Models.Services;
 using System;
 using System.Diagnostics;
@@ -68,18 +68,21 @@ namespace Lively.Common.Services
             if (PackageUtil.IsRunningAsPackaged || BuildInfoUtil.IsDebugBuild())
                 return AppUpdateStatus.notchecked;
 
+            ReleaseInfo info = null;
+            bool fetched = false;
             try
             {
                 await Task.Delay(fetchDelay);
-                var (SetupUri, SetupFileName, SetupVersion) = await GetLatestRelease(Constants.ApplicationType.IsTestBuild);
-                if (SetupVersion is null)
+                info = await GetReleaseInfo();
+                fetched = true;
+                if (info is null)
                 {
                     // Nothing published on the release page yet, so there is simply nothing to update to.
                     Status = AppUpdateStatus.uptodate;
                 }
                 else
                 {
-                    int verCompare = GithubUtil.CompareAssemblyVersion(SetupVersion);
+                    int verCompare = GithubUtil.CompareAssemblyVersion(info.Version);
                     if (verCompare > 0)
                     {
                         //update available.
@@ -95,15 +98,31 @@ namespace Lively.Common.Services
                         //up-to-date.
                         Status = AppUpdateStatus.uptodate;
                     }
+
+                    if (Status == AppUpdateStatus.available && info.Url is null)
+                    {
+                        // A newer tag exists but carries no installer for this architecture,
+                        // which the ui cannot recover from on its own.
+                        Debug.WriteLine($"Release {info.Tag} has no setup asset for {ProcessArch}.");
+                        Status = AppUpdateStatus.error;
+                    }
                 }
-                LastCheckUri = SetupUri;
-                LastCheckVersion = SetupVersion ?? new Version(0, 0, 0, 0);
-                LastCheckFileName = SetupFileName;
             }
             catch (Exception e)
             {
                 Debug.WriteLine("Update fetch error:" + e.ToString());
                 Status = AppUpdateStatus.error;
+            }
+
+            // A failed lookup keeps whatever the last successful one found, so the
+            // changelog card does not go blank just because the network dropped.
+            // A fetch that succeeded but found nothing published clears the stale data.
+            if (fetched)
+            {
+                LastCheckUri = info?.Url;
+                LastCheckFileName = info?.FileName;
+                LastCheckChangelog = info?.Changelog;
+                LastCheckVersion = info?.Version ?? new Version(0, 0, 0, 0);
             }
             LastCheckTime = DateTime.Now;
 
@@ -116,29 +135,69 @@ namespace Lively.Common.Services
             return Status;
         }
 
+        /// <summary>
+        /// isBeta is kept for the rpc contract; this fork publishes a single channel.
+        /// </summary>
         public async Task<(Uri Url, string FileName, Version AppVersion)> GetLatestRelease(bool isBeta)
         {
-            var userName = Constants.ApplicationType.UpdateRepoOwner;
-            var repositoryName = Constants.ApplicationType.UpdateRepoName;
-            var gitRelease = await GithubUtil.GetLatestRelease(userName, repositoryName);
-            if (gitRelease is null)
-                return (null, null, null);
+            var info = await GetReleaseInfo();
+            return info is null ? (null, null, null) : (info.Url, info.FileName, info.Version);
+        }
 
-            Version version = GithubUtil.GetVersion(gitRelease);
+        private sealed class ReleaseInfo
+        {
+            public string Tag;
+            public string Changelog;
+            public Version Version;
+            public Uri Url;
+            public string FileName;
+        }
 
-            // Get latest installer file
-            var arch = GetArchSetupString(ProcessArch);
-            // Format: lively_setup_ARCH_full_vXXXX.exe, XXXX - 4 digit version no and ARCH - x86, arm64
-            var (fileName, url) = GithubUtil.GetAssetUrl(gitRelease, $"lively_setup_{arch}_full");
-            if (fileName == null && ProcessArch == Architecture.X64)
+        private static async Task<ReleaseInfo> GetReleaseInfo()
+        {
+            var release = await GithubUtil.GetLatestRelease(Constants.ApplicationType.UpdateRepoOwner,
+                Constants.ApplicationType.UpdateRepoName);
+            if (release is null)
+                return null;
+
+            var info = new ReleaseInfo
             {
-                // Fallback, old updater has hardcoded arch value so for backward compatibility initially x64 setup will be named x86.
-                // In the future make an x86 installer that downloads x64 installer and installs.
-                // Lively v2.1 onwards only x64 version is available.
-                (fileName, url) = GithubUtil.GetAssetUrl(gitRelease, $"lively_setup_x86_full");
+                Tag = release.TagName,
+                Version = GithubUtil.GetVersion(release),
+                Changelog = release.Body,
+            };
+
+            // Installer name produced by Script_x64.iss: luma_setup_ARCH_full_vXXXX.exe.
+            // The lively_ prefix is still accepted so an older release can be installed,
+            // and the x86 spelling covers the builds published while every x64 installer
+            // was named that way.
+            var arch = GetArchSetupString(ProcessArch);
+            var names = ProcessArch == Architecture.X64
+                ? new[]
+                {
+                    $"luma_setup_{arch}_full",
+                    $"lively_setup_{arch}_full",
+                    "luma_setup_x86_full",
+                    "lively_setup_x86_full",
+                }
+                : new[]
+                {
+                    $"luma_setup_{arch}_full",
+                    $"lively_setup_{arch}_full",
+                };
+
+            foreach (var prefix in names)
+            {
+                var (fileName, url) = GithubUtil.GetAssetUrl(release, prefix);
+                if (fileName is not null)
+                {
+                    info.FileName = fileName;
+                    info.Url = url is null ? null : new Uri(url);
+                    break;
+                }
             }
 
-            return (url is null ? null : new Uri(url), fileName, version);
+            return info;
         }
 
         private static string GetArchSetupString(Architecture arch)

@@ -136,22 +136,22 @@
     <value>API dokumentasie en hulp</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively het 'n noodlottige fout teëgekom.
+    <value>Luma het 'n noodlottige fout teëgekom.
 
-Windows Explorer het twee keer in die laaste 30 sekondes herbegin! Dit kan 'n konflik wees tussen Lively en ander rekenaaraanpassingsagteware of Windows. Om verdere probleme te vermy, word alle agtergronde beëindig.</value>
+Windows Explorer het twee keer in die laaste 30 sekondes herbegin! Dit kan 'n konflik wees tussen Luma en ander rekenaaraanpassingsagteware of Windows. Om verdere probleme te vermy, word alle agtergronde beëindig.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Onversoenbare program gevind, taakbalktema is gedeaktiveer</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Amptelike webtuiste van Lively Wallpaper</value>
+    <value>Amptelike webtuiste van Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Die meeste moderne LCD- en LED-skerms ly nie aan inbrandprobleme nie en daarom kan enige muurpapier as skermbewaarder gebruik word.
 
 Vir OLED-, Plasma- of CRT-skerms wat vatbaar is vir inbrand, word dit aangeraai om plakpapier met gereelde beweging te gebruik en 'n algehele donker tema wat veronderstel is om inbranding te versag, maar hierdie kenmerk is ongetoets en die doeltreffendheid daarvan kan nie gewaarborg word nie.
 
-Die hoofdoel van Lively se skermbeskermers is om nog 'n laag aanpassing by jou rekenaar te voeg, gebruik skermbeskermers as inbrandbeskerming op eie risiko!</value>
+Die hoofdoel van Luma se skermbeskermers is om nog 'n laag aanpassing by jou rekenaar te voeg, gebruik skermbeskermers as inbrandbeskerming op eie risiko!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Raporteer n probleem met die sagteware</value>
@@ -180,10 +180,10 @@ Kwaadwillige toepassings kan wanware, virusse... en skade aan jou stelsel aanrig
 Gaan net voort as hierdie toepassing van 'n betroubare bron kom.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively is tot die system tray geminimaliseer, regskliek lewendige ikoon om voort te gaan.</value>
+    <value>Luma is tot die system tray geminimaliseer, regskliek lewendige ikoon om voort te gaan.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Herbegin asseblief Lively vir instellings om in werking te tree</value>
+    <value>Herbegin asseblief Luma vir instellings om in werking te tree</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Stop asseblief voordat jy voortgaan</value>
@@ -204,7 +204,7 @@ Gaan net voort as hierdie toepassing van 'n betroubare bron kom.</value>
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Hierdie towenaar sal jou laat begin met die opstel van Lively</value>
+    <value>Hierdie towenaar sal jou laat begin met die opstel van Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Jou Windows N/KN-weergawe sal die aflaai van bykomende kodeks vereis om videoterugspeel in agtergronde te ondersteun</value>
@@ -213,7 +213,7 @@ Gaan net voort as hierdie toepassing van 'n betroubare bron kom.</value>
     <value>Wys ondersteuning deur die ontwikkelaarkoffie te koop</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Jy is op die punt om te verander na beta (ontwikkelaar) bou van Lively.
+    <value>Jy is op die punt om te verander na beta (ontwikkelaar) bou van Luma.
 Opdaterings sal gereeld wees en kan foute bevat!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@ Opdaterings sal gereeld wees en kan foute bevat!</value>
     <value>Stelselbak-ikoon</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively sal weer begin om die nuwe taal toe te pas</value>
+    <value>Luma sal weer begin om die nuwe taal toe te pas</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Taal</value>
@@ -242,7 +242,7 @@ Instruksies vir die deel van loglêer:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively kan nie behoorlik werk met Windows High Contrast-modus geaktiveer nie!
+    <value>Luma kan nie behoorlik werk met Windows High Contrast-modus geaktiveer nie!
 Deaktiveer hoë kontras-modus en probeer weer</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -257,18 +257,18 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Nie lewendige plakpapierlêer nie</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively was nie behoorlik gesluit nie, begin in veilige modus.
+    <value>Luma was nie behoorlik gesluit nie, begin in veilige modus.
 Wil jy agtergronde wat voorheen werk, herstel?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Dit lyk of sommige instellings ingestel moet word om Lively te laat werk:
+    <value>Dit lyk of sommige instellings ingestel moet word om Luma te laat werk:
 1. Druk die Win + R-sleutels om Run oop te maak,
 2. Tik SystemPropertiesPerformance.exe in Run, klik op "OK" om Prestasie-opsies oop te maak.
 3. Aktiveer/merk "Animeer kontroles en elemente binne vensters" (As dit reeds gemerk is, ontmerk dan en merk) &amp; Pas toe.
 4. Klik "Pas toe" en druk dan "OK" om die venster toe te maak.
 
 As Windows 7 pas gestel - Pas vir die beste voorkoms &amp; amp; Doen aansoek.
-As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
+As dit steeds nie werk nie, maak toe en begin Luma weer / herbegin vensters.
 (Werk nie in sommige insider Windows 10 builds nie)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
@@ -356,7 +356,7 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
     <value>Stoor na lêer</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Sommige kenmerke is nie in hierdie weergawe van Lively beskikbaar nie</value>
+    <value>Sommige kenmerke is nie in hierdie weergawe van Luma beskikbaar nie</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Lêer nie gevind nie</value>
@@ -425,7 +425,7 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
     <value>Aanlyn</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Maak Lively oop</value>
+    <value>Maak Luma oop</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Alle proses</value>
@@ -488,7 +488,7 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
     <value>Stop</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Geniet jy dit om Lively te gebruik? Laat 'n resensie :)</value>
+    <value>Geniet jy dit om Luma te gebruik? Laat 'n resensie :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Ondersteuning</value>
@@ -614,7 +614,7 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
     <value>Onderbreek muurpapier wanneer hierdie toepassings uitgevoer word</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively pas by stelseltema-instellings aan om die voorkoms te verander</value>
+    <value>Luma pas by stelseltema-instellings aan om die voorkoms te verander</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Verander afspeel wanneer AC-krag ontkoppel is</value>
@@ -710,7 +710,7 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
     <value>Toepassings volskerm</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Toepassingsreëls</value>

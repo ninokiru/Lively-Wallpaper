@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "JSON schema for Lively Wallpaper LivelyProperties.json files",
+  "title": "JSON schema for Luma Wallpaper LivelyProperties.json files",
   "description": "https://github.com/rocksdanister/lively/wiki/Web-Guide-IV-:-Interaction#lively-properties",
   "type": "object",
   "additionalProperties": {

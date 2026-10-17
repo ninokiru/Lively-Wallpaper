@@ -136,22 +136,22 @@
     <value>API documentatie en hulp</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively is een fatale fout tegen gekomen.
+    <value>Luma is een fatale fout tegen gekomen.
 
-Windows Explorer is in de laatste 30 seconden twee keer gestart! Dit kan een conflict zijn tussen Lively en andere bureaublad aanpassingssoftware van Windows. Om verdere problemen te vermijden, worden alle achtergronden beëindigd.</value>
+Windows Explorer is in de laatste 30 seconden twee keer gestart! Dit kan een conflict zijn tussen Luma en andere bureaublad aanpassingssoftware van Windows. Om verdere problemen te vermijden, worden alle achtergronden beëindigd.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Incompatibel programma gevonden, taakbalk thematisering uitgeschakeld</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Officiële webpagina van Lively</value>
+    <value>Officiële webpagina van Luma</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>De meeste moderne LCD en LED displays hebben geen last van inbranden en daarom kan elke achtergrond gebruikt worden als screensaver.
 
 Voor OLED Plasma of beeldbuis-displays die vatbaar zijn voor inbranden wordt aangeraden om achtergrond te gebruiken met regelmatige beweging en een algemeen donker thema dat branding moet verzachten, maar deze functie is niet getest en de effectiviteit ervan kan niet worden gegarandeerd.
 
-Het belangrijkste doel van Lively's screensavers is om extra visuele aanpassingen te doen aan je PC, gebruik screensavers als inbrand bescherming op eigen risico!</value>
+Het belangrijkste doel van Luma's screensavers is om extra visuele aanpassingen te doen aan je PC, gebruik screensavers als inbrand bescherming op eigen risico!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Een probleem in de software melden</value>
@@ -178,10 +178,10 @@ Het belangrijkste doel van Lively's screensavers is om extra visuele aanpassinge
     <value>U opent een extern programma als achtergrond. Kwaadaardige applicaties kunnen malware en virussen hosten, dit kan schade toebrengen aan uw systeem. Ga alleen verder als het programma vanuit een betrouwbare bron is verkregen.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively wordt geminimaliseerd naar de systeembalk, om verder te gaan klikt u met de rechtermuisknop op Lively.</value>
+    <value>Luma wordt geminimaliseerd naar de systeembalk, om verder te gaan klikt u met de rechtermuisknop op Luma.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Herstart Lively om de nieuwe instellingen toe te passen. </value>
+    <value>Herstart Luma om de nieuwe instellingen toe te passen. </value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Stop alsjeblieft voordat je verder gaat</value>
@@ -202,7 +202,7 @@ Het belangrijkste doel van Lively's screensavers is om extra visuele aanpassinge
     <value>Voer een link in om te laden, shadertoy.com shader links worden ondersteund.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>De wizard helpt u bij het instellen van Lively.</value>
+    <value>De wizard helpt u bij het instellen van Luma.</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Uw Windows N/KN versie vereist het downloaden van aanvullende codecs om het afspelen van video's in achtergronden te ondersteunen</value>
@@ -211,11 +211,11 @@ Het belangrijkste doel van Lively's screensavers is om extra visuele aanpassinge
     <value>Toon steun door de ontwikkelaar een kop koffie te geven</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Je staat op het punt om te veranderen in bèta (ontwikkelaars) build van Lively.
+    <value>Je staat op het punt om te veranderen in bèta (ontwikkelaars) build van Luma.
 Updates zullen vaker voorkomen en de updates kunnen bugs bevatten!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Zichtbaarheid van systeemtray icoon, Lively blijft actief ook met een verborgen pictogram</value>
+    <value>Zichtbaarheid van systeemtray icoon, Luma blijft actief ook met een verborgen pictogram</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Systeemvak icoon</value>
@@ -237,22 +237,22 @@ Updates zullen vaker voorkomen en de updates kunnen bugs bevatten!</value>
 Om de foutmelding beter te begrijpen en te corrigeren, raden we aan om het logboekbestand te delen met de ontwikkelaar. Instructie voor het delen van logboekbestanden zijn hier te vinden: https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively werkt niet goed als de Windows Hoog Contrast modus is inschakeld! Schakel de Hoog Contrast modus uit en probeer het opnieuw</value>
+    <value>Luma werkt niet goed als de Windows Hoog Contrast modus is inschakeld! Schakel de Hoog Contrast modus uit en probeer het opnieuw</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Afspelen van media is mislukt :(
-Probeer de videospeler te veranderen in Lively instellingen. 
+Probeer de videospeler te veranderen in Luma instellingen. 
 Om de foutmelding beter te begrijpen en te corrigeren, raden we aan om het logboekbestand te delen met de ontwikkelaar. Instructie voor het delen van logboekbestanden zijn hier te vinden: https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Geen Lively achtergrondbestand.</value>
+    <value>Geen Luma achtergrondbestand.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively is verkeerd afgesloten, programma start in veilig modus.
+    <value>Luma is verkeerd afgesloten, programma start in veilig modus.
 Wilt u de vorige achtergrond(en) herstellen?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Er zullen enkele instellingen toegepast moeten worden om Lively te starten:
+    <value>Er zullen enkele instellingen toegepast moeten worden om Luma te starten:
 1. Open 'Deze Computer'.
 2. Klik met rechtermuisknop in een leeg gebied.
 3. Selecteer 'Eigenschappen'.
@@ -261,10 +261,10 @@ Wilt u de vorige achtergrond(en) herstellen?</value>
 6. Schakel 'Animeer besturingselementen in vensters' in en pas toe.
 
 Voor Windows 7 selecteer 'Pas aan voor het beste uiterlijk' en pas toe.
-Als dat niet werkt herstart Lively en Windows. (Werkt niet met sommige insider Windows 10 builds) -</value>
+Als dat niet werkt herstart Luma en Windows. (Werkt niet met sommige insider Windows 10 builds) -</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Voor achtergrond afspeelmogelijkheden moet Lively in de achtergond blijven draaien.</value>
+    <value>Voor achtergrond afspeelmogelijkheden moet Luma in de achtergond blijven draaien.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Met Windows opstarten</value>
@@ -345,10 +345,10 @@ Als dat niet werkt herstart Lively en Windows. (Werkt niet met sommige insider W
     <value>Afsluiten</value>
   </data>
   <data name="ExportWallpaperZip.Text" xml:space="preserve">
-    <value>Exporteer Lively .zip</value>
+    <value>Exporteer Luma .zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Sommige functies zijn niet beschikbaar in deze versie van Lively</value>
+    <value>Sommige functies zijn niet beschikbaar in deze versie van Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Bestand niet gevonden</value>
@@ -364,7 +364,7 @@ Geanimeerde GIF</value>
     <value>Doorgaan</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Help Lively vertalen.</value>
+    <value>Help Luma vertalen.</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>uren</value>
@@ -418,7 +418,7 @@ Geanimeerde GIF</value>
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Open Lively</value>
+    <value>Open Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Alle Processen</value>
@@ -481,7 +481,7 @@ Geanimeerde GIF</value>
     <value>Stop</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Vind je Lively leuk? Laat een beoordeling achter :)</value>
+    <value>Vind je Luma leuk? Laat een beoordeling achter :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Ondersteuning</value>
@@ -607,7 +607,7 @@ Geanimeerde GIF</value>
     <value>Stel verschillende achtergrond afspeelmogelijkheden in gebaseerd op actieve programma's</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively past zich aan op het systeem thema om het uiterlijk te wijzigen.</value>
+    <value>Luma past zich aan op het systeem thema om het uiterlijk te wijzigen.</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Alleen voor systeem op accu) Wijzig de weergave zodra de voeding is losgekoppeld.</value>
@@ -704,7 +704,7 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
     <value>Toepassingen op volledig scherm</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Achtergronden</value>
+    <value>Luma Achtergronden</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Toepassingsregels</value>
@@ -767,7 +767,7 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
     <value>Bibliotheek</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Installatie</value>
+    <value>Luma Installatie</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Locatie</value>

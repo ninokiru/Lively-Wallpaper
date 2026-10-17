@@ -136,22 +136,22 @@
     <value>API-документация и помощь</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively столкнулась с фатальной ошибкой.
+    <value>Luma столкнулась с фатальной ошибкой.
 
-Проводник Windows перезапускался дважды за последние 30 секунд! Это может быть конфликтом между Lively и другими программами для кастомизации, или Windows. Во избежание дальнейших проблем, все обои были отключены.</value>
+Проводник Windows перезапускался дважды за последние 30 секунд! Это может быть конфликтом между Luma и другими программами для кастомизации, или Windows. Во избежание дальнейших проблем, все обои были отключены.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Несовместимая программа найдена, оформление панели задач отключено</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Официальная веб-страница Lively Wallpaper</value>
+    <value>Официальная веб-страница Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Большинство современных ЖК и светодиодных дисплеев не подвержены выгоранию, поэтому в качестве заставки можно использовать любые обои.
 
 Для OLED, плазменных или ЭЛТ-дисплеев, подверженных выгоранию, рекомендуется использовать темные обои с постоянным движением. Это должно помочь избавиться от эффекта выгорания, однако результат не гарантирован.
 
-Основная цель заставок Lively - добавить еще один уровень персонализации на ваш компьютер. Используйте заставки в качестве защиты от выгорания на свой страх и риск!</value>
+Основная цель заставок Luma - добавить еще один уровень персонализации на ваш компьютер. Используйте заставки в качестве защиты от выгорания на свой страх и риск!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Сообщить о проблеме с программным обеспечением</value>
@@ -180,10 +180,10 @@
 Продолжайте только в том случае, если приложение получено из надежного источника.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively свернут на панель задач. Нажмите правой кнопкой мыши на иконку Lively для дополнительных опций.</value>
+    <value>Luma свернут на панель задач. Нажмите правой кнопкой мыши на иконку Luma для дополнительных опций.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Пожалуйста, перезапустите Lively, чтобы изменения вступили в силу.</value>
+    <value>Пожалуйста, перезапустите Luma, чтобы изменения вступили в силу.</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Пожалуйста, остановитесь, прежде чем продолжить.</value>
@@ -204,7 +204,7 @@
     <value>Вставьте ссылку для скачивания. Имеется поддержка шейдеров с shadertoy.com.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Мастер установки поможет вам настроить Lively.</value>
+    <value>Мастер установки поможет вам настроить Luma.</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Ваша версия Windows N/KN потребует загрузки дополнительных кодеков для поддержки воспроизведения видео в обоях.</value>
@@ -213,7 +213,7 @@
     <value>Поддержите разработчика, купив ему кофе</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Вы собираетесь перейти на бета (разработчика) сборку Lively.
+    <value>Вы собираетесь перейти на бета (разработчика) сборку Luma.
 Обновления будут частыми и будут содержать ошибки!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@
     <value>Иконка в области уведомлений</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively будет перезапущен, чтобы применить новый язык.</value>
+    <value>Luma будет перезапущен, чтобы применить новый язык.</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Язык</value>
@@ -242,37 +242,37 @@ https://github.com/ninokiru/Lively-Wallpaper/releases </value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively не может работать корректно с режимом Высокой Контрастности Windows!
+    <value>Luma не может работать корректно с режимом Высокой Контрастности Windows!
 Выключите режим Высокой Контрастности и попробуйте снова</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Ошибка воспроизведения видео :(	
-Попробуйте изменить плеер в настройках Lively.
+Попробуйте изменить плеер в настройках Luma.
 
 Для того, чтобы мы могли лучше понять ошибку и решить проблему, отправьте нам файл лога.
 Прочитайте, как это можно сделать здесь:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Не является файлом обоев Lively.</value>
+    <value>Не является файлом обоев Luma.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Работа Lively была некорректно прекращена. Запуск в безопасном режиме.
+    <value>Работа Luma была некорректно прекращена. Запуск в безопасном режиме.
 Хотите восстановить ранее запущенные обои?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Похоже, что для работы Lively необходимо задать некоторые настройки:  
+    <value>Похоже, что для работы Luma необходимо задать некоторые настройки:  
 1. Нажмите клавиши Win + R, чтобы открыть "Выполнить", 
 2. Введите SystemPropertiesPerformance.exe в строку "Выполнить", нажмите "ОК", чтобы открыть "Параметры производительности".
 3. Включите/отметьте "Анимированные элементы управления и элементы внутри окна" (если флажок уже установлен, снимите его и установите) и Примените.
 4. Нажмите "Применить", затем нажмите "ОК", чтобы закрыть окно.
 
 Если у вас Windows 7, установите флажок "Обеспечить наилучший внешний вид" &amp; и нажмите "Применить".
-Если все еще не работает, перезапустите Lively снова/перезагрузите Windows.
+Если все еще не работает, перезапустите Luma снова/перезагрузите Windows.
 Не работает в некоторых инсайдерских сборках windows 10</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively необходимо работать в фоновом режиме для воспроизведения обоев.</value>
+    <value>Luma необходимо работать в фоновом режиме для воспроизведения обоев.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Запускать с Windows</value>
@@ -356,7 +356,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Экспорт в Lively.zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Часть функций недоступна в этой версии Lively</value>
+    <value>Часть функций недоступна в этой версии Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Файл не найден</value>
@@ -371,7 +371,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Добавить</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Помогите c переводом Lively.</value>
+    <value>Помогите c переводом Luma.</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>час(ы)</value>
@@ -425,7 +425,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Онлайн</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Открыть Lively</value>
+    <value>Открыть Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Все процессы</value>
@@ -488,7 +488,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Стоп</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Вам нравится пользоваться Lively? Оставьте отзыв :)</value>
+    <value>Вам нравится пользоваться Luma? Оставьте отзыв :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Поддержать</value>
@@ -614,7 +614,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Приостановить обои, если запущены следющие приложения:</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively использует настройки системной темы. Чтобы изменить их, перейдите в</value>
+    <value>Luma использует настройки системной темы. Чтобы изменить их, перейдите в</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Изменить режим воспроизведения при работе от батареи.</value>
@@ -713,7 +713,7 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Полноэкранные приложения</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Обои</value>
+    <value>Luma Обои</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Настроить приложения</value>
@@ -776,7 +776,7 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Библиотека</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Установка Lively</value>
+    <value>Установка Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Местонахождение</value>

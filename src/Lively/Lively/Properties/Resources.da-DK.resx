@@ -138,20 +138,20 @@
   <data name="DescExplorerCrash" xml:space="preserve">
     <value>Livligt er stødt på en fatal fejl.
 
-Windows Explorer genstartet to gange i de sidste 30 sekunder! Dette kan være en konflikt mellem Lively og anden desktop tilpasning software eller Windows. For at undgå yderligere problemer, alle baggrunde afsluttes.</value>
+Windows Explorer genstartet to gange i de sidste 30 sekunder! Dette kan være en konflikt mellem Luma og anden desktop tilpasning software eller Windows. For at undgå yderligere problemer, alle baggrunde afsluttes.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Inkompatibelt program fundet, proceslinje tema deaktiveret</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Officiel hjemmeside af Lively Wallpaper</value>
+    <value>Officiel hjemmeside af Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>De fleste moderne LCD og LED-skærme ikke lider af burn-in problem, og derfor enhver tapet kan bruges som screensaver.
 
 For OLED, Plasma eller CRT skærme, som er tilbøjelige til at brænde i det rådes til at bruge tapet med regelmæssig bevægelse og en samlet mørk tema, som formodes at afbøde forbrænding, men denne funktion er uprøvet og dens effektivitet kan ikke garanteres.
 
-Hovedformålet med Lively's screensavers er at tilføje endnu et lag af tilpasning til din pc, bruge screensavers som burn-in beskyttelse på din egen risiko!</value>
+Hovedformålet med Luma's screensavers er at tilføje endnu et lag af tilpasning til din pc, bruge screensavers som burn-in beskyttelse på din egen risiko!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Rapporter et problem med programmet</value>
@@ -180,10 +180,10 @@ Ondsindede programmer kan være vært malware, virus. og gør skade på dit syst
 Kun fortsætte, hvis denne applikation kommer fra en pålidelig kilde.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively er minimeret til systembakke, højreklik Lively ikon for at fortsætte.</value>
+    <value>Luma er minimeret til systembakke, højreklik Luma ikon for at fortsætte.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Genstart venligst Lively for at indstillingerne kan træde i kraft</value>
+    <value>Genstart venligst Luma for at indstillingerne kan træde i kraft</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Stop inden du fortsætter</value>
@@ -204,7 +204,7 @@ Kun fortsætte, hvis denne applikation kommer fra en pålidelig kilde.</value>
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Denne guide vil få dig i gang med opsætning af Lively</value>
+    <value>Denne guide vil få dig i gang med opsætning af Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Din Windows N/KN version vil kræve download af yderligere codecs til at understøtte videoafspilning i baggrunde</value>
@@ -213,7 +213,7 @@ Kun fortsætte, hvis denne applikation kommer fra en pålidelig kilde.</value>
     <value>Vis support ved at købe udviklerkaffe</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Du er ved at ændre til beta (udvikler) build af Lively.
+    <value>Du er ved at ændre til beta (udvikler) build af Luma.
 Opdateringer vil være hyppige og kan indeholde fejl!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -242,7 +242,7 @@ Instruktioner til deling af logfil:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively kan ikke fungere korrekt med Windows High Contrast mode aktiveret!
+    <value>Luma kan ikke fungere korrekt med Windows High Contrast mode aktiveret!
 Deaktivér High Contrast mode og prøv igen</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -257,11 +257,11 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Ikke en lively baggrundsfil</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively blev ikke lukket korrekt, starter i fejlsikret tilstand.
+    <value>Luma blev ikke lukket korrekt, starter i fejlsikret tilstand.
 Ønsker du at gendanne tidligere kørende baggrundsbilleder?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Det ser ud til at nogle indstillinger skal indstilles til at gøre Lively virker:  
+    <value>Det ser ud til at nogle indstillinger skal indstilles til at gøre Luma virker:  
 1. Tryk på Win + R-tasterne for at åbne Kør, 
 2. Type SystemPropertiesPerformance.exe ind i Kør, klik på "OK" for at åbne indstillinger for ydeevne.
 3. Aktiver/Check "Animér kontroller og elementer inde i vinduer" (Hvis allerede markeret, så fjern markering og kontrol) &amp; Anvend.
@@ -272,7 +272,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
 (virker ikke i nogle insider windows 10 byggere)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively skal køre i baggrunden for at afspille baggrunden</value>
+    <value>Luma skal køre i baggrunden for at afspille baggrunden</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Start med Windows</value>
@@ -356,7 +356,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Gem i fil</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Nogle funktioner er ikke tilgængelige i denne version af Lively</value>
+    <value>Nogle funktioner er ikke tilgængelige i denne version af Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Fil ikke fundet</value>
@@ -425,7 +425,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Åben Lively</value>
+    <value>Åben Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Alle processer</value>
@@ -488,7 +488,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Stop</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Kan du lide at bruge Lively? Efterlad en anmeldelse :)</value>
+    <value>Kan du lide at bruge Luma? Efterlad en anmeldelse :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Support</value>
@@ -614,7 +614,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Sæt baggrundsbillede på pause, når du kører disse programmer</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively tilpasser sig til systemtemaindstillinger, for at ændre udseende goto</value>
+    <value>Luma tilpasser sig til systemtemaindstillinger, for at ændre udseende goto</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Skift afspilning, når AC strømmen afbrydes</value>
@@ -710,7 +710,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Programmer fuldskærm</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Program Regler</value>
@@ -773,7 +773,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Bibliotek</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Opsætning</value>
+    <value>Luma Opsætning</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Lokation</value>
@@ -1248,7 +1248,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
     <value>Samme som System</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Genstart venligst Lively for at indstillingerne kan træde i kraft.</value>
+    <value>Genstart venligst Luma for at indstillingerne kan træde i kraft.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Ved genoptagelse, vis login skærm</value>

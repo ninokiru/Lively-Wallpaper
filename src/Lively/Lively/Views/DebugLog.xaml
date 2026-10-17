@@ -6,7 +6,7 @@
     xmlns:dj="clr-namespace:DJ;assembly=NLogViewer"
     xmlns:local="clr-namespace:Lively.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Lively Debugger"
+    Title="Luma Debugger"
     Width="1200"
     Height="700"
     Style="{DynamicResource WindowUI}"

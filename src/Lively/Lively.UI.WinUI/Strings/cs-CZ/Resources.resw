@@ -136,22 +136,22 @@
     <value>API dokumentace a pomoc</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>V poslední době došlo k fatální chybě s Lively.
+    <value>V poslední době došlo k fatální chybě s Luma.
 
-Průzkumník Windows se za posledních 30 sekund restartoval! Může se jednat o konflikt mezi Lively a jiným softwarem pro přizpůsobení plochy nebo Windows. Aby se předešlo dalším problémům, všechny tapety jsou ukončeny.</value>
+Průzkumník Windows se za posledních 30 sekund restartoval! Může se jednat o konflikt mezi Luma a jiným softwarem pro přizpůsobení plochy nebo Windows. Aby se předešlo dalším problémům, všechny tapety jsou ukončeny.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Nalezen nekompatibilní program, motivy hlavního panelu jsou zakázány</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Oficiální webová stránka Lively Wallpaper</value>
+    <value>Oficiální webová stránka Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Většina moderních LCD a LED displejů netrpí vypalováním, a proto lze tapetu použít jako spořič obrazovky.
 
 Pro OLED, Plazma nebo CRT displeje, které jsou náchylné ke spálení, se doporučuje používat tapetu s pravidelným pohybem a celkový tmavý motiv, který má zmírnit spálení, ale tento prvek není otestován a jeho účinnost nemůže být zaručena.
 
-Hlavním účelem spořičů Lively's obrazovky je přidat další vrstvu přizpůsobení do vaší pc, použít spořiče obrazovky jako ochranu proti spálení na vlastní riziko!</value>
+Hlavním účelem spořičů Luma's obrazovky je přidat další vrstvu přizpůsobení do vaší pc, použít spořiče obrazovky jako ochranu proti spálení na vlastní riziko!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Nahlásit problém se softwarem</value>
@@ -180,7 +180,7 @@ Hlavním účelem spořičů Lively's obrazovky je přidat další vrstvu přizp
 Pokračujte pouze, pokud tato aplikace pochází z důvěryhodného zdroje.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively je minimalizován na systémovou lištu, pravým tlačítkem myši na ikonu pokračovat.</value>
+    <value>Luma je minimalizován na systémovou lištu, pravým tlačítkem myši na ikonu pokračovat.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
     <value>Prosím restartujte Live, aby se nastavení projevilo</value>
@@ -204,7 +204,7 @@ Pokračujte pouze, pokud tato aplikace pochází z důvěryhodného zdroje.</val
     <value>Zadejte odkaz na webové stránky, který chcete načíst, jsou podporovány odkazy shadertoy.com na stínové stránky</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Tento průvodce bude spuštěn při nastavení Lively</value>
+    <value>Tento průvodce bude spuštěn při nastavení Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Vaše verze Windows N/KN bude vyžadovat stažení dodatečných kodeků pro podporu přehrávání videa v tapetách</value>
@@ -213,7 +213,7 @@ Pokračujte pouze, pokud tato aplikace pochází z důvěryhodného zdroje.</val
     <value>Ukázat podporu nákupem kávy vývojáře</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Chystáte se změnit na beta (vývojář) sestavení Lively.
+    <value>Chystáte se změnit na beta (vývojář) sestavení Luma.
 Aktualizace budou časté a mohou obsahovat chyby!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -242,7 +242,7 @@ Pokyny ke sdílení log souboru:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively nemůže správně fungovat s povoleným režimem s vysokým kontrastem systému Windows!
+    <value>Luma nemůže správně fungovat s povoleným režimem s vysokým kontrastem systému Windows!
 Zakažte režim s vysokým kontrastem a zkuste to znovu</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,21 +254,21 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Soubor pozadí není Lively</value>
+    <value>Soubor pozadí není Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
     <value>Live, nebyl správně zavřen, spustil se v bezpečném režimu.
 Přejete si obnovit dříve spuštěné tapety?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Vypadá to, že je třeba nastavit některá nastavení, aby se Lively pracovalo:  
+    <value>Vypadá to, že je třeba nastavit některá nastavení, aby se Luma pracovalo:  
 1. Stisknutím tlačítka Win + R otevřete Spustit, 
 2. Zadejte systémové vlastnosti Výkonu.exe , klikněte na tlačítko "OK" pro otevření výkonových možností.
 3. Povolit/Zaškrtnout "Animovat ovládání a prvky uvnitř okna" (Je-li již zaškrtnuto, odškrtněte a zaškrtněte) &amp; Aplikovat.
 4. Klikněte na "Aplikovat" a stiskněte "OK" pro zavření okna.
 
 Pokud je pouze nastaveno Windows 7 - upravte pro nejlepší vzhled &amp; Aplikovat.
-Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
+Pokud stále nefunguje, zavřete a spusťte Luma znova/restartujte okna.
 (nefunguje v některých budovách uvnitř oken 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
@@ -356,7 +356,7 @@ Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
     <value>Ulož do souboru</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Některé funkce nejsou v této verzi Lively k dispozici</value>
+    <value>Některé funkce nejsou v této verzi Luma k dispozici</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Soubor nebyl nalezen</value>
@@ -425,7 +425,7 @@ Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
     <value>Připojený</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Otevřít Lively</value>
+    <value>Otevřít Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Všechny procesy</value>
@@ -488,7 +488,7 @@ Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
     <value>Zastavit</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Líbí se Vám Lively ? Zanechte recenzi :)</value>
+    <value>Líbí se Vám Luma ? Zanechte recenzi :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Podpora</value>
@@ -614,7 +614,7 @@ Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
     <value>Pozastavit tapetu při spuštění těchto aplikací</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively se přizpůsobí systémovému nastavení motivu, změní vzhled</value>
+    <value>Luma se přizpůsobí systémovému nastavení motivu, změní vzhled</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Změnit přehrávání při odpojení napájení</value>
@@ -773,7 +773,7 @@ Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
     <value>Knihovna</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Nastavení</value>
+    <value>Luma Nastavení</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Lokalita</value>

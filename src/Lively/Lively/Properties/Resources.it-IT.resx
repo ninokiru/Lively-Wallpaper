@@ -136,22 +136,22 @@
     <value>Documentazione API e Aiuto</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively ha riscontrato un errore fatale.
+    <value>Luma ha riscontrato un errore fatale.
 
-Windows Explorer si è riavviato due volte negli ultimi 30 secondi! Questo potrebbe esssere dato da un conflitto tra Lively ed alcuni altri software di personalizzazione dello sfondo oppure da Windows. Per evitare errori futuri, tutti gli sfondi sono stati terminati.</value>
+Windows Explorer si è riavviato due volte negli ultimi 30 secondi! Questo potrebbe esssere dato da un conflitto tra Luma ed alcuni altri software di personalizzazione dello sfondo oppure da Windows. Per evitare errori futuri, tutti gli sfondi sono stati terminati.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Programma incompatibile trovato, Tema della barra delle applicazioni è stata disabilitata</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Sito Ufficiale di Lively Wallpaper</value>
+    <value>Sito Ufficiale di Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>La maggior parte dei schermi LCD e LED moderni non soffrono di problemi di bruciatura dello schermo, pertanto qualsiasi sfondo può essere usato.
 
 Per i schermi di tipo OLED, Plasma o CRT che sono suscettibili ai problemi di bruciatura dello schermo, si consiglia di utilizzare sfondi con movimenti regolari e un tema generale scuro che dovrebbero mitigare le bruciature, ma, questa funziona non è ancora testata e pertanto non è garantita la sua efficacia.
 
-Lo scopo principale dei sfondi di Lively è aggiungero un altro livello di personalizzazione al tuo PC, usa gli sfondi a tuo rischio e pericolo dalle bruciature dello schermo!</value>
+Lo scopo principale dei sfondi di Luma è aggiungero un altro livello di personalizzazione al tuo PC, usa gli sfondi a tuo rischio e pericolo dalle bruciature dello schermo!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Segnala un problema con il software</value>
@@ -180,7 +180,7 @@ Le applicazioni malevole possono contenere malware, virus... e danneggiare il tu
 Continua soltanto se l'applicazione proviene da una fonte sicura.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively è minimizzato all'area delle notifiche, fai trastro destro sull'icona lively per continuare.</value>
+    <value>Luma è minimizzato all'area delle notifiche, fai trastro destro sull'icona lively per continuare.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
     <value>Riavva lively per applicare le impostazioni </value>
@@ -204,7 +204,7 @@ Continua soltanto se l'applicazione proviene da una fonte sicura.</value>
     <value>Inserisci il link del sito per installare lo sfondo, I link da shadertoy.com sono supportati</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Questa procedura guidata ti consentirà di iniziare a configurare Lively</value>
+    <value>Questa procedura guidata ti consentirà di iniziare a configurare Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>La tua versione di Windows N/KN richiede più codecs addizionali per supportare la riproduzione dei sfondi video</value>
@@ -213,7 +213,7 @@ Continua soltanto se l'applicazione proviene da una fonte sicura.</value>
     <value>Mostra il tuo supporto comprando un caffè allo sviluppatore</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Stai per aggiornare Lively alla versione Sviluppatore (Beta). 
+    <value>Stai per aggiornare Luma alla versione Sviluppatore (Beta). 
 Questa verisione contiene più funzioni ma anche più bug!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -223,7 +223,7 @@ Questa verisione contiene più funzioni ma anche più bug!</value>
     <value>Icona della barra delle applicazioni</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively verrà riavviato per applicare la nuova lingua.</value>
+    <value>Luma verrà riavviato per applicare la nuova lingua.</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Lingua</value>
@@ -242,7 +242,7 @@ Istruzioni per la condivisione del file di registro:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively non funziona bene con la Modalità di Windows ad Alti Contrasti attiva!
+    <value>Luma non funziona bene con la Modalità di Windows ad Alti Contrasti attiva!
 Disattiva la modalità e prova di nuovo</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -253,25 +253,25 @@ Per risolvere il problema e saperne di piu', manda il log allo sviluppatore tram
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Questo non è un file sfondo Lively</value>
+    <value>Questo non è un file sfondo Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively non è stata chiusa correttamente, inizializzando in modalità sicura.
+    <value>Luma non è stata chiusa correttamente, inizializzando in modalità sicura.
 Vuoi ripristinare i sfondi in esecuzione in precedenza?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Sembra che qualche impostazione debba essere modificata per far funzionare Lively:  
+    <value>Sembra che qualche impostazione debba essere modificata per far funzionare Luma:  
 1. Premi Win + R per aprire Run, 
 2. Scrivi SystemPropertiesPerformance.exe in Run, Clicca "OK" per aprire le Impostazioni di Perfomance.
 3. Abilita "Anima le finestra quando vengono ingrandite o ridotte ad icona" (Se già abilitato, allora disabilita e riabilita) &amp; Applica.
 4. Clicca "Applica" dopo di che premi "OK" e chiudi la finestra.
 
 Se Windows 7 è stato appena impostato - Impostalo per le migliori animazioni &amp; Applica.
-Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
+Se non funziona ancora, chiudi &amp; riavvia Luma / riavvia Windows.
 (Non funziona in alcune versioni insider di Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively deve essere eseguito in background per la riproduzione dello sfondo.</value>
+    <value>Luma deve essere eseguito in background per la riproduzione dello sfondo.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Avvia insieme a Windows</value>
@@ -355,7 +355,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Salva su file</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Alcune funzionalità di Lively non sono disponibili in questa versione</value>
+    <value>Alcune funzionalità di Luma non sono disponibili in questa versione</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>File non trovato</value>
@@ -370,7 +370,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>VAI</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Aiuta a tradurre Lively</value>
+    <value>Aiuta a tradurre Luma</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>ore</value>
@@ -424,7 +424,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Online</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Apri Lively</value>
+    <value>Apri Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Tutti i processi</value>
@@ -487,7 +487,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Arresta</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Ti piace Lively? Lascia un recensione :)</value>
+    <value>Ti piace Luma? Lascia un recensione :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Supporto</value>
@@ -550,7 +550,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Ricerca aggiornamenti</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>Lively è aggiornato!</value>
+    <value>Luma è aggiornato!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>Video</value>
@@ -613,7 +613,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Impostare diverse regole di riproduzione dello sfondo in base all'applicazione in esecuzione.</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively si adatta alle impostazioni del tema di sistema, per cambiare l'aspetto vai a</value>
+    <value>Luma si adatta alle impostazioni del tema di sistema, per cambiare l'aspetto vai a</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Solo per sistemi a batteria) Modificare la riproduzione quando l'alimentazione AC è scollegata.</value>
@@ -710,7 +710,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Applicazioni a tutto schermo</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Regole Applicazione</value>
@@ -773,7 +773,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Libreria</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Configurazione di Lively</value>
+    <value>Configurazione di Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Posizione</value>

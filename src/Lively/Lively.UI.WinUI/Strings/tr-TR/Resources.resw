@@ -136,22 +136,22 @@
     <value>API belgeleri ve yardım</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively ciddi bir sorunla karşılaştı.
+    <value>Luma ciddi bir sorunla karşılaştı.
 
-Windows Gezgini son 30 saniye içinde iki kez yeniden başlatıldı! Bu, Lively ile diğer masaüstü özelleştirme yazılımları veya Windows arasındaki bir çakışmadan kaynaklanmış olabilir. Sorunun devam etmesini engellemek için tüm duvar kağıtları durduruldu.</value>
+Windows Gezgini son 30 saniye içinde iki kez yeniden başlatıldı! Bu, Luma ile diğer masaüstü özelleştirme yazılımları veya Windows arasındaki bir çakışmadan kaynaklanmış olabilir. Sorunun devam etmesini engellemek için tüm duvar kağıtları durduruldu.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Uyumsuz program tespit edildi, görev çubuğu teması devre dışı bırakıldı.</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively Wallpaper'ın resmi web sayfası</value>
+    <value>Luma Wallpaper'ın resmi web sayfası</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Çoğu modern LCD ve LED ekran yanma (burn-in) sorunu yaşamaz ve bu yüzden bu ekranlarda genelde herhangi bir duvar kağıdı ekran koruyucu olarak kullanılabilir.
 
 Yanmaya duyarlı OLED, Plazma veya CRT ekranlar için, normal hareketli duvar kağıdı ve yanmayı hafifletmesi beklenen genel bir karanlık tema kullanılması tavsiye edilir, ancak bu özellik test edilmemiştir ve etkinliği garanti edilemez.
 
-Lively'nin ekran koruyucularının temel amacı, bilgisayarınıza başka bir özelleştirme katmanı eklemektir, ancak Lively'i yanma koruması için ekran koruyucu olarak kullanmanın riski size aittir!</value>
+Luma'nin ekran koruyucularının temel amacı, bilgisayarınıza başka bir özelleştirme katmanı eklemektir, ancak Luma'i yanma koruması için ekran koruyucu olarak kullanmanın riski size aittir!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Yazılım ile ilgili bir sorunu bildir</value>
@@ -180,10 +180,10 @@ Kötü niyetli uygulamalar zararlı yazılım, virüs gibi kötü niyetli içeri
 Yalnızca güvenilir bir kaynaktan bu uygulama geldiyse devam edin.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively sistem tepsisine küçültüldü, devam etmek için Lively simgesine sağ tıklayın.</value>
+    <value>Luma sistem tepsisine küçültüldü, devam etmek için Luma simgesine sağ tıklayın.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Ayarların geçerli olması için Lively'yi yeniden başlatın.</value>
+    <value>Ayarların geçerli olması için Luma'yi yeniden başlatın.</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Lütfen devam etmeden önce durdurun</value>
@@ -204,7 +204,7 @@ Yalnızca güvenilir bir kaynaktan bu uygulama geldiyse devam edin.</value>
     <value>Yüklemek için website urlsi girin, shadertoy.com shader linkleri destekleniyor.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Bu sihirbaz, Lively kurulumunda size yardımcı olacak</value>
+    <value>Bu sihirbaz, Luma kurulumunda size yardımcı olacak</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Windows N/KN versiyonunuzda video duvar kağıtlarının oynatılabilmesi için ek çözümleyicilerin indirilmesi gerekiyor.</value>
@@ -213,17 +213,17 @@ Yalnızca güvenilir bir kaynaktan bu uygulama geldiyse devam edin.</value>
     <value>Geliştiriciye kahve alarak destek gösterin</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Lively'nin beta (geliştirici) sürümüne geçmek üzeresiniz.
+    <value>Luma'nin beta (geliştirici) sürümüne geçmek üzeresiniz.
 Güncellemeler sık olacak ve hatalar içerebilir!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Sistem tepsisi simgesinin görünürlüğü, Lively simgesi gizli olsa bile devam edecek</value>
+    <value>Sistem tepsisi simgesinin görünürlüğü, Luma simgesi gizli olsa bile devam edecek</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Sistem tepsisi simgesi</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Yeni dil uygulanması için Lively yeniden başlatılacak</value>
+    <value>Yeni dil uygulanması için Luma yeniden başlatılacak</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Dil</value>
@@ -242,7 +242,7 @@ Günlük dosyasını paylaşma talimatları için:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively, Windows Yüksek Kontrast modu etkin olduğunda düzgün çalışamaz!
+    <value>Luma, Windows Yüksek Kontrast modu etkin olduğunda düzgün çalışamaz!
 Yüksek Kontrast modunu devre dışı bırakın ve tekrar deneyin</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Günlük dosyasını paylaşma hakkında detaylı bilgi:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Lively duvar kağıdı dosyası değil</value>
+    <value>Luma duvar kağıdı dosyası değil</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively düzgün şekilde kapatılmadı, güvenli modda başlatılıyor.
+    <value>Luma düzgün şekilde kapatılmadı, güvenli modda başlatılıyor.
 Daha önce çalışan duvar kağıtlarını geri yüklemek ister misiniz?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Lively'nin çalışması için bazı ayarların yapılması gerekiyor gibi görünüyor:  
+    <value>Luma'nin çalışması için bazı ayarların yapılması gerekiyor gibi görünüyor:  
 1. Win + R tuşlarına basarak Çalıştır'ı açın, 
 2. Çalıştır'a SystemPropertiesPerformance.exe yazın, "Tamam" ı tıklayarak Performans Seçenekleri'ni açın.
 3. "Pencere içindeki denetimleri ve öğeleri animasyonlandır"ı etkinleştirin/kontrol edin (Zaten işaretliyse, işareti kaldırıp işaretleyin) &amp; Uygula.
 4. "Uygula" ya tıklayın, sonra pencereyi kapatmak için "Tamam"a basın.
 
 Windows 7 ise - En iyi görünüm için ayarla &amp; Uygula.
-Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeniden başlatın.
+Hala çalışmıyorsa, Luma'yi kapatın ve yeniden başlatın / Windows'u yeniden başlatın.
 (Bazı insider windows 10 yapılarında çalışmaz)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Duvar kağıdını oynatabilmek için Lively arka planda çalışmalı.</value>
+    <value>Duvar kağıdını oynatabilmek için Luma arka planda çalışmalı.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Başlangıçta çalıştır</value>
@@ -356,7 +356,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Dosyaya Kaydet</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Bazı özellikler, bu Lively sürümünde mevcut değil</value>
+    <value>Bazı özellikler, bu Luma sürümünde mevcut değil</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Dosya bulunamadı</value>
@@ -371,7 +371,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Git</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Lively'yi farklı dillere çevirmemize yardım edin.</value>
+    <value>Luma'yi farklı dillere çevirmemize yardım edin.</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>saat(ler)</value>
@@ -425,7 +425,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Çevrimiçi</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively'i Aç</value>
+    <value>Luma'i Aç</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Tüm işlem</value>
@@ -488,7 +488,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Durdur</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Lively'yi kullanmaktan keyif alıyor musunuz? Bir değerlendirme bırakın :)</value>
+    <value>Luma'yi kullanmaktan keyif alıyor musunuz? Bir değerlendirme bırakın :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Destek</value>
@@ -614,7 +614,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Bu uygulamalar çalıştığında duvar kağıdını duraklat</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively, sistem tema ayarlarına uyum sağlar; görünümü değiştirmek için şuraya gidin</value>
+    <value>Luma, sistem tema ayarlarına uyum sağlar; görünümü değiştirmek için şuraya gidin</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>AC güç bağlantısı kesildiğinde oynatımı değiştir</value>
@@ -710,7 +710,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Tam Ekran Açık Olan Uygulamalar</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Uygulama Kuralları</value>
@@ -773,7 +773,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Kütüphane</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Kurulumu</value>
+    <value>Luma Kurulumu</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Konum</value>

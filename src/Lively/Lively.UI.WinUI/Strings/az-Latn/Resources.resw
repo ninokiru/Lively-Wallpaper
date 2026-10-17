@@ -136,22 +136,22 @@
     <value>API sənədləşdirmə və kömək</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively ciddi bir xəta ilə qarşılaşdı.
+    <value>Luma ciddi bir xəta ilə qarşılaşdı.
 
-Windows Explorer son 30 saniyədə iki dəfə yenidən başladıldı! Bu, Lively ilə digər masaüstü özəlləşdirmə yazılımı və ya Windows arasındakı ziddiyətə görə ola bilər. Daha çox problemi önləmək üçün bütün divar kağızları sonlandırıldı.</value>
+Windows Explorer son 30 saniyədə iki dəfə yenidən başladıldı! Bu, Luma ilə digər masaüstü özəlləşdirmə yazılımı və ya Windows arasındakı ziddiyətə görə ola bilər. Daha çox problemi önləmək üçün bütün divar kağızları sonlandırıldı.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Uyumsuz proqram tapıldı, tapşırıq çubuğu teması sıradan çıxarıldı</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively Wallpaper - rəsmi internet səhifəsi</value>
+    <value>Luma Wallpaper - rəsmi internet səhifəsi</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Əksər müasir LCD və LED ekranlar (burn-in) yanma problemi yaşamır və buna görə də istənilən divar kağızı ekran qoruyucu olaraq istifadə edilər bilər.
 
 Yanmağa həssas OLED, Plazma və ya CRT ekranlar üçün yanmanı yüngülləşdirməsi gözlənilən normal hərəkətli və ümumi olaraq qaranlıq temalı divar kağızının istifadə edilməsi tövsiyə olunur, ancaq bu özəllik test edilməyib və effektivliyinə zəmanət verilmir.
 
-Lively-nin ekran qoruyucularının əsas məqsədi, kompüterinizə başqa bir özəlləşdirmə qatı əlavə etməkdir, ancaq ekran qoruyucularını yanma qoruması olaraq istifadə etmək riskini siz daşıyırsınız!</value>
+Luma-nin ekran qoruyucularının əsas məqsədi, kompüterinizə başqa bir özəlləşdirmə qatı əlavə etməkdir, ancaq ekran qoruyucularını yanma qoruması olaraq istifadə etmək riskini siz daşıyırsınız!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Proqram təminatı ilə bağlı problemi bildir</value>
@@ -180,10 +180,10 @@ Zərərli tətbiqlər zərərli proqram təminatı, virus ehtiva edə və sistem
 Yalnız güvənli mənbədən gələn tətbiqlə davam edin.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively, bildiriş sahəsinə kiçildildi, davam etmək üçün Lively nişanına sağ klikləyin.</value>
+    <value>Luma, bildiriş sahəsinə kiçildildi, davam etmək üçün Luma nişanına sağ klikləyin.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Ayarların qüvvəyə minməsi üçün Lively-ni yenidən başladın</value>
+    <value>Ayarların qüvvəyə minməsi üçün Luma-ni yenidən başladın</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Davam etməzdən əvvəl gözləyin</value>
@@ -204,7 +204,7 @@ Yalnız güvənli mənbədən gələn tətbiqlə davam edin.</value>
     <value>Yüklənəcək bir veb sayt keçidi daxil edin, shadertoy.com shader keçidləri dəstəklənir</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Bu sehrbaz Lively-ni quraşdırmaqda sizə kömək edəcək</value>
+    <value>Bu sehrbaz Luma-ni quraşdırmaqda sizə kömək edəcək</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Windows N/KN versiyanız, divar kağızlarında video oxutmanı dəstəkləmək üçün əlavə kodeklərin endirilməsini tələb edəcək</value>
@@ -213,17 +213,17 @@ Yalnız güvənli mənbədən gələn tətbiqlə davam edin.</value>
     <value>Tərtibatçıya bir qəhvə alaraq dəstək göstərin</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Lively-nin beta versiyasına keçirsiniz.
+    <value>Luma-nin beta versiyasına keçirsiniz.
 Güncəlləmələr tez-tez gələcək və xətalar ehtiva edə bilər!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Bildiriş sahəsinə nişan görünməsi, Lively, nişan gizli olduqda işləməyə davam edəcək</value>
+    <value>Bildiriş sahəsinə nişan görünməsi, Luma, nişan gizli olduqda işləməyə davam edəcək</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Bildiriş sahəsi nişanı</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively, yeni dili tətbiq etmək üçün yenidən başladılacaq</value>
+    <value>Luma, yeni dili tətbiq etmək üçün yenidən başladılacaq</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Dil</value>
@@ -242,7 +242,7 @@ Jurnal faylını paylaşmaq üçün təlimatlar bu keçiddədir:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Windows Yüksək Kontrast rejimi fəal olduqda Lively düzgü işləyə bilmir!
+    <value>Windows Yüksək Kontrast rejimi fəal olduqda Luma düzgü işləyə bilmir!
 Yüksək Kontrast rejimini sıradan çıxardıb yenidən sınayın</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Jurnal faylını paylaşmaq üçün təlimatlar bu keçiddədir:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Lively divar kağızı faylı deyil</value>
+    <value>Luma divar kağızı faylı deyil</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively düzgün bağlanılmadı, güvənli rejimdə başladılır.
+    <value>Luma düzgün bağlanılmadı, güvənli rejimdə başladılır.
 Daha əvvəl işləyən divar kağızını bərpa etmək istəyirsiniz?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Deyəsən, Lively-nin işləməsi üçün bəzi ayarları etmək lazımdır:  
+    <value>Deyəsən, Luma-nin işləməsi üçün bəzi ayarları etmək lazımdır:  
 1. "İcra et"i açmaq üçün Win + R düymələrinə basın, 
 2. Açılan pəncərədə "SystemPropertiesPerformance.exe" yazın, "Performans Seçimləri"ni açmaq üçün "Ok"a basın.
 3. Üçüncü sırada olan "Pəncərələrin daxilindəki kontrolları və elementləri canlandır"ın yanındakı qutunu işarələyin (əgər işarələnibsə, işarəni götürüb yenidən işarələyin) və "Tətbiq et"ə basın. (Qeyd: Windows Sistem Ayarları yanlış tərcümə edildiyi üçün yazılar fərqli görünə bilər).
 4. Ardından "Ok"a klikləyərək pəncərəni bağlayın.
 
 Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və Tətbiq et.
-Əgər işləməsə Lively-ni bağlayıb yenidən başladın.
+Əgər işləməsə Luma-ni bağlayıb yenidən başladın.
 (Bəzi Windows 10 quruluşlarında işləməyə bilər)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Divar kağızı oxutmaq üçün Lively arxaplanda işləməlidir</value>
+    <value>Divar kağızı oxutmaq üçün Luma arxaplanda işləməlidir</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Sistem açılanda başlat</value>
@@ -356,7 +356,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Faylda saxla</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Lively-nin bu versiyasında bəzi özəlliklər mövcud deyil</value>
+    <value>Luma-nin bu versiyasında bəzi özəlliklər mövcud deyil</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Fayl tapılmadı</value>
@@ -425,7 +425,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Onlayn</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively-ni aç</value>
+    <value>Luma-ni aç</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Bütün proseslər</value>
@@ -488,7 +488,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Dayandır</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Lively-dən zövq alırsınız? Rəy bildirin :)</value>
+    <value>Luma-dən zövq alırsınız? Rəy bildirin :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Dəstək</value>
@@ -614,7 +614,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Bu tətbiqləri işə salarkən divar kağızına fasilə ver</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively, görünüşü dəyişdirmək üçün sistemin tema ayarlarına uyğunlaşır</value>
+    <value>Luma, görünüşü dəyişdirmək üçün sistemin tema ayarlarına uyğunlaşır</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Adapter çıxarıldıqda oxutmanı dəyişdir</value>
@@ -710,7 +710,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Tam ekran tətbiqlər</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively divar kağızı</value>
+    <value>Luma divar kağızı</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Tətbiq qaydaları</value>
@@ -773,7 +773,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Kitabxana</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Quraşdırması</value>
+    <value>Luma Quraşdırması</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Yerləşmə</value>

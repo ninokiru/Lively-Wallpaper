@@ -136,22 +136,22 @@
     <value>עזרה ותיעוד של API</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively נתקלה בשגיאה קטלנית.
+    <value>Luma נתקלה בשגיאה קטלנית.
 
-סייר Windows הופעל מחדש פעמיים ב-30 השניות האחרונות! זה עשוי להיות התנגשות בין Lively לבין תוכנות אחרות להתאמה אישית של שולחן העבודה או Windows. כדי למנוע בעיות נוספות, כל הטפטים מופסקים</value>
+סייר Windows הופעל מחדש פעמיים ב-30 השניות האחרונות! זה עשוי להיות התנגשות בין Luma לבין תוכנות אחרות להתאמה אישית של שולחן העבודה או Windows. כדי למנוע בעיות נוספות, כל הטפטים מופסקים</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>נמצאה תוכנית לא תואמת, נושא שורת המשימות מושבת</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>דף האינטרנט הרשמי של Lively Wallpaper</value>
+    <value>דף האינטרנט הרשמי של Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>מרבית צגי ה- LCD וה- LED המודרניים אינם סובלים מבעיות צריבה ולכן כל טפט יכול לשמש כשומר מסך.
 
 עבור מסכי OLED, פלזמה או CRT הרגישים לצריבה מומלץ להשתמש בטפטים עם תנועה קבועה ועם נושא כהה כולל אשר אמור למתן צריבה אך תכונה זו אינה נבדקה ולא ניתן להבטיח את יעילותה.
 
-המטרה העיקרית של שומרי המסך של Lively היא להוסיף שכבת התאמה אישית נוספת למחשב האישי שלך, השתמש בשומרי מסך כהגנה על צריבה על אחריותך בלבד!</value>
+המטרה העיקרית של שומרי המסך של Luma היא להוסיף שכבת התאמה אישית נוספת למחשב האישי שלך, השתמש בשומרי מסך כהגנה על צריבה על אחריותך בלבד!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>דווח על בעיה בתוכנה</value>
@@ -180,7 +180,7 @@
 המשך רק אם יישום זה מגיע ממקור מהימן.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively ממוזערת למגש המערכת, לחץ לחצן ימני על הסמל כדי להמשיך.</value>
+    <value>Luma ממוזערת למגש המערכת, לחץ לחצן ימני על הסמל כדי להמשיך.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
     <value>אנא הפעל מחדש את האפליקציה כדי שההגדרות ייכנסו לתוקף</value>
@@ -204,7 +204,7 @@
     <value>הקלד קישור לאתר לטעינה, נתמכים קישורי shader של shadertoy.com</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>אשף זה יתחיל בהגדרת Lively.</value>
+    <value>אשף זה יתחיל בהגדרת Luma.</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>גרסת Windows N / KN שלך תדרוש הורדת קודקים נוספים כדי לתמוך בהפעלת וידאו ברקעים.</value>
@@ -213,7 +213,7 @@
     <value>הראה תמיכה על ידי קניית קפה מפתחים</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>אתה עומד לעבור למבנה בטא (מפתח) של Lively.
+    <value>אתה עומד לעבור למבנה בטא (מפתח) של Luma.
 העדכונים יהיו תכופים ועשויים להכיל באגים!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -243,13 +243,13 @@ https://github.com/rocksdanister/lively/wiki
 </value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively לא יכולה לעבוד כראוי כאשר מצב ניגודיות גבוהה של Windows מופעל!
+    <value>Luma לא יכולה לעבוד כראוי כאשר מצב ניגודיות גבוהה של Windows מופעל!
 השבת את מצב הניגודיות הגבוהה ונסה שוב.
 </value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>הפעלת המדיה נכשלה :(
-נסה לשנות את נגן הוידאו בהגדרות של Lively.
+נסה לשנות את נגן הוידאו בהגדרות של Luma.
 
 על מנת להבין טוב יותר את השגיאה ולתקן את הבעיה, שתף את קובץ היומן עם המפתח.
 הוראות לשיתוף קובץ יומן רישום:
@@ -257,26 +257,26 @@ https://github.com/rocksdanister/lively/wiki
 </value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>לא קובץ טפט של Lively</value>
+    <value>לא קובץ טפט של Luma</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively לא נסגר כראוי, מתחיל במצב בטוח.
+    <value>Luma לא נסגר כראוי, מתחיל במצב בטוח.
 האם ברצונך לשחזר טפטים שפעלו בעבר?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>נראה כי יש להגדיר כמה הגדרות בכדי לגרום ל- Lively לעבוד:
+    <value>נראה כי יש להגדיר כמה הגדרות בכדי לגרום ל- Luma לעבוד:
 1. לחץ על מקשי Win + R כדי לפתוח את Run,
 2. הקלד SystemPropertiesPerformance.exe ב- Run, לחץ על "אישור" כדי לפתוח אפשרויות ביצועים
 3. הפעל / סמן "הנפש בקרים ואלמנטים בתוך חלונות" (אם האפשרות כבר מסומנת, בטל את הסימון ובדוק) והחל.
 4. לחץ על "החל" ואז לחץ על "אישור" כדי לסגור את החלון.
 
 אם משתמשים ב- Windows 7 פשוט הגדר – "התאם למראה הטוב ביותר" ו amp; אשר.
-אם עדיין לא עובד, סגור והתחל את Lively שוב / הפעל מחדש את Windows.
+אם עדיין לא עובד, סגור והתחל את Luma שוב / הפעל מחדש את Windows.
 (לא עובד בחלק מגרסאות הניסיון של Windows 10)
 </value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively צריכה לפעול ברקע להפעלת טפטים</value>
+    <value>Luma צריכה לפעול ברקע להפעלת טפטים</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>התחל עם ווינדוס</value>
@@ -360,7 +360,7 @@ https://github.com/rocksdanister/lively/wiki
     <value>יצא lively.zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>חלק מהתכונות אינן זמינות בגרסה זו של Lively.</value>
+    <value>חלק מהתכונות אינן זמינות בגרסה זו של Luma.</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>הקובץ לא נמצא</value>
@@ -429,7 +429,7 @@ https://github.com/rocksdanister/lively/wiki
     <value>אונליין</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>פתח את Lively</value>
+    <value>פתח את Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>כל התהליך</value>
@@ -492,7 +492,7 @@ https://github.com/rocksdanister/lively/wiki
     <value>הפסק</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>האם אתם נהנים להשתמש ב- Lively? השאירו ביקורת :)</value>
+    <value>האם אתם נהנים להשתמש ב- Luma? השאירו ביקורת :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>תמיכה</value>
@@ -618,7 +618,7 @@ https://github.com/rocksdanister/lively/wiki
     <value>הגדר כללי השמעת טפטים שונים בהתבסס על הפעלת יישום.</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively מסתגל להגדרות נושא המערכת, כדי לשנות את המראה גש ל</value>
+    <value>Luma מסתגל להגדרות נושא המערכת, כדי לשנות את המראה גש ל</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>שנה את ההפעלה כאשר המחשב מנותק מהחשמל (מערכות המופעלות באמצעות סוללות בלבד)</value>
@@ -715,7 +715,7 @@ Edge הוא תצוגת האינטרנט המובנית של Windows 10.</value>
     <value>יישומים במסך מלא</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>כללי אפליקציה</value>
@@ -778,7 +778,7 @@ Edge הוא תצוגת האינטרנט המובנית של Windows 10.</value>
     <value>ספרייה</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>הגדרת Lively</value>
+    <value>הגדרת Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>מיקום</value>

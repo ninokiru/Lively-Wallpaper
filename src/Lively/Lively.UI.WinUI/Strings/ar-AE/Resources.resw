@@ -144,14 +144,14 @@
     <value>تم العثور على برنامج غير متوافق ، تم تعطيل تطبيق سمات شريط المهام.</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>صفحة الإنترنت الرسمية لـ Lively Wallpaper</value>
+    <value>صفحة الإنترنت الرسمية لـ Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>لا تعاني معظم شاشات LCD و LED الحديثة من مشاكل الاحتراق؛ لذلك، يمكن استخدام أي خلفية كشاشة توقف.
 
 بالنسبة لشاشات OLED أو Plasma أو CRT المعرضة للاحتراق، يُنصح باستخدام الخلفيات المظلمة التي من المفترض أن تخفف الاحتراق. ومع ذلك، لم يتم اختبار هذه الميزة ولا يمكن ضمان فعاليتها.
 
-الغرض الأساسي من شاشات توقف Lively هو إضافة طبقة أخرى من التخصيص إلى جهاز الكمبيوتر الخاص بك، واستخدام شاشات التوقف كحماية ضد الاحتراق هو على مسؤوليتك الخاصة!</value>
+الغرض الأساسي من شاشات توقف Luma هو إضافة طبقة أخرى من التخصيص إلى جهاز الكمبيوتر الخاص بك، واستخدام شاشات التوقف كحماية ضد الاحتراق هو على مسؤوليتك الخاصة!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>الإبلاغ عن مشكلة في التطبيق</value>
@@ -261,14 +261,14 @@ https://github.com/rocksdanister/lively/wiki</value>
 هل تريد استعادة خلفيات الشاشة التي تم تشغيلها مسبقاً؟</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>يبدو أنه يجب تعديل بعض الإعدادات لتشغيل Lively بشكل صحيح:
+    <value>يبدو أنه يجب تعديل بعض الإعدادات لتشغيل Luma بشكل صحيح:
 1. اضغط مفتاحي Win + R معًا لفتح التشغيل،  
 2. اكتب SystemPropertiesPerformance.exe في التشغيل ثم انقر فوق "موافق" لفتح خيارات الأداء.
 3. قم بتفعيل/تحديد "تحريك عناصر النوافذ والتحكمات" (إذا كان مفعلًا مسبقًا فقم بإلغاء تحديده ثم تحديده مرة أخرى) وتطبيق التغييرات. 
 4. انقر فوق "تطبيق" ثم على "موافق" لإغلاق النافذة.
 
 في حالة ويندوز 7 قم بـ - ضبطه لأقصى جودة مظهر وتطبيق التغييرات.
-إذا لم يعمل بعدها، اغلق Lively ثم اعد فتحه/إعادة تشغيل ويندوز.
+إذا لم يعمل بعدها، اغلق Luma ثم اعد فتحه/إعادة تشغيل ويندوز.
 (قد لا يعمل في بعض بناءات ويندوز 10 إنسايدر)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
@@ -710,7 +710,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>تطبيقات في وضع ملء الشاشة</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>قواعد التطبيق</value>
@@ -773,7 +773,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>المكتبة</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>إعداد Lively</value>
+    <value>إعداد Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>الموقع</value>

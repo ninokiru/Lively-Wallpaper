@@ -226,13 +226,16 @@ namespace Lively
         }
 
         // Leftover per-user data from the players that the WebView2 engine replaced.
+        // The temp path below keeps the pre-rename brand folder name on purpose: old
+        // installs wrote their Cef cache there, so it is a legacy on-disk location,
+        // not a missed rename of the current "Luma Wallpaper" folder.
         private static void CleanupLegacyPlayerData()
         {
             foreach (var path in new[]
             {
                 Path.Combine(Constants.CommonPaths.AppDataDir, "Cef"),
                 Path.Combine(Constants.CommonPaths.AppDataDir, "Mpv"),
-                Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "Cef"),
+                Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "Cef"), // legacy temp folder from pre-rename installs, not a missed rename
             })
             {
                 try

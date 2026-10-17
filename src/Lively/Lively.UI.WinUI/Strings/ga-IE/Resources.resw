@@ -136,22 +136,22 @@
     <value>Cáipéisíocht API ⁊ cabhair</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Tháinig Lively ar earráid mharfach.
+    <value>Tháinig Luma ar earráid mharfach.
 
-Tá Windows Explorer tar éis atosnú dhá uair le 30 soicind anuas. Is féidir gur coinbhleacht é seo idir Lively agus bogearraí phearsantú deisce eile nó Windows. Cuireadh stop le gach cúlbhrat chun fadhbanna eile a sheachaint.</value>
+Tá Windows Explorer tar éis atosnú dhá uair le 30 soicind anuas. Is féidir gur coinbhleacht é seo idir Luma agus bogearraí phearsantú deisce eile nó Windows. Cuireadh stop le gach cúlbhrat chun fadhbanna eile a sheachaint.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Aimsíodh feidhmchlár neamh-chomhoiriúnach, tá téama an tascbharra díchumasaithe</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Suíomh oifigiúil Lively Wallpaper</value>
+    <value>Suíomh oifigiúil Luma Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Ní fhulaingíonn an chuid is mó de scáileáin LCD ⁊ LED an lae inniubh le fadhbanna triailreatha agus is féidir aon chúlbhrat a úsáid mar spárálaí scáileáin.
 
 Le haghaidh scáileán OLED, plasma nó CRT ar féidir leo triailrith a fhulaingt, moltar cúlbhrat a úsáid a bhfuil gluaiseacht rialta agus téama atá dorcha go ginearálta ann chun trailrith a mhaolú. Is gné neamhphrofa í seo agus ní féidir a héifeachtacht a dhearbhú.
 
-Is é príomhchuspóir spárálaithe scáileáin Lively ná leibhéal eile pearsantaithe a chur le do ríomhaire. Is ar do phriacal féin a bhaineann tú úsáid as spárálaithe scáileáin mar chosaint ar an triailrith.</value>
+Is é príomhchuspóir spárálaithe scáileáin Luma ná leibhéal eile pearsantaithe a chur le do ríomhaire. Is ar do phriacal féin a bhaineann tú úsáid as spárálaithe scáileáin mar chosaint ar an triailrith.</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Tuairiscigh fadhb leis an mbogearra</value>
@@ -180,10 +180,10 @@ Is féidir le feidhmchláir mhailíseacha bogearraí mailíseacha nó víris a �
 Ná lean ar aghaidh ach amháin má thagann an feidhmchlár so ó fhoinse iontaofa.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Tá Lively íosmhéadaithe sa tráidire córais, deaschliceáil ar dheilbhín Lively le leanúint ar aghaidh.</value>
+    <value>Tá Luma íosmhéadaithe sa tráidire córais, deaschliceáil ar dheilbhín Luma le leanúint ar aghaidh.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Atosnaigh Lively le hathruithe a chur i bhfeidhm</value>
+    <value>Atosnaigh Luma le hathruithe a chur i bhfeidhm</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Please stop before proceeding</value>
@@ -204,7 +204,7 @@ Ná lean ar aghaidh ach amháin má thagann an feidhmchlár so ó fhoinse iontao
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Cabhróidh an draoi seo leat le cumraíocht Lively</value>
+    <value>Cabhróidh an draoi seo leat le cumraíocht Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Beidh comhbhrúnna breise ag teastáil ó leagan N/KN Windows chun tacú le hathsheinnt físeán i gcúlbhrait</value>
@@ -213,17 +213,17 @@ Ná lean ar aghaidh ach amháin má thagann an feidhmchlár so ó fhoinse iontao
     <value>Ceannaigh caife don bhforbróir agus taispeáin tacaíocht dó</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Tá tú ar tí athrú go dtí an leagan béite (forbróra) de Lively.
+    <value>Tá tú ar tí athrú go dtí an leagan béite (forbróra) de Luma.
 Tiocfaidh na nuashonruithe go minic agus seans go mbeidh fabhtanna iontu</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Infheictheacht an deilbhín sa tráidire córas, leanfaidh Lively ag rith agus an deilbhín folaithe</value>
+    <value>Infheictheacht an deilbhín sa tráidire córas, leanfaidh Luma ag rith agus an deilbhín folaithe</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Deilbhín an tráidire córais</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Atosnófar Lively chun an teanga nua a chur i bhfeidhm</value>
+    <value>Atosnófar Luma chun an teanga nua a chur i bhfeidhm</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Teanga</value>
@@ -242,7 +242,7 @@ Treoir le haghaidh comhroinnte an chomhaid loga:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Ní fheidhmíonn Lively i gceart agus mód 'Ardchodarsnacht' Windows casta air.
+    <value>Ní fheidhmíonn Luma i gceart agus mód 'Ardchodarsnacht' Windows casta air.
 Cas an mód 'Ardchodarsnacht' as agus bain triail eile as</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Ní comhad cúlbhrait Lively é seo</value>
+    <value>Ní comhad cúlbhrait Luma é seo</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Níor dúnadh Lively i gceart. Mód sábháilte á thosnú.
+    <value>Níor dúnadh Luma i gceart. Mód sábháilte á thosnú.
 An bhfuil fonn ort na cúlbhrait a bhí á rith agat roimhe seo a chur thar n-ais?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Is cosúil go gcaithfidh tú cúpla socruithe a athrú chun Lively a rith i gceart:
+    <value>Is cosúil go gcaithfidh tú cúpla socruithe a athrú chun Luma a rith i gceart:
 1. Brúigh ar na heochracha 'Win' + 'R' le 'Rith' a oscailt.
 2. Clóscríobh "SystemPropertiesPerformance.exe" isteach i 'Rith', cliceáil ar 'OK' chun 'Roghanna feidhmíochta' a oscailt.
 3. Cumasaigh/Ticeáil 'Beoigh rialtáin agus eilimintí laistigh de Windows' (Má tá tic ann cheana féin, déan é a bhaint agus a chur ann arís) agus cuir i bhfeidhm é.
 4. Cliceáil ar 'Cuir i bhfeidhm' agus ansan ar 'OK' chun an fhuinneog a dhúnadh.
 
 I gcás Windows 7, déan é a shocrú mar 'Adjust for best appearance' (Coigeartaigh i gcomhair na cuma is fearr) agus cuir i bhfeidhm é.
-Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú arís/atosnaigh Windows.
+Mura bhfuil sé ag feidhmiú go fóill, déan Luma a dhúnadh agus a atosnú arís/atosnaigh Windows.
 (Ní oibreoidh sé i roinnt leaganacha 'Insider' de Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Ní mór do Lively a bheith ag rith sa chúlra le haghaidh athsheinnt na gcúlbhrat</value>
+    <value>Ní mór do Luma a bheith ag rith sa chúlra le haghaidh athsheinnt na gcúlbhrat</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Tosnaigh in éineacht le Windows</value>
@@ -356,7 +356,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Sábháil chuig comhad</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Níl roinnt gnéithe ar fáil sa leagan so de Lively</value>
+    <value>Níl roinnt gnéithe ar fáil sa leagan so de Luma</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Comhad ar iarraidh</value>
@@ -425,7 +425,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Ar líne</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Oscail Lively</value>
+    <value>Oscail Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Gach próiseas</value>
@@ -488,7 +488,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Stad</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>An bhfuil tú ag baint sult as Lively? Scríobh léirmheas :)</value>
+    <value>An bhfuil tú ag baint sult as Luma? Scríobh léirmheas :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Support</value>
@@ -614,7 +614,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Cuir an cúlbhrat ar sos agus na feidhmchláir seo á rith</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively adapts to system theme settings, to change appearance goto</value>
+    <value>Luma adapts to system theme settings, to change appearance goto</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Athraigh an athsheinnt nuair a bhaintear cumhacht srutha ailtéarnaigh</value>
@@ -710,7 +710,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Feidhmchláir atá ar lánscáileán</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Cúlbhrat Lively</value>
+    <value>Cúlbhrat Luma</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Rialacha feidhmchlár</value>
@@ -773,7 +773,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Leabharlann</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Cumraíocht Lively</value>
+    <value>Cumraíocht Luma</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Suíomh</value>

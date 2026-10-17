@@ -136,22 +136,22 @@
     <value>API のドキュメントと説明</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively で致命的なエラーが発生しました。
+    <value>Luma で致命的なエラーが発生しました。
 
-エクスプローラーは 30 秒以内に 2 回再起動しました。 これは Lively と他のアプリまたは Windows との間で競合（互換性がない）している可能性があります。 さらなる問題を避けるためにすべての壁紙を Windows 標準の壁紙に戻します。</value>
+エクスプローラーは 30 秒以内に 2 回再起動しました。 これは Luma と他のアプリまたは Windows との間で競合（互換性がない）している可能性があります。 さらなる問題を避けるためにすべての壁紙を Windows 標準の壁紙に戻します。</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>互換性のないプログラムが見つかりました。タスク バーのテーマは反映されなくなります。</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively Wallpaper 公式サイト</value>
+    <value>Luma Wallpaper 公式サイト</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>最近の液晶ディスプレイや LED ディスプレイのほとんどは画面の焼き付きがないため、どんな壁紙でもスクリーンセーバーとして使用できます。
 
 焼き付きの影響を受けやすい有機 EL やプラズマ、ブラウン管のディスプレイでは焼き付きを軽減するために動きのある壁紙や全体的にダークテーマを使用することを推奨しますが、この機能は現在ベータ版のため、確実ではないため保証できません。
 
-Lively のスクリーンセーバーの主な目的はあなたの PC のカスタマイズをより幅広くするためであり、焼き付きの保護のために使用するのは自己責任ですのでご自身で判断お願いします。</value>
+Luma のスクリーンセーバーの主な目的はあなたの PC のカスタマイズをより幅広くするためであり、焼き付きの保護のために使用するのは自己責任ですのでご自身で判断お願いします。</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>ソフトウェアに関する問題を報告</value>
@@ -180,10 +180,10 @@ Lively のスクリーンセーバーの主な目的はあなたの PC のカス
 このアプリが信頼できる情報元から来ている場合でのみ続行してください。</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively はシステム トレイに最小化されています。Lively のアイコンを右クリックして続行します。</value>
+    <value>Luma はシステム トレイに最小化されています。Luma のアイコンを右クリックして続行します。</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>設定を反映させるためには、Lively を再起動してください。</value>
+    <value>設定を反映させるためには、Luma を再起動してください。</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>続行する前に停止してください。</value>
@@ -204,7 +204,7 @@ Lively のスクリーンセーバーの主な目的はあなたの PC のカス
     <value>ロードするウェブサイトのリンクを入力してください。shadertoy.comのシェーダーリンクがサポートされています</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Lively のセットアップを開始します</value>
+    <value>Luma のセットアップを開始します</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>お使いの Windows N/KN エディションでは、壁紙での動画再生をサポートするために追加のコーデックをダウンロードする必要があります。</value>
@@ -213,17 +213,17 @@ Lively のスクリーンセーバーの主な目的はあなたの PC のカス
     <value>開発者にコーヒーを送ってサポートする</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Livelyのベータ（開発者）版に変更しようとしています。
+    <value>Lumaのベータ（開発者）版に変更しようとしています。
 アップデートが頻繁に行われ、バグを含む可能性があります！</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>システム トレイ アイコンの表示をします。Lively はシステム トレイ アイコンが非表示の状態で動作し続けます。</value>
+    <value>システム トレイ アイコンの表示をします。Luma はシステム トレイ アイコンが非表示の状態で動作し続けます。</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>システム トレイ アイコン</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>新しい言語を適用するには、Lively を再起動する必要があります。</value>
+    <value>新しい言語を適用するには、Luma を再起動する必要があります。</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>言語</value>
@@ -242,37 +242,37 @@ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Windows のハイ コントラスト モードが有効な状態では、Lively が正常に動作しません！
+    <value>Windows のハイ コントラスト モードが有効な状態では、Luma が正常に動作しません！
 ハイ コントラスト モードを無効にしてから再度お試しください。</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>メディアの再生に失敗しました。 :(
-Livelyの設定から動画プレイヤーを変更してみてください。
+Lumaの設定から動画プレイヤーを変更してみてください。
 
 このエラーを理解し問題を解決するために、ログファイルを開発者に共有してください。
 ログファイルを共有するための手順:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Lively の壁紙ファイルではありません。</value>
+    <value>Luma の壁紙ファイルではありません。</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively が適切に閉じられず、セーフモードで起動しました。
+    <value>Luma が適切に閉じられず、セーフモードで起動しました。
 以前に実行した壁紙を復元しますか？</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Lively を動作させるためには、いくつかの設定が必要なようです。  
+    <value>Luma を動作させるためには、いくつかの設定が必要なようです。  
 1.  Win + R を押して"ファイル名を指定して実行"を開きます, 
 2. SystemPropertiesPerformance.exe と入力して"OK"を押し、パフォーマンス オプションを開きます.
 3. "Windows 内のアニメーション コントロールと要素" の項目にチェックを入れて (既にチェックがついている場合は、一度チェックを外してからもう一度チェックを入れます) 有効にします。
 4. "適用"をクリックしたら "OK" を押してウインドウを閉じます。
 
 Windows 7 の場合は、"パフォーマンスを優先する"を選択するだけです。
-それでも動作しない場合は、Lively を再起動するか、Windows を再起動してください。
+それでも動作しない場合は、Luma を再起動するか、Windows を再起動してください。
 (一部の Windows 10 Insider ビルドでは動作しません)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>壁紙を再生するためには、Lively をバックグラウンドで動作させる必要があります。</value>
+    <value>壁紙を再生するためには、Luma をバックグラウンドで動作させる必要があります。</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Windows の起動時に開始</value>
@@ -356,7 +356,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>ファイルを保存</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>このバージョンの Lively では利用できない機能があります。</value>
+    <value>このバージョンの Luma では利用できない機能があります。</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>ファイルが存在しません</value>
@@ -371,7 +371,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>GO</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Lively の翻訳を助けてください！</value>
+    <value>Luma の翻訳を助けてください！</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>時間</value>
@@ -425,7 +425,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>オンライン</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively を開く</value>
+    <value>Luma を開く</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>すべてのプロセス</value>
@@ -488,7 +488,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>停止</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Lively の壁紙に満足していますか？ コメントをください :)</value>
+    <value>Luma の壁紙に満足していますか？ コメントをください :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>サポート</value>
@@ -614,7 +614,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>実行中のアプリに応じて、異なる壁紙の再生ルールを設定します。</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Livelyをシステムのテーマ設定に適応して、外観を変更する</value>
+    <value>Lumaをシステムのテーマ設定に適応して、外観を変更する</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>AC 電源を切った状態での動作を変更します。</value>
@@ -711,7 +711,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>アプリのフルスクリーン</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>アプリのルール</value>
@@ -774,7 +774,7 @@ Windows 7 の場合は、"パフォーマンスを優先する"を選択する�
     <value>ライブラリー</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively セットアップ</value>
+    <value>Luma セットアップ</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>場所</value>

@@ -77,7 +77,7 @@ namespace Lively
                     }
                     catch (Exception e)
                     {
-                        _ = MessageBox.Show($"Failed to communicate with Core:\n{e.Message}", "Lively Wallpaper");
+                        _ = MessageBox.Show($"Failed to communicate with Core:\n{e.Message}", "Luma Wallpaper");
                     }
                     QuitApp();
                     return;
@@ -333,7 +333,7 @@ namespace Lively
                 if (!Services.GetRequiredService<IRunnerService>().IsVisibleUI)
                 {
                     Services.GetRequiredService<ISystray>().ShowBalloonNotification(4000,
-                        "Lively Wallpaper",
+                        "Luma Wallpaper",
                         Lively.Properties.Resources.TextUpdateAvailable);
                 }
             }));

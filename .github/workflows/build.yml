@@ -102,7 +102,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: lively-win-x64-portable
+          name: luma-win-x64-portable
           # Glob so the artifact stores the publish contents, not a "publish" folder.
           path: ${{ env.PUBLISH_DIR }}\**
           if-no-files-found: error
@@ -116,7 +116,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          name: lively-win-x64-portable
+          name: luma-win-x64-portable
           path: src/installer/Release
 
       - name: Flatten artifact
@@ -167,7 +167,7 @@ jobs:
         shell: pwsh
         run: |
           # Tagged builds override the version in the script, so the asset the updater
-          # downloads (lively_setup_x64_full_v<tag>.exe) matches the release it came from.
+          # downloads (luma_setup_x64_full_v<tag>.exe) matches the release it came from.
           if ($env:GITHUB_REF_TYPE -eq 'tag') {
             $version = $env:GITHUB_REF_NAME -replace '^v', ''
             & $env:ISCC_PATH "/DMyAppVersion=$version" Script_x64.iss
@@ -178,7 +178,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: lively-win-x64-installer
+          name: luma-win-x64-installer
           path: src/installer/Output/*.exe
           if-no-files-found: error
 
@@ -197,7 +197,7 @@ jobs:
   #   build really is newer.
   #
   # Asset the updater matches on: any asset whose name contains
-  # lively_setup_x64_full, which is what Script_x64.iss produces.
+  # luma_setup_x64_full, which is what Script_x64.iss produces.
   # ---------------------------------------------------------------------------
   release:
     name: GitHub Release
@@ -226,20 +226,20 @@ jobs:
       - name: Download installer
         uses: actions/download-artifact@v4
         with:
-          name: lively-win-x64-installer
+          name: luma-win-x64-installer
           path: dist
 
       - name: Download portable build
         uses: actions/download-artifact@v4
         with:
-          name: lively-win-x64-portable
+          name: luma-win-x64-portable
           path: portable
 
       - name: Stage release assets
         run: |
           set -euo pipefail
           command -v zip >/dev/null || { echo "::error::zip is missing from the runner image."; exit 1; }
-          folder="lively-win-x64-portable-${GITHUB_REF_NAME}"
+          folder="luma-win-x64-portable-${GITHUB_REF_NAME}"
           mv portable "${folder}"
           zip -qr "dist/${folder}.zip" "${folder}"
           ls -l dist
@@ -300,7 +300,7 @@ jobs:
         run: |
           set -euo pipefail
           TAG="${GITHUB_REF_NAME}"
-          TITLE="Lively Wallpaper ${TAG}"
+          TITLE="Luma Wallpaper ${TAG}"
           # v0.0.2-beta and similar suffixed tags are prereleases, plain ones are not.
           FLAGS=()
           case "${TAG}" in

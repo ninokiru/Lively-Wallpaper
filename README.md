@@ -1,7 +1,7 @@
 
 <p align="center">
   <img alt="Files Logo" src="resources/figma_promo_16x9.jpg" width="450" />
-  <h2 align="center">Lively Wallpaper</h2>
+  <h2 align="center">Luma Wallpaper</h2>
 </p>
 
 [![GitHub release](https://img.shields.io/github/release/rocksdanister/lively/all.svg)](https://github.com/rocksdanister/lively/releases)
@@ -21,7 +21,7 @@
 ## About
 <img src="/resources/main_preview.gif" width="600" height="338"/>
 
-Animated desktop wallpapers, bring your desktop to life!
+Luma Wallpaper — animated desktop wallpapers, bring your desktop to life!
 
 #### Join Discussions:
 * <a href="https://www.reddit.com/r/LivelyWallpaper/">Reddit</a>
@@ -38,14 +38,14 @@ Animated desktop wallpapers, bring your desktop to life!
 #### Screensavers
 <img src="/resources/screen_saver.gif" width="600" height="338"/>
 
-* Lively supports Windows screensaver.
+* Luma Wallpaper supports Windows screensaver.
 * Any wallpaper can be used as screensaver.
 * Multiple monitor supported.
 * [Learn more..](https://github.com/rocksdanister/lively/wiki/Screen-Saver)
 #### Automation
 <img src="/resources/rotary_demo.gif" width="600" height="338"/>
 
-* Lively can be controlled with command line arguments from terminal.
+* Luma Wallpaper can be controlled with command line arguments from terminal.
 * Integrate with other languages like Python or scripting software AutoHotKey.
 * [Learn more..](https://github.com/rocksdanister/lively/wiki/Command-Line-Controls)
 #### Lively API
@@ -62,9 +62,9 @@ Animated desktop wallpapers, bring your desktop to life!
 #### More Features
 - Minimal webpage renderer powered by chromium.
 - Hardware accelerated video playback using mpv/vlc player with customizable video filters.
-- Easy to use; Just drag'n'drop media or webpages into lively to set as wallpaper.
+- Easy to use; Just drag'n'drop media or webpages into Luma Wallpaper to set as wallpaper.
 - Latest Windows 11 design using WinUI 3 + WindowsAppSDK framework.
-- Efficient, Lively is native application designed for Windows.
+- Efficient, Luma Wallpaper is native application designed for Windows.
 - Fully opensource & free; no blackmagic, no features behind paywall.
 - Shadertoy.com urls are supported as wallpaper.
 #### Performance
@@ -73,7 +73,7 @@ Animated desktop wallpapers, bring your desktop to life!
  * Can be set to pause wallpaper when running on battery power (laptops.)
  * Wallpaper automatically pauses when running remote desktop session.
 
-**_Lively is not officially affiliated with Unity technologies, godot, shadertoy;_**
+**_Luma Wallpaper is not officially affiliated with Unity technologies, godot, shadertoy;_**
 ## Download
 ##### Microsoft Store (Windows 10 1809 or above)
 
@@ -84,19 +84,19 @@ Animated desktop wallpapers, bring your desktop to life!
 [Which version do I download?](https://github.com/rocksdanister/lively/wiki/Differences-Between-Distributions)
 
 ## Support
-Are you a Lively fan and want to help out? here are some options..
+Are you a Luma Wallpaper fan and want to help out? here are some options..
 
 #### Programmer
 Code contributions are welcome, [learn more..](https://github.com/rocksdanister/lively/wiki/Contributing-Guidelines)
 
 #### Designer
-Help improve UI/UX of Lively, [learn more..](https://github.com/rocksdanister/lively/wiki/Contributing-Guidelines)
+Help improve UI/UX of Luma Wallpaper, [learn more..](https://github.com/rocksdanister/lively/wiki/Contributing-Guidelines)
 
 #### Localization
-Help translate Lively to more languages, [learn more..](https://github.com/rocksdanister/lively-translations)
+Help translate Luma Wallpaper to more languages, [learn more..](https://github.com/rocksdanister/lively-translations)
 
 #### Suggestions & Bug report
-Suggest new features or file bug reports to improve Lively, [learn more..](https://github.com/rocksdanister/lively/issues)
+Suggest new features or file bug reports to improve Luma Wallpaper, [learn more..](https://github.com/rocksdanister/lively/issues)
 
 #### Spread the word
 Star this repository, leave a Microsoft store review or tell your friend.. any help is welcome :)

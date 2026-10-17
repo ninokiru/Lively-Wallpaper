@@ -136,22 +136,22 @@
     <value>API 文件和幫助</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively 動態桌布遇到了致命錯誤。
+    <value>Luma 動態桌布遇到了致命錯誤。
 
-Windows 檔案總管在最近30秒內重新啟動了兩次！這也許是 Lively 動態桌布與其他桌面自訂軟體或 Windows 的衝突造成的。為了防止出現更多問題，所有桌布已被終止。</value>
+Windows 檔案總管在最近30秒內重新啟動了兩次！這也許是 Luma 動態桌布與其他桌面自訂軟體或 Windows 的衝突造成的。為了防止出現更多問題，所有桌布已被終止。</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>偵測到不相容軟體，工具列主題已禁用</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively 動態桌布官方網站</value>
+    <value>Luma 動態桌布官方網站</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>大多數現代 LCD 和 LED 顯示幕都不會出現殘影問題，因此任何桌布都可以用作螢幕保護程式。
 
 對於容易出現殘影的 OLED、電漿或 CRT 顯示幕，建議使用有規律運動的動態桌布和深色整體主題，以減輕殘影；但此功能未經測試，無法保證其有效性。
 
-Lively 動態桌布的螢幕保護程式主要用於為您的電腦新增另一層客製化可能性，使用螢幕保護程式作為殘影保護手段請自行承擔風險！</value>
+Luma 動態桌布的螢幕保護程式主要用於為您的電腦新增另一層客製化可能性，使用螢幕保護程式作為殘影保護手段請自行承擔風險！</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>回報軟體問題</value>
@@ -180,10 +180,10 @@ Lively 動態桌布的螢幕保護程式主要用於為您的電腦新增另一�
 請僅在你信任此應用程式的來源時繼續。</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively 動態桌布已最小化至系統匣，右鍵點選 Lively 動態桌布的圖示以存取更多選項。</value>
+    <value>Luma 動態桌布已最小化至系統匣，右鍵點選 Luma 動態桌布的圖示以存取更多選項。</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>請重新啟動 Lively 動態桌布以使設定生效</value>
+    <value>請重新啟動 Luma 動態桌布以使設定生效</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>繼續操作前請停止桌布</value>
@@ -204,7 +204,7 @@ Lively 動態桌布的螢幕保護程式主要用於為您的電腦新增另一�
     <value>輸入網站連結以載入，支援來自 shadertoy.com 的著色器連結</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>此精靈將幫助你開始設定 Lively 動態桌布</value>
+    <value>此精靈將幫助你開始設定 Luma 動態桌布</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>你的 Windows N/KN 版本將需要下載附加解碼元件以支援桌布的影片播放作業</value>
@@ -213,17 +213,17 @@ Lively 動態桌布的螢幕保護程式主要用於為您的電腦新增另一�
     <value>為開發人員購買咖啡以示支持</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>您即將變更為 Lively 動態桌布 Beta (開發人員) 版本。
+    <value>您即將變更為 Luma 動態桌布 Beta (開發人員) 版本。
 更新將會很頻繁，並且可能包含 bug！</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>系統匣圖示可見性，Lively 動態桌布在圖示隱藏的情況下仍會繼續運作</value>
+    <value>系統匣圖示可見性，Luma 動態桌布在圖示隱藏的情況下仍會繼續運作</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>系統匣圖示</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively 動態桌布將會重新啟動以套用新語言</value>
+    <value>Luma 動態桌布將會重新啟動以套用新語言</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>語言</value>
@@ -242,37 +242,37 @@ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>啟用 Windows 高對比 (Windows High Contrast) 模式時 Lively 動態桌布將無法正常工作！
+    <value>啟用 Windows 高對比 (Windows High Contrast) 模式時 Luma 動態桌布將無法正常工作！
 請禁用高對比模式然後重試</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>媒體播放作業失敗:(
-請嘗試在 Lively 動態桌布的設定中變更影片播放器。
+請嘗試在 Luma 動態桌布的設定中變更影片播放器。
 
 為了更好地理解這個錯誤並解決問題，請與開發人員分享日誌檔。
 分享日誌檔的說明：
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>非 Lively 動態桌布檔案</value>
+    <value>非 Luma 動態桌布檔案</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively 動態桌布之前沒有被正常關閉，因此正在以安全模式啟動。
+    <value>Luma 動態桌布之前沒有被正常關閉，因此正在以安全模式啟動。
 您是否要還原之前運作的動態桌布？</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>看起來需要進行一些設定才能使 Lively 動態桌布正常工作:  
+    <value>看起來需要進行一些設定才能使 Luma 動態桌布正常工作:  
 1. 點按 Win + R 快速鍵開啟「執行」， 
 2. 輸入「SystemPropertiesPerformance.exe」，點選「確定」以開啟「效能選項」。
 3. 啟用/選定「在視窗內部以動畫方式顯示控制項和元素」(如果已經選定，請反選然後再次選定) 並套用。
 4. 點選「套用」然後點按「確定」關閉視窗。
 
 如果是 Windows 7 只需設定 -「調整成最佳外觀」並套用。
-如果仍無法正常工作， 請關閉並重新啟動 Lively 動態桌布 / Windows。
+如果仍無法正常工作， 請關閉並重新啟動 Luma 動態桌布 / Windows。
 (在部分 Windows 10 測試人員組建中無法正常工作)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively 動態桌布需要在背景運作以進行桌布播放作業。</value>
+    <value>Luma 動態桌布需要在背景運作以進行桌布播放作業。</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>隨 Windows 開機啟動</value>
@@ -356,7 +356,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>儲存至檔案</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>一些特性在此版本 Lively 動態桌布中不可用</value>
+    <value>一些特性在此版本 Luma 動態桌布中不可用</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>找不到檔案</value>
@@ -425,7 +425,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>線上</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>開啟 Lively 動態桌布</value>
+    <value>開啟 Luma 動態桌布</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>所有處理程序</value>
@@ -488,7 +488,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>停止</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>你是否享受使用 Lively 動態桌布？請留下評論 :)</value>
+    <value>你是否享受使用 Luma 動態桌布？請留下評論 :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>支援開發</value>
@@ -614,7 +614,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>根據運作的應用程式設定不同的桌布播放規則</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively 動態桌布跟隨系統主題設定，要改變外觀請至</value>
+    <value>Luma 動態桌布跟隨系統主題設定，要改變外觀請至</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>變更斷開交流電源後的播放行為</value>
@@ -710,7 +710,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>全螢幕應用程式</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively 動態桌布</value>
+    <value>Luma 動態桌布</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>應用程式規則</value>
@@ -773,7 +773,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>資料庫</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively 動態桌布設定精靈</value>
+    <value>Luma 動態桌布設定精靈</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>位置</value>
@@ -1248,7 +1248,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>與系統語言相同</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>請重新啟動 Lively 動態桌布以使設定生效.</value>
+    <value>請重新啟動 Luma 動態桌布以使設定生效.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>恢復工作階段後，顯示登入螢幕</value>

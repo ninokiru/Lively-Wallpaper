@@ -61,8 +61,12 @@ namespace Lively.RPC
             {
                 try
                 {
-                    // Main user interface downloads the setup.
-                    var fileName = updater.LastCheckFileName;
+                    // Main user interface downloads the setup into the shared temp folder.
+                    // The name comes from a release asset, so it is flattened before use.
+                    var fileName = Path.GetFileName(updater.LastCheckFileName);
+                    if (string.IsNullOrEmpty(fileName))
+                        throw new FileNotFoundException("No installer asset was found for the latest release.");
+
                     var filePath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
                     if (!File.Exists(filePath))
                         throw new FileNotFoundException(filePath);
@@ -122,7 +126,7 @@ namespace Lively.RPC
             return Task.FromResult(new UpdateResponse()
             {
                 Status = (UpdateStatus)((int)updater.Status),
-                Changelog = string.Empty,
+                Changelog = updater.LastCheckChangelog ?? string.Empty,
                 Url = updater.LastCheckUri?.OriginalString ?? string.Empty,
                 FileName = updater.LastCheckFileName ?? string.Empty,
                 Version = updater.LastCheckVersion?.ToString() ?? string.Empty,

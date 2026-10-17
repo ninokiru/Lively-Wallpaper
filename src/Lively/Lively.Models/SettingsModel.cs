@@ -132,7 +132,7 @@ namespace Lively.Models
 
         public SettingsModel()
         {
-            SavedURL = "https://livelywallpaper.net/demo";
+            SavedURL = "https://github.com/ninokiru/Lively-Wallpaper";
             ProcessMonitorAlgorithm = ProcessMonitorAlgorithm.grid;
             WallpaperArrangement = WallpaperArrangement.per;
             ScreensaverArragement = WallpaperArrangement.per;
@@ -174,7 +174,7 @@ namespace Lively.Models
             TileSize = 1;
             DisplayIdentification = DisplayIdentificationMode.deviceId;
             UIMode = LivelyGUIState.normal;
-            WallpaperDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Lively Wallpaper", "Library");
+            WallpaperDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Luma Wallpaper", "Library");
             WallpaperDirMoveExistingWallpaperNewDir = true;
             SysTrayIcon = true;
             WebDebugPort = string.Empty;

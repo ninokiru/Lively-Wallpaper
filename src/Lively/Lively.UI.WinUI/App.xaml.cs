@@ -57,7 +57,7 @@ namespace Lively.UI.WinUI
         {
             if (!AppLifeCycleUtil.IsAppMutexRunning(SingleInstance.UniqueAppName))
             {
-                _ = NativeMethods.MessageBox(IntPtr.Zero, "Wallpaper core is not running, run Lively.exe first before opening UI.", "Lively Wallpaper", 16);
+                _ = NativeMethods.MessageBox(IntPtr.Zero, "Wallpaper core is not running, run Lively.exe first before opening UI.", "Luma Wallpaper", 16);
                 //Sad dev noises.. this.Exit() does not work without Window: https://github.com/microsoft/microsoft-ui-xaml/issues/5931
                 Process.GetCurrentProcess().Kill();
             }
@@ -153,7 +153,7 @@ namespace Lively.UI.WinUI
                 .AddSingleton<GalleryViewModel>()
                 .AddSingleton<GallerySubscriptionViewModel>()
                 .AddSingleton<AppUpdateViewModel>()
-                .AddSingleton<ICacheService, DiskCacheService>((e) => new DiskCacheService(e.GetRequiredService<IHttpClientFactory>(), Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "gallery")))
+                .AddSingleton<ICacheService, DiskCacheService>((e) => new DiskCacheService(e.GetRequiredService<IHttpClientFactory>(), Path.Combine(Path.GetTempPath(), ApplicationType.Name, "gallery")))
                 .AddSingleton<IDepthEstimate, MiDaS>()
                 // Scoped
                 .AddScoped<IDialogNavigator, DialogNavigator>()

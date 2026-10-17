@@ -136,22 +136,22 @@
     <value>API dokumentacija ir pagalba</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively susidūrė su mirtina klaida.
+    <value>Luma susidūrė su mirtina klaida.
 
-„Windows Explorer“ buvo paleista iš naujo du kartus per paskutines 30 sekundžių! Tai gali būti „Lively“ ir kitos darbalaukio tinkinimo programinės įrangos arba „Windows“ konfliktas. Siekiant išvengti tolesnių problemų, visos ekrano užsklandos nutraukiamos.</value>
+„Windows Explorer“ buvo paleista iš naujo du kartus per paskutines 30 sekundžių! Tai gali būti „Luma“ ir kitos darbalaukio tinkinimo programinės įrangos arba „Windows“ konfliktas. Siekiant išvengti tolesnių problemų, visos ekrano užsklandos nutraukiamos.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Rasta nesuderinama programa, užduočių juostos temos išjungtos</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Oficialus Lively Wallpaper tinklalapis</value>
+    <value>Oficialus Luma Wallpaper tinklalapis</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Dauguma šiuolaikinių LCD ir LED ekranų neturi perdegimo, todėl bet kokią ekrano užsklandą galima naudoti kaip ekrano užsklandą.
 
 OLED, plazminiams arba kineskopiniams ekranams, kurie yra linkę įdegti, patartina naudoti ekrano užsklandą su reguliariais judesiais ir bendrą tamsią temą, kuri turėtų sumažinti įdegimą, tačiau ši funkcija nėra išbandyta ir jos veiksmingumas negali būti garantuotas.
 
-Pagrindinis Lively ekrano užsklandų tikslas yra pridėti dar vieną tinkinimo sluoksnį prie kompiuterio, naudokite ekrano užsklandas kaip apsaugą nuo įsidegimo savo rizika!</value>
+Pagrindinis Luma ekrano užsklandų tikslas yra pridėti dar vieną tinkinimo sluoksnį prie kompiuterio, naudokite ekrano užsklandas kaip apsaugą nuo įsidegimo savo rizika!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Pranešti apie programinės įrangos problemą</value>
@@ -180,10 +180,10 @@ Kenkėjiškos programos gali priglobti kenkėjiškas programas, virusus... ir pa
 Tęskite, tik jei ši programa gaunama iš patikimo šaltinio.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>„Lively“ yra sumažintas sistemos dėkle, dešiniuoju pelės mygtuku spustelėkite ant „Lively“ piktogramos, kad tęstumėte.</value>
+    <value>„Luma“ yra sumažintas sistemos dėkle, dešiniuoju pelės mygtuku spustelėkite ant „Luma“ piktogramos, kad tęstumėte.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Iš naujo paleiskite „Lively“, kad nustatymai įsigaliotų</value>
+    <value>Iš naujo paleiskite „Luma“, kad nustatymai įsigaliotų</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Prieš tęsdami sustokite</value>
@@ -204,7 +204,7 @@ Tęskite, tik jei ši programa gaunama iš patikimo šaltinio.</value>
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Šis vedlys padės jums pradėti „Lively“ sąranką</value>
+    <value>Šis vedlys padės jums pradėti „Luma“ sąranką</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Jūsų Windows N/KN versija turės turėti atsiųstus papildomus kodekus, kad galėtų palaikyti vaizdo grojimą fonuose</value>
@@ -213,17 +213,17 @@ Tęskite, tik jei ši programa gaunama iš patikimo šaltinio.</value>
     <value>Parodykite palaikymą nupirkdami kūrėjui kavą</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Jūs dabar pasikeisit į beta (programuotojo) Lively versiją.
+    <value>Jūs dabar pasikeisit į beta (programuotojo) Luma versiją.
 Atnaujinimai bus dažnesni ir gali turėti defektų!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Sistemos dėklo piktogramos matomumas, „Lively“ toliau veiks su paslėpta piktograma</value>
+    <value>Sistemos dėklo piktogramos matomumas, „Luma“ toliau veiks su paslėpta piktograma</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Sistemos dėklo piktograma</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>"Lively" bus perkrautas, kad pritaikytų naują kalbą</value>
+    <value>"Luma" bus perkrautas, kad pritaikytų naują kalbą</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Kalba</value>
@@ -242,7 +242,7 @@ Instrukcijos kaip dalintys logoritmo failu:
 https://github.com/rocksdanister/lively/wiki (svetainė nėra lietuviškai išversta, kol kas)</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>"Lively" negali veikti naudojant Windows Aukšto Kontrasto režimą!
+    <value>"Luma" negali veikti naudojant Windows Aukšto Kontrasto režimą!
 Išjunkite jį ir pamėginkite iš naujo</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -254,25 +254,25 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Ne Lively fono failas</value>
+    <value>Ne Luma fono failas</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>"Lively" buvo negerai uždarytas, startuojamas saugiame režime.
+    <value>"Luma" buvo negerai uždarytas, startuojamas saugiame režime.
 Ar norite atkurti prieš tai veikiančius darbalaukio fonus?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Atrodo kai kurie nustatymai turi būti sutvarkyti, kad Lively veiktų: 
+    <value>Atrodo kai kurie nustatymai turi būti sutvarkyti, kad Luma veiktų: 
 1. Paspauskite Win ir R mygtukus kad atidarytumėte Vykdyti, 
 2. Parašykite SystemPropertiesPerformance.exe į Vykdyti, paspauskite "OK" kad atidaryti Atlikimo Nustatymus.
 3. Įjunkite/Patikrinkite "Animuoti valdiklius ir elementus viduje Windows" (Jei pažymėta, atžymėkite ir vėl pažymėkite) ir Pritaikyti.
 4. Paspauskite "Pritaikyti" tada "OK" kad uždaryti langą.
 
 Jei naudojate Windows 7, tai tiesiog nustatykite - "Adjust for best appearance" &amp; Pritaikyti.
-Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Windows.
+Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Luma/perkraukite Windows.
 (Neveikia kai kuriose Insider Windows 10 versijose)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>„Lively“ turi veikti fone, kad veiktų darbalaukio fonas</value>
+    <value>„Luma“ turi veikti fone, kad veiktų darbalaukio fonas</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Pradėti su Windows</value>
@@ -356,7 +356,7 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Įrašyti į failą</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Kai kurios funkcijos neveikia šioje Lively versijoje</value>
+    <value>Kai kurios funkcijos neveikia šioje Luma versijoje</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Failas nerastas</value>
@@ -425,7 +425,7 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Prisijungęs</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Atidaryti Lively</value>
+    <value>Atidaryti Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Visi procesai</value>
@@ -488,7 +488,7 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Sustabdyti</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Ar jums patiko naudotis Lively? Palikite atsiliepimą :)</value>
+    <value>Ar jums patiko naudotis Luma? Palikite atsiliepimą :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Palaikymas</value>
@@ -614,7 +614,7 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Pristabdyti ekrano foną paleidžiant šias programas</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively prisitaiko prie sistemos temos nustatymų, kad pakeistų išvaizdą</value>
+    <value>Luma prisitaiko prie sistemos temos nustatymų, kad pakeistų išvaizdą</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Keisti atkūrimą, kai atjungtas išorinės srovės maitinimas</value>
@@ -710,7 +710,7 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Programos visame ekrane</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Fonai</value>
+    <value>Luma Fonai</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Taikymo taisyklės</value>
@@ -773,7 +773,7 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Biblioteka</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively sąranka</value>
+    <value>Luma sąranka</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Vieta</value>

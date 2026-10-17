@@ -211,17 +211,17 @@
     <value>Покажи подршку куповином кафе за програмере</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Спремате се да пређете на бета (развојну) верзију програма Lively.
+    <value>Спремате се да пређете на бета (развојну) верзију програма Luma.
 Ажурирања ће бити честа и могу садржати грешке!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Видљивост иконица системске траке. Lively ће наставити да ради са скривеном иконицом</value>
+    <value>Видљивост иконица системске траке. Luma ће наставити да ради са скривеном иконицом</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Икона у позадини система</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively ће се рестартовати како би промене језика добила ефекат</value>
+    <value>Luma ће се рестартовати како би промене језика добила ефекат</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Језик</value>
@@ -344,7 +344,7 @@ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
     <value>Сачувај у датотеци</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Неке функције нису доступне у овој верзији Lively програма</value>
+    <value>Неке функције нису доступне у овој верзији Luma програма</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Фајл није пронађен</value>

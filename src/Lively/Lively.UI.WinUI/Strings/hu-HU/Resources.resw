@@ -136,22 +136,22 @@
     <value>API dokumentáció és segítség</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively végzetes hibába ütközött.
+    <value>Luma végzetes hibába ütközött.
 
-A Windows Intéző kétszer indult újra az elmúlt 30 másodpercben! Ez ütközés lehet a Lively és más asztali testreszabási szoftverek vagy a Windows között. A további problémák elkerülése érdekében az összes háttérkép le lett állitva.</value>
+A Windows Intéző kétszer indult újra az elmúlt 30 másodpercben! Ez ütközés lehet a Luma és más asztali testreszabási szoftverek vagy a Windows között. A további problémák elkerülése érdekében az összes háttérkép le lett állitva.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Inkompatibilis progam észlelve, a tálca témázása letiltva</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>A Lively Wallpaper hivatalos weboldala</value>
+    <value>A Luma Wallpaper hivatalos weboldala</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>A legtöbb modern LCD és LED kijelző nem szenved beégési problémától, ezért bármilyen háttérkép használható képernyővédőként.
 
 A beégésre hajlamos OLED-, plazma vagy CRT kijelzők esetében javasolt szabályos mozgású hátteret és általános sötét témát használni, ami ennek megelőzését szolgálja, de ez a funkció nem tesztelt és nem garantált a hatékony müködése.
 
-A Lively képernyővédőinek fő célja, hogy egy újabb testreszabási réteget adjon a számítógépéhez, és beégés védett hátteret csak a saját felelősségel használd!</value>
+A Luma képernyővédőinek fő célja, hogy egy újabb testreszabási réteget adjon a számítógépéhez, és beégés védett hátteret csak a saját felelősségel használd!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>A porgrammal kapcsolatos hiba jelentése</value>
@@ -180,7 +180,7 @@ Rosszindulatú alkalmazások hordozhatnak káros szoftvert, vírust és kárt ok
 Csak akkor folytasd, ha ez az alkalmazás megbízható forrásból származik.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>A Lively minimalizálva lett a talcára, jobb klikkelj a lively ikonjára a folytatáshoz.</value>
+    <value>A Luma minimalizálva lett a talcára, jobb klikkelj a lively ikonjára a folytatáshoz.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
     <value>Kérlek indítsd újra a programot hogy a beállítások müködésbe lépjenek.</value>
@@ -204,7 +204,7 @@ Csak akkor folytasd, ha ez az alkalmazás megbízható forrásból származik.</
     <value>Írd be a weboldal linket a betöltéshez, shadertoy.com árnyék linkek támogatottak.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Ez a varázsló segít a Lively beáiitásában</value>
+    <value>Ez a varázsló segít a Luma beáiitásában</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>A te Windows N/KN verziódhoz további kodekek letöltése szükséges a hetterek videólejátszásához</value>
@@ -213,17 +213,17 @@ Csak akkor folytasd, ha ez az alkalmazás megbízható forrásból származik.</
     <value>Támogasd egy kávéval a fejlesztőt</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>A Lively béta (fejlesztői) verziójára készülsz váltani.
+    <value>A Luma béta (fejlesztői) verziójára készülsz váltani.
 A frissítések gyakoriak lesznek, és hibákat tartalmazhatnak!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Tálca ikon láthatósága, a Lively akkor futni fog ha az ikon rejtett</value>
+    <value>Tálca ikon láthatósága, a Luma akkor futni fog ha az ikon rejtett</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Tálca Ikon</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>A Lively újra fog indulni az új nyelv alkalmazásához</value>
+    <value>A Luma újra fog indulni az új nyelv alkalmazásához</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Nyelv</value>
@@ -242,8 +242,8 @@ Instrukciók a naplófájl megosztásához:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>A Lively nem tud megfelelően működni, ha a Windows Kontrasztos megjelenítés be van kapcsolva.
-Kérem, kapcsolja ki a Lively megfelelő működéséhez.</value>
+    <value>A Luma nem tud megfelelően működni, ha a Windows Kontrasztos megjelenítés be van kapcsolva.
+Kérem, kapcsolja ki a Luma megfelelő működéséhez.</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Média lejátszás nem sikerült :(Próbáld meg megváltoztatni a videó lejátszót a beállításokban.Annak érdekében hogy jobban megértsd a hibát és javítsd meg a problémát, oszd meg a napló fáljt a fejlesztővel.
@@ -251,14 +251,14 @@ Utasítások a naplófálj megosztására:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Nem Lively háttérkép fájl.</value>
+    <value>Nem Luma háttérkép fájl.</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>A Lively nem lett megfelelően bezárva, indítás biztonságos módban.
+    <value>A Luma nem lett megfelelően bezárva, indítás biztonságos módban.
 Szeretnéd visszaállítani az előzőleg futó háttérképeket?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Úgy látszik néhány beállítást be kell állítani, hogy a Lively működjön:-  
+    <value>Úgy látszik néhány beállítást be kell állítani, hogy a Luma működjön:-  
 1. Nyisd meg ezt a gépet(Ez a gép)
 2. Kattints az üres területre
 3. Válaszd ki a Tulajdonságokat
@@ -352,7 +352,7 @@ Ha még mindig nem működik, zárd be &amp; indítsd el a Livelyt újra/ indít
     <value>Kilépés</value>
   </data>
   <data name="ExportWallpaperZip.Text" xml:space="preserve">
-    <value>Lively .zip exportálása</value>
+    <value>Luma .zip exportálása</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
     <value>Néhány funkciók nem elérhető ebben a verzióban.</value>
@@ -424,7 +424,7 @@ Ha még mindig nem működik, zárd be &amp; indítsd el a Livelyt újra/ indít
     <value>Csatlakozás</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively indítása</value>
+    <value>Luma indítása</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Összes Folyamat</value>
@@ -487,7 +487,7 @@ Ha még mindig nem működik, zárd be &amp; indítsd el a Livelyt újra/ indít
     <value>Megállítás</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Élvezed használni Lively-t? Hadj véleményt :)</value>
+    <value>Élvezed használni Luma-t? Hadj véleményt :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Támogatás</value>
@@ -613,7 +613,7 @@ Ha még mindig nem működik, zárd be &amp; indítsd el a Livelyt újra/ indít
     <value>Állíts be különböző háttérkép lejátszási szabályokat a futó alkalmazásokon alapulva.</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>A Lively a rendszer téma beállításához igazítja magát, hogy megváltoztassa a megjelenést.</value>
+    <value>A Luma a rendszer téma beállításához igazítja magát, hogy megváltoztassa a megjelenést.</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>(Csak az akkumulátor működő rendszereknél) Változtasd meg a lejátszást, ha az AC tápkábel nincs csatlakoztatva.</value>
@@ -713,7 +713,7 @@ Az Edge a Windows 10 beépített WebView-ja (Lehetővé teszi, hogy webes tartal
     <value>Alkalmazások Teljes képernyőben</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Háttérkép</value>
+    <value>Luma Háttérkép</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Alkalmazás Szabályok</value>
@@ -776,7 +776,7 @@ Az Edge a Windows 10 beépített WebView-ja (Lehetővé teszi, hogy webes tartal
     <value>Könyvtár</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Felépítés</value>
+    <value>Luma Felépítés</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Pozíció</value>

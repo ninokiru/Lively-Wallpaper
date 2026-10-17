@@ -59,7 +59,7 @@ namespace Lively.UI.WinUI.Services
         public async Task<IReadOnlyList<string>> PickWallpaperFile(bool multipleFile = false)
         {
             var filters = GetWallpaperFilters(true);
-            filters.Add(("Lively Wallpaper", [".zip"]));
+            filters.Add(("Luma Wallpaper", [".zip"]));
 
             return await PickFileAsync(filters, multipleFile);
         }

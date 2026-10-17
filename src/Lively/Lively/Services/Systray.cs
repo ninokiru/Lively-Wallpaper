@@ -69,7 +69,7 @@ namespace Lively.Services
             notifyIcon.DoubleClick += (s, args) => runner.ShowUI();
             notifyIcon.ContextMenuStrip = new ContextMenuStrip();
             notifyIcon.Icon = appIcon;
-            notifyIcon.Text = "Lively Wallpaper";
+            notifyIcon.Text = "Luma Wallpaper";
             notifyIcon.Visible = userSettings.Settings.SysTrayIcon;
             var toolStripColor = Color.FromArgb(55, 55, 55);
             notifyIcon.ContextMenuStrip = new ContextMenuStrip

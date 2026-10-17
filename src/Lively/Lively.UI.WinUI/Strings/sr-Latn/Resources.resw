@@ -136,22 +136,22 @@
     <value>API dokumentacija i pomoć</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively je naišao na fatalnu grešku.
+    <value>Luma je naišao na fatalnu grešku.
 
-Istraživač datoteka se restartovao dva puta u poslednjih 30 sekundi! Ovo može biti znak konflikta između Lively-a i nekog drugog programa za prilagođavanje radne površine ili Windows-a. Da bi se izbegli dalji problemi, sve pozadine su prekinute.</value>
+Istraživač datoteka se restartovao dva puta u poslednjih 30 sekundi! Ovo može biti znak konflikta između Luma-a i nekog drugog programa za prilagođavanje radne površine ili Windows-a. Da bi se izbegli dalji problemi, sve pozadine su prekinute.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Pronađen je nekompatibilan program, onemogućena je tema trake zadataka</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Zvaničan veb-sajt Lively Pozadina</value>
+    <value>Zvaničan veb-sajt Luma Pozadina</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Većina modernih LCD i LED displeja ne pati od problema pregorevanja ( burn-in efekat) stoga se može koristiti bilo koja pozadina kao čuvar ekrana.
 
 Za OLED, Plazma i CRT displeje koji su podložni burn-in efektu preporučeno je da koriste pozadinu sa redovnim kretanjem i opštom tamnom temom koja bi trebala da ublaži pregorevanje, ovo nije testirano tako da efektivnost se ne može garantovati.
 
-Glavni cilj Lively-a je dodavanje još jednog sloja prilagođavanja vašem računaru, koristite čuvare ekrana kao zaštitu od pregorevanja na sopstveni rizik!</value>
+Glavni cilj Luma-a je dodavanje još jednog sloja prilagođavanja vašem računaru, koristite čuvare ekrana kao zaštitu od pregorevanja na sopstveni rizik!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>Prijavi problem sa softverom</value>
@@ -178,10 +178,10 @@ Glavni cilj Lively-a je dodavanje još jednog sloja prilagođavanja vašem raču
     <value>Otvaraš spoljašnju aplikaciju kao pozadinu. Zlonamerne aplikacije mogu da ubace viruse... i oštete vaš računar. Jedino prihvatajte ako aplikacija dolazi od proverenog izvora.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively je minimiziran u računaru, desnim klikom na lively ikonicu kako bi nastavio.</value>
+    <value>Luma je minimiziran u računaru, desnim klikom na lively ikonicu kako bi nastavio.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Molim vas ponovo pokrenite Lively program kako bi se promenila podešavanja</value>
+    <value>Molim vas ponovo pokrenite Luma program kako bi se promenila podešavanja</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Molim vas da stopirate pre nastavljanja</value>
@@ -202,7 +202,7 @@ Glavni cilj Lively-a je dodavanje još jednog sloja prilagođavanja vašem raču
     <value>Unesi link vebsajta za učitavanje, shadertoy.com linkovi su podržani.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Ovaj program će vam pomoći da započnete Lively</value>
+    <value>Ovaj program će vam pomoći da započnete Luma</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>Vaša Windows N/KN verzija će zahtevati skidanje dodatnih kodeksa kako bi podržala reprodukciju video zapisa u pozadinama</value>
@@ -211,17 +211,17 @@ Glavni cilj Lively-a je dodavanje još jednog sloja prilagođavanja vašem raču
     <value>Pokaži podršku kupovinom kafe za developera</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Spremate se da pređete na beta (programersku) verziju Lively-a.
+    <value>Spremate se da pređete na beta (programersku) verziju Luma-a.
 Ažuriranja će biti česta i mogu sadržati greške!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Vidljivost ikonice sistemske trake. Lively će nastaviti da radi sa skrivenom ikonicom</value>
+    <value>Vidljivost ikonice sistemske trake. Luma će nastaviti da radi sa skrivenom ikonicom</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Ikonica u sistеmskoj traci</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively program će se restartovati radi promene jezika</value>
+    <value>Luma program će se restartovati radi promene jezika</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Jezik</value>
@@ -240,32 +240,32 @@ Uputstva za podelu evidencije:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively ne može da radi normalno sa Windows režimom Visokog kontrasta!
+    <value>Luma ne može da radi normalno sa Windows režimom Visokog kontrasta!
 Isključi Visok Kontrast režim i pokušaj ponovo</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
-    <value>Medijski plej-bek neuspešan :(Pokušaj da promeniš video-plejer u Lively podešavanjima.Da bi bolje razumeo problem i mogao da rešiš grešku podeli evidenciju(log) fajl i pošalji programeru.Instrukcije za deljenje evidencije:https://github.com/rocksdanister/lively/wiki</value>
+    <value>Medijski plej-bek neuspešan :(Pokušaj da promeniš video-plejer u Luma podešavanjima.Da bi bolje razumeo problem i mogao da rešiš grešku podeli evidenciju(log) fajl i pošalji programeru.Instrukcije za deljenje evidencije:https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Nije Lively pozadinski fajl</value>
+    <value>Nije Luma pozadinski fajl</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively nije ugašen normalno, započinje se pokretanje u sigurnom režimu. 
+    <value>Luma nije ugašen normalno, započinje se pokretanje u sigurnom režimu. 
 Da li želiš da povratiš prethodnu pozadinu?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Izgleda da neka podešavanja moraju da se promene da bi  Lively radio:
+    <value>Izgleda da neka podešavanja moraju da se promene da bi  Luma radio:
 1. Pritisni Windows dugme + R da bi otvorio Run,
 2. Ukucaj SystemPropertiesPerfomance.exe u Run, stisni "OK" da otvoris Podešavanja Performansa.
 3. Dozvoli/Proveri "Animate controls and elements inside windows" (Ako je već štiklirano, pritisni opet da onemogućiš i opet štikliraj) i pristisni "Apply".
 4. Klikni "Apply" i onda pritisni "OK" da zatvoriš prozor.
 
 Ako imas Windows 7 samo štikliraj - "Adjust for best appearance &amp; onda "Apply".
-Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
+Ako još ne radi, ugasi i upali Luma opet/restartuj windows.
 (Ne radi na nekim windows 10 sistemima)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively mora da radi u pozadini za reprodukciju pozadine</value>
+    <value>Luma mora da radi u pozadini za reprodukciju pozadine</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Startuj sa Windowsom</value>
@@ -349,7 +349,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Sačuvaj u datoteke</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Neke funkcije nisu dostupne u ovoj verziji Lively programa</value>
+    <value>Neke funkcije nisu dostupne u ovoj verziji Luma programa</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Datoteka nije pronađena</value>
@@ -364,7 +364,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Kreni</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Pomozi oko prevoda za Lively</value>
+    <value>Pomozi oko prevoda za Luma</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>hours</value>
@@ -418,7 +418,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Na mreži</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Otvori Lively</value>
+    <value>Otvori Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Svi procesi</value>
@@ -481,7 +481,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Zaustavi</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Da li uživate u korišćenju Lively? Ostavite komentar :)</value>
+    <value>Da li uživate u korišćenju Luma? Ostavite komentar :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Podrška</value>
@@ -607,7 +607,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Zaustavi pozadinu kada je neka od navedenih aplikacija pokrenuta</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively se prilagođava temi sistema, da promeniš izgled idi na</value>
+    <value>Luma se prilagođava temi sistema, da promeniš izgled idi na</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>Promeni reprodukciju kada je uređaj na bateriji</value>
@@ -691,7 +691,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>CEF(Chronium Embedded Framework) je lagan chromium sistem. Edge je ugradjen pretraživač za Windows 10.</value>
   </data>
   <data name="About.Label" xml:space="preserve">
-    <value>O Lively-ju</value>
+    <value>O Luma-ju</value>
   </data>
   <data name="AddWallpaper.Label" xml:space="preserve">
     <value>Dodaj pozadinu</value>
@@ -703,7 +703,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Aplikacije preko celog ekrana</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively pozadina</value>
+    <value>Luma pozadina</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>Pravila aplikacije</value>
@@ -766,7 +766,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Biblioteka</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively Instalacija</value>
+    <value>Luma Instalacija</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Lokacija</value>
@@ -950,7 +950,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Uskoro</value>
   </data>
   <data name="AboutMenu.Text" xml:space="preserve">
-    <value>O Lively-ju</value>
+    <value>O Luma-ju</value>
   </data>
   <data name="SourceWebsite.Text" xml:space="preserve">
     <value>Veb-sajt</value>

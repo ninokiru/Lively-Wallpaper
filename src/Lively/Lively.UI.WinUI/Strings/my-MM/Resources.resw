@@ -136,22 +136,22 @@
     <value>API စာရွက်စာတမ်းနှင့် အကူအညီ</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively သည် ဆိုးရွားသော အမှားတစ်ခုနှင့် ကြုံတွေ့ခဲ့ရသည်။
+    <value>Luma သည် ဆိုးရွားသော အမှားတစ်ခုနှင့် ကြုံတွေ့ခဲ့ရသည်။
 
-Windows Explorer သည် ပြီးခဲ့သည့် 30 စက္ကန့်အတွင်း နှစ်ကြိမ် ပြန်လည်စတင်ခဲ့သည်။ ၎င်းသည် Lively နှင့် အခြားသော desktop စိတ်ကြိုက်ဆော့ဖ်ဝဲ သို့မဟုတ် Windows အကြား ပဋိပက္ခဖြစ်နိုင်သည်။ နောက်ထပ်ပြဿနာများကိုရှောင်ရှားရန်၊ နောက်ခံပုံများအားလုံးကိုရပ်စဲထားသည်။</value>
+Windows Explorer သည် ပြီးခဲ့သည့် 30 စက္ကန့်အတွင်း နှစ်ကြိမ် ပြန်လည်စတင်ခဲ့သည်။ ၎င်းသည် Luma နှင့် အခြားသော desktop စိတ်ကြိုက်ဆော့ဖ်ဝဲ သို့မဟုတ် Windows အကြား ပဋိပက္ခဖြစ်နိုင်သည်။ နောက်ထပ်ပြဿနာများကိုရှောင်ရှားရန်၊ နောက်ခံပုံများအားလုံးကိုရပ်စဲထားသည်။</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>သဟဇာတမဖြစ်သော ပရိုဂရမ်ကို တွေ့ရှိသည်၊ အလုပ်ဘား အပြင်အဆင်ကို ပိတ်ထားသည်။</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively Wallpaper ၏တရားဝင်ဝဘ်စာမျက်နှာ</value>
+    <value>Luma Wallpaper ၏တရားဝင်ဝဘ်စာမျက်နှာ</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>ခေတ်မီ LCD နှင့် LED ဖန်သားပြင်အများစုသည် မီးလောင်မှုပြဿနာကို မခံစားရသောကြောင့် မည်သည့်နောက်ခံပုံများကို စခရင်စခန်ဆာဗာအဖြစ် အသုံးပြုနိုင်သည်။
 
 OLED၊ Plasma သို့မဟုတ် CRT ဖန်သားပြင်များအတွက် မီးလောင်မှုကို လျော့ပါးသက်သာစေရန် ပုံမှန်ရွေ့လျားမှုနှင့် အလုံးစုံမှောင်မိုက်သော အပြင်အဆင်ကို အသုံးပြုရန် အကြံပြုထားသော်လည်း ဤအင်္ဂါရပ်သည် စမ်းသပ်မရသေးဘဲ ၎င်း၏ထိရောက်မှုကို အာမမခံနိုင်ပါ။
 
-Lively's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ သင့်ကွန်ပြူတာတွင် စိတ်ကြိုက်ပြင်ဆင်ခြင်းအလွှာကို ပေါင်းထည့်ရန်ဖြစ်ပြီး၊ သင့်ကိုယ်ပိုင်အန္တရာယ်ဖြင့် မီးလောင်ခြင်းအတွက် ကာကွယ်မှုအဖြစ် စခရင်ခရင်ကို အသုံးပြုပါ။</value>
+Luma's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ သင့်ကွန်ပြူတာတွင် စိတ်ကြိုက်ပြင်ဆင်ခြင်းအလွှာကို ပေါင်းထည့်ရန်ဖြစ်ပြီး၊ သင့်ကိုယ်ပိုင်အန္တရာယ်ဖြင့် မီးလောင်ခြင်းအတွက် ကာကွယ်မှုအဖြစ် စခရင်ခရင်ကို အသုံးပြုပါ။</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>ဆော့ဖ်ဝဲတွင် ပြဿနာတစ်ခုကို သတင်းပို့ပါ။</value>
@@ -183,7 +183,7 @@ Lively's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ
     <value>တက်ကြွမှုကို systemtray သို့ လျှော့ချထားပြီး ရှေ့ဆက်ရန် သက်ဝင်လှုပ်ရှားနေသော အိုင်ကွန်ကို ညာကလစ်နှိပ်ပါ။</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>ဆက်တင်များအကျိုးသက်ရောက်စေရန်အတွက် Lively ကို ပြန်လည်စတင်ပါ။</value>
+    <value>ဆက်တင်များအကျိုးသက်ရောက်စေရန်အတွက် Luma ကို ပြန်လည်စတင်ပါ။</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>ဆက်မလုပ်မီ ရပ်တန့်ပါ။</value>
@@ -204,7 +204,7 @@ Lively's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>ဤ wizard သည် Lively ကိုစဖွင့်သတ်မှတ်ခြင်းတွင်သင့်အားစတင်စေလိမ့်မည်။</value>
+    <value>ဤ wizard သည် Luma ကိုစဖွင့်သတ်မှတ်ခြင်းတွင်သင့်အားစတင်စေလိမ့်မည်။</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>သင်၏ Windows N/KN ဗားရှင်းသည် နောက်ခံပုံများတွင် ဗီဒီယိုပြန်ဖွင့်ခြင်းကို ပံ့ပိုးရန် နောက်ထပ်ကုဒ်ဒစ်များကို ဒေါင်းလုဒ်လုပ်ရန် လိုအပ်ပါသည်။</value>
@@ -213,7 +213,7 @@ Lively's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ
     <value>Developer ကော်ဖီကို ဝယ်ယူခြင်းဖြင့် ပံ့ပိုးမှုကို ပြသပါ။</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>သင်သည် Lively ၏ beta (ဆော့ဖ်ဝဲအင်ဂျင်နီယာ) သို့ ပြောင်းလဲပါတော့မည်။
+    <value>သင်သည် Luma ၏ beta (ဆော့ဖ်ဝဲအင်ဂျင်နီယာ) သို့ ပြောင်းလဲပါတော့မည်။
 အပ်ဒိတ်များသည် မကြာခဏဖြစ်မည်ဖြစ်ပြီး ချွတ်ယွင်းချက်များ ပါဝင်နိုင်သည်။</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -241,7 +241,7 @@ Lively's screensavers ၏ အဓိကရည်ရွယ်ချက်မှာ
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Windows High Contrast မုဒ်ကို ဖွင့်ထားခြင်းဖြင့် Lively ကောင်းစွာ အလုပ်မလုပ်နိုင်ပါ။
+    <value>Windows High Contrast မုဒ်ကို ဖွင့်ထားခြင်းဖြင့် Luma ကောင်းစွာ အလုပ်မလုပ်နိုင်ပါ။
 High Contrast မုဒ်ကိုပိတ်ပြီး ထပ်စမ်းကြည့်ပါ။</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
@@ -253,25 +253,25 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Lively နောက်ခံပုံ ဖိုင်မဟုတ်ပါ။</value>
+    <value>Luma နောက်ခံပုံ ဖိုင်မဟုတ်ပါ။</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively သည် လုံခြုံသောမုဒ်တွင် စတင်၍ ကောင်းစွာပိတ်မထားပါ။
+    <value>Luma သည် လုံခြုံသောမုဒ်တွင် စတင်၍ ကောင်းစွာပိတ်မထားပါ။
 ယခင်က အသုံးပြုနေသည့် နောက်ခံပုံများကို ပြန်လည်ရယူလိုပါသလား။</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Lively အလုပ်လုပ်ရန် အချို့သော ဆက်တင်များကို သတ်မှတ်ရန် လိုအပ်ပုံပေါ်သည်-
+    <value>Luma အလုပ်လုပ်ရန် အချို့သော ဆက်တင်များကို သတ်မှတ်ရန် လိုအပ်ပုံပေါ်သည်-
 1. Run ကိုဖွင့်ရန် Win + R ခလုတ်များကို နှိပ်ပါ၊
 2. Run ထဲသို့ SystemPropertiesPerformance.exe ဟုရိုက်ထည့်ကာ Performance Options ကိုဖွင့်ရန် "OK" ကိုနှိပ်ပါ။
 3. "ဝင်းဒိုးများအတွင်း သက်ဝင်လှုပ်ရှားနေသော ထိန်းချုပ်မှုများနှင့် ဒြပ်စင်များ" ကို ဖွင့်/စစ်ဆေးပါ (စစ်ဆေးပြီးပါက၊ အမှန်ခြစ်ဖြုတ်ပြီး စစ်ဆေးပါ) &amp; အသုံးပြုပါ။
 4. "Apply" ကိုနှိပ်ပြီး window ကိုပိတ်ရန် "OK" ကိုနှိပ်ပါ။
 
 အကယ်၍ Windows 7 ကို သတ်မှတ်လိုက်လျှင် - အကောင်းဆုံးအသွင်အပြင်အတွက် ချိန်ညှိပါ &amp; လျှောက်ထားပါ။
-အလုပ်မလုပ်သေးပါက ပိတ်ပြီး Lively ပြန်စပါ/ windows ကို ပြန်လည်စတင်ပါ။
+အလုပ်မလုပ်သေးပါက ပိတ်ပြီး Luma ပြန်စပါ/ windows ကို ပြန်လည်စတင်ပါ။
 (အချို့အတွင်းပိုင်း windows 10 တည်ဆောက်မှုများတွင် အလုပ်မလုပ်ပါ။)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>နောက်ခံပုံဖွင့်ခြင်းအတွက် Lively သည် နောက်ခံတွင်လည်ပတ်ရန်လိုအပ်သည်။</value>
+    <value>နောက်ခံပုံဖွင့်ခြင်းအတွက် Luma သည် နောက်ခံတွင်လည်ပတ်ရန်လိုအပ်သည်။</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Windows ဖြင့် စတင်ပါ။</value>
@@ -355,7 +355,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ဖိုင်တွင်သိမ်းဆည်းပါ</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>အချို့သောဝန်ဆောင်မှုများသည် Lively ဗားရှင်းတွင် မရရှိနိုင်ပါ</value>
+    <value>အချို့သောဝန်ဆောင်မှုများသည် Luma ဗားရှင်းတွင် မရရှိနိုင်ပါ</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>ဖိုင်မတွေ့ပါ</value>
@@ -424,7 +424,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>အွန်လိုင်း</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Lively ကိုဖွင့်ပါ</value>
+    <value>Luma ကိုဖွင့်ပါ</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>လုပ်ငန်းစဉ်အားလုံး</value>
@@ -487,7 +487,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ရပ်</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Lively ကို သုံးရတာ နှစ်သက်ပါသလား။ သုံးသပ်ချက်ထားခဲ့ပါ :)</value>
+    <value>Luma ကို သုံးရတာ နှစ်သက်ပါသလား။ သုံးသပ်ချက်ထားခဲ့ပါ :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>အထောက်အပံ့</value>
@@ -613,7 +613,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ဤအပလီကေးရှင်းများကိုအသုံးပြုသည့်အခါ နောက်ခံပုံများကို ခေတ္တရပ်ပါ</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively အသွင်အပြင်ကိုပြောင်းရန် စနစ်အပြင်အဆင်ဆက်တင်များဆီသို့ လိုက်လျောညီထွေဖြစ်အောင်လုပ်ပါ။</value>
+    <value>Luma အသွင်အပြင်ကိုပြောင်းရန် စနစ်အပြင်အဆင်ဆက်တင်များဆီသို့ လိုက်လျောညီထွေဖြစ်အောင်လုပ်ပါ။</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>AC ပါဝါ ချိတ်ဆက်မှု ပြတ်တောက်သောအခါတွင် ပြန်ဖွင့်ခြင်းကို ပြောင်းလဲပါ</value>
@@ -772,7 +772,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>မီဒီယာတိုက်</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively သတ်မှတ်မှု</value>
+    <value>Luma သတ်မှတ်မှု</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>တည်နေရာ</value>

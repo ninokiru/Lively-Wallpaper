@@ -136,22 +136,22 @@
     <value>API 文档和帮助</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively 出现了一个严重错误。
+    <value>Luma 出现了一个严重错误。
 
-在过去 30 秒内，Windows 资源管理器重新启动了两次！这可能是 Lively 与 Windows 操作系统或者其他桌面个性化软件之间出现了冲突。为避免发生更多问题，所有壁纸都已停止运行。</value>
+在过去 30 秒内，Windows 资源管理器重新启动了两次！这可能是 Luma 与 Windows 操作系统或者其他桌面个性化软件之间出现了冲突。为避免发生更多问题，所有壁纸都已停止运行。</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>发现不兼容的程序，已停用任务栏个性化主题。</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Lively Wallpaper 官网</value>
+    <value>Luma Wallpaper 官网</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>大多数现代 LCD 和 LED 显示器都不会出现烧屏问题，因此任何壁纸都可以被用作屏幕保护程序。
 
 对于容易烧屏的 OLED、等离子或 CRT 显示器，建议使用有规律运动的壁纸和偏深色的主题，以缓解烧屏现象，但此功能未经测试，无法保证其有效性。
 
-Lively 屏保的主要目的是为您的电脑增加另一层定制功能，自行使用屏保作为防烧屏保护的风险由您承担！</value>
+Luma 屏保的主要目的是为您的电脑增加另一层定制功能，自行使用屏保作为防烧屏保护的风险由您承担！</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
     <value>报告软件问题</value>
@@ -180,10 +180,10 @@ Lively 屏保的主要目的是为您的电脑增加另一层定制功能，自�
 仅当您信任此应用程序时，方可继续。</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively 已被最小化到系统托盘，右键单击 Lively 的图标以获取更多选项。</value>
+    <value>Luma 已被最小化到系统托盘，右键单击 Luma 的图标以获取更多选项。</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>请重新启动 Lively 以使设置生效。</value>
+    <value>请重新启动 Luma 以使设置生效。</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>请先停止，然后再继续。</value>
@@ -204,7 +204,7 @@ Lively 屏保的主要目的是为您的电脑增加另一层定制功能，自�
     <value>输入要加载的网站链接，支持 shadertoy.com 着色器链接</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>该向导将会帮助您设置 Lively 。</value>
+    <value>该向导将会帮助您设置 Luma 。</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
     <value>您的Windows N / KN版本将需要下载额外的编解码器以支持壁纸中的视频播放。</value>
@@ -213,17 +213,17 @@ Lively 屏保的主要目的是为您的电脑增加另一层定制功能，自�
     <value>给开发者买杯咖啡支持一下</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>您即将切换到 Lively 的测试版(开发者版本)。
+    <value>您即将切换到 Luma 的测试版(开发者版本)。
 更新会很频繁，可能会有BUG!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>开启或关闭 Lively 图标系统托盘显示，关闭后 Lively 将在隐藏图标的情况下继续运行</value>
+    <value>开启或关闭 Luma 图标系统托盘显示，关闭后 Luma 将在隐藏图标的情况下继续运行</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>系统托盘图标</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>重启 Lively 以应用新的语言。</value>
+    <value>重启 Luma 以应用新的语言。</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>语言设置</value>
@@ -242,37 +242,37 @@ https://github.com/ninokiru/Lively-Wallpaper/releases</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively 无法在 Windows 高对比度模式下正常工作！
+    <value>Luma 无法在 Windows 高对比度模式下正常工作！
 请禁用高对比度模式，然后重试。</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>媒体播放失败 :(
-请尝试在 Lively 设置中改变视频播放器。
+请尝试在 Luma 设置中改变视频播放器。
 
 为了更好地了解这个错误并修复问题，请将日志文件分享给开发者。
 分享日志文件的说明：
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>不是 Lively 壁纸文件</value>
+    <value>不是 Luma 壁纸文件</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively未正常关闭，已在安全模式下启动。
+    <value>Luma未正常关闭，已在安全模式下启动。
 您希望恢复之前运行的所有壁纸吗？</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>需要进行一些设置才能正常使用 Lively：   
+    <value>需要进行一些设置才能正常使用 Luma：   
 1. 按 Win+R 键，打开“运行”。 
 2. 在“运行”中输入 SystemPropertiesPerformance.exe，点击 “确定”，打开性能选项。
 3. 启用 / 勾选 “窗口内的动画控件和元素”（如果已经勾选，则取消勾选并重新勾选），并应用。
 4. 点击“应用”，然后点击“确定”，关闭该窗口。
 
 Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
-如果仍然无法使用，尝试重新启动 Lively 或系统。
+如果仍然无法使用，尝试重新启动 Luma 或系统。
 （在某些 Windows 10 预览版本中可能无法奏效）</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively 需要在后台运行以播放壁纸。</value>
+    <value>Luma 需要在后台运行以播放壁纸。</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>开机自启动</value>
@@ -371,7 +371,7 @@ Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
     <value>GO</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>协助翻译 Lively</value>
+    <value>协助翻译 Luma</value>
   </data>
   <data name="TextHours" xml:space="preserve">
     <value>小时</value>
@@ -425,7 +425,7 @@ Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
     <value>在线网页</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>打开 Lively</value>
+    <value>打开 Luma</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>所有进程</value>
@@ -488,7 +488,7 @@ Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
     <value>结束</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>您喜欢使用 Lively 吗？留言告诉我们:)</value>
+    <value>您喜欢使用 Luma 吗？留言告诉我们:)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>支持</value>
@@ -614,7 +614,7 @@ Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
     <value>根据运行的应用程序设置不同的壁纸播放规则。</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
-    <value>Lively 自适应系统主题设置，要更改外观请前往</value>
+    <value>Luma 自适应系统主题设置，要更改外观请前往</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
     <value>非交流电源供电时切换播放方式</value>
@@ -714,7 +714,7 @@ Grid 网格：利用网格算法更精准地确定暂停时机</value>
     <value>其他应用程序全屏</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
-    <value>Lively Wallpaper</value>
+    <value>Luma Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
     <value>排除的应用程序</value>
@@ -777,7 +777,7 @@ Grid 网格：利用网格算法更精准地确定暂停时机</value>
     <value>图库</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Lively 配置</value>
+    <value>Luma 配置</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>地区</value>
