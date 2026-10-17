@@ -179,17 +179,16 @@ namespace Lively.Common.Helpers.Files
                 {
                     await Task.Run(() => Directory.Delete(folderPath, true));
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    //Logger.Error("Folder Delete Failure {0}.\nRetrying..", ex.Message);
+                    //Folder delete failed, the retry below is the only recovery here.
                     await Task.Delay(retryDelay);
                     try
                     {
                         await Task.Run(() => Directory.Delete(folderPath, true));
                     }
-                    catch (Exception ie)
+                    catch (Exception)
                     {
-                        //Logger.Error("(Retry)Folder Delete Failure: {0}", ie.Message);
                         status = false;
                     }
                 }

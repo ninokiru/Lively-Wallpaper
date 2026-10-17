@@ -75,7 +75,11 @@ namespace Lively.Common.Helpers
             foreach (var rule in Load())
             {
                 if (string.Equals(rule?.DeviceId, deviceId, StringComparison.OrdinalIgnoreCase))
-                    return Math.Clamp(rule.FpsLimit, 0, 240);
+                {
+                    // netstandard2.0 has no Math.Clamp, and the value comes from a user file.
+                    var limit = rule.FpsLimit;
+                    return limit < 0 ? 0 : (limit > 240 ? 240 : limit);
+                }
             }
 
             return 0;

@@ -7,7 +7,7 @@ namespace Lively.Common.Helpers
 {
     public static class LivelyInfoUtil
     {
-        public static LivelyInfoModel? GetLocalized(string locPath, string languageCode = "")
+        public static LivelyInfoModel GetLocalized(string locPath, string languageCode = "")
         {
             if (!File.Exists(locPath))
                 return null;
