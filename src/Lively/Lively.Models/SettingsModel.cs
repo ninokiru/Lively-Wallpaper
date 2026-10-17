@@ -111,6 +111,12 @@ namespace Lively.Models
         public bool RememberSelectedScreen { get; set; }
         public bool IsUpdated { get; set; }
         public bool IsUpdatedNotify { get; set; }
+        /// <summary>
+        /// Set once by the core: Luma ships the light interface as its default, installs made
+        /// before that still had the old dark default stored and are moved over one time only,
+        /// so picking dark afterwards is respected.
+        /// </summary>
+        public bool IsLightThemeDefaultApplied { get; set; }
         public string VisualizerAudioDeviceId { get; set; }
         /// <summary>
         /// Notify user if plugin is missing.
@@ -188,7 +194,7 @@ namespace Lively.Models
             IsBrowserDiskCacheEnabled = false;
             DebugMenu = false;
             IsBetaOptIn = false;
-            ApplicationTheme = AppTheme.Dark;
+            ApplicationTheme = AppTheme.Light;
             RemoteDesktopPause = AppRules.pause;
             PowerSaveModePause = AppRules.ignore;
             LockScreenAutoWallpaper = false;
@@ -204,6 +210,7 @@ namespace Lively.Models
             RememberSelectedScreen = true;
             IsUpdated = false;
             IsUpdatedNotify = false;
+            IsLightThemeDefaultApplied = false;
             IsScreensaverPluginNotify = true;
             ApplicationThemeBackgroundPath = null;
             ApplicationThemeBackground = AppThemeBackground.default_mica;

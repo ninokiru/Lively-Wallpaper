@@ -53,6 +53,21 @@ namespace Lively.Services
 
             // Reject unsupported language.
             Settings.Language = Languages.SupportedLanguages.FirstOrDefault(x => x.Code == Settings.Language)?.Code ?? string.Empty;
+
+            // Luma opens with the light interface. Fresh installs get it from the model default,
+            // but an install made before the change still has the old dark value in Settings.json,
+            // so move it over once. The flag is not part of the wire settings message, so the UI
+            // client cannot write it back and clear it.
+            if (!Settings.IsLightThemeDefaultApplied)
+            {
+                Settings.IsLightThemeDefaultApplied = true;
+                if (Settings.ApplicationTheme == AppTheme.Dark)
+                {
+                    Settings.ApplicationTheme = AppTheme.Light;
+                    Logger.Info("Interface default changed to light.");
+                }
+                Save<SettingsModel>();
+            }
         }
 
         public SettingsModel Settings { get; private set; }

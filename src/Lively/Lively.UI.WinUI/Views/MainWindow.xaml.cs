@@ -166,38 +166,59 @@ namespace Lively.UI.WinUI
                             break;
                         }
                         var args = msg.Split(' ');
-                        DispatcherQueue.TryEnqueue(() =>
-                        {
-                            if (args[0].Equals("WM", StringComparison.OrdinalIgnoreCase))
-                            {
-                                if (args[1].Equals("SHOW", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    contentFrame.Visibility = Visibility.Visible; //undo drop resource usage.
-                                    NativeMethods.ShowWindow(this.GetWindowHandleEx(), (uint)NativeMethods.SHOWWINDOW.SW_SHOW);
-                                }
-                            }
-                            else if (args[0].Equals("LM", StringComparison.OrdinalIgnoreCase))
-                            {
-                                if (args[1].Equals("SHOWBUSY", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    libraryVm.IsBusy = true;
-                                }
-                                else if (args[1].Equals("HIDEBUSY", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    libraryVm.IsBusy = false;
-                                }
-                                else if (args[1].Equals("SHOWCUSTOMISEPANEL", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    _ = dialogService.ShowControlPanelDialogAsync();
-                                }
-                                else if (args[1].Equals("SHOWAPPUPDATEPAGE", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    navigator.NavigateTo(ContentPageType.appupdate);
-                                }
-                            }
-                        });
+                        DispatcherQueue.TryEnqueue(() => HandleStdioCommand(msg, args));
                     }
                 });
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+        }
+
+        /// <summary>
+        /// Commands are read on a worker thread but run on the UI thread. An exception raised
+        /// by a dispatcher callback does not reach the reader loop, it surfaces unhandled on the
+        /// UI thread and ends the whole process with a native fast-fail, so the dispatch and its
+        /// argument count are guarded here.
+        /// </summary>
+        private void HandleStdioCommand(string message, string[] args)
+        {
+            try
+            {
+                if (args.Length < 2)
+                {
+                    Logger.Warn($"Ignoring malformed stdio command: {message}");
+                    return;
+                }
+
+                if (args[0].Equals("WM", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (args[1].Equals("SHOW", StringComparison.OrdinalIgnoreCase))
+                    {
+                        contentFrame.Visibility = Visibility.Visible; //undo drop resource usage.
+                        NativeMethods.ShowWindow(this.GetWindowHandleEx(), (uint)NativeMethods.SHOWWINDOW.SW_SHOW);
+                    }
+                }
+                else if (args[0].Equals("LM", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (args[1].Equals("SHOWBUSY", StringComparison.OrdinalIgnoreCase))
+                    {
+                        libraryVm.IsBusy = true;
+                    }
+                    else if (args[1].Equals("HIDEBUSY", StringComparison.OrdinalIgnoreCase))
+                    {
+                        libraryVm.IsBusy = false;
+                    }
+                    else if (args[1].Equals("SHOWCUSTOMISEPANEL", StringComparison.OrdinalIgnoreCase))
+                    {
+                        _ = dialogService.ShowControlPanelDialogAsync();
+                    }
+                    else if (args[1].Equals("SHOWAPPUPDATEPAGE", StringComparison.OrdinalIgnoreCase))
+                    {
+                        navigator.NavigateTo(ContentPageType.appupdate);
+                    }
+                }
             }
             catch (Exception ex)
             {

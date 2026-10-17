@@ -11,6 +11,8 @@ namespace Lively.UI.WinUI.Services
 {
     public class MainNavigator : IMainNavigator
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
         /// <inheritdoc/>
         public event EventHandler<ContentPageType>? ContentPageChanged;
 
@@ -52,13 +54,25 @@ namespace Lively.UI.WinUI.Services
                 _ => throw new NotImplementedException(),
             };
 
-            if (Frame is Frame f)
-            {
-                f.Navigate(pageType, navArgs, transition);
+            if (Frame is not Frame f)
+                return;
 
-                CurrentPage = contentPage;
-                ContentPageChanged?.Invoke(this, contentPage);
+            // A page that throws while being built (bad resource, view model that cannot be
+            // resolved) used to take the whole UI client down with a native fast-fail, leaving
+            // an empty content area and no log entry. Stay on the current page and record it.
+            try
+            {
+                if (!f.Navigate(pageType, navArgs, transition))
+                    throw new InvalidOperationException($"Navigation to {pageType.Name} was refused by the frame.");
             }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+                return;
+            }
+
+            CurrentPage = contentPage;
+            ContentPageChanged?.Invoke(this, contentPage);
         }
     }
 }

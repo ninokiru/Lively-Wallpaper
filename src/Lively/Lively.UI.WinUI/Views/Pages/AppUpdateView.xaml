@@ -8,7 +8,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:Lively.UI.WinUI.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    RequestedTheme="Light"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -18,9 +17,15 @@
             FalseValue="Visible"
             TrueValue="Collapsed" />
         <converters:BoolNegationConverter x:Key="NegateBool" />
+
+        <!--  Built here instead of looked up: only the Color resources (SystemAccentColor)
+              are guaranteed in WinUI, the *Brush variants of the system fill colours are not,
+              and a missing key silently renders an invisible badge.  -->
+        <SolidColorBrush x:Key="UpdateAccentBrush" Color="{ThemeResource SystemAccentColor}" />
+        <SolidColorBrush x:Key="UpdateSuccessBrush" Color="#FF0F7B0F" />
+        <SolidColorBrush x:Key="UpdateCriticalBrush" Color="#FFC42B1C" />
     </Page.Resources>
 
-    <!--  Light surface: the update page keeps the same white look regardless of the app theme.  -->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel
@@ -55,7 +60,7 @@
                             <ProgressRing
                                 Width="62"
                                 Height="62"
-                                Foreground="{ThemeResource SystemAccentColorPrimaryBrush}"
+                                Foreground="{StaticResource UpdateAccentBrush}"
                                 IsActive="{Binding IsBusy, Mode=OneWay}"
                                 Visibility="{Binding IsBusy, Mode=OneWay, Converter={StaticResource VisibleWhenTrue}}">
                                 <animations:Implicit.ShowAnimations>
@@ -71,7 +76,7 @@
                                 Height="26"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Bottom"
-                                Background="{ThemeResource SystemFillColorSuccessBrush}"
+                                Background="{StaticResource UpdateSuccessBrush}"
                                 BorderBrush="{ThemeResource CardBackgroundFillColorDefaultBrush}"
                                 BorderThickness="2"
                                 CornerRadius="13"
@@ -93,7 +98,7 @@
                                 Height="26"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Bottom"
-                                Background="{ThemeResource SystemFillColorCriticalBrush}"
+                                Background="{StaticResource UpdateCriticalBrush}"
                                 BorderBrush="{ThemeResource CardBackgroundFillColorDefaultBrush}"
                                 BorderThickness="2"
                                 CornerRadius="13"
