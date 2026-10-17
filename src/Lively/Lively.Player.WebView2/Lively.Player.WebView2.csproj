@@ -14,7 +14,9 @@
     <Platforms>AnyCPU;x64</Platforms>
     <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <Version>0.0.1</Version>
+    <!-- Same stamp as the core: CI passes -p:LivelyVersion=<tag>, local builds stay 0.0.1. -->
+    <LivelyVersion Condition="'$(LivelyVersion)' == ''">0.0.1</LivelyVersion>
+    <Version>$(LivelyVersion)</Version>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 

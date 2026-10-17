@@ -197,6 +197,47 @@
                     </InfoBar>
                 </StackPanel>
 
+                <!--  Frame rate  -->
+                <StackPanel>
+                    <TextBlock
+                        x:Uid="DisplayFrameRateGroup"
+                        Margin="0,0,0,10"
+                        FontWeight="SemiBold" />
+                    <controls:SettingsCard x:Uid="DisplayFrameRate" ContentAlignment="Left">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE916;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ItemsControl MinWidth="420" ItemsSource="{Binding DisplayFrameLimits}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,3" ColumnSpacing="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock
+                                            Grid.Column="0"
+                                            VerticalAlignment="Center"
+                                            Text="{Binding DisplayName}"
+                                            TextTrimming="CharacterEllipsis" />
+                                        <ComboBox
+                                            Grid.Column="1"
+                                            MinWidth="130"
+                                            SelectedIndex="{Binding SelectedFpsIndex, Mode=TwoWay}">
+                                            <ComboBoxItem x:Uid="DisplayFrameRateUnlimited" />
+                                            <ComboBoxItem>120</ComboBoxItem>
+                                            <ComboBoxItem>60</ComboBoxItem>
+                                            <ComboBoxItem>30</ComboBoxItem>
+                                            <ComboBoxItem>24</ComboBoxItem>
+                                            <ComboBoxItem>15</ComboBoxItem>
+                                        </ComboBox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </controls:SettingsCard>
+                </StackPanel>
+
                 <!--  Application  -->
                 <StackPanel>
                     <TextBlock

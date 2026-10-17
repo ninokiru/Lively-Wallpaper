@@ -244,6 +244,13 @@
       "brightness": { "text": "Độ sáng" },
       "contrast": { "text": "Độ tương phản" },
       "gamma": { "text": "Gamma" },
+      "temperature": { "text": "Nhiệt độ màu", "help": "Làm hình nền ấm hơn hoặc lạnh hơn" },
+      "blur": { "text": "Làm mờ" },
+      "vignette": { "text": "Tối góc ảnh", "help": "Làm mờ tối các rìa của hình nền" },
+      "chromatic": { "text": "Tách màu", "help": "Tách kênh đỏ và xanh lệch nhau" },
+      "ripple": { "text": "Gợn nước", "help": "Bề mặt gợn sóng, tốn thêm GPU" },
+      "parallax": { "text": "Theo chuột", "help": "Lớp hình nền trượt theo con trỏ" },
+      "audio": { "text": "Theo âm thanh", "help": "Nhịp theo âm thanh đang phát" },
       "speed": { "text": "Tốc độ" },
       "scaler": {
         "text": "Kiểu hiển thị",

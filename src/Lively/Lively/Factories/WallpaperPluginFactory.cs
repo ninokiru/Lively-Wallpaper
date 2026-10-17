@@ -51,8 +51,15 @@ namespace Lively.Factories
                 case WallpaperType.gif:
                     return CreateWebView2Wallpaper(model, display, arrangement, isWindowed);
                 case WallpaperType.picture:
-                    // Static images use the shell wallpaper api: no extra process, no gpu cost.
-                    return new PictureWinApi(model.FilePath, model, display, arrangement, userSettings.Settings.WallpaperScaling);
+                    {
+                        // A plain image is painted by the shell: no process, no gpu cost.
+                        // Anything that has to move, filter or react needs the host page instead.
+                        var propertyCopyPath = lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings);
+                        if (MediaPropertyUtil.RequiresPlayer(propertyCopyPath ?? model.LivelyPropertyPath))
+                            return CreateWebView2Wallpaper(model, display, arrangement, isWindowed, propertyCopyPath);
+
+                        return new PictureWinApi(model.FilePath, model, display, arrangement, userSettings.Settings.WallpaperScaling);
+                    }
                 case WallpaperType.app:
                 case WallpaperType.bizhawk:
                 case WallpaperType.unity:
@@ -74,7 +81,8 @@ namespace Lively.Factories
         private IWallpaper CreateWebView2Wallpaper(LibraryModel model,
             DisplayMonitor display,
             WallpaperArrangement arrangement,
-            bool isWindowed)
+            bool isWindowed,
+            string propertyCopyPath = null)
         {
             var settings = userSettings.Settings;
             var scaler = model.LivelyInfo.Type switch
@@ -87,14 +95,16 @@ namespace Lively.Factories
             return new WebView2Wallpaper(model.FilePath,
                 model,
                 display,
-                lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
+                propertyCopyPath ?? lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
                 GetWebView2UserDataDir(arrangement, display, isWindowed),
                 settings.ApplicationTheme,
                 settings.AudioVolumeGlobal,
                 settings.WebDebugPort,
                 GetWebView2Scale(display, isWindowed),
                 settings.VisualizerAudioDeviceId,
-                scaler);
+                scaler,
+                // Per screen budget: 0 leaves the wallpaper at the monitor refresh rate.
+                DisplayPerformanceUtil.GetFpsLimit(display?.DeviceId));
         }
 
         private string GetWebView2UserDataDir(WallpaperArrangement arrangement, DisplayMonitor display, bool isWindowed)

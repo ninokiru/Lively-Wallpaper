@@ -1299,4 +1299,64 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
     <value>Khởi động lại hình nền khi quay lại từ màn hình khoá</value>
   </data>
+  <data name="DisplayFrameRateGroup.Text" xml:space="preserve">
+    <value>Tốc độ khung hình</value>
+  </data>
+  <data name="DisplayFrameRate.Header" xml:space="preserve">
+    <value>Giới hạn FPS cho tủng màn hình</value>
+  </data>
+  <data name="DisplayFrameRate.Description" xml:space="preserve">
+    <value>Hạn chế số lần vẵ lại của hình nền động trên màn hình đó. Đặt giá trị thấp sẽ tốn ít CPU và GPU hơn.</value>
+  </data>
+  <data name="DisplayFrameRateUnlimited.Content" xml:space="preserve">
+    <value>Không giới hạn</value>
+  </data>
+  <data name="PlaylistGroup.Text" xml:space="preserve">
+    <value>Danh sách phát</value>
+  </data>
+  <data name="PlaylistEnable.Header" xml:space="preserve">
+    <value>Danh sách hình nền</value>
+  </data>
+  <data name="PlaylistEnable.Description" xml:space="preserve">
+    <value>Tự đổi giữa các hình nền bên dưới theo lịch.</value>
+  </data>
+  <data name="PlaylistInterval.Header" xml:space="preserve">
+    <value>Đổi sau mỗi (phút)</value>
+  </data>
+  <data name="PlaylistShuffle.Header" xml:space="preserve">
+    <value>Phát ngẪu hưng</value>
+  </data>
+  <data name="PlaylistShuffle.Description" xml:space="preserve">
+    <value>Chọn hình nền ngẪu hưng thay vì theo thứ tự.</value>
+  </data>
+  <data name="PlaylistDays.Header" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="PlaylistDaysEvery.Content" xml:space="preserve">
+    <value>Mọi ngày</value>
+  </data>
+  <data name="PlaylistDaysWeekdays.Content" xml:space="preserve">
+    <value>Ngày làm việc</value>
+  </data>
+  <data name="PlaylistDaysWeekends.Content" xml:space="preserve">
+    <value>Cuối tuần</value>
+  </data>
+  <data name="PlaylistStartTime.Header" xml:space="preserve">
+    <value>Bắt đầu lúc</value>
+  </data>
+  <data name="PlaylistStartTime.Description" xml:space="preserve">
+    <value>Giờ lịch bắt đầu chạy.</value>
+  </data>
+  <data name="PlaylistEndTime.Header" xml:space="preserve">
+    <value>Kết thúc lúc</value>
+  </data>
+  <data name="PlaylistEndTime.Description" xml:space="preserve">
+    <value>Giờ lịch dừng. Bằng giờ bắt đầu nghĩa là cả ngày.</value>
+  </data>
+  <data name="PlaylistItems.Header" xml:space="preserve">
+    <value>Hình nền trong danh sách</value>
+  </data>
+  <data name="PlaylistItems.Description" xml:space="preserve">
+    <value>Chọn hình nền từ thư viện, chọn màn hình rồi thêm vào.</value>
+  </data>
 </root>

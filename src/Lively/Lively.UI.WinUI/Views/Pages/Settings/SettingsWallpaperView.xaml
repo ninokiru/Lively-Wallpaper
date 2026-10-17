@@ -268,6 +268,118 @@
                         </animations:Implicit.HideAnimations>
                     </InfoBar>
                 </StackPanel>
+
+                <!--  Playlist  -->
+                <StackPanel>
+                    <TextBlock
+                        x:Uid="PlaylistGroup"
+                        Margin="0,0,0,10"
+                        FontWeight="SemiBold" />
+                    <controls:SettingsCard x:Uid="PlaylistEnable">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE72E;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ToggleSwitch IsOn="{Binding IsPlaylistEnabled, Mode=TwoWay}" />
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="PlaylistInterval" IsEnabled="{Binding IsPlaylistEnabled}">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE916;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ComboBox
+                            MinWidth="{StaticResource SettingActionControlMinWidth}"
+                            SelectedIndex="{Binding SelectedPlaylistIntervalIndex, Mode=TwoWay}">
+                            <ComboBoxItem>5</ComboBoxItem>
+                            <ComboBoxItem>15</ComboBoxItem>
+                            <ComboBoxItem>30</ComboBoxItem>
+                            <ComboBoxItem>60</ComboBoxItem>
+                            <ComboBoxItem>120</ComboBoxItem>
+                            <ComboBoxItem>180</ComboBoxItem>
+                            <ComboBoxItem>360</ComboBoxItem>
+                            <ComboBoxItem>720</ComboBoxItem>
+                        </ComboBox>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="PlaylistShuffle" IsEnabled="{Binding IsPlaylistEnabled}">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE8B1;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ToggleSwitch IsOn="{Binding IsPlaylistShuffle, Mode=TwoWay}" />
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="PlaylistDays" IsEnabled="{Binding IsPlaylistEnabled}">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE787;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ComboBox
+                            MinWidth="{StaticResource SettingActionControlMinWidth}"
+                            SelectedIndex="{Binding SelectedPlaylistDaysIndex, Mode=TwoWay}">
+                            <ComboBoxItem x:Uid="PlaylistDaysEvery" />
+                            <ComboBoxItem x:Uid="PlaylistDaysWeekdays" />
+                            <ComboBoxItem x:Uid="PlaylistDaysWeekends" />
+                        </ComboBox>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="PlaylistStartTime" IsEnabled="{Binding IsPlaylistEnabled}">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE916;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ComboBox
+                            MinWidth="{StaticResource SettingActionControlMinWidth}"
+                            ItemsSource="{Binding PlaylistHours}"
+                            SelectedIndex="{Binding SelectedPlaylistStartHourIndex, Mode=TwoWay}" />
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="PlaylistEndTime" IsEnabled="{Binding IsPlaylistEnabled}">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE916;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ComboBox
+                            MinWidth="{StaticResource SettingActionControlMinWidth}"
+                            ItemsSource="{Binding PlaylistHours}"
+                            SelectedIndex="{Binding SelectedPlaylistEndHourIndex, Mode=TwoWay}" />
+                    </controls:SettingsCard>
+                    <controls:SettingsExpander x:Uid="PlaylistItems" IsExpanded="False">
+                        <controls:SettingsExpander.HeaderIcon>
+                            <FontIcon Glyph="&#xF0E3;" />
+                        </controls:SettingsExpander.HeaderIcon>
+                        <controls:SettingsExpander.Items>
+                            <controls:SettingsCard ContentAlignment="Left">
+                                <StackPanel Spacing="6">
+                                    <ListView
+                                        MinWidth="500"
+                                        MinHeight="100"
+                                        MaxHeight="200"
+                                        Background="{ThemeResource ControlFillColorDefault}"
+                                        BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                                        BorderThickness="1"
+                                        CornerRadius="5"
+                                        ItemsSource="{Binding PlaylistItems}"
+                                        SelectedItem="{Binding SelectedPlaylistItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        SelectionMode="Single">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="0,5,0,5" Text="{Binding Title}" />
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                    <StackPanel Orientation="Horizontal" Spacing="5">
+                                        <ComboBox
+                                            MinWidth="240"
+                                            DisplayMemberPath="Title"
+                                            ItemsSource="{Binding PlaylistSources}"
+                                            SelectedItem="{Binding SelectedPlaylistSource, Mode=TwoWay}" />
+                                        <ComboBox
+                                            MinWidth="140"
+                                            ItemsSource="{Binding PlaylistScreens}"
+                                            SelectedIndex="{Binding SelectedPlaylistScreenIndex, Mode=TwoWay}" />
+                                        <Button Command="{Binding AddPlaylistItemCommand}">
+                                            <FontIcon FontSize="12" Glyph="&#xE710;" />
+                                        </Button>
+                                        <Button Command="{Binding RemovePlaylistItemCommand}">
+                                            <FontIcon FontSize="12" Glyph="&#xE738;" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </controls:SettingsCard>
+                        </controls:SettingsExpander.Items>
+                    </controls:SettingsExpander>
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
     </Grid>

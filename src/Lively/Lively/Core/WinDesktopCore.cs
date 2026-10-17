@@ -1229,7 +1229,8 @@ namespace Lively.Core
 
             try
             {
-                ForwardMouseToWallpapers(e.X, e.Y, InputUtil.MouseMove);
+                // Moves also reach media wallpapers: the parallax layer follows the cursor.
+                ForwardMouseToWallpapers(e.X, e.Y, InputUtil.MouseMove, includeMedia: true);
             }
             catch (Exception ex)
             {
@@ -1315,7 +1316,7 @@ namespace Lively.Core
             }
         }
 
-        private void ForwardMouseToWallpapers(int x, int y, Action<IntPtr, int, int> forwardAction)
+        private void ForwardMouseToWallpapers(int x, int y, Action<IntPtr, int, int> forwardAction, bool includeMedia = false)
         {
             var display = displayManager.GetDisplayMonitorFromPoint(new System.Drawing.Point(x, y));
             var pos = userSettings.Settings.WallpaperArrangement switch
@@ -1328,7 +1329,12 @@ namespace Lively.Core
 
             foreach (var wallpaper in Wallpapers)
             {
-                if (wallpaper.Category.IsDeviceInputAllowed() &&
+                // Media wallpapers only ever receive moves: enough for the parallax layer to
+                // follow the cursor, while clicks keep going to the desktop like before.
+                var categoryMatches = includeMedia
+                    ? wallpaper.Category.IsDeviceInputAllowed() || wallpaper.Category.IsMediaWallpaper()
+                    : wallpaper.Category.IsDeviceInputAllowed();
+                if (categoryMatches &&
                     (wallpaper.Screen.Equals(display) || userSettings.Settings.WallpaperArrangement == WallpaperArrangement.span))
                 {
                     forwardAction(wallpaper.InputHandle, pos.X, pos.Y);

@@ -176,6 +176,8 @@ namespace Lively
             {
                 // Restore wallpaper(s) from previous run.
                 Services.GetRequiredService<IDesktopCore>().RestoreWallpaper();
+                // Timed rotation, the schedule file is re-read on every tick.
+                Services.GetRequiredService<IPlaylistService>().Start();
             }
 
             // First run setup wizard show.
@@ -227,6 +229,7 @@ namespace Lively
                 .AddSingleton<IWatchdogService, WatchdogProcess>()
                 .AddSingleton<IDisplayManager, DisplayManager>()
                 .AddSingleton<IScreensaverService, ScreensaverService>()
+                .AddSingleton<IPlaylistService, PlaylistService>()
                 .AddSingleton<IPlayback, Playback>()
                 .AddSingleton<IRunnerService, RunnerService>()
                 .AddSingleton<ISystray, Systray>()

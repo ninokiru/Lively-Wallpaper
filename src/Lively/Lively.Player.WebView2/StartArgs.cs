@@ -42,6 +42,12 @@ namespace Lively.Player.WebView2
         HelpText = "Media fit mode for video/gif/image wallpapers.")]
         public WallpaperScaler Scaler { get; set; }
 
+        [Option("wallpaper-frame-limit",
+        Required = false,
+        Default = 0,
+        HelpText = "Maximum animation frames per second, 0 follows the monitor refresh rate.")]
+        public int FrameLimit { get; set; }
+
         [Option("wallpaper-audio",
         Default = false,
         HelpText = "Analyse system audio(visualiser data.)")]

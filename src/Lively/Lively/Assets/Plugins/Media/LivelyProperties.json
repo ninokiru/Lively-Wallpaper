@@ -39,6 +39,68 @@
     "type": "slider",
     "value": 0
   },
+  "temperature": {
+    "max": 100,
+    "min": -100,
+    "tick": 200,
+    "text": "Temperature",
+    "help": "Warm or cool colour grading",
+    "type": "slider",
+    "value": 0
+  },
+  "blur": {
+    "max": 100,
+    "min": 0,
+    "tick": 100,
+    "text": "Blur",
+    "type": "slider",
+    "value": 0
+  },
+  "vignette": {
+    "max": 100,
+    "min": 0,
+    "tick": 100,
+    "text": "Vignette",
+    "help": "Darkens the edges of the wallpaper",
+    "type": "slider",
+    "value": 0
+  },
+  "chromatic": {
+    "max": 100,
+    "min": 0,
+    "tick": 100,
+    "text": "Chromatic aberration",
+    "help": "Splits the red and blue channels",
+    "type": "slider",
+    "value": 0
+  },
+  "ripple": {
+    "max": 100,
+    "min": 0,
+    "tick": 100,
+    "text": "Water ripple",
+    "help": "Moving surface distortion, costs extra GPU",
+    "type": "slider",
+    "value": 0
+  },
+  "parallax": {
+    "max": 100,
+    "min": 0,
+    "tick": 100,
+    "text": "Mouse parallax",
+    "help": "The layer slides with the pointer",
+    "type": "slider",
+    "value": 0
+  },
+  "audio": {
+    "max": 100,
+    "min": 0,
+    "tick": 100,
+    "text": "Audio reactive",
+    "help": "Pulses with the system audio",
+    "type": "slider",
+    "value": 0
+  },
    "speed": {
     "max": 5,
     "min": 0.25,

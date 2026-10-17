@@ -20,6 +20,14 @@ namespace Lively.Common
             public static string ScreenSaverLayoutPath { get; } = Path.Combine(AppDataDir, "ScreenSaverLayout.json");
             public static string UserSettingsPath { get; } = Path.Combine(AppDataDir, "Settings.json");
             public static string MusicAppExclusionRulesPath { get; } = Path.Combine(AppDataDir, "MusicAppExclusionRules.json");
+            /// <summary>
+            /// Timed wallpaper rotation, written by the settings window and read by the core timer.
+            /// </summary>
+            public static string PlaylistPath { get; } = Path.Combine(AppDataDir, "Playlist.json");
+            /// <summary>
+            /// Per screen fps budget, same split as the playlist: UI writes, core reads.
+            /// </summary>
+            public static string DisplayPerformancePath { get; } = Path.Combine(AppDataDir, "DisplayPerformance.json");
             public static string WeatherSettingsPath { get; } = Path.Combine(AppDataDir, "WeatherSettings.json");
             public static string ThemeDir { get; } = Path.Combine(AppDataDir, "Themes");
             public static string ThemeCacheDir { get; } = Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "themes");

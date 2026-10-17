@@ -31,12 +31,33 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
+      # The in-app updater compares the installed assembly version against the newest
+      # release tag: a tagged build that kept the version committed in the csproj would
+      # offer the very same update forever. Stamped once here, read by every publish.
+      - name: Resolve build version
+        shell: pwsh
+        run: |
+          $version = '0.0.1.0'
+          if ($env:GITHUB_REF_TYPE -eq 'tag') {
+            $raw = ($env:GITHUB_REF_NAME -replace '^v', '') -replace '-.*$', ''
+            $parts = @($raw.Split('.') | Where-Object { $_ -match '^\d+$' })
+            if ($parts.Count -ge 1) {
+              while ($parts.Count -lt 4) { $parts += '0' }
+              # AssemblyVersion fields are 16 bit, a bigger part would fail the compile.
+              $limited = @($parts[0..3] | ForEach-Object { [Math]::Min([int]$_, 65535) })
+              $version = ($limited -join '.')
+            }
+          }
+          Write-Host "Assembly version: $version"
+          Add-Content -Path $env:GITHUB_ENV -Value "LIVELY_VERSION=$version"
+
       # Everything comes from NuGet restore; no binaries are committed or fetched by hand.
       - name: Publish core
         run: >
           dotnet publish src/Lively/Lively/Lively.csproj
           -c Release -r $env:RID --self-contained true
           -p:DebugType=none -p:DebugSymbols=false
+          -p:LivelyVersion=$env:LIVELY_VERSION
           -o "$env:PUBLISH_DIR"
 
       - name: Publish UI
@@ -44,6 +65,7 @@ jobs:
           dotnet publish src/Lively/Lively.UI.WinUI/Lively.UI.WinUI.csproj
           -c Release -r $env:RID --self-contained true
           -p:DebugType=none -p:DebugSymbols=false
+          -p:LivelyVersion=$env:LIVELY_VERSION
           -o "$env:PUBLISH_DIR\plugins\UI"
 
       - name: Publish WebView2 player
@@ -51,6 +73,7 @@ jobs:
           dotnet publish src/Lively/Lively.Player.WebView2/Lively.Player.WebView2.csproj
           -c Release -r $env:RID --self-contained true
           -p:DebugType=none -p:DebugSymbols=false
+          -p:LivelyVersion=$env:LIVELY_VERSION
           -o "$env:PUBLISH_DIR\plugins\webview2"
 
       # The app looks these up by relative path at runtime, so fail the build if staging is wrong.
@@ -163,11 +186,12 @@ jobs:
   # GitHub Release: the only channel the in-app updater reads.
   #
   # How the tag relates to AssemblyVersion:
-  #   GithubUtil.GetVersion() strips every non-digit and non-dot from TagName and
-  #   parses the rest as System.Version, then CompareAssemblyVersion() pads both
-  #   sides to four parts before comparing against the entry assembly version
-  #   (Lively.csproj: 0.0.1.0). So v0.0.2 is an update, v0.0.1 is up to date and
-  #   v0.0.2-beta is read as 0.0.2.
+  #   The build job stamps LivelyVersion from the tag, so the installed app reports the
+  #   same version it was released as. GithubUtil.GetVersion() strips every non-digit and
+  #   non-dot from TagName and parses the rest as System.Version, then
+  #   CompareAssemblyVersion() pads both sides to four parts before comparing against the
+  #   entry assembly version. So v0.0.2 is an update over an installed 0.0.1, v0.0.1 is up
+  #   to date and v0.0.2-beta is read as 0.0.2.
   #   The --prerelease flag below only decorates GitHub; the updater takes the
   #   newest release whatever its channel, so publish a beta tag only when the
   #   build really is newer.

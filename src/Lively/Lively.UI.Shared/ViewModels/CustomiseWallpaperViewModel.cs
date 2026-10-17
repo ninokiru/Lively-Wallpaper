@@ -28,6 +28,8 @@ namespace Lively.UI.Shared.ViewModels
         private Dictionary<string, ControlModel> livelyControlsCopy;
         private DisplayMonitor currentScreen;
         private string currentFilePath;
+        // One restart per page, dragging the slider further must not blink the wallpaper again.
+        private bool isPlayerHandoverSent;
 
         public CustomiseWallpaperViewModel(IDesktopCoreClient desktopCore,
             IDisplayManagerClient displayManager,
@@ -44,6 +46,7 @@ namespace Lively.UI.Shared.ViewModels
         {
             IsLoaded = false;
             ErrorText = InfoText = null;
+            isPlayerHandoverSent = false;
 
             try
             {
@@ -108,6 +111,37 @@ namespace Lively.UI.Shared.ViewModels
 
             WallpaperSendMsg(new LivelySlider() { Name = slider.Name, Value = slider.Value, Step = slider.Step });
             copy.Value = slider.Value;
+            HandOverShellWallpaper(slider.Name, slider.Value);
+        }
+
+        /// <summary>
+        /// A picture still painted by the shell has no process to receive these values, so
+        /// the first interactive slider hands that screen over to the player. The file is
+        /// written before the restart, otherwise the new instance reads the old numbers.
+        /// </summary>
+        private void HandOverShellWallpaper(string name, double value)
+        {
+            if (isPlayerHandoverSent || value == 0 || !MediaPropertyUtil.IsInteractive(name))
+                return;
+
+            if (Model?.LivelyInfo?.Type != WallpaperType.picture)
+                return;
+
+            // A running player already applies every change live, and a wallpaper that is
+            // not on the screen at all does not have to be restarted either.
+            var isShellPainted = desktopCore.Wallpapers
+                .Any(x => string.Equals(x?.LivelyInfoFolderPath, Model.LivelyInfoFolderPath, StringComparison.OrdinalIgnoreCase)
+                          && string.IsNullOrEmpty(x?.LivelyPropertyCopyPath));
+            if (!isShellPainted)
+                return;
+
+            var screen = currentScreen ?? userSettings.Settings.SelectedDisplay;
+            if (screen is null)
+                return;
+
+            isPlayerHandoverSent = true;
+            UpdatePropertyFile();
+            _ = desktopCore.SetWallpaper(Model.LivelyInfoFolderPath, screen.DeviceId);
         }
 
         [RelayCommand]

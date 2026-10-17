@@ -208,6 +208,15 @@ namespace Lively.Player.WebView2
             webView.CoreWebView2.DocumentTitleChanged += CoreWebView2_DocumentTitleChanged;
             webView.CoreWebView2.WebMessageReceived += CoreWebView2_WebMessageReceived;
 
+            if (startArgs.FrameLimit > 0 && IsFrameLimitPage(startArgs.Type))
+            {
+                // Chromium has no frame rate switch, so the page is paced from the
+                // inside by wrapping requestAnimationFrame before any script runs.
+                // Media pages pace themselves, they don't need this.
+                await webView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(
+                    GetFrameLimitScript(startArgs.FrameLimit));
+            }
+
             switch (startArgs.Type)
             {
                 case WebPageType.online:
@@ -273,6 +282,86 @@ namespace Lively.Player.WebView2
             });
         }
 
+        /// <summary>
+        /// Pages the player cannot pace by itself: the media host page throttles its own
+        /// animation loop, everything else needs the injected wrapper.
+        /// </summary>
+        private static bool IsFrameLimitPage(WebPageType kind)
+        {
+            return kind switch
+            {
+                WebPageType.video => false,
+                WebPageType.gif => false,
+                WebPageType.image => false,
+                _ => true,
+            };
+        }
+
+        private static string GetFrameLimitScript(int frameLimit)
+        {
+            var minimum = (1000d / frameLimit).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            return FrameLimitScript.Replace("__minFrameMs__", minimum);
+        }
+
+        // Batches every callback and only releases them on the paced frame, so a wallpaper
+        // that asks for 30 fps gets one paint per 33ms instead of one per vsync.
+        private const string FrameLimitScript = """
+            (() => {
+              const minimum = __minFrameMs__;
+              if (!isFinite(minimum) || minimum <= 0)
+                return;
+              const paint = window.requestAnimationFrame.bind(window);
+              const abort = window.cancelAnimationFrame.bind(window);
+              const pending = new Map();
+              let token = 1;
+              let last = 0;
+              let handle = 0;
+              let armed = false;
+              const flush = (time) => {
+                armed = false;
+                handle = 0;
+                if (time - last < minimum - 1) {
+                  arm();
+                  return;
+                }
+                last = time;
+                const batch = Array.from(pending.values());
+                pending.clear();
+                for (const callback of batch) {
+                  try {
+                    callback(time);
+                  } catch (error) {
+                    setTimeout(() => { throw error; }, 0);
+                  }
+                }
+                if (pending.size > 0)
+                  arm();
+              };
+              const arm = () => {
+                if (armed)
+                  return;
+                armed = true;
+                handle = paint(flush);
+              };
+              window.requestAnimationFrame = (callback) => {
+                const id = token++;
+                pending.set(id, callback);
+                arm();
+                return id;
+              };
+              window.cancelAnimationFrame = (id) => {
+                if (pending.delete(id)) {
+                  if (pending.size === 0 && armed) {
+                    armed = false;
+                    abort(handle);
+                  }
+                  return;
+                }
+                abort(id);
+              };
+            })();
+            """;
+
         private void CoreWebView2_DocumentTitleChanged(object sender, object e)
         {
             this.Invoke((System.Windows.Forms.MethodInvoker)(() => this.Text = webView.CoreWebView2.DocumentTitle));
@@ -311,7 +400,7 @@ namespace Lively.Player.WebView2
             var mediaUri = new Uri($"https://{hostName}/{Uri.EscapeDataString(Path.GetFileName(filePath))}");
             isMediaWallpaper = true;
             $"Opening media {kind}: {mediaUri}".SendLog(SendToParent);
-            webView.CoreWebView2.NavigateToString(MediaPageBuilder.Build(kind, mediaUri, startArgs.Scaler, startArgs.Volume));
+            webView.CoreWebView2.NavigateToString(MediaPageBuilder.Build(kind, mediaUri, startArgs.Scaler, startArgs.Volume, startArgs.FrameLimit));
         }
 
         private void CoreWebView2_ProcessFailed(object sender, CoreWebView2ProcessFailedEventArgs e)
@@ -426,25 +515,42 @@ namespace Lively.Player.WebView2
                     hardwareUsageService.Start();
                 }
 
-                if (startArgs.AudioVisualizer)
-                {
-                    visualizerService = new NAudioVisualizerService();
-                    visualizerService.AudioDataAvailable += (s, e) => {
-                        try
-                        {
-                            if (isPaused)
-                                return;
+                // Web wallpapers own their visualiser code, so they always get the feed.
+                // Media pages are given the option instead: the loopback capture and FFT
+                // stay off until the wallpaper actually raises the audio reactive slider.
+                if (startArgs.AudioVisualizer && !isMediaWallpaper)
+                    StartAudioVisualizer();
+            }
+        }
 
-                            //TODO: CefSharp CanExecuteJavascriptInMainFrame equivalent in webview
-                            this.Invoke((Action)(() =>
-                            {
-                                _ = webView.ExecuteScriptFunctionAsync("livelyAudioListener", e);
-                            }));
-                        }
-                        catch { }
-                    };
-                    visualizerService.Start(startArgs.AudioVisualizerDeviceId);
-                }
+        private void StartAudioVisualizer()
+        {
+            if (visualizerService != null)
+                return;
+
+            try
+            {
+                visualizerService = new NAudioVisualizerService();
+                visualizerService.AudioDataAvailable += (s, e) => {
+                    try
+                    {
+                        if (isPaused)
+                            return;
+
+                        this.Invoke((Action)(() =>
+                        {
+                            _ = webView.ExecuteScriptFunctionAsync("livelyAudioListener", e);
+                        }));
+                    }
+                    catch { }
+                };
+                visualizerService.Start(startArgs.AudioVisualizerDeviceId);
+            }
+            catch (Exception ex)
+            {
+                // No playback device, or the service is unavailable: the wallpaper still runs.
+                visualizerService = null;
+                ex.SendError(SendToParent, "Failed to start audio capture");
             }
         }
 
@@ -609,6 +715,10 @@ namespace Lively.Player.WebView2
                     break;
                 case MessageType.lp_slider:
                     var sl = (LivelySlider)obj;
+                    // Dragging the audio reactive slider is what switches the capture on,
+                    // so the wallpaper does not have to be restarted for it to start pulsing.
+                    if (isMediaWallpaper && string.Equals(sl.Name, "audio", StringComparison.OrdinalIgnoreCase) && sl.Value > 0)
+                        StartAudioVisualizer();
                     await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", sl.Name, sl.Value);
                     break;
                 case MessageType.lp_textbox:
@@ -697,6 +807,11 @@ namespace Lively.Player.WebView2
             {
                 await LivelyPropertyUtil.LoadProperty(propertyPath, Path.GetDirectoryName(startArgs.Url), async (key, value) =>
                 {
+                    // A media wallpaper that asks for audio is what turns the capture on,
+                    // so a wallpaper that never touches the slider never costs anything.
+                    if (isMediaWallpaper && string.Equals(key, "audio", StringComparison.OrdinalIgnoreCase) && IsPositiveValue(value))
+                        StartAudioVisualizer();
+
                     await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", key, value);
                 });
             }
@@ -704,6 +819,13 @@ namespace Lively.Player.WebView2
             {
                 ex.SendError(SendToParent);
             }
+        }
+
+        private static bool IsPositiveValue(object value)
+        {
+            return double.TryParse(value?.ToString(),
+                System.Globalization.NumberStyles.Any,
+                System.Globalization.CultureInfo.InvariantCulture, out var number) && number > 0;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

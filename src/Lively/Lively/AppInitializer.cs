@@ -128,8 +128,34 @@ namespace Lively
                     File.Copy(livelyPropertyPath, Path.Combine(Constants.CommonPaths.TempMediaDir, "LivelyProperties.json"), true);
                 if (File.Exists(livelyPropertyLocPath))
                     File.Copy(livelyPropertyLocPath, Path.Combine(Constants.CommonPaths.TempMediaDir, "LivelyProperties.loc.json"), true);
+
+                AddNewMediaControls(livelyPropertyPath);
             }
             catch { /* Nothing to do */ }
+        }
+
+        /// <summary>
+        /// Every wallpaper keeps its own copy of the media template under SaveData/wpdata,
+        /// so a control added by an update is invisible until the copy is topped up.
+        /// Existing values are preserved, only missing entries are appended.
+        /// </summary>
+        private void AddNewMediaControls(string templatePath)
+        {
+            try
+            {
+                var dataDir = Path.Combine(userSettings.Settings.WallpaperDir, Constants.CommonPartialPaths.WallpaperSettingsDir);
+                if (!File.Exists(templatePath) || !Directory.Exists(dataDir))
+                    return;
+
+                var copies = Directory.EnumerateFiles(dataDir, "LivelyProperties.json", SearchOption.AllDirectories);
+                var updated = Common.Helpers.MediaPropertyUtil.MergeMissingEntries(templatePath, copies);
+                if (updated > 0)
+                    Logger.Info($"Added new media controls to {updated} wallpaper setting(s).");
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
         }
 
         private void MigrateFromOlderVersions()

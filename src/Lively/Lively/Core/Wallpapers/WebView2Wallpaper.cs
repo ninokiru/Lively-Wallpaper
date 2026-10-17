@@ -57,7 +57,8 @@ namespace Lively.Core.Wallpapers
             string debugPort = null,
             double? scale = null,
             string audioVisualizerId = null,
-            WallpaperScaler scaler = WallpaperScaler.fill)
+            WallpaperScaler scaler = WallpaperScaler.fill,
+            int frameLimit = 0)
         {
             var filePath = ResolveFilePath(path, model);
             var type = model.LivelyInfo.Type;
@@ -78,13 +79,16 @@ namespace Lively.Core.Wallpapers
             cmdArgs.Append(" --wallpaper-property " + "\"" + LivelyPropertyCopyPath + "\"");
             if (scale != null)
                 cmdArgs.Append(" --wallpaper-scale " + JsonConvert.SerializeObject(scale.Value));
+            if (frameLimit > 0)
+                cmdArgs.Append(" --wallpaper-frame-limit " + frameLimit);
+            // Audio spectrum device, shared by web and media wallpapers.
+            if (!string.IsNullOrEmpty(audioVisualizerId))
+                cmdArgs.Append(" --wallpaper-audio-id " + audioVisualizerId);
             if (!isMediaWallpaper)
             {
                 // --wallpaper-audio false: https://github.com/commandlineparser/commandline/issues/702
                 if (type == WallpaperType.webaudio)
                     cmdArgs.Append(" --wallpaper-audio true");
-                if (!string.IsNullOrEmpty(audioVisualizerId))
-                    cmdArgs.Append(" --wallpaper-audio-id " + audioVisualizerId);
                 if (!string.IsNullOrWhiteSpace(debugPort))
                     cmdArgs.Append(" --wallpaper-debug " + debugPort);
                 // Wallpapers call livelySystemInformation, livelyCurrentTrack and
@@ -98,6 +102,9 @@ namespace Lively.Core.Wallpapers
             {
                 cmdArgs.Append(" --wallpaper-type " + MediaPageTypeOf(type));
                 cmdArgs.Append(" --wallpaper-scaler " + scaler);
+                // Capability only: the player starts the capture once the wallpaper
+                // actually sets the audio reactive slider above zero.
+                cmdArgs.Append(" --wallpaper-audio true");
             }
             if (TryParseUserCommandArgs(model.LivelyInfo.Arguments, out string parsedArgs))
                 cmdArgs.Append(" " + parsedArgs);

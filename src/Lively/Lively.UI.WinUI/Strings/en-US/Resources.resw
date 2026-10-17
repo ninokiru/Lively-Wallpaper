@@ -1298,4 +1298,64 @@ If still not working, close &amp; start Lively again/restart windows.
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
     <value>Restart wallpaper when returning from lock screen</value>
   </data>
+  <data name="DisplayFrameRateGroup.Text" xml:space="preserve">
+    <value>Frame rate</value>
+  </data>
+  <data name="DisplayFrameRate.Header" xml:space="preserve">
+    <value>Per screen frame limit</value>
+  </data>
+  <data name="DisplayFrameRate.Description" xml:space="preserve">
+    <value>Limits how often an animated wallpaper repaints on that screen. Lower values cost less CPU and GPU.</value>
+  </data>
+  <data name="DisplayFrameRateUnlimited.Content" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
+  <data name="PlaylistGroup.Text" xml:space="preserve">
+    <value>Playlist</value>
+  </data>
+  <data name="PlaylistEnable.Header" xml:space="preserve">
+    <value>Wallpaper playlist</value>
+  </data>
+  <data name="PlaylistEnable.Description" xml:space="preserve">
+    <value>Rotates between the wallpapers below on a schedule.</value>
+  </data>
+  <data name="PlaylistInterval.Header" xml:space="preserve">
+    <value>Change every (minutes)</value>
+  </data>
+  <data name="PlaylistShuffle.Header" xml:space="preserve">
+    <value>Shuffle</value>
+  </data>
+  <data name="PlaylistShuffle.Description" xml:space="preserve">
+    <value>Pick a random wallpaper instead of following the order.</value>
+  </data>
+  <data name="PlaylistDays.Header" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="PlaylistDaysEvery.Content" xml:space="preserve">
+    <value>Every day</value>
+  </data>
+  <data name="PlaylistDaysWeekdays.Content" xml:space="preserve">
+    <value>Weekdays</value>
+  </data>
+  <data name="PlaylistDaysWeekends.Content" xml:space="preserve">
+    <value>Weekends</value>
+  </data>
+  <data name="PlaylistStartTime.Header" xml:space="preserve">
+    <value>Active from</value>
+  </data>
+  <data name="PlaylistStartTime.Description" xml:space="preserve">
+    <value>Hour the schedule begins.</value>
+  </data>
+  <data name="PlaylistEndTime.Header" xml:space="preserve">
+    <value>Active until</value>
+  </data>
+  <data name="PlaylistEndTime.Description" xml:space="preserve">
+    <value>Hour the schedule ends. Equal to the start hour means all day.</value>
+  </data>
+  <data name="PlaylistItems.Header" xml:space="preserve">
+    <value>Playlist wallpapers</value>
+  </data>
+  <data name="PlaylistItems.Description" xml:space="preserve">
+    <value>Pick a wallpaper from your library, choose its screen and add it.</value>
+  </data>
 </root>

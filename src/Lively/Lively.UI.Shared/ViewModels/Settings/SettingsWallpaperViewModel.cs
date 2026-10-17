@@ -30,6 +30,8 @@ namespace Lively.UI.Shared.ViewModels
         private readonly IAudioDeviceFactory audioDeviceFactory;
         private readonly IApplicationsRulesFactory appRuleFactory;
         private readonly ICommandsClient commandsClient;
+        private readonly IDisplayManagerClient displayManager;
+        private readonly LibraryViewModel library;
 
         public SettingsWallpaperViewModel(IUserSettingsClient userSettings,
             IDesktopCoreClient desktopCore,
@@ -39,7 +41,9 @@ namespace Lively.UI.Shared.ViewModels
             IDownloadService downloader,
             IResourceService i18n,
             IAudioDeviceFactory audioDeviceFactory,
-            IApplicationsRulesFactory appRuleFactory)
+            IApplicationsRulesFactory appRuleFactory,
+            IDisplayManagerClient displayManager,
+            LibraryViewModel library)
         {
             this.i18n = i18n;
             this.userSettings = userSettings;
@@ -50,8 +54,11 @@ namespace Lively.UI.Shared.ViewModels
             this.audioDeviceFactory = audioDeviceFactory;
             this.dispatcher = dispatcher;
             this.downloader = downloader;
+            this.displayManager = displayManager;
+            this.library = library;
 
             AppMusicExclusionRules = new ObservableCollection<AppMusicExclusionRuleModel>(GetAppMusicExclusionRule());
+            LoadPlaylistConfig();
             IsDesktopAutoWallpaper = userSettings.Settings.DesktopAutoWallpaper;
             //IsLockScreenAutoWallpaper = userSettings.Settings.LockScreenAutoWallpaper;
             SelectedWallpaperScalingIndex = (int)userSettings.Settings.WallpaperScaling;
@@ -349,6 +356,207 @@ namespace Lively.UI.Shared.ViewModels
         }
 
         #endregion //apprules
+
+        #region playlist
+
+        // Matches the order of the interval items declared in SettingsWallpaperView.xaml.
+        private static readonly int[] playlistIntervals = [5, 15, 30, 60, 120, 180, 360, 720];
+
+        // Snapshot of the file, keeps the fields the ui does not edit.
+        private PlaylistModel playlist;
+
+        public List<string> PlaylistHours { get; } = Enumerable.Range(0, 24).Select(x => $"{x:00}:00").ToList();
+        public ObservableCollection<LibraryModel> PlaylistSources => library.LibraryItems;
+        public List<string> PlaylistScreens { get; } = new();
+
+        [ObservableProperty]
+        private ObservableCollection<PlaylistItemModel> playlistItems = new();
+
+        private bool _isPlaylistEnabled;
+        public bool IsPlaylistEnabled
+        {
+            get => _isPlaylistEnabled;
+            set
+            {
+                if (SetProperty(ref _isPlaylistEnabled, value))
+                    UpdatePlaylistConfigFile();
+            }
+        }
+
+        private bool _isPlaylistShuffle;
+        public bool IsPlaylistShuffle
+        {
+            get => _isPlaylistShuffle;
+            set
+            {
+                if (SetProperty(ref _isPlaylistShuffle, value))
+                    UpdatePlaylistConfigFile();
+            }
+        }
+
+        private int _selectedPlaylistIntervalIndex;
+        public int SelectedPlaylistIntervalIndex
+        {
+            get => _selectedPlaylistIntervalIndex;
+            set
+            {
+                if (SetProperty(ref _selectedPlaylistIntervalIndex, value))
+                    UpdatePlaylistConfigFile();
+            }
+        }
+
+        private int _selectedPlaylistDaysIndex;
+        public int SelectedPlaylistDaysIndex
+        {
+            get => _selectedPlaylistDaysIndex;
+            set
+            {
+                if (SetProperty(ref _selectedPlaylistDaysIndex, value))
+                    UpdatePlaylistConfigFile();
+            }
+        }
+
+        private int _selectedPlaylistStartHourIndex;
+        public int SelectedPlaylistStartHourIndex
+        {
+            get => _selectedPlaylistStartHourIndex;
+            set
+            {
+                if (SetProperty(ref _selectedPlaylistStartHourIndex, value))
+                    UpdatePlaylistConfigFile();
+            }
+        }
+
+        private int _selectedPlaylistEndHourIndex;
+        public int SelectedPlaylistEndHourIndex
+        {
+            get => _selectedPlaylistEndHourIndex;
+            set
+            {
+                if (SetProperty(ref _selectedPlaylistEndHourIndex, value))
+                    UpdatePlaylistConfigFile();
+            }
+        }
+
+        private LibraryModel _selectedPlaylistSource;
+        public LibraryModel SelectedPlaylistSource
+        {
+            get => _selectedPlaylistSource;
+            set
+            {
+                SetProperty(ref _selectedPlaylistSource, value);
+                AddPlaylistItemCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        private int _selectedPlaylistScreenIndex;
+        public int SelectedPlaylistScreenIndex
+        {
+            get => _selectedPlaylistScreenIndex;
+            set => SetProperty(ref _selectedPlaylistScreenIndex, value);
+        }
+
+        private PlaylistItemModel _selectedPlaylistItem;
+        public PlaylistItemModel SelectedPlaylistItem
+        {
+            get => _selectedPlaylistItem;
+            set
+            {
+                SetProperty(ref _selectedPlaylistItem, value);
+                RemovePlaylistItemCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        [RelayCommand(CanExecute = nameof(CanAddPlaylistItem))]
+        private void AddPlaylistItem()
+        {
+            var source = SelectedPlaylistSource;
+            if (source is null || string.IsNullOrEmpty(source.LivelyInfoFolderPath))
+                return;
+
+            var screenIndex = SelectedPlaylistScreenIndex;
+            var display = screenIndex >= 0 && screenIndex < displayManager.DisplayMonitors.Count
+                ? displayManager.DisplayMonitors[screenIndex]
+                : displayManager.PrimaryMonitor;
+
+            var duplicate = PlaylistItems.Any(x =>
+                string.Equals(x.LivelyInfoFolderPath, source.LivelyInfoFolderPath, StringComparison.OrdinalIgnoreCase) &&
+                string.Equals(x.MonitorDeviceId, display?.DeviceId, StringComparison.OrdinalIgnoreCase));
+            if (duplicate)
+                return;
+
+            PlaylistItems.Add(new PlaylistItemModel
+            {
+                LivelyInfoFolderPath = source.LivelyInfoFolderPath,
+                Title = source.Title,
+                MonitorDeviceId = display?.DeviceId,
+            });
+            UpdatePlaylistConfigFile();
+        }
+
+        private bool CanAddPlaylistItem => SelectedPlaylistSource != null;
+
+        [RelayCommand(CanExecute = nameof(CanRemovePlaylistItem))]
+        private void RemovePlaylistItem()
+        {
+            if (SelectedPlaylistItem is null)
+                return;
+
+            PlaylistItems.Remove(SelectedPlaylistItem);
+            UpdatePlaylistConfigFile();
+        }
+
+        private bool CanRemovePlaylistItem => SelectedPlaylistItem != null;
+
+        private void LoadPlaylistConfig()
+        {
+            playlist = GetPlaylistConfig();
+            foreach (var display in displayManager.DisplayMonitors)
+                PlaylistScreens.Add($"{display.Index + 1} - {display.Bounds.Width}x{display.Bounds.Height}");
+
+            var intervalIndex = Array.IndexOf(playlistIntervals, playlist.IntervalMinutes);
+            // Seeded through the backing fields so opening the page never writes the file.
+            _isPlaylistEnabled = playlist.IsEnabled;
+            _isPlaylistShuffle = playlist.IsShuffle;
+            _selectedPlaylistIntervalIndex = intervalIndex < 0 ? 2 : intervalIndex;
+            _selectedPlaylistDaysIndex = Math.Clamp((int)playlist.Days, 0, 2);
+            _selectedPlaylistStartHourIndex = Math.Clamp(playlist.StartHour, 0, 23);
+            _selectedPlaylistEndHourIndex = Math.Clamp(playlist.EndHour, 0, 23);
+            PlaylistItems = new ObservableCollection<PlaylistItemModel>(playlist.Items ?? []);
+        }
+
+        private static PlaylistModel GetPlaylistConfig()
+        {
+            try
+            {
+                if (File.Exists(Constants.CommonPaths.PlaylistPath))
+                    return JsonStorage<PlaylistModel>.LoadData(Constants.CommonPaths.PlaylistPath);
+            }
+            catch { /* Corrupted file, start from the defaults. */ }
+
+            return new PlaylistModel();
+        }
+
+        /// <summary>
+        /// The core re-reads this file on its own clock, nothing has to be restarted here.
+        /// </summary>
+        public void UpdatePlaylistConfigFile()
+        {
+            _ = dispatcher.TryEnqueue(() =>
+            {
+                var model = playlist ?? new PlaylistModel();
+                model.IsEnabled = IsPlaylistEnabled;
+                model.IsShuffle = IsPlaylistShuffle;
+                model.IntervalMinutes = playlistIntervals[Math.Clamp(SelectedPlaylistIntervalIndex, 0, playlistIntervals.Length - 1)];
+                model.Days = (PlaylistDays)Math.Clamp(SelectedPlaylistDaysIndex, 0, 2);
+                model.StartHour = Math.Clamp(SelectedPlaylistStartHourIndex, 0, 23);
+                model.EndHour = Math.Clamp(SelectedPlaylistEndHourIndex, 0, 23);
+                model.Items = PlaylistItems.ToList();
+                JsonStorage<PlaylistModel>.StoreData(Constants.CommonPaths.PlaylistPath, model);
+            });
+        }
+
+        #endregion //playlist
 
         public void UpdateSettingsConfigFile()
         {
